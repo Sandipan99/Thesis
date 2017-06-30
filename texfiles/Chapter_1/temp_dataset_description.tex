@@ -1,0 +1,76 @@
+\noindent
+\section{Description of the dataset}
+\label{dataset}
+We perform our experiments on five human face-to-face network datasets: INFOCOM 2006 dataset~\cite{cambridge-haggle-imote-infocom2006-2009-05-29}, SIGCOMM 2009 dataset~\cite{thlab-sigcomm2009-mobiclique-proximity-2012-07-15}\footnote{http://crawdad.org/}, 
+High school datasets (2011, 2012)~\cite{fournet2014contact} and Hospital dataset~\cite{vanhems2013estimating}\footnote{http://www.sociopatterns.org/}.
+
+
+% \textcolor{blue}{The first two represent human face-to-face interaction while the last two represent 
+% human interaction through social media.}
+\begin{itemize}
+\item {\bf INFOCOM 2006:}
+This is a human face-to-face communication network and was collected at the IEEE INFOCOM 2006 conference at Barcelona.
+78 researchers and students participated in the experiment. They were equipped with imotes and apart from them 20 stationary imotes were deployed as 
+location anchors. The stationary imotes had more powerful battery and had a radio range of about 100 meters. The dynamic imotes had a radio range of 30 meters.
+If two imotes came in each others' range and stayed for at least 20 seconds then an edge was recorded between the two imotes.
+The edges were recorded at every 20 seconds. 
+Therefore, this is the lowest resolution at which the experiments can be potentially conducted. However, we observe that at this resolution the network is extremely sparse 
+which makes it difficult to conduct meaningful data comparison and prediction. We observe experimentally that the lowest interval that allows for appropriate comparison 
+and prediction is $5$ minutes and therefore we set this value as our resolution for all further analysis.
+%The network is both unweighted and undirected.
+ \item {\bf SIGCOMM 2009:}
+ This is also a human face-to-face communication network and was collected at the SIGCOMM 2009 conference at Barcelona, Spain. The dataset contains data collected by an opportunistic mobile social 
+application, MobiClique. The application was used by 76 persons during SIGCOMM 
+2009 conference in Barcelona, Spain. The trace records all the nearby Bluetooth devices reported by the periodic 
+Bluetooth device discoveries.
+Each device performed a periodic Bluetooth device discovery every 120+/-10.24 seconds for nearby Bluetooth devices. A link was added with a device 
+on discovering it. 
+We remove the contacts with external Bluetooth 
+devices and a network snapshot is an aggregate of data obtained for 5 minutes. 
+%The network is both unweighted and undirected.
+
+\item {\bf High school datasets:}
+These are two datasets containing the temporal network of contacts between students in a high school in Marseilles taken during December 2011 and November 2012 respectively. 
+Contacts were recorded at intervals of 20 seconds. We consider a network snapshot as an aggregate of data obtained for 5 minutes. 
+%The network is both unweighted and undirected.
+
+\item {\bf Hospital dataset:}
+This dataset consists of the temporal network of contacts between patients and health care workers in a hospital ward in Lyon, france. Data was collected at every 20 second intervals.
+ Due to sparseness of the network of 20 seconds, we consider each network snapshot as an aggregated network of 5 minutes. 
+ 
+ 
+ In table 1 we provide the details of the datasets.  
+%  \item {\bf Twitter Hashtag co-occurrence network:}
+%  This is a hashtag co-occurrence network created from the tweets posted by human users 
+%  on London Olympics from 27th July 2012 to 1st August 2012 extracted from 1\% random sample.
+%  The network snapshot is an aggregated network of 10 minutes each. Each node represents a unique hashtag and a link appears between 
+%  two nodes if they co-occur in a tweet. The network consists of 7118 nodes i.e., unique hashtags. It is both unweighted and undirected.
+%  \item{\bf Facebook posts network:}
+%  \textcolor{blue}{The original network consists of a set of Facebook users (nodes) and a link appears between two users if one posts on other's wall. As it is a directed network, we need to first obtain an undirected projection of it.   
+%  We divide the whole data into slots of 6 hours and a link appears in the undirected projection between two nodes if both the users have posted in each other's wall within this time window. 
+%  Thus we obtain an undirected projection of the original directed network and we perform our analysis on this network. Note that due to this conversion we found several 
+%  such 6 hour slots without any edge making the series discontinuous.
+%  All our further analysis is on the part of the whole window where we have continuous datapoints for the longest stretch.
+%  %We take out only that part of the whole time window with a large sequence of consecutive 
+%  %slots. Thus the final network stretches for this time window only.
+%  The network consists of 20284 unique users.}
+%  
+ \end{itemize}
+ 
+\begin{table*}
+\centering
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Dataset         & \# unique nodes & \# unique edges & edge type  & \begin{tabular}[c]{@{}l@{}}Time span of \\ the dataset\end{tabular}     & \begin{tabular}[c]{@{}l@{}}Time steps \\ for  prediction\end{tabular} \\ \hline
+INFOCOM 2006    & 98              & 4414            & undirected &  1120                                                                   & 200 - 800                                                             \\ \hline
+SIGCOMM 2009    & 76              & 2082            & do         &  1068                                                                   & 300 - 900                                                             \\ \hline
+Highschool 2011 & 126             & 5758            & do         &  1215                                                                   & 200 - 900                                                           \\ \hline
+Highschool 2012 & 180             & 8384            & do         &  1512                                                                   & 200 - 1000                                                            \\ \hline
+Hospital        & 75              & 5704            & do         &  1158                                                                   & 100 - 900                                                             \\ \hline
+\end{tabular}
+\end{adjustbox}
+\label{tab_data}
+\caption{Properties of the dataset used.}
+\end{table*}
+\medskip

@@ -1,0 +1,81 @@
+
+
+\chapter[Permanence and Network Communities]{Permanence and Network Communities}\label{chapter_perm} In
+this chapter
+we address our second objective of analyzing the limitations of state-of-the-art community evaluation metrics (such as modularity) and
+community detection algorithms (such as modularity maximization algorithms).
+
+\section{Introduction}
+Community detection algorithms primarily deal with identifying densely-connected units from within large networks. Often this is done
+blindly without much attention being paid toward inferring whether the network {\em at all possesses a community structure}. Similarly, a
+community detection algorithm targets for full coverage; in contrast, there might be situations when it should rather not include some of
+the nodes in any community. 
+Modularity is a widely accepted metric for measuring the quality of community structure identified by various community detection
+algorithms. However, a growing body of research have begun 
+to explore the limitations of maximizing modularity for community identification and evaluation; three such limitations 
+include -- resolution limit, degeneracy of solutions and asymptotic growth of the modularity value. To address these issues, we propose a
+new
+vertex-based metric called
+{\it permanence}, that can quantitatively give an estimate of the community-like structure of the network. The central idea of permanence is
+based on the observation that the strength of membership of  a vertex to a community depends upon the  following two factors: (i) the
+distribution of external connectivity of the vertex to individual communities and {\em not} the total external connectivity, and (ii) the 
+strength of its internal connectivity and {\em not} just the total internal edges.   
+
+The contributions of this chapter are as follows:
+
+\begin{itemize}
+ \item We define permanence for both disjoint and overlapping community structures. In contrast to the earlier literature where it is
+assumed that the constituent nodes in a community have the same level of belongingness, permanence unfolds the heterogeneity in the
+community membership of vertices.
+
+\item  We show that permanence as compared to other standard measures, namely modularity, conductance and cut-ratio provides a more
+accurate estimate of a derived community structure to the ground-truth community.
+
+\item Permanence qualifies to be appropriately sensitive to perturbations in the network.
+
+\item We demonstrate that the process of maximizing permanence produces meaningful  communities that concur with the ground-truth structure
+of the networks more accurately than the modularity based and other approaches.
+
+\item We also provide theoretical results to show that maximizing permanence can effectively reduce the limitations associated with
+modularity maximization as well as can indirectly help in inferring the community quality of a network.
+\end{itemize}
+
+In this chapter, we discuss the permanence measure for both disjoint and overlapping communities separately.
+
+
+\input{texfiles/Chapter_3/perm/intro.tex}
+
+\input{texfiles/Chapter_3/perm/dataset.tex}
+
+\input{texfiles/Chapter_3/perm/goodness_measure.tex}
+
+\input{texfiles/Chapter_3/perm/perturbation.tex}
+
+\input{texfiles/Chapter_3/perm/method.tex}
+
+
+
+\input{texfiles/Chapter_3/perm/perm_property.tex}
+
+
+\input{texfiles/Chapter_3/operm/4.metric.tex}
+
+
+\input{texfiles/Chapter_3/operm/3.dataset.tex}
+
+\input{texfiles/Chapter_3/operm/14.core-periphery.tex}
+
+\input{texfiles/Chapter_3/operm/13.perm_value.tex}
+
+\input{texfiles/Chapter_3/operm/7.goodness.tex}
+
+\input{texfiles/Chapter_3/operm/8.algorithm.tex}
+
+\input{texfiles/Chapter_3/operm/9.results.tex}
+
+\input{texfiles/Chapter_3/operm/5.sensitivity.tex}
+
+%\input{texfiles/Chapter_3/operm/11.discussion.tex}
+
+\input{texfiles/Chapter_3/operm/summary.tex}
+

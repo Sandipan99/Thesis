@@ -1,0 +1,54 @@
+\noindent
+
+Efficient data dissemination in dynamic and distributed networks like delay-tolerant, peer-to-peer, ad-hoc networks is useful for many applications and the 
+existing studies have shown combining the push and the pull epidemic protocols can be 
+an efficient approach because of their inherent robustness. 
+In an interesting study in~\cite{broadcastCoverage_push_pull}, it has been
+shown that the cost (in terms of time and resource utilization) to reach the
+last 10\% of the agents is much higher compared to the cost of reaching the
+first 90\% of the agents during broadcasting in DTNs. To solve this problem,
+the authors in this study propose a controlled broadcasting technique where
+the broadcast start using push technique, and towards the end of broadcast
+the agents switch to adopt the pull technique (instead of push). 
+The study in~\cite{push_pull_contentDistribution} has proposed a cooperative file sharing
+mechanism in a practical DTN framework, where only a few agents have
+Internet connectivity. 
+The authors show that, to efficiently spread a file in
+the network, the agents that are actually downloading the files from
+Internet or cellular networks can use the pull technique, and then they
+later on can push the received message to other agents. 
+The study in~\cite{DTN_framework_pushPull} has proposed a framework for DTNs, where
+the agents in the network form communities located in different geographical
+regions, and the agents in different communities use different network
+technology such as Bluetooth, WiMAX, etc. Agents located within the same
+region may use the pull technique for information sharing, whereas to spread
+it across the different regions they can use the push technique.
+
+In addition, there have also been few works on fragmentation of larger sized messages to make them 
+suitable for transmission in DTNs and Peer-to-peer networks. In  
+~\cite{mikko} the authors introduce various strategies of message fragmentation independent of routing algorithm and evaluate their impact in DTNs. 
+Some of the more recent works include ~\cite{altamimi2014message,ginzboorg2014message}. 
+%But they mostly deal with on-time delivery of message rather than efficient message dissemination to the whole network.
+In peer-to-peer systems there are also numerous instances where the authors 
+have tried to efficiently combine the push and the pull epidemic protocols. In ~\cite{sanghavi2007gossiping} the authors propose a combined strategy 
+by interleaving between push and pull and show that $k$ pieces can be disseminated from a single source to $n$ users in $9(k+\log n)$ time. 
+\if{0}
+In this strategy the interleaving between push and pull is achieved by the users trying to push during odd time slot and pull during the 
+even time slots with some added constraints. The strategy does not take into consideration the number of useless contacts while data dissemination.
+\fi
+~\cite{felber2012pulp} introduces a system called Pulp which proposes a data dissemination approach 
+by limiting push and also reducing the redundant pulls. 
+Some other data dissemination strategies combining push and pull have been proposed in 
+~\cite{lo2008some,ozkasap2009principles}. 
+Since peer-to-peer systems deal with dissemination of large files fragmenting them before spreading is an obvious choice as is considered in all the 
+above works.
+%\vspace{-1.5mm}
+
+In this paper, we study for the first time, the systematic
+coupling of two different issues that have been dealt in the literature
+only independently and in parts. These two issues concern
+(a) the effect of message segmentation and (b) the technique adopted for transferring
+the message, especially the give-up technique allowing for a
+deterministic termination in a completely distributed fashion on broadcast time and wastage.
+
+\medskip

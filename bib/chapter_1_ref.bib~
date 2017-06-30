@@ -1,0 +1,1475 @@
+@article{dynamic,
+  author    = {Bivas Mitra and
+               Lionel Tabourier and
+               Camille Roth},
+  title     = {Intrinsically dynamic network communities},
+  journal   = {Computer Networks},
+  volume    = {56},
+  number    = {3},
+  year      = {2012},
+  pages     = {1041-1053},
+  
+}
+
+@Article{Repe,
+  author={Reindert K Buter and Ed C M Noyons and Anthony F J van Raan},
+  title={Identification of converging research areas using publication and citation data},
+  journal={Research Evaluation},
+  year=2010,
+  volume={19},
+  number={1},
+  pages={19-27},
+  month={March},
+  }
+
+@Article{Shibata,
+	author = "Naoki Shibata and Yuya Kajikawa and Yoshiyuki Takeda and Katsumori Matsushima",
+	journal = "TECHNOVATION",
+	number = "11",
+	title = "{Detecting emerging research fronts based on topological measures in citation networks of scientific publications}",
+	volume = "28",
+	year = "2008"
+}
+
+
+@Article{pear,
+	author = "Leo Egghe and Loet Leydesdorff",
+	journal = "Journal of the American Society for Information Science and Technology",
+	number = "5",
+	pages = "1027--1036",
+	title = "{The relation between Pearson's correlation coefficient r and Salton's cosine measure}",
+	volume = "{60}",
+	year = "{2009}"
+}
+
+@inproceedings{lesco,
+  author    = { Yang, Jaewon and Leskovec, Jure },
+  title     = {Overlapping community detection at scale: a nonnegative
+               matrix factorization approach},
+  booktitle = {WSDM},
+  year      = {2013},
+  pages     = {587-596}
+}
+
+@inproceedings{Greene,
+ author = {Greene, Derek and Doyle, Donal and Cunningham, Padraig},
+ title = {Tracking the Evolution of Communities in Dynamic Social Networks},
+ booktitle = {Proceedings of ASONAM '10},
+ year = {2010},
+ pages = {176--183},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+} 
+
+
+
+
+@inproceedings{Pham,
+ author = {Pham, Manh Cuong and Klamma, Ralf},
+ title = {The Structure of the Computer Science Knowledge Network},
+ booktitle = {Proceedings of ASONAM '10},
+ year = {2010},
+ pages = {17--24},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ } 
+
+@inproceedings{Spilio,
+ author = {Spiliopoulou, Myra and Ntoutsi, Irene and Theodoridis, Yannis and Schult, Rene},
+ title = {MONIC: modeling and monitoring cluster transitions},
+ booktitle = {Proceedings of the 12th ACM SIGKDD},
+ year = {2006},
+ pages = {706--711},
+ address = {New York, USA},
+ } 
+
+@inproceedings{Yang:2012,
+ author = {Yang, Jaewon and Leskovec, Jure},
+ title = {Defining and evaluating network communities based on ground-truth},
+ booktitle = {Proceedings of the ACM SIGKDD Workshop on Mining Data Semantics},
+ series = {MDS '12},
+ year = {2012},
+ pages = {3:1--3:8},
+ address = {New York, USA},
+ } 
+
+
+@article{Lancichinett,
+title={Benchmarks for testing community detection algorithms on directed and weighted graphs with overlapping communities}, 
+volume={80}, 
+number={1}, 
+journal={Physical Review E}, 
+publisher={APS}, 
+author={Lancichinetti, Andrea and Fortunato, Santo}, 
+year={2009}, 
+pages={9}
+}
+
+@article{DBLP,
+  author    = {Jierui Xie and
+               Stephen Kelley and
+               Boleslaw K. Szymanski},
+  title     = {Overlapping Community Detection in Networks: the State of
+               the Art and Comparative Study},
+  journal   = {CoRR},
+  volume    = {abs/1110.5813},
+  year      = {2011},
+  ee        = {http://arxiv.org/abs/1110.5813},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{Clauset2005,
+     author = {Clauset, Aaron},
+    journal = {Phys. Rev. E},
+    month = aug,
+    number = {2},
+    pages = {026132},
+    publisher = {American Physical Society},
+    title = {{Finding local community structure in networks}},
+    volume = {72},
+    year = {2005}
+}
+
+
+
+@article{Karrer07,
+    author = {Karrer, Brian and Levina, Elizaveta and Newman, M. E. J.},
+    journal = {Phys. Rev. E},
+    month = sep,
+    number = {4},
+    pages = {046119},
+    publisher = {American Physical Society},
+    title = {{Robustness of community structure in networks}},
+    volume = {77},
+    year = {2007}
+}
+
+
+@article{Girvan02,
+    address = {Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA. girvan@santafe.edu},
+    author = {Girvan, M. and Newman, M. E. J.},
+    journal = {PNAS},
+    month = jun,
+    number = {12},
+    pages = {7821--7826},
+    publisher = {National Academy of Sciences},
+    title = {{Community structure in social and biological networks}},
+    volume = {99},
+    year = {2002}
+}
+
+@article{radicchi,
+  author = {Radicchi, F. and Castellano, C. and Cecconi, F. and Loreto, V. and Parisi, D.},
+  journal = {PNAS},
+  number = 9,
+  pages = 2658,
+  publisher = {National Acad Sciences},
+  title = {{Defining and identifying communities in networks}},
+  volume = 101,
+  year = 2004
+}
+
+@article{font,
+     author = {Shibata, Naoki and Kajikawa, Yuya and Takeda, Yoshiyuki and Matsushima, Katsumori},
+    journal = {TECHNOVATION},
+    number = {11},
+    title = {{Detecting emerging research fronts based on topological measures in citation networks of scientific publications}},
+    volume = {28},
+    year = {2008}
+}
+
+@inproceedings{Flake:2000,
+ author = {Flake, Gary William and Lawrence, Steve and Giles, C. Lee},
+ title = {Efficient identification of Web communities},
+ booktitle = {Proceedings of the sixth ACM SIGKDD},
+ year = {2000},
+ pages = {150--160},
+ address = {New York, USA},
+} 
+
+
+@article{time,
+    author = {Kawadia, Vikas and Sreenivasan, Sameet},
+    journal = {Scientific Reports},
+    month = nov,
+    title = {{Sequential detection of temporal communities by estrangement confinement}},
+    volume = {2},
+    year = {2012}
+}
+
+@article{price,
+  author = {de Solla Price, Derek J.},
+  journal = {Science},
+  number = 3683,
+  pages = {510--515},
+  title = {Networks of Scientific Papers},
+  volume = 149,
+  year = 1965
+}
+
+@inproceedings{Kawamae,
+ author = {Kawamae, Noriaki and Higashinaka, Ryuichiro},
+ title = {Trend detection model},
+ booktitle = {Proceedings of WWW '10},
+ year = {2010},
+ pages = {1129--1130},
+ publisher = {ACM},
+ address = {New York, USA},
+ }
+@Article{lei,
+	author = "E. A. Leicht and G. Clarkson and K. Shedden and Newman",
+	journal = "The European Physical Journal B",
+	number = "1",
+	pages = "75--83",
+	title = "{Large-scale structure of time evolving citation networks}",
+	volume = "59",
+	year = "2007"
+}
+
+@article{kevin,
+  author    = {Kevin W. Boyack and
+               Richard Klavans and
+               Katy B{\"o}rner},
+  title     = {Mapping the backbone of science},
+  journal   = {Scientometrics},
+  volume    = {64},
+  number    = {3},
+  year      = {2005},
+  pages     = {351-374},
+ }
+
+@inproceedings{Lee,
+  author    = {Kathy Lee and
+               Diana Palsetia and
+               Ramanathan Narayanan and
+               Md. Mostofa Ali Patwary and
+               Ankit Agrawal and
+               Alok N. Choudhary},
+  title     = {Twitter Trending Topic Classification},
+  booktitle = {ICDM Workshops},
+  year      = {2011},
+  pages     = {251-258},
+ }
+
+@article{mazul,
+	author = "Amin Mazloumian and Young-Ho Eom and Dirk Helbing and Sergi Lozano and Santo Fortunato",
+	journal = "PLoS ONE",
+	month = may,
+	number = "5",
+	pages = "e18975+",
+	title = "{How Citation Boosts Promote Scientific Paradigm Shifts and Nobel Prizes}",
+	volume = "6",
+	year = "2011"
+}
+
+@Article{ render,
+	author = "Sidney Redner",
+	journal = "Physics Today",
+	number = "6",
+	pages = "49--54",
+	publisher = "AIP",
+	title = "{Citation Statistics from 110 Years of Physical Review}",
+	volume = "58",
+	year = "2005"
+}
+
+
+@article{kleinberg,
+author={J. Kleinberg},
+year={1999},
+title={Authoritative sources in a hyperlinked environment},
+journal={J. of the ACM},
+volume={46},
+number={5},
+pages={604--632}
+
+}
+
+@Book{Kont,
+ added-at = {2008-12-16T15:29:09.000+0100},
+  author = {Kontostathis, April and Galitsky, Leon and Pottenger, William M. and Roy, Soma and Phelps, Daniel J.},
+  biburl = {http://www.bibsonomy.org/bibtex/2311b2be62e83691cd5d82abfc2f454fa/beate},
+  booktitle = {A Comprehensive Survey of Text Mining - Clustering, Classification and Retrieval},
+  editor = {Berry, Michael W.},
+  interhash = {fc05ef98c8872ca51d8b3e4d5d849ba2},
+  intrahash = {311b2be62e83691cd5d82abfc2f454fa},
+  keywords = {data-mining survey trends},
+  publisher = {Springer},
+  timestamp = {2008-12-16T15:29:09.000+0100},
+  title = {A Survey of Emerging Trend Detection in Textual Data Mining},
+  url = {citeseer.ist.psu.edu/article/kontostathis03survey.html},
+  year = 2004
+}
+
+@Book{urq,
+	author ={Urquhart, S. and Larsen, D.},
+	booktitle = {Monitoring For Policy-Relevant Regional Trends Over Time},	
+	publisher = {Ecological Society of America},
+	year = {1998}
+}
+
+@article{Mahdavi,
+    author = {Fereshteh Mahdavi and Maizatul Akmar Ismail and Noorhidawati Abdullah},
+    title = {Semi-Automatic Trend Detection in Scholarly Repository Using Semantic Approach},
+	journal = {World Academy of Science, Engineering and Technology},
+	pages = {224--226},
+	volume = {60},
+	year = {2009}
+}
+
+
+@article{hop11,
+journal={Int. J. of Soft. Info.},
+volume=5,
+number=4,
+year={2011}, 
+pages={549--565},
+title={The Future of Computer Science},
+author={John E. Hopcroft and Sucheta Soundarajan and Liaoruo Wang}
+}
+
+@TechReport{ketzler:12,
+  author={R. Ketzler and K. L. Zimmermann},
+  title={A Citation-Analysis of Economic Research Institutes},
+  year=2012,
+  type={IZA Discussion Papers},
+  number={6780},
+  }
+
+@article{Franc:10,
+title={A comparison of bibliometric indicators for computer science scholars and journals on {Web of Science} and {Google Scholar}},
+author={Massimo Franceschet},
+journal={Scientometrics},
+volume=83,
+number=1,
+pages={243--258},
+year={2010}
+}
+
+@article{Feit:04,
+title={Predictive ranking of computer scientists using {CiteSeer} data},
+author={Dror G. Feitelson and Uri Yovel},
+journal={J. of Documentation},
+volume=60,
+number=1,
+year={2004},
+pages={44--61}
+}
+
+
+
+
+@Book{Kuhn,
+	author = "Thomas S. Kuhn",
+	booktitle = "The Structure of Scientific Revolutions",
+	publisher = "University of Chicago Press",
+	title = "The structure of scientific revolutions",
+	year = "1970"
+}
+
+
+
+@Book{ pulkkinen,
+	title = "The Paradigms of E-Education: An Analysis of the Communication Structures in the Research on Information and Communication Technology Integration in 		Education in the Years 2000-2001",
+	author = "J. Pulkkinen",
+	series = "Acta Universitatis Ouluensis: Scientiae rerum socialium",
+	year = "2003",
+	publisher = "Oulun yliopisto"
+}
+
+@Article{ Bornholdt,
+	author = "S. Bornholdt and M. H. Jensen and K. Sneppen",
+	journal = "Phys. Rev. Lett.",
+	number = "5",
+	pages = "058701",
+	title = "{Emergence and Decline of Scientific Paradigms}",
+	volume = "106",
+	year = "2011"
+}
+
+@Article{ Clifford1973,
+	author = "Peter Clifford and Aidan Sudbury",
+	journal = "Biometrika",
+	pages = "581--588",
+	title = "A model for spatial conflict",
+	volume = 60,
+	year = 1973
+}
+
+@Book{ liggett,
+	title = "Stochastic Interacting Systems: Contact, Voter, and Exclusion Processes",
+	author = "T.M. Liggett",
+	series = "Grundlehren Der Mathematischen Wissenschaften",
+	year = "1999",
+	publisher = "Springer"
+}
+
+@Book{box19,
+   author = {Box, George Edward Pelham and Jenkins, Gwilym},
+ title = {Time Series Analysis, Forecasting and Control},
+ year = {1990},
+ isbn = {0816211043},
+ publisher = {Holden-Day, Incorporated},
+} 
+
+
+
+
+@Article{ castellano,
+	author = "Claudio Castellano and Santo Fortunato and Vittorio Loreto",
+	title = "Statistical physics of social dynamics",
+	journal = "Rev. of Mod. Phys.",
+	year = "2009",
+	month = "Apr-Jun",
+	volume = "81",
+	number = "2",
+	pages = "591--646",
+}
+
+@Article{ rosvall09,
+	author = "M. Rosvall and K. Sneppen",
+	journal = "Phys. Rev. E",
+	title = "{Reinforced communication and social navigation generate groups in model networks}",
+	volume = "79",
+        pages="026111",
+	year = "2009"
+}
+
+@inproceedings{master,
+ author = {Mathioudakis, Michael and Koudas, Nick},
+ title = {TwitterMonitor: trend detection over the twitter stream},
+ booktitle = {Proceedings of the 2010 ACM SIGMOD},
+ year = {2010},
+ pages = {1155--1158},
+ publisher = {ACM},
+ address = {New York, USA}
+} 
+
+
+@inproceedings{vakk,
+ author = {Vakali, Athena and Giatsoglou, Maria and Antaris, Stefanos},
+ title = {Social networking trends and dynamics detection via a cloud-based framework design},
+ booktitle = {Proceedings of WWW '12},
+ year = {2012},
+ pages = {1213--1220},publisher = {ACM},
+ address = {New York, USA},
+} 
+
+@InProceedings{Shaparenko,
+author={B. Shaparenko and R. Caruana and J. Gehrke and T. Joachims}, 
+title={Identifying temporal patterns and {key} players in document collections},
+booktitle={ICDM},
+year=2005,
+pages={165--174}
+}
+
+@InProceedings{ Zhao,
+	author = "Qiankun Zhao and Sourav S. Bhowmick and Xin Zheng and Kai Yi",
+	title = "Characterizing and predicting community members from evolutionary and heterogeneous networks",
+	booktitle = "CIKM",
+	year = "2008",
+	pages = "309--318"
+}
+
+@Book{ Garfield,
+	author = "E. Garfield and Irving H. Sher and R. J. Torpie",
+	publisher = "Institute for Scientific Information Inc.",
+	title = "{The Use of Citation Data in Writing the History of Science}",
+	year = "1984"
+}
+
+@Article{ Hirsch,
+	author = "J. E. Hirsch",
+	title = "An index to quantify an individual's scientific research output that takes into account the effect of multiple coauthorship",
+	journal = "Scientometrics",
+	volume = "85",
+	number = "3",
+	year = "2010",
+	pages = "741--754",
+}
+
+@Article{ Guimera,
+	author = "Roger Guimer{\`a} and Brian Uzzi and Jarrett Spiro and Lu{\'i}s A. {Nunes Amaral}",
+	journal = "Science",
+	number = "5722",
+	pages = "697--702",
+	title = "{Team Assembly Mechanisms Determine Collaboration Network Structure and Team Performance}",
+	volume = "308",
+	year = "2005"
+}
+
+@InProceedings{ Shi,
+	author = "Xiaolin Shi and Belle L. Tseng and Lada A. Adamic",
+	title = "Information Diffusion in Computer Science Citation Networks",
+	booktitle = "ICWSM",
+	year = "2009",
+        pages="319-322"
+}
+
+@Article{ Leicht,
+	author = "E. A. Leicht and G. Clarkson and K. Shedden and Newman",
+	journal = "Euro. Phys. B",
+	number = "1",
+	pages = "75--83",
+	title = "{Large-scale structure of time evolving citation networks}",
+	volume = "59",
+	year = "2007"
+}
+
+@InProceedings{ Tang,
+	author = "Jie Tang and Jing Zhang and Limin Yao and Juanzi Li and Li Zhang and Zhong Su",
+	title = "ArnetMiner: extraction and mining of academic social networks",
+	booktitle = "ACM SIGKDD",
+	year = "2008",
+	pages = "990--998",
+}
+
+@article{guns09,
+    author = {Guns, Raf and Rousseau, Ronald},
+     journal = {J. of Informetrics},
+    number = {1},
+    pages = {64--71},
+    title = {{Real and rational variants of the h-index and the g-index}},
+    volume = {3},
+    year = {2009}
+}
+
+
+@article{jin07r,
+    author = {Jin, Bihui and Liang, Liming and Rousseau, Ronald and Egghe, Leo},
+    journal = {Chin. Sci. Bull.},
+    month = mar,
+    number = {6},
+    pages = {855--863},
+    title = {The {R}- and {AR}-indices: Complementing the h-index},
+    volume = {52},
+    year = {2007}
+}
+
+
+
+@article{Gui,
+    author = {Guimera, Roger and Uzzi, Brian and Spiro, Jarrett and Amaral, Lus A. Nunes},
+  journal = {Science},
+  month = {April},
+  number = {5722},
+  pages = {697-702},
+  title = {Team Assembly Mechanisms Determine Collaboration Network Structure and Team Performance},
+  volume = {308},
+  year = {2005}
+}
+
+@book{fitzgeral,
+  title={The Crack-Up},
+  author={Fitzgerald, F.S. and Wilson, E.},
+  year={2009},
+  publisher={New Directions Publishing Corporation}
+}
+
+@book{hall,
+  title={Market Value and Patent Citations: A First Look},
+  author={Hall, B.H. and Jaffe, A.B. and Trajtenberg, M. and National Bureau of Economic Research},
+  number={7741},
+  series={Working paper series (National Bureau of Economic Research)},
+  year={2000},
+  publisher={National Bureau of Economic Research}
+}
+
+@article{ali,
+   author = {Ali, S. Nazim and Young, Harold C. and Ali, Nasser M.},
+ journal = {Library Review },
+  number = 1,
+  pages = {39 - 53 },
+  title = {Determining the quality of publications and research for tenure or promotion decisions: A preliminary checklist to assist },
+  volume = 45,
+  year = 1996
+}
+
+@InCollection{dhanj,
+	author = "Charanpal Dhanjal and Sandrine Blanchemanche and St{\'e}phan Cl{\'e}men\c{c}on and Akos Rona-Tas and Fabrice Rossi",
+	booktitle = "Networks in Social Policy Problems",
+	month = 10,
+	editor = "Bal{\'a}zs Vedres and Marco Scotti",
+	pages = {15--46},
+	publisher = "Cambridge University Press",
+	title = "Dissemination of Health Information within Social Networks",
+	year = 2012
+}
+
+
+@inproceedings{conf,
+  added-at = {2011-08-23T00:00:00.000+0200},
+  author = {El-Arini, Khalid and Guestrin, Carlos},
+  biburl = {http://www.bibsonomy.org/bibtex/243e28f8e65616b6b2cfb3d80952115eb/dblp},
+  booktitle = {KDD},
+  pages = {439--447},
+  publisher = {ACM},
+  title = {Beyond keyword search: discovering relevant scientific literature.},
+  year = 2011
+}
+
+@article{sitabro,
+  author = {Pan, Raj Kumar and Sinha, Sitabhra and Kaski, Kimmo and Saram{\"a}ki, Jari},
+  title = {The evolution of interdisciplinarity in physics research},
+  journal={Nature Scientific Reports},
+  number={551},
+  volume = {2},
+  year = {2012}
+}
+
+
+@inproceedings{Blei,
+ author = {Blei, David M. and Lafferty, John D.},
+ title = {Dynamic topic models},
+ booktitle = {Proceedings of the 23rd international conference on Machine learning},
+ series = {ICML '06},
+ year = {2006},
+ pages = {113--120},
+ publisher = {ACM},
+ address = {New York, USA}
+} 
+
+@misc{dmi,
+   author = {van den Besselaar, Peter and Heimeriks, Gaston},
+  howpublished = {The 8th conference on Scientometrics and Informetrics – ISSI2001, Sydney. Australia, July 16-20},
+  title = {Disciplinary, Multidisciplinary, Interdisciplinary  - Concepts and Indicators},
+  year = {2001}
+}
+
+
+
+
+
+@Article{Carmi07,
+	author = "Shai Carmi and Shlomo Havlin and Scott Kirkpatrick and Yuval Shavitt and Eran Shir",
+	journal = "PNAS",
+	month = jul,
+	number = "27",
+	pages = "11150--11154",
+	title = "{A model of Internet topology using k-shell decomposition}",
+	volume = "104",
+	year = "2007"
+}
+
+@article{Chen,
+  author    = {P. Chen and
+               Sidney Redner},
+  title     = {Community structure of the physical review citation network},
+  journal   = {J. Informetrics},
+  volume    = {4},
+  number    = {3},
+  year      = {2010},
+  pages     = {278-290}
+}
+
+
+
+@article{Tibor,
+  author    = {Tibor Braun and
+               Andr{\'a}s Schubert},
+  title     = {A quantitative view on the coming of age of interdisciplinarity
+               in the sciences 1980-1999},
+  journal   = {Scientometrics},
+  volume    = {58},
+  number    = {1},
+  year      = {2003},
+  pages     = {183-189},
+ }
+
+
+
+
+
+@Article{price65,
+	author = "D J de Solla Price",
+	journal = "Science",
+	month = jul,
+	number = "3683",
+	pages = "510--515",
+	title = "{Networks of Scientific Papers}",
+	volume = "149",
+	year = "1965"
+}
+
+@article{newman2,
+  author = {Newman, M.E.J.},
+  journal = {Phys. Rev. E},
+  number = 2,
+  pages = 025102,
+  publisher = {APS},
+  title = {Clustering and preferential attachment in growing networks},
+  volume = 64,
+  year = 2001
+}
+
+
+@article{Leydesdorff,
+ author = {Leydesdorff, Loet},
+ title = {Betweenness centrality as an indicator of the interdisciplinarity of scientific journals},
+ journal = {J. Am. Soc. Inf. Sci. Technol.},
+ volume = {58},
+ number = {9},
+ month = jul,
+ year = {2007},
+ pages = {1303--1319},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+} 
+
+@article{ismael,
+  author    = {Ismael Rafols and
+               Martin Meyer},
+  title     = {Diversity and network coherence as indicators of interdisciplinarity:
+               case studies in bionanoscience},
+  journal   = {Scientometrics},
+  volume    = {82},
+  number    = {2},
+  year      = {2010},
+  pages     = {263-287},
+ }
+
+
+@article{caro,
+  author    = {Caroline S. Wagner and
+               J. David Roessner and
+               Kamau Bobb and
+               Julie Thompson Klein and
+               Kevin W. Boyack and
+               Joann Keyton and
+               Ismael Rafols and
+               Katy B{\"o}rner},
+  title     = {Approaches to understanding and measuring interdisciplinary
+               scientific research (IDR): A review of the literature},
+  journal   = {J. Informetrics},
+  volume    = {5},
+  number    = {1},
+  year      = {2011},
+  pages     = {14-26},
+  }
+
+@article{hiroki,
+  author    = {Hiroki Sayama and
+               Jin Akaishi},
+  title     = {Characterizing Interdisciplinarity of Researchers and Research
+               Topics Using Web Search Engines},
+  journal   = {CoRR},
+  volume    = {abs/1201.3592},
+  year      = {2012},
+  ee        = {http://arxiv.org/abs/1201.3592},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{newman,
+  address = {Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA. mark@santafe.edu},
+  author = {Newman, M. E. J.},
+  journal = {PNAS},
+  month = {January},
+  number = 2,
+  pages = {404--409},
+  title = {The structure of scientific collaboration networks},
+  volume = 98,
+  year = 2001
+}
+
+
+
+
+@Book{Kuhn,
+	author = "Thomas S. Kuhn",
+	booktitle = "The Structure of Scientific Revolutions",
+	publisher = "University of Chicago Press",
+	title = "The structure of scientific revolutions",
+	year = "1970"
+}
+
+
+
+@article{sitabra,
+  author    = {Raj Kumar Pan and
+               Sitabhra Sinha and
+               Kimmo Kaski and
+               Jari Saram{\"a}ki},
+  title     = {The evolution of interdisciplinarity in physics research},
+  journal   = {Nature Scientific Reports 2},
+  year      = {2012}
+}
+
+@article{uri,
+author = {Uri Shwed and Peter S Bearman},
+TITLE = {The Temporal Structure of Scientific Consensus Formation.},
+JOURNAL = {American sociological review},
+VOLUME = {75},
+YEAR = {2010},
+NUMBER = {6},
+PAGES = {817-840}
+}
+
+
+@Article{ Morillo,
+	author = "Fernanda Morillo and Mar{\'i}a Bordons and Isabel G{\'o}mez",
+	journal = "Scientometrics",
+	month = apr,
+	number = "1",
+	pages = "203--222",
+	title = "{An approach to interdisciplinarity through bibliometric indicators}",
+	volume = "51",
+	year = "2001"
+}
+
+@article{Leydesdorff,
+ author = {Leydesdorff, Loet and Rafols, Ismael},
+ title = {A global map of science based on the ISI subject categories},
+ journal = {J. Am. Soc. Inf. Sci. Technol.},
+ volume = {60},
+ number = {2},
+ month = feb,
+ year = {2009},
+ pages = {348--362},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+ } 
+
+
+
+@article{infomap,
+  author    = {Martin Rosvall and
+               Carl T. Bergstrom},
+  title     = {Multilevel compression of random walks on networks reveals
+               hierarchical organization in large integrated systems},
+  journal   = {CoRR},
+  volume    = {abs/1010.0431},
+  year      = {2010},
+  }
+
+
+@article{vos,
+  author = {van Eck, Nees Jan and Waltman, Ludo},
+  journal = {CoRR},
+  title = {Text mining and visualization using VOSviewer},
+  volume = {abs/1109.2058},
+  year = 2011
+}
+
+
+
+
+
+
+@article{Booth,
+ author = {Booth, Kellogg S. and Lueker, George S.},
+ title = {Testing for the Consecutive Ones Property, Interval Graphs, and Graph Planarity Using PQ-tree Algorithms},
+ journal = {Journal of Computer and System Sciences},
+ volume = {13},
+ number = {3},
+ month = dec,
+ year = {1976},
+ pages = {335--379},
+ publisher = {Academic Press, Inc.},
+ address = {Orlando, FL, USA},
+} 
+
+
+
+
+
+@inproceedings{Jierui,
+  author    = {Jierui Xie and
+               Boleslaw K. Szymanski and
+               Xiaoming Liu},
+  title     = {{SLPA: Uncovering Overlapping Communities in Social Networks via a Speaker-Listener Interaction Dynamic Process}},
+  booktitle = {ICDM Workshops},
+  year      = {2011},
+  pages     = {344-349}
+}
+
+@article{Tibor,
+  author    = {Tibor Braun and
+               Andr{\'a}s Schubert},
+  title     = {A quantitative view on the coming of age of interdisciplinarity
+               in the sciences 1980-1999},
+  journal   = {Scientometrics},
+  volume    = {58},
+  number    = {1},
+  year      = {2003},
+  pages     = {183-189},
+ }
+
+@book{klein,
+  title={Interdisciplinarity: History, Theory, and Practice},
+  author={Klein, J.T.},
+  year={1990},
+  publisher={Wayne State University Press}
+}
+
+@article{Metzger,
+    author = {Metzger, Norman and Zare, Richard N.},
+    journal = {Science},
+    month = jan,
+    number = {5402},
+    pages = {642--643},
+    title = {{SCIENCE POLICY:Interdisciplinary Research: From Belief to Reality}},
+    volume = {283},
+    year = {1999}
+}
+
+@Article{price65,
+	author = "D J de Solla Price",
+	journal = "Science",
+	month = jul,
+	number = "3683",
+	pages = "510--515",
+	title = "{Networks of Scientific Papers}",
+	volume = "149",
+	year = "1965"
+}
+
+@article{newman2,
+  author = {Newman, M.E.J.},
+  journal = {Phys. Rev. E},
+  number = 2,
+  pages = 025102,
+  publisher = {APS},
+  title = {Clustering and preferential attachment in growing networks},
+  volume = 64,
+  year = 2001
+}
+
+@article{alan,
+  author    = {Alan L. Porter and
+               Alex S. Cohen and
+               J. David Roessner and
+               Marty Perreault},
+  title     = {Measuring researcher interdisciplinarity},
+  journal   = {Scientometrics},
+  volume    = {72},
+  number    = {1},
+  year      = {2007},
+  pages     = {117-147},
+ }
+
+@article{Leydesdorff,
+ author = {Leydesdorff, Loet},
+ title = {Betweenness centrality as an indicator of the interdisciplinarity of scientific journals},
+ journal = {J. Am. Soc. Inf. Sci. Technol.},
+ volume = {58},
+ number = {9},
+ month = jul,
+ year = {2007},
+ pages = {1303--1319},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+} 
+
+@article{ismael,
+  author    = {Ismael Rafols and
+               Martin Meyer},
+  title     = {Diversity and network coherence as indicators of interdisciplinarity:
+               case studies in bionanoscience},
+  journal   = {Scientometrics},
+  volume    = {82},
+  number    = {2},
+  year      = {2010},
+  pages     = {263-287},
+ }
+
+
+
+
+@article{hiroki,
+  author    = {Hiroki Sayama and
+               Jin Akaishi},
+  title     = {Characterizing Interdisciplinarity of Researchers and Research
+               Topics Using Web Search Engines},
+  journal   = {CoRR},
+  volume    = {abs/1201.3592},
+  year      = {2012},
+  ee        = {http://arxiv.org/abs/1201.3592},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{newman,
+  address = {Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA. mark@santafe.edu},
+  author = {Newman, M. E. J.},
+  journal = {PNAS},
+  month = {January},
+  number = 2,
+  pages = {404--409},
+  title = {The structure of scientific collaboration networks},
+  volume = 98,
+  year = 2001
+}
+
+
+
+@Book{Kuhn,
+	author = "Thomas S. Kuhn",
+	booktitle = "The Structure of Scientific Revolutions",
+	publisher = "University of Chicago Press",
+	title = "The structure of scientific revolutions",
+	year = "1970"
+}
+
+
+
+@article{sitabra,
+  author    = {Raj Kumar Pan and
+               Sitabhra Sinha and
+               Kimmo Kaski and
+               Jari Saram{\"a}ki},
+  title     = {The evolution of interdisciplinarity in physics research},
+  journal   = {Nature Scientific Reports 2},
+  year      = {2012}
+}
+
+@article{uri,
+author = {Uri Shwed and Peter S Bearman},
+TITLE = {The Temporal Structure of Scientific Consensus Formation.},
+JOURNAL = {American sociological review},
+VOLUME = {75},
+YEAR = {2010},
+NUMBER = {6},
+PAGES = {817-840}
+}
+
+
+
+
+@article{Leydesdorff,
+ author = {Leydesdorff, Loet and Rafols, Ismael},
+ title = {A global map of science based on the ISI subject categories},
+ journal = {J. Am. Soc. Inf. Sci. Technol.},
+ volume = {60},
+ number = {2},
+ month = feb,
+ year = {2009},
+ pages = {348--362},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+ } 
+
+@book{research2005,
+  title={Facilitating Interdisciplinary Research},
+  author={Research, C.F.I. and Sciences, N.A. and Engineering, N.A. and Medicine, I.},
+  year={2005},
+  publisher={National Academies Press}
+}
+
+@article{infomap,
+  author    = {Martin Rosvall and
+               Carl T. Bergstrom},
+  title     = {Multilevel compression of random walks on networks reveals
+               hierarchical organization in large integrated systems},
+  journal   = {CoRR},
+  volume    = {abs/1010.0431},
+  year      = {2010},
+  }
+
+
+@article{vos,
+  author = {van Eck, Nees Jan and Waltman, Ludo},
+  journal = {CoRR},
+  title = {Text mining and visualization using VOSviewer},
+  volume = {abs/1109.2058},
+  year = 2011
+}
+
+@article{lude,
+  author    = {Ludo Waltman and
+               Nees Jan van Eck and
+               Ed C. M. Noyons},
+  title     = {A unified approach to mapping and clustering of bibliometric
+               networks},
+  journal   = {J. Informetrics},
+  volume    = {4},
+  number    = {4},
+  year      = {2010},
+  pages     = {629-635},
+  }
+
+
+
+
+@article{Brett,
+     author = {Brett, J.M.},
+    journal = {Research in personnel and human resources management},
+    number = {2},
+    publisher = {In K.M. Rowland & G.R. Ferris (Eds.), CT: JAI Pres},
+    title = {{Job transitions and personal and role development}},
+    volume = {2},
+    year = {1984},
+    pages ={155-185}
+}
+
+@article{ne,
+     author = {Nicholson, Nigel},
+    journal = {Administrative Science Quarterly},
+    number = {2},
+    publisher = {Johnson Graduate School of Management, Cornell University},
+    title = {{A Theory of Work Role Transitions}},
+    volume = {29},
+    year = {1984},
+    pages ={172-191}
+}
+
+@article{Brett1,
+     author = {Brett, J.M.},
+    journal = {Journal of Applied Psychology},
+    title = {{Job transfer and well-being}},
+    volume = {67},
+    year = {1982},
+    pages ={450-463}
+}
+
+@article{Louis,
+     author = {Evered, R. and Louis, M. R.},
+    journal = { Academy of Management Review},
+    title = {{Alternative perspectives in the organizational sciences: “Inquiry from the inside” and “inquiry from the outside.”}},
+    volume = {6},
+    year = {1981},
+    pages ={385–395}
+}
+
+@article{Passi,
+     author = {Passi, B.K. and Mishra, S.},
+    journal = { The International Review of Research in Open and Distance Learning},
+    title = {{Selecting Research Areas and Research Design Approaches in Distance Education: Process issues}},
+    volume = {5},
+    number ={3},
+    year = {2004},
+    pages ={329-340}
+}
+
+@article{Albert,
+     author = {Albert, S. and Ashforth, B.E. and Dutton, J.E.},
+    journal = { Academy of Management Review},
+    title = {{Organizational identity and identification: Charting new waters and building new bridges}},
+    volume = {25},
+    year = {2000},
+    pages ={13-17}
+}
+
+@inproceedings{Zhou,
+  author    = {Ding Zhou and
+               Xiang Ji and
+               Hongyuan Zha and
+               C. Lee Giles},
+  title     = {Topic evolution and social interactions: how authors effect
+               research},
+  booktitle = {CIKM},
+  year      = {2006},
+  pages     = {248-257},
+ }
+
+
+@inproceedings{Maria,
+ author = {Biryukov, Maria and Dong, Cailing},
+ title = {Analysis of Computer Science Communities Based on DBLP},
+ booktitle = {Proceedings of the 14th European Conference on Research and Advanced Technology for Digital Libraries},
+ series = {ECDL'10},
+ year = {2010},
+ pages = {228--235},
+ publisher = {Springer-Verlag},
+ address = {Berlin, Heidelberg},
+ }
+
+@article{Andrew,
+  author = {Pettigrew, Andrew M.},
+  journal = {Organization Science Special Issue: Longitudinal Field Research Methods for Studying Processes of Organizational Change },
+  number = 3,
+  pages = {267-292},
+  title = {Longitudinal Field Research on Change: Theory and Practice},
+  volume = 1,
+  year = 1990
+}
+
+
+
+@article{Shannon,
+  author = {Shannon, Claude E},
+  journal = {Bell System Technical Journal},
+  number = 3,
+  pages = {379–423},
+  title = {A Mathematical Theory of Communication},
+  volume = {27},
+  year = {1948}
+}
+
+@inproceedings{Schein:2002,
+ author = {Schein, Andrew I. and Popescul, Alexandrin and Ungar, Lyle H. and Pennock, David M.},
+ title = {Methods and Metrics for Cold-start Recommendations},
+ booktitle = {Proceedings of the 25th ACM SIGIR},
+ year = {2002},
+ pages = {253--260},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ } 
+
+ @book{chen2003mapping,
+  title={Mapping Scientific Frontiers: The Quest for Knowledge Visualization},
+  author={Chen, C.},
+  isbn={9781852334949},
+  lccn={20226827},
+  url={http://books.google.co.in/books?id=vN17wM4aPtQC},
+  year={2003},
+  publisher={Springer}
+}
+
+@book{visualizing_2003,
+  author = {B{\"o}rner, Katy and Chen, Chaomei and Boyack, Kevin W},
+  pages = {179-255},
+  title = {Visualizing knowledge domains},
+  volume = 37,
+  year = 2003
+}
+
+
+@article{Borner:2005,
+ author = {B\"{o}rner, Katy and Dall'Asta, Luca and Ke, Weimao and Vespignani, Alessandro},
+ title = {Studying the Emerging Global Brain: Analyzing and Visualizing the Impact of Co-authorship Teams: Research Articles},
+ journal = {Complex.},
+ volume = {10},
+ number = {4},
+ month = mar,
+ year = {2005},
+ pages = {57--67},
+ publisher = {John Wiley \& Sons, Inc.},
+ address = {New York, NY, USA},
+ } 
+
+@article{citeulike:128,
+  address = {Santa Fe Institute, 1399 Hyde Park Road, Santa Fe, NM 87501, USA. mark@santafe.edu},
+  author = {Newman, M. E. J.},
+  journal = {Proceedings of the National Academy of Sciences of the United States of America},
+  month = {January},
+  number = 2,
+  pages = {404--409},
+  title = {The structure of scientific collaboration networks},
+  volume = 98,
+  year = 2001
+}
+
+@article{barabasi,
+  added-at = {2009-11-02T00:58:57.000+0100},
+  author = {Barab{\'a}si, A. L. and Jeong, H. and N{\'e}da, Z. and Ravasz, E. and Schubert, A. and Vicsek, T.},
+  journal = {Physica A: Statistical Mechanics and its Applications},
+  number = {3-4},
+  pages = {590 - 614},
+  title = {Evolution of the social network of scientific collaborations},
+  volume = 311,
+  year = 2002
+}
+
+@Article{ Redner05,
+	author = "Sidney Redner",
+	journal = "Physics Today",
+	number = "6",
+	pages = "49--54",
+	publisher = "AIP",
+	title = "{Citation Statistics from 110 Years of Physical Review}",
+	volume = "58",
+	year = "2005"
+}
+
+@Article{ Redner05,
+	author = "Borner, K and Sidney Redner",
+	journal = "Physics Today",
+	number = "6",
+	pages = "49--54",
+	publisher = "AIP",
+	title = "{Citation Statistics from 110 Years of Physical Review}",
+	volume = "58",
+	year = "2005"
+}
+
+@book{essays,
+  author = {Garfield, Eugene},
+  editor = {Press, Philadelphia : ISI},
+  title = {Essays of an Information Scientist: Volumes 1-15},
+  year = 1977
+}
+
+
+@article{GarfieldPI03,
+  author = {Garfield, Eugene and Pudovkin, Alexander I. and Istomin, V. S.},
+  journal = {JASIST},
+  number = 5,
+  pages = {400-412},
+  title = {Why do we need algorithmic historiography?},
+  volume = 54,
+  year = 2003
+}
+
+
+@article{citeulike:683590,
+  author = {Garfield, Eugene},
+  journal = {Journal of Information Science},
+  number = 2,
+  pages = {119--145},
+  title = {Historiographic Mapping of Knowledge Domains Literature},
+  volume = 30,
+  year = 2004
+}
+
+
+@article{Vlachy,
+  author = {Vlachy, J.},
+  journal = {Czechoslovak Journal of Physics B},
+  number = 6,
+  pages = {669–674},
+  title = {Mobility in physics – a bibliography of occupational, geographic and field mobility of physicists},
+  volume = 31,
+  year = 1981
+}
+
+@article{Kluwer,
+journal={Scientometrics},
+volume={5},
+number={4},
+doi={10.1007/BF02019741},
+title={Migration of physicists to other academic disciplines: Situation in the Netherlands},
+url={http://dx.doi.org/10.1007/BF02019741},
+publisher={Kluwer Academic Publishers},
+author={van Houten, J. and van Vuren, H.G. and Le Pairs, C. and Dijkhuis, G.},
+pages={257-267},
+year={1983}
+}
+
+@article{Houten,
+journal={Scientometrics},
+volume={2},
+number={3},
+doi={10.1007/BF02016696},
+title={Switching between academic disciplines in universities in the Netherlands},
+url={http://dx.doi.org/10.1007/BF02016696},
+publisher={Kluwer Academic Publishers},
+author={Le Pair, C.},
+pages={177-191},
+year={1980}
+}
+
+@book{wagner1993,
+  title={Mathematische Logik von 1847 bis zur Gegenwart: eine bibliometrische Untersuchung},
+  author={Wagner-D{\"o}bler, R. and Berg, J.},
+  isbn={9783110139877},
+  lccn={94190770},
+  series={Foundations of communication and cognition},
+  url={http://books.google.com.au/books?id=uyOBuUcvAw8C},
+  year={1993},
+  publisher={de Gruyter}
+}
+
+@article{Urban,
+journal={Social Studies of Science},
+volume={12},
+number={3},
+title={Mobility and the growth of science},
+author={Urban, D.},
+pages={409-433},
+year={1982}
+}
+
+
+
+@book{Scharnhorst,
+  title={Integrative Systems Approaches to Natural and Social Dynamics: Systems Sciences 2000},
+  author={Allen, P.M. and Malchow, H. and Kriz, J.},
+  isbn={9783540412922},
+  lccn={2001032238},
+  url={http://books.google.co.in/books?id=9gcjw5VoP8UC},
+  year={2001},
+  publisher={Springer Berlin Heidelberg}
+}
+
+@book{ebeling1986physik,
+  title={Physik der Selbstorganisation und Evolution},
+  author={Ebeling, W. and Feistel, R.},
+  url={http://books.google.co.in/books?id=OQj0mgEACAAJ},
+  year={1986},
+  publisher={Akademie-Verlag}
+}
+
+@article{ChenBF13,
+  author    = {Yunwei Chen and
+               Katy B{\"o}rner and
+               Shu Fang},
+  title     = {Evolving collaboration networks in Scientometrics in 1978-2010:
+               a micro-macro analysis},
+  journal   = {Scientometrics},
+  volume    = {95},
+  number    = {3},
+  year      = {2013},
+  pages     = {1051-1070},
+  ee        = {http://dx.doi.org/10.1007/s11192-012-0895-2},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@article{HellstenLSA07,
+  author = {Hellsten, Iina and Lambiotte, Renaud and Scharnhorst, Andrea and Ausloos, Marcel},
+  journal = {Scientometrics},
+  number = 3,
+  pages = {469-486},
+  title = {Self-citations, co-authorships and keywords: A new approach to scientists' field mobility?},
+  volume = 72,
+  year = 2007
+}
+
+@Article{ citeulike:6031957,
+	author = "Ed Rinia and Thed van Leeuwen and Eppo Bruins and Hendrik van Vuren and Anthony van Raan",
+	journal = "Scientometrics",
+	month = jul,
+	number = "3",
+	pages = "347--362",
+	title = "{Measuring knowledge transfer between fields of science}",
+	volume = "54",
+	year = "2002"
+}
+
+@article{Urata90,
+  added-at = {2013-11-14T00:00:00.000+0100},
+  author = {Urata, Hiroaki},
+  journal = {Scientometrics},
+  number = {3-4},
+  pages = {309-319},
+  title = {Information flows among academic disciplines in Japan.},
+  volume = 18,
+  year = 1990
+}
+
+@article{Pierce99,
+  author    = {Sydney J. Pierce},
+  title     = {Boundary Crossing in Research Literatures as a Means of
+               Interdisciplinary Information Transfer},
+  journal   = {JASIS},
+  volume    = {50},
+  number    = {3},
+  year      = {1999},
+  pages     = {271-279},
+  }
+
+@article{Pierce99,
+  author    = {Gilbert, G.N.},
+  title     = {Competition, differentiation and careers in science},
+  journal   = {Social Science Information},
+  volume    = {16},
+  number    = {1},
+  year      = {1977},
+  pages     = {103–123},
+  }
+
+
+
+@inproceedings{mrr,
+  author = {Radev, Dragomir R. and Qi, Hong and Wu, Harris and Fan, Weiguo},
+  booktitle = {LREC},
+  publisher = {European Language Resources Association},
+  title = {Evaluating Web-based Question Answering Systems.},
+  year = 2002
+}
+
+@INPROCEEDINGS{info,
+    author = {M. Rosvall and C. T. Bergstrom},
+    title = {Maps of information flow reveal community structure in complex networks},
+    booktitle = {In Proceedings of the National Academy of Sciences USA},
+    year = {2007},
+    pages = {1118--1123}
+}

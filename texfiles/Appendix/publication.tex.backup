@@ -1,0 +1,70 @@
+\clearpage
+
+\thispagestyle{empty}
+
+
+
+\chapter[Appendix]{List of all Publications by the Candidate} 
+
+
+
+Following is a list of all the publications by the candidate including those on and related to the work presented in the thesis. The
+publications are arranged in chronological order and in four sections -- (i) journals, (ii)
+conferences, and (iii) workshops/research colloquiums.
+
+\if{0}
+\section*{Book Chapter}
+\begin{enumerate}
+
+ \item S. Srinivasan, {\bf T. Chakraborty}, and S. Bhowmick. ``Identifying Base Clusters and Their Application to Maximizing
+Modularity''. {\it Contemporary Mathematics. Graph partitioning and Graph Clustering. (D. A. Bader, H. Meyerhenke, P. Sanders and D. Wagner
+eds.), AMS-DIMACS}, pp. 141-156, 2012.
+
+\end{enumerate}
+\fi
+
+
+\section*{Journals}
+\begin{enumerate}
+\item  {\bf Sandipan Sikdar}, Matteo Marsili and Animesh Mukherjee. ``Unsupervised Ranking of Clustering Algorithms by INFOMAX''. (communicated to CACM)
+
+\item  Marcin Bodych, Niloy Ganguly, Tyll Kruger, Animesh Mukherjee, Rainer Seigmund-Schultze and {\bf Sandipan Sikdar}. ``Threshold based epidemic dynamics in systems with memory'', {\em Europhysics Letters, 116.4(2017):48004}.
+
+\item  {\bf Sandipan Sikdar}, Niloy Ganguly, Animesh Mukherjee. `` Time series analysis of temporal networks'', {\em  European Physics Journal B topical issue on  Temporal Network Theory and Applications (2016), volume 89(1), 1-11, DOI: 10.1140/epjb/e2015-60654-7}.
+
+\item  Tanmoy Chakraborty, {\bf Sandipan Sikdar}, Niloy Ganguly, Animesh Mukherjee. `` Citation Interactions among Computer Science Fields: A Quantitative Route to the Rise and Fall of Scientific Research'', {\em Social Network Analysis and Mining 
+(SNAM 2014), Springer, 4:187, pp. 1-18, DOI 10.1007/s13278-014-0187-3}.
+
+\end{enumerate}
+
+\section*{Conferences}
+\begin{enumerate}
+
+\item  {\bf Sandipan Sikdar}, Tanmoy Chakraborty, Soumya Sarkar, Niloy Ganguly and Animesh Mukherjee. `` ComPAS: Community Preserving Sampling for Streaming Graphs''. (communicated)
+
+\item  {\bf Sandipan Sikdar}, Nitesh Sekhar, Matteo Marsili, Niloy Ganguly and Animesh Mukherjee. `` On the effectiveness of multiple reviewers in a peer-review system: A case study of two high impact Physics journals''. (communicated)
+
+\item  Soumya Sarkar, {\bf Sandipan Sikdar}, Animesh Mukherjee and Sanjukta Bhowmick. ``Using Core-Periphery Structure to Predict High Centrality Nodes in Time-Varying Networks''. (communicated)
+
+\item  {\bf Sandipan Sikdar}, Matteo Marsili, Niloy Ganguly and Animesh Mukherjee. `` Influence of Reviewer Interaction Network on Long-term Citations: A Case Study of the Scientific Peer-Review System of the Journal of High Energy Physics'', 
+  {\em IEEE/ACM Joint Conference on Digital Libraries (JCDL), Toronto, Canada, 2017}.
+  
+\item  {\bf Sandipan Sikdar}, Matteo Marsili, Niloy Ganguly and Animesh Mukherjee. `` Anomalies in the peer-review system: A case study of the journal of High Energy Physics'', {\em ACM International Conference on 
+Information and Knowledgement Management (CIKM), Indianapolis, USA, 2016}.
+
+\item  {\bf Sandipan Sikdar}, Abhijnan Chakraborty, Anshit Choudhury, Gourav Kumar, S. Kumar, Abhijeet Patil, Niloy Ganguly and Animesh Mukherjee. `` Identifying and Characterizing Sleeping Beauties on YouTube'', {\em ACM Conference on Computer-Supported Cooperative Work and Social Computing (CSCW) 2016, San Francisco Poster highlights}.
+  
+\end{enumerate}
+
+\section*{Workshops/ Research Colloquium}
+\begin{enumerate}
+
+\item {\bf Sandipan Sikdar}. `` Significance of scientific peer-review system: A case study of the Journal of High Energy Physics''. {\em JCDL Doctoral Consortium 2017}.
+
+\item {\bf Sandipan Sikdar}, Marcin Bodych, Rajib Ranjan Maity, Biswajit Paria, Niloy Ganguly, Tyll Kruger, Animesh Mukherjee. `` On segmented message broadcast 
+   in dynamic networks'', {\em IEEE INFOCOM workshop (Netscicom), HongKong, 2015}.
+   
+\item  Tanmoy Chakraborty, {\bf Sandipan Sikdar}, Niloy Ganguly, Animesh Mukherjee, `` Shift of Research Focus in Computer Sciences over the Last Fifty Years: What Citation Analysis Reflects?'' {\em Poster 
+in TechVista organized by Microsoft Research India, Coimbatore, Tamil Nadu, on January 24, 2013 (Awarded Honorable mention award)}.   
+
+\end{enumerate}

@@ -1,0 +1,49 @@
+\noindent
+\section{Introduction}
+Information diffusion is one of the most common phenomena that occurs on a
+network and the most elementary model of this process is SI
+(Susceptible-Infected)~\cite{anderson1992infectious} and its different variations~\cite{watts2002simple,dodds2004universal,pnas1,pnas2,tang2009epidemic,son2012percolation}.
+Epidemic/adoption models have recently found a renewed interest with the formulation of temporal networks and 
+realization that most of the real-world networks are temporal in nature (network structure changes with time). 
+\if{0}
+For example,  Takaguchi et. al. in~\cite{takaguchi2013bursty} presents a model whereby adoption behavior 
+of a node is driven by the number of recent contacts with already adopted individual. 
+Through simulations on real-world temporal networks the authors further show that burstiness~\cite{karsai2011small} 
+affects spreading rate. Similar empirical study was also performed by Karimi et. al. in~\cite{karimi2013threshold}. A further modification to the 
+model has been proposed by Backlund et. al. in~\cite{backlund2014effects} which considers that adoption is driven by the number of contacts
+with different adopted neighbors within a chosen time instead of a particular neighbor multiple times. Further, information diffusion on temporal 
+networks, more specifically prevalence, have also been studied in \cite{rocha2013bursts}. 
+Several other results on the study of 
+epidemics in temporal networks are listed in~\cite{masuda2013predicting} and on epidemic thresholds in~\cite{prl1,van2012epidemic,zhang2014susceptible}.
+This type of history-dependent thresholding spreading pattern is largely observed in spread of bacterial diseases such as tuberculosis and 
+dysentery \cite{joh2009dynamics} and 
+also in peer-to-peer \cite{sanghavi2007gossiping} and Bittorrent systems \cite{qiu2004modeling}. In \cite{romero2011differences} the authors show that people 
+accept ideas/news after repeated exposure.
+\fi
+
+The fundamental difference between static and temporal epidemic (SI) models is that in temporal models every agent  within a population is {\em not equally susceptible} to a disease or equally amenable to a rumor
+ - the one which has been exposed more number of times (in recent past) are more amenable. This difference however is not well formulated and hence not well modeled - the primary contribution of this letter 
+is to succinctly define the problem in  terms of a simple model and then theoretically calculate the rate of spread of the epidemics. 
+%Albeit a deep literature exists on the study of epidemics in temporal networks, they are mostly simulation based and to the best of our knowledge, a theoretical foundation on the topic is still wanting. 
+We consider a spreading model in the lines of~\cite{takaguchi2013bursty} where each susceptible node needs to communicate with the 
+infected nodes {\em multiple times} to contract infection. More importantly, unlike memoryless systems, we assume that each node comprises a memory which 
+keeps track of the number of contacts it makes with infected ones. Note that in our system memory is a property which allows each node to remember the number 
+of contacts it has already made with the infected ones. While Karimi et. al. studied the effect of burstiness in the diffusion process, we 
+are more interested in estimating both empirically and analytically the diffusion time and rate.
+Note that this model is completely different from  threshold models~\cite{granovetter1978threshold,sur1} where a node
+ gets infected when majority of its neighbors are infected or probabilistic SI-models where an infected node,  on coming in contact, 
+infects a susceptible node with a probability $p$,  as those are memoryless systems and the transition depends only on the activity of present time step. 
+Our diffusion model also differs from the Neighborhood Exchange (NE) model proposed in \cite{volz2007susceptible}. NE assumes at any given time, an individual
+will be in contact with an individual-specific number of neighbors with whom disease transmission is possible while our model considers that a node can be in contact with 
+only a single individual. Also NE does not consider the fact that multiple contacts are required to contract infection.
+
+The analytical results are obtained 
+considering simple yet important topologies like the complete graph and the infinite $d$-regular trees which accounts for two extreme variants of network topology in terms of edge 
+density.  
+An important inference we draw from the theoretical analysis is that irrespective of the topology the diffusion process could be divided into two phases: (i) an initial phase where the diffusion rate is very slow and 
+(ii) a residual phase where the diffusion becomes very fast.
+This inference is the central contribution of this work which can help in containing 
+the spread of infectious diseases with minimum overhead if acted upon in the initial phase which we further prove through a detailed empirical study.
+
+
+\medskip

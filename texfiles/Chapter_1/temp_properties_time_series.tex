@@ -1,0 +1,191 @@
+\noindent
+\section{Analysis of time series}
+\label{properties}
+
+We now present the plots of the time series and analyze their properties based on both time domain and frequency domain characteristics. 
+%{\bf tell what you observe from the time series and how you are able to differentiate between the two types of temporal network}
+%We plot the time series for some of the properties in figure~\ref{fig4}, figure~\ref{fig5}, figure~\ref{twitter} and figure~\ref{fb_post} for INFOCOM 2006, SIGCOMM 2009, Twitter hashtag co-occurrence and Facebook posts datasets respectively.
+\begin{figure*}[!ht]
+  \centering
+  \includegraphics*[width=0.9\textwidth,angle=0]{./texfiles/Chapter_1/fig/infocom_all-eps-converted-to.pdf}
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/clus_coeff.eps}	
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/avg_deg.eps}
+  
+%  \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+  
+ %\caption{\label{fig4}Time series plotsfor the properties}
+  
+  
+  \centering
+  \includegraphics*[width=0.9\textwidth,angle=0]{./texfiles/Chapter_1/fig/sigcomm_all-eps-converted-to.pdf}
+  
+  \centering
+  \includegraphics*[width=0.95\textwidth,angle=0]{./texfiles/Chapter_1/fig/highschool_2011_psd-eps-converted-to.pdf}
+  %\centering
+  %\includegraphics*[width=0.95\textwidth,angle=0]{fig/highschool_2011_psd.eps}
+  
+  
+%   \centering
+%   \includegraphics*[width=0.95\textwidth,angle=0]{fig/highschool_psd.eps}
+  
+%   \centering
+%   \includegraphics*[width=0.95\textwidth,angle=0]{fig/hospital_psd.eps}
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/avg_deg_plot_sigcomm.eps}	
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/clus_coeff_plot_sigcomm.eps}
+  
+%  \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+  
+%   \caption{\label{fig5}Time series plots for SIGCOMM 2009 dataset. (a) Number of active nodes (b) Average degree (c) Clustering coefficient. The plots are 
+%  the values of these measurements at time corresponding to the values in the X-axis}
+  
+%  \centering
+%  \includegraphics*[width=0.95\textwidth,angle=0]{fig/Twitter_all.eps}
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/avg_deg_twitter.eps}	
+% \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/clo_cen_twitter.eps}
+  
+%  \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+  
+ % \caption{\label{twitter}Time series plots for Twitter Hashtag co-occurrence during London olympics 2012. (a) Number of active edges, (b) Average degree, (c) Closeness centrality. The plots are 
+ % the values of these measurements at time corresponding to values in the X-axis}
+
+  % \centering
+  %\includegraphics*[width=0.95\textwidth,height=30mm,angle=0]{fig/facebook_all.eps}
+ %\includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/avg_deg_fb.eps}	
+ %\includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/clo_cen_fb.eps}
+  
+ % \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+  
+  %\caption{\label{fb_post}{\bf NEED TO CHANGE}}
+   \caption{\label{fig_all_dataset} (A), (C) and (E) represent the time series plots for INFOCOM 2006, SIGCOMM 2009 and High-school 2011 respectively. (B), (D) and (F) represent the power spectral density (PSD) corresponding to the frequency bins for INFOCOM 2006, SIGCOMM 2009 and High-school 2011 dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
+%   
+ \end{figure*}
+  %From the time series plots we can make the following observations about the key properties:
+  \begin{figure*}[!ht]
+%   \centering
+%   \includegraphics*[width=0.95\textwidth,angle=0]{fig/highschool_psd.eps}
+  
+    \centering
+  \includegraphics*[width=0.95\textwidth,angle=0]{./texfiles/Chapter_1/fig/highschool_psd-eps-converted-to.pdf}
+  
+  \centering
+  \includegraphics*[width=0.95\textwidth,angle=0]{./texfiles/Chapter_1/fig/hospital_psd-eps-converted-to.pdf}
+  
+  \caption{\label{fig_all_dataset_1} (A) and (C) represent the time series plots for High-school 2012, Hospital respectively. (B) and (D) represent the power spectral density (PSD) corresponding to the frequency bins for High-school 2012 and Hospital dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
+  
+  \end{figure*}
+ % \begin{figure*}[!ht]
+  %\centering
+  %\includegraphics*[width=0.95\textwidth,angle=0]{fig/facebook_all.eps}
+%  \includegraphics*[width=0.3\textwidth,height=35mm,angle=0]{fig/acf_inf06_bcen.eps}	
+%  \includegraphics*[width=0.3\textwidth,height=35mm,angle=0]{fig/acf_inf06_clus_coeff.eps}
+% 
+%  \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+%  
+%  \caption{\label{fig6} Auto-correlation plots for INFOCOM 2006 dataset. (a) Average degree, (b) Betweenness centrality, (c) Clustering coefficient. The correlation value is 
+%  represented by Y-axis and lag is represented by X-axis.}
+%  
+%  \includegraphics*[width=0.3\textwidth,height=35mm,angle=0]{fig/acf_sig_act_edge.eps}
+%  \includegraphics*[width=0.3\textwidth,height=35mm,angle=0]{fig/acf_sig_avg_deg.eps}	
+%  \includegraphics*[width=0.3\textwidth,height=35mm,angle=0]{fig/acf_sig_mod.eps}
+% 
+%  \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
+%  
+%  \caption{\label{fig7} Auto-correlation plots for SIGCOMM 2009 dataset. (a) Number of active edges, (b) Average degree, (c) Modularity. The correlation value is 
+%  represented by Y-axis and lag is represented by X-axis.}
+%  
+%  \centering
+%   \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/acf_twit_act_nodes.eps}
+%  \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/acf_twit_clo_cen.eps}	
+%  \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/acf_twit_avg_clus.eps}
+%   
+%   \hspace{6mm}(d)\hspace{52mm}(e)\hspace{52mm}(f)
+%   
+%   \caption{\label{twitter_acf}Auto-correlation plots for Twitter Hashtag co-occurrence dataset. (a) Number of active nodes, (b) Closeness centrality, (c) Clustering coefficient. 
+%   The correlation value is 
+%  represented by Y-axis and lag is represented by X-axis.}
+%  
+%  \centering
+%   \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/node_fb_acf.eps}
+%  \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/clo_cen_fb_acf.eps}	
+%  \includegraphics*[width=0.3\textwidth,height=30mm,angle=0]{fig/avg_deg_fb_acf.eps}
+%   
+%   \hspace{6mm}(d)\hspace{52mm}(e)\hspace{52mm}(f)
+  
+%   \caption{\label{fig_all_dataset} (A),(C),(E) and (G) represent the time series plots for INFOCOM 2006, SIGCOMM 2009, Twitter hashtag and 
+%   Facebook post dataset respectively. (B),(D),(F) and (H) represent the power spectral density (PSD) corresponding to the frequency bins for INFOCOM 2006, SIGCOMM 2009, Twitter hashtag and 
+%   Facebook post dataset respectively. Bins 1,2 and 3 corresponds to $<$5, 5-15 and $>$15(Hz) respectively.}
+ 
+%\end{figure*}
+
+\subsection{Time domain characteristics}
+
+For the time domain analysis of the properties we look into the time series plots for the datasets represented in figures ~\ref{fig_all_dataset}(A), (C), (E) and 
+~\ref{fig_all_dataset_1}(A), (C).
+From the time series plots we observe the presence of periodicity in almost all the datasets. A stretch of high values is followed by a stretch of low values 
+and so on. However, they are of varying lengths.  
+% If we compare the time-series plots in figures ~\ref{fig_all_dataset}(A) and (C) (human face-to-face communication networks) with the time series 
+% plots in figures ~\ref{fig_all_dataset}(E) and (G) (human communication through social media), we observe that while for the 
+% former case a periodic pattern is
+% present, no such pattern is present for the latter case. 
+This indicates the presence of correlation in case of human face-to-face communication network.
+We quantify this structural correlation later in this paper. 
+%We also do not observe any measurable trend in any of the four datasets since none 
+%of them seem to be globally increasing, decreasing or keeping constant with time. 
+We also check whether these time series are stationary. 
+On performing KPSS (Kwiatkowski–Phillips–Schmidt–Shin) ~\cite{kwiatkowski1992testing} and 
+ ADF (Augmented Dickey Fuller) test ~\cite{dickey1979distribution} on the data we conclude that the data is non-stationary. 
+ Overall, the presence of correlation in case of human face-to-face network indicates that it is a stochastic process with memory i.e., the contacts a node 
+ makes in the current time step is influenced by its contact history. 
+%  The network of human contact through social media is memory-less i.e., the 
+%  network at each time step is random.
+% % For the time series plots of the human face-to-face contact network (INFOCOM 2006 and SIGCOMM 2009), we observe that periodicity appears to be present in the 
+%  time series with a stretch of high values followed by another stretch of low values and so on. But these periods are inconsistent. Another 
+%  important observation that we make from these plots is that the 
+%    \begin{itemize}
+%  \item {\bf Periodicity:}figures 
+%  Periodicity represents the repetition of data in a time series at certain time intervals. 
+%  In case of INFOCOM 2006 and SIGCOMM 2009 datasets as shown in figures ~\ref{fig4} and ~\ref{fig5} respectively, periodicity appears to be present in the 
+%  time series with a stretch of high values followed by another stretch of low values and so on. But these periods are inconsistent. For Twitter hashtag co-occurrence and Facebook posts network  
+%   as shown in figure ~\ref{twitter} and ~\ref{fb_post} respectively, periodicity is not present.
+%  \item {\bf Trend:}
+%  Trend represents the global nature of a time series indicating whether the series is gradually increasing, decreasing or remaining constant with time.  
+%  There is also no measurable consistent  trend in the data as the series do not appear to increase or decrease with time in case of INFOCOM 2006 and SIGCOMM 2009 datasets. 
+%  For the Facebook data one observes a slightly increasing trend in the number of active nodes.
+%  \item {\bf Seasonality:}
+%  Seasonality represents the specific patterns in a time series occurring at certain time steps and is identified by comparing two similar time series: for instance, 
+% the temperature recorded over the months for two or more years shows that it tends to increase during the summer months and decreases during winter.    
+%  Seasonality may also be present in our case as well but it cannot 
+%  be checked as we have no other similar series to compare with. 
+% 
+% \end{itemize}
+ 
+%  For a more quantitative analysis we further look into the auto-correlation (ACF) plots of the time series. The auto-correlation $r$ at a lag $k$ is given by the formula-
+%  \begin{center}
+%  {\large $r_k=\frac{\Sigma_{t=1}^{N-k}(x_t-\mu)(x_{t+k}-\mu)}{\Sigma_{1}^{N}(x_t-\mu)^{2}}$}
+%  \end{center}
+% where $\mu$ is the mean and $x_t$ is the value at time $t$. Figures ~\ref{fig6} and ~\ref{fig7} represent the auto-correlation plots for INFOCOM 2006 and 
+% SIGCOMM 2009 datasets respectively.
+% The correlation value is 1 at lag 0 and it gradually decreases with increasing lag. Clearly it represents a stochastic 
+% process that is not random since, for a random process the correlation value is 1 at lag 0 and negligible for the rest. As is evident from the plots, the time 
+% series is also not alternating. The ACF plots also show indications of periodicity as it can be observed from the time series plots. 
+% Initially, it shows a decreasing trend with the value gradually going to zero. The series then continues its decreasing trend reaching negative values; 
+% after a point, it again starts increasing. It then reaches zero and continues its upward trend and so on.   
+% One can also observe that the correlation value decreases gradually and does not get to zero until a large value of the lag. 
+% Thus the series appears to be non-stationary. We further performed two tests- KPSS (Kwiatkowski–Phillips–Schmidt–Shin) ~\cite{kwiatkowski1992testing} and 
+% ADF (Augmented Dickey Fuller) test ~\cite{dickey1979distribution} on the data and concluded that the process is indeed non-stationary.  
+% In case of the hashtag co-occurrence network we observe that the time series representing the properties differ in their characteristics. In fact, we observe that 
+% they can be sub-divided into two sets with one showing short term correlations and evidence of non-stationarity while the other is completely random. 
+% Figure ~\ref{twitter_acf} represents the auto-correlation function plots for Twitter hashtag co-occurrence during London Olympics 2012 event.
+% This is in contrast to the previous cases where all the time series were of similar nature.
+% \textcolor{blue}{In case of Facebook posts network we observe the time series plot to be alternating between positive and negative and decaying to 0 only very slowly 
+% for some of the properties while for others it is random like in case of Twitter (figure~\ref{fb_post_acf}).
+% %We thus conclude that a growth model which successfully mimics human mobility dynamics may not be able to mimic other temporal networks and hence a single growth model 
+% %is not sufficient to explain all temporal networks.
+% So these networks represent a process which is mostly markovian in nature i.e., the network at each time step has almost no structural dependence on the 
+% network at previous time steps. 
+% We thus conclude that a single growth model might not be suitable to reproduce the strikingly different physical properties of these classes of 
+% temporal networks. In general, a systematic approach would be to have a different growth model for every single such class.}
+ 
+
+
+\medskip

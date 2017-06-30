@@ -1,0 +1,51 @@
+\noindent
+\section{Related work}
+\label{related_works}
+The effectiveness of peer-review system has often been debated. Researchers have pointed out its several limitations~\cite{ingelfinger1974peer,relman1989good,smith2006peer}. 
+In fact, authors in~\cite{cole1981chance} showed that 
+reviewers often fail to reach consensus when judging the quality of the contribution while~\cite{braatz2014papers} points out that 
+rejected papers are often cited more in the long run. Nevertheless, little work has been done toward systematic analysis and improvement of the 
+system~\cite{graffy2006improving}. That blinding can improve the quality of the reviews, has been demonstrated in~\cite{mcnutt1990effects}.~\cite{caswellimproving} pointed 
+out that incentives for reviewers could encourage them doing a better job. In~\cite{sikdar2016anomalies} the authors 
+point out several indicators for anomalous behavior of the referees and the editors. In fact, they were able to filter out 
+anomalous editors and reviewers leveraging anomaly detection algorithms. 
+
+On the other hand, there have been a lot of work on the formation of teams of experts whose goal is to complete a given 
+project~\cite{anagnostopoulos2010power,anagnostopoulos2012online, lappas2009finding,agrawal2014grouping,pragarauskas2012multi}. A trend in this line of work is to formulate
+the team formation problem as an integer linear program
+(ILP), and then focus on finding an optimal match
+between people and the demanded functional requirements.
+Widely used techniques in solving these problems include simulated
+annealing~\cite{baykasoglu2007project}, branch-and-cut~\cite{zzkarian1999forming} or genetic algorithms~\cite{ani2010method}.~\cite{agrawal2014grouping} proposed 
+a way of creating study groups in an educational setting so that the overall gain for the 
+students is maximized. Another set of works leverage the underlying social network among the individuals as a proxy for compatibility and propose 
+techniques for creating groups so as to match the requirements 
+of a co-operative task~\cite{majumder2012capacitated,mcdonald2003recommending,wolf2009mining,li2010team}. 
+In this paper we consider the review information of two leading scientific 
+journals (JHEP -- Journal of High Energy Physics and JSTAT -- Journal of Statistical Mechanics: Theory and Experiment) and propose a scheme 
+for allocating referees for a submitted paper. Anonymity of the reviewers and absence of any kind of underlying network 
+prevents us from using any of the existing network based approaches. Formulating it as an ILP also appears difficult due to unavailability of any obvious optimization function.
+To the best of our knowledge this is the first work which formulates the referee recommendation in peer-review system as a group formation problem 
+leveraging genetic algorithms. We believe our findings could be useful in increasing the effectiveness of the peer-review system.
+
+\begin{table}[]
+\centering
+\caption{Some general information related to the two datasets.}
+\label{tab:data}
+\scalebox{0.85}{
+\begin{tabular}{l|l|l}
+\hline
+                                                                                      & JHEP  & JSTAT \\ \hline\hline
+\# papers                                                                             & 28871 & 6106  \\ \hline
+\# accepted papers                                                                    & 20384 & 3528  \\ \hline
+\begin{tabular}[c]{@{}l@{}}Fraction of multi-reviewed \\ papers\end{tabular}           & 0.12  & 0.43  \\ \hline
+\begin{tabular}[c]{@{}l@{}}\# Editors with at least one \\ assignment\end{tabular}    & 95    & 148   \\ \hline
+\begin{tabular}[c]{@{}l@{}}\# Reviewers with at least \\ one assignment\end{tabular}  & 3976  & 2647     \\ \hline
+\begin{tabular}[c]{@{}l@{}}Average number of \\ reviewers per paper\end{tabular}      &  1.03     & 1.42      \\ \hline
+\begin{tabular}[c]{@{}l@{}}Average number of \\ authors per paper\end{tabular}        &  2.87     & 2.32      \\ \hline
+\begin{tabular}[c]{@{}l@{}}Average number of \\ assignments per reviewer\end{tabular} &  6.48     &  2.56     \\ \hline
+\# Unique keywords                                                                    & 201 & 562  \\ \hline
+\end{tabular}}
+\end{table}
+
+\medskip

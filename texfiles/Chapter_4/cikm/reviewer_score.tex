@@ -1,0 +1,4 @@
+\noindent
+Now given a review report we try to classify normal and anomalous review reports. To this aim we consider nine features related to the report - (i) delay in sending the report, (ii) length of the report, (iii) sentiment score, percentage of (iv) insightful words, (v) discrepant words, (vi) tentative words, (vii) certainty words, (viii) future time words and (ix) quantifiers and try to predict the citation score. Based on this score we consider the bottom $25$ percentile of the review reports to be anomalous. To evaluate our scheme we consider the bottom $25$ percentile of the review reports based on the original citation and calculate the jaccard coefficient between these two sets.
+We use support vector regression (RBF kernel) with $C=10$ and $\gamma=0.1$ and perform 10-fold cross validation. We obtain an average jaccard score of {\bf $0.76$} indicating that the model was able to correctly identify the anomalous review reports. 
+\medskip

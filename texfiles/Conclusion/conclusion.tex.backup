@@ -1,0 +1,59 @@
+\chapter[Conclusion and Future Work]{Conclusion and Future Work} In this chapter we elaborate important contributions from this thesis and finally wrap up this thesis pointing to some future research directions that have been opened from this thesis.
+
+\section{Summary of Contribution} The demand for data through mobile devices would continue to increase thus leading to an exponential growth in Internet traffic. Merely increasing network capacity by means of infrastructure can not solve Internet traffic issue completely. In addition to it several protocol level modifications are needed. In this regard this thesis contributes in a meaningful way. We discuss contributions of this thesis corresponding to the objectives laid out in the beginning of the thesis.
+
+\subsection{Efficient Offload using WiFi Network} Cellular networks are becoming heavily congested due to huge data demand. One very promising approach to reduce the load of congested cellular network is to offload its traffic to some other networks like the Wi-Fi network. With availability of cheap storage, Wi-Fi APs (or base stations) can act as edge server with caching support. Caching of popular files may restrict significant traffic within local network. Applying this notion, this work provides a framework for local area CDN which enables uninterrupted video watching for users with high mobility. Contributions from this work are summarized as follows. 
+
+\begin{itemize}
+\item Use Wi-Fi APs as edge server to bring popular contents closer to users which results in significant reduction in data access delay.\\
+\item Develop a methodology for systematic chunk distribution across network based on prior knowledge of human mobility pattern and hence ensure just in time streaming.\\
+\item Performance of this system is independent of the city map pattern and hence can be applied to any city with any road map.\\
+\item Short association duration with AP for users with high mobility was the main obstacle for smooth streaming; proposed system with caching support enables video streaming for the users with high mobility.\\
+\item Simulation results confirm that the proposed system can do a sizeable offload over a wide variation of speed (more than $80\%$ offload in the speed range between $20$km/hour - $60$km/hour). \\
+\item Performance degrades gracefully with increasing traffic, however waiting due to traffic signal increases performance for high traffic scenario.\\
+\item Even with very low density of Wi-Fi AP, system offloads the load significantly (when APs are placed at every 300m, system can offload more than $85\%$).\\
+\end{itemize}
+\subsection{Managing Heterogeneous Traffic} Many recent studies pointed out that load distribution across network is not homogeneous which in effect creates issue with overall system performance and user satisfaction. In most of the cases few base stations remain over loaded while others remain under utilized. In recent years Wi-Fi networks are going through an architectural shift. Wi-Fi APs are being connected via high speed wires. This change brings new opportunity to out of band communication among APs. The present work exploits this new architecture to collect a global view of load distribution across network and applies max-flow based strategy for resource allocation and association control. Contributions from this work are summarized as follows. 
+
+
+\begin{itemize}
+\item Exploiting the architectural shift, proposed system with minimum cost (out of band communication) can create a global load distribution view necessary for optimal association strategy.\\
+\item Pressing association control protocol is mapped to the classical max-flow algorithm where APs are considered as source of bandwidth and mobile devices are considered as sink of bandwidth and maximum flow of bandwidth from source nodes to sink nodes ensures maximum device satisfaction.\\
+\item Along with maximum device satisfaction, proposed association control protocol ensures fair chance of association for devices spatially distributed across network.\\
+\item With distributed design, proposed association control protocol is highly scalable.\\
+\item Proposed association control protocol can admit up to $10\%$ more devices than standard RSSI and LLF based association in the viable load range.\\
+\item Simulation results confirm that the proposed system can easily cope up with user mobility.\\
+\end{itemize}
+\subsection{Restricting Unauthorized Traffic} Among the three objectives of this thesis, this objective is least studied in literature. However, recent studies are pointing out the importance of restricting such traffic both from the point of view of service provider's revenue and unwanted extra traffic in network. In this work we have proposed another dimension of metric to be checked for authentication algorithm namely {\em shareability} along with existing dimension of security and simplicity to restrict unwanted traffic. An authentication system is proposed based on user's daily activity to restrict password sharing. This work empirically provides a proof to our hypothesis that {\em users can remember their own activity mostly while it is very difficult to be guessed by even close friends}. Contributions from this work are summarized as follows. 
+
+\begin{itemize}
+\item This work proposes a new dimension of metric to authentication -- {\em shareability}.\\
+\item This work identifies and empirically proves that our daily activity can be used in a meaningful way for authentication purpose.\\
+\item An integrated system is developed for evaluating the potential of proposed system which is capable of automatic activity collection, selection of potential activities for challenge generation and an interface for challenge response.\\
+\item Proposed system inherently provides security to any number of accounts with dynamic challenges and easy maintainability as users need to remember activities of recent past.\\ 
+\item User survey suggests that they are interested to use such system for password recovery instead of static (hint) question answer based password recovery.\\
+\item Our experiment shows that legitimate users can successfully pass through our authentication system in $95\%$ cases whereas impostors can go through only for $5.5\%$ cases.\\
+\item We have made some important observations from this study, for example a) outlier activities do have more potential to be a good candidate of challenge generation, b) text based question with little hint is more effective, c) user can remember well last 2-3 days activities etc.
+\end{itemize}
+
+\section{Future Direction} In this section we discuss some new research issues that have been opened up by this thesis.
+\subsection{Efficient Offload using WiFi Network} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item This work does not consider the file selection strategy for caching and how the cache should be modified with time. So an important direction for an integrated system will be to focus on the file selection strategy which can be modulated based upon feedback from user.\\
+\item Feasibility of live streaming support with proposed framework can be studied.\\
+\item With this proposed framework, we want to study the feasibility in supporting live streaming and the solution thereof.\\
+\item In a high traffic scenario, due to bandwidth division, clients suffer from low streaming rate. However, in this scenario, a P2P kind of strategy might boost up efficiency significantly. A future direction could be to study the performance of such system in high traffic scenario.\\
+\end{itemize}
+\subsection{Managing Heterogeneous Traffic} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item In this work, we have assumed very low mobility of users and a simplistic mobility protocol. More practical mobility model applicable for university campus and city may be studied.\\
+\item An anticipatory association based on mobility prediction will help in faster association. One can, in future, study the feasibility of this scheme and, subsequently explore the effect of such a strategy.\\
+\item We want to study the effect of a sophisticated channel allocation strategy on reduction of interference during association.\\
+\end{itemize}
+
+\subsection{Restricting Unauthorized Traffic} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item As a proof of concept we explored very few information sources, we want to explore more information sources like information from wearable devices, smartphone sensors etc.\\
+\item Want to develop architectures for utilizing proposed methodology in different scenarios of authentication like architecture for utilizing proposed system in user's own smartphone will be different from the architecture when it is going to be used by some third party.\\
+\item There is always a potential of privacy leaks as this system works with user's private data. So in future we would like to investigate the methods of securing privacy in greater detail.\\
+\end{itemize}

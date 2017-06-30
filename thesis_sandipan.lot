@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Properties of the dataset used.}}{48}{table.105}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Network property and the fraction of predictions with percentage error $\leq 20\%$ without (with) spectrogram analysis. The cases where more than $80\%$ of the points have prediction error $\leq 20\%$ have been highlighted in bold font and the cases where on using spectrogram analysis the improvement is more than $5\%$ have been underlined.}}{57}{table.118}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Important notations used in this paper.}}{67}{table.131}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of the $D$-statistics (the lower, the better) values of the topological measures for all the datasets. For Youtube we present all the results, while for the rest we provide the average $D$-statistics and standard deviation (SD). {\tt ComPAS}\nobreakspace {}truns out to the second best algorithm after GA (the most informed static graph sampling algorithm for which the sample is obtained from the aggregated graph and Louvain is run on the sample, thus serving as the strict baseline). Top two values for each average result is highlighted.}}{81}{table.162}
+\contentsline {table}{\numberline {4.3}{\ignorespaces NMI between the ground-truth and community structure obtained from individual sampling algorithms for all datasets.}}{82}{table.169}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Summary of $D$-statistics for different graph properties. For Youtube we present all the results, while for the rest we provide only average $D$-statistics (top three results in each average case are highlighted).}}{84}{table.172}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Rank correlation of community detection algorithms based on the performance on the sample (generated from individual sampling methods) and the original graph. (b) Performance of SVM using the training set obtained from sampling methods.}}{86}{table.177}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the notations used.}}{95}{table.190}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces General information of the dataset.}}{122}{table.243}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.}}{130}{table.263}
+\contentsline {table}{\numberline {6.3}{\ignorespaces The F-statistics value for all the features used for predicting the long-term citation of the paper.}}{133}{table.271}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Features used for detecting anomalies.}}{147}{table.298}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Jaccard similarity between the cases identified as discordant by the different metrics.}}{156}{table.323}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since last assignment). }}{161}{table.333}
+\contentsline {table}{\numberline {6.7}{\ignorespaces True positive (TP) and true negative (TN) values across accepted and rejected papers measured for different values of $k$. Results are reported for JHEP and JSTAT datasets.}}{169}{table.346}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

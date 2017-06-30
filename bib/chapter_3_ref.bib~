@@ -1,0 +1,189 @@
+
+
+@article{Ghosh,
+  author = {Ghosh, Saptarshi and Banerjee, Avishek and  Sharma, Naveen and Agarwal, Sanket and  Ganguly, Niloy},
+  journal = {Acta Physica Polonica B Proceedings Supplement},
+  pages = {123--137},
+  title = {Statistical Analysis of The Indian Railway Network: a Complex Network Approach},
+  volume = 4,
+  year = 2011
+}
+
+@article{Newman:2006,
+  author = {Newman, M E},
+  journal = {PNAS},
+  month = Jun,
+  number = 23,
+  pages = {8577-8582},
+  title = {Modularity and community structure in networks},
+  volume = 103,
+  year = 2006
+}
+
+@article{cond_09,
+  author    = {Jure Leskovec and
+               Kevin J. Lang and
+               Anirban Dasgupta and
+               Michael W. Mahoney},
+  title     = {Community Structure in Large Networks: Natural Cluster Sizes
+               and the Absence of Large Well-Defined Clusters},
+  journal   = {Internet Mathematics},
+  volume    = {6},
+  number    = {1},
+  year      = {2009},
+  pages     = {29-123},
+}
+
+
+
+@Article{ blondel2008,
+	author = "Vincent D. Blondel and Jean-Loup Guillaume and Renaud Lambiotte and Etienne Lefebvre",
+	journal = "J. Stat. Mech.",
+	month = oct,
+	number = "10",
+	pages = "P10008",
+	title = "{Fast unfolding of communities in large networks}",
+	volume = "2008",
+	year = "2008"
+}
+
+
+
+
+@article{steinhaeuser2010,
+  author = {Steinhaeuser, Karsten and Chawla, Nitesh V.},
+  journal = {Pattern Recognition Letters},
+  number = 5,
+  pages = {413-421},
+  title = {Identifying and evaluating community structure in complex
+               networks},
+  volume = 31,
+  year = 2010
+}
+
+@misc{appendix,
+   howpublished={\url{http://cse.iitkgp.ac.in/resgrp/cnerg/Files/resources/appendix_permanence.pdf}}
+}
+
+
+
+
+
+
+@article{Shen,
+  author = {H. Shen, X. Cheng, K. Cai and M. B. Hu},
+  journal = {Physica A},
+  number = {8},
+  title = {Detect Overlapping and Hierarchical Community Structure in Networks},
+  volume = {388},
+  year = 2009,
+  pages={1706-1712}
+}
+
+
+@Article{oslom,
+	author = "Lancichinetti, A. and Radicchi, F. and Ramasco, J. J. and Fortunato, S.",
+	title = "Finding statistically significant communities in networks",
+	journal = "PLoS ONE",
+	volume = "6",
+	number = "4",
+	pages = "e18961",
+	year = "2011"
+}
+
+@Article{Gregory1,
+	author = "Steve Gregory",
+	title = "Finding overlapping communities in networks by label propagation",
+	journal = "New J. Phys.",
+	volume = "12",
+	number = "10",
+	pages = "103018",
+	year = "2010",
+}
+
+@inproceedings{Xie,
+  author = {Xie, Jierui and Szymanski, Boleslaw K.},
+  booktitle = {PAKDD},
+  title = {Towards Linear Time Overlapping Community Detection in Social Networks},
+  pages = {25-36},
+  year = {2012}
+}
+
+@inproceedings{moses,
+ author = {McDaid, Aaron and Hurley, Neil},
+ title = {Detecting Highly Overlapping Communities with Model-Based Overlapping Seed Expansion},
+ booktitle = {ASONAM},
+ year = {2010},
+ pages = {112--119},
+ address = {Washington, DC, USA},
+ } 
+
+@misc{appendix_operm,
+   howpublished={\url{http://cnerg.org/appendix_operm.pdf}}
+}
+
+@article{McDaid,
+  author = {McDaid, Aaron F. and Greene, Derek and Hurley, Neil J.},
+  journal = {CoRR},
+  title = {Normalized Mutual Information to evaluate overlapping community finding algorithms},
+  volume = {abs/1110.2515},
+  year = 2011
+}
+
+@ARTICLE{Wang-etal12,
+author = {Xufei Wang and Lei Tang and Huan Liu and Lei Wang},
+title = {Learning with Multi-Resolution Overlapping Communities},
+journal = {Knowledge and Information Systems (KAIS)},
+year = {2012},
+DOI = {10.1007/s10115-012-0555-0} 
+}
+
+@Article{ Palla,
+	author = "Gergely Palla and Ill{\'e}s J Farkas and P{\'e}ter Pollner and Imre Der{\'e}nyi and Tam{\'a}s Vicsek",
+	title = "Fundamental statistical features and self-similar properties of tagged networks",
+	journal = "New J. Phys.",
+	volume = "10",
+	number = "12",
+	pages = "123026",
+	url = "http://stacks.iop.org/1367-2630/10/i=12/a=123026",
+	year = "2008"
+}
+
+@article{Yang14,
+  author = {Jaewon Yang and Jure Leskovec},
+  journal = { Proceedings of IEEE},
+  title = {Overlapping Communities Explain Core-Periphery Organization of Networks},
+  volume = {102},
+  pages ={1892 - 1902},
+  year = 2014
+}
+
+@article{Newman-assort-2003,
+  added-at = {2008-04-22T20:55:51.000+0200},
+  author = {Newman, M. E. J.},
+  biburl = {http://www.bibsonomy.org/bibtex/23b3bc907d1babb2ad8c774ed0893eeef/kurtjx},
+  doi = {10.1103/PhysRevE.67.026126},
+  interhash = {626d6302447ef4fafee72b56340b84f2},
+  intrahash = {3b3bc907d1babb2ad8c774ed0893eeef},
+  journal = {Phys. Rev. E},
+  keywords = {assortativity},
+  month = Feb,
+  number = 2,
+  numpages = {13},
+  pages = 026126,
+  publisher = {American Physical Society},
+  timestamp = {2008-04-22T20:55:51.000+0200},
+  title = {Mixing patterns in networks},
+  volume = 67,
+  year = 2003
+}
+
+@inproceedings{ChierichettiLP10,
+   author = {Chierichetti, Flavio and Lattanzi, Silvio and Panconesi, Alessandro},
+  booktitle = {SODA},
+  pages = {1657-1663},
+  publisher = {SIAM},
+  title = {Rumour Spreading and Graph Conductance},
+  url = {http://www.siam.org/proceedings/soda/2010/SODA10_135_chierichettif.pdf},
+  year = 2010
+}

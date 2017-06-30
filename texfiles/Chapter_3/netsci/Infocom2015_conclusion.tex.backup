@@ -1,0 +1,61 @@
+\noindent
+Our contributions in this chapter can be summarized as - 
+\begin{itemize}
+ \item We proposed a threshold based diffusion model whereby a susceptible individual contracts infection only after multiple contacts with infected individuals motivated 
+ from the idea that an individual adopts an idea after encountering it multiple times.
+ \item Irrespective of the topology, the diffusion seems to progress in two phases - (i) initial phase where the diffusion rate is slow followed by (ii) residual phase where 
+ the diffusion rate increases manifold.
+ \item Based on these observat
+ 
+\end{itemize}
+
+The significance of the paper lies in  defining a new problem in the space of information dissemination and broadcast in unstructured dynamic networks. 
+In this paper we show through simulation and initial analytical results that
+ the speed at which segmented data can be disseminated 
+over dynamic network is different from it comprising a single segment. 
+We explore the impact of the problem in different topologies and surprisingly notice that mere dense 
+topology is not of much help in a dynamic setting. We also try to propose a practical strategy which 
+can optimize the dual (conflicting) objective of speed and wastage. 
+We believe these initial results can be enriched by  tackling the problem in a more practical setting 
+like allowing more than one message transfer in one time step, considering the order of the 
+message segments, considering wider variants of topology snapshot etc. 
+This along with more rigorous theoretical analysis would be our immediate future work. 
+
+We believe that our findings could open up paths to a number of future studies especially regulating contagion processes in systems with memory. 
+We note that our analysis does not 
+consider the fact that the extent of influence decays with time as observed in several real-world diffusion processes. We believe such 
+investigation calls for additional research efforts.
+
+
+\if{0}
+
+In this paper we presented a systematic and rigorous study of two crucial issues in dynamic networks which have 
+so far been treated independently and in parts. Here, we propose for the first time the effects of coupling these 
+two issues -- the effect of message size and the partition structure of the message and the technique adopted for message transfer, i.e., B-P, X-P-P and 
+P-P-G. One can also develop several variants of these algorithms and we plan to investigate these in forthcoming works.
+We introduced the concept of give up which allows the system that is both dynamic and distributed 
+to reduce wastage and deterministically terminate broadcast using some local information at each node. 
+We simulate the algorithms on Gnutella snapshots and compare them based on broadcast delay and wastage.
+ We show that for a complete graph topology and a suitable partition structure, 
+ the broadcast time scales as $n^{\frac{k-1}{k}}$ for the B-P technique. 
+ %We make explicit calculations for 
+% the minimum non-trivial choice of $m=k=2$ and indicate pointers to obtain the general case.
+Further, we study the effect of  
+network topologies, e.g., $d$-regular tree, $d$-regular graph, random graph $G(n, p)$ on the evaluation metrics and land up to a 
+remarkable observation that one can find a critical value of $d$ for which the dynamics becomes fast.
+Even when the topology of the network is not known in advance, we observe that it is better to have lesser number of links 
+between the nodes as sparser variants provide a faster dynamics than the denser ones.
+
+\vspace{-1mm}
+The current work unfolds many new directions of research and we plan to report a majority of these in a forthcoming paper. 
+% A first step would be to conduct a detailed theoretical analysis of the broadcast time for the general 
+% choice of $m$ and $k$. 
+We plan to investigate the broadcast delay and wastage analytically which has been established here only 
+through numerical evidence. All our results are based on the assumption that no data loss occurs during transmission. However, in 
+any wireless ad-hoc network data loss is a common phenomena. We also assumed that only a single packet is transferred in each 
+contact opportunity although for dynamic networks like DTN it may be more than one. We plan to address these issues in our subsequent works as well.
+Further, we plan to investigate the importance of the segment order, i.e., an agent is allowed to 
+become a sender only when it receives the segments in a particular order. 
+\fi
+
+\medskip

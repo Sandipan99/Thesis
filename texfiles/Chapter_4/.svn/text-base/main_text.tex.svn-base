@@ -1,0 +1,53 @@
+
+\chapter[Community-based Applications]{Community-based Applications} 
+In this chapter we address our fourth objective of leveraging the community information of networks in order to design different
+applications.
+
+
+\section{Introduction}
+Community detection or clustering constitutes a fundamental framework
+in the development of various applied systems, e.g., search system, recommendation system etc. In this chapter we show how the citation
+network and various types of community markings of this network can be leveraged to develop two applications.
+
+The contributions of this chapter are threefold:
+\begin{itemize}
+ \item  We analyze the scientific dataset mentioned in Section \ref{sec:data} to understand the citation
+growth of each paper after its publication. We discover that the pattern of citation growth can be clustered into at least six different
+categories which are in contrast with the
+earlier
+observation that the citation profile of published articles in general follows a universal pattern. We further conduct a deeper
+investigation of the papers in the different categories that leads us to deduce a series of conclusions about the 
+characteristic properties of these categories.
+
+\item In particular, we adopt a {\em stratified learning approach} for the prediction task, whereby, we propose a two-stage prediction
+model for the task of future citation count prediction where we make use of the six categories of citation pattern that we observe.
+
+\item Finally, we propose for the first time a framework for {\em faceted recommendation} of scientific articles, {\em FeRoSA} which apart
+from ensuring quality retrieval of scientific articles for a particular query paper, also efficiently clusters the recommended papers into
+different semantic categories (facets).
+
+\end{itemize}
+
+
+\input{texfiles/Chapter_4/jcdl/introduction.tex}
+
+
+\input{texfiles/Chapter_4/jcdl/result.tex}
+
+\input{texfiles/Chapter_4/jcdl/5.features.tex}
+
+\input{texfiles/Chapter_4/jcdl/6.model.tex}
+
+\input{texfiles/Chapter_4/jcdl/7.evaluation.tex}
+
+
+\input{texfiles/Chapter_4/ferosa/1.intro.tex}
+\input{texfiles/Chapter_4/ferosa/3.dataset.tex}
+% 
+ \input{texfiles/Chapter_4/ferosa/4.experimental_setup.tex}
+% 
+\input{texfiles/Chapter_4/ferosa/5.results.tex}
+\input{texfiles/Chapter_4/ferosa/facet_eval.tex}
+\input{texfiles/Chapter_4/ferosa/flat_eval.tex}
+% 
+ \input{texfiles/Chapter_4/summary.tex}

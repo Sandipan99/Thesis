@@ -1,0 +1,17 @@
+pdflatex template.tex
+bibtex template.aux
+pdflatex template.tex
+pdflatex template.tex
+
+pdflatex letter_to_editor.tex 
+bibtex letter_to_editor.aux
+pdflatex letter_to_editor.tex
+pdflatex letter_to_editor.tex
+
+rm *.backup
+rm *.blg
+rm *.log
+rm *.aux
+rm *.bbl
+rm *.end
+

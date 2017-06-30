@@ -1,0 +1,212 @@
+\begin{thebibliography}{10}
+
+\bibitem{si}
+{Supplementary Materials}.
+\newblock \url{http://tinyurl.com/SI-ComPAS}.
+\newblock [Online; accessed 24-Oct-2016].
+
+\bibitem{aggarwal2011outlier}
+C.~C. Aggarwal, Y.~Zhao, and S.~Y. Philip.
+\newblock Outlier detection in graph streams.
+\newblock In {\em ICDE}, pages 399--409. IEEE, 2011.
+
+\bibitem{ahmed2010reconsidering}
+N.~K. Ahmed, J.~Neville, and R.~Kompella.
+\newblock Reconsidering the foundations of network sampling.
+\newblock In {\em Proceedings of the 2nd Workshop on Information in Networks},
+  2010.
+
+\bibitem{ahmed2014network}
+N.~K. Ahmed, J.~Neville, and R.~Kompella.
+\newblock Network sampling: From static to streaming graphs.
+\newblock {\em ACM TKDD}, 8(2):7, 2014.
+
+\bibitem{blondel2008fast}
+V.~D. Blondel, J.-L. Guillaume, R.~Lambiotte, and E.~Lefebvre.
+\newblock Fast unfolding of communities in large networks.
+\newblock {\em Journal of statistical mechanics: theory and experiment},
+  2008(10):P10008, 2008.
+
+\bibitem{clauset2004finding}
+A.~Clauset, M.~E. Newman, and C.~Moore.
+\newblock Finding community structure in very large networks.
+\newblock {\em Physical review E}, 70(6):066111, 2004.
+
+\bibitem{danon2005comparing}
+L.~Danon, A.~Diaz-Guilera, J.~Duch, and A.~Arenas.
+\newblock Comparing community structure identification.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2005(09):P09008, 2005.
+
+\bibitem{doucet2000sequential}
+A.~Doucet, S.~Godsill, and C.~Andrieu.
+\newblock On sequential monte carlo sampling methods for bayesian filtering.
+\newblock {\em Statistics and computing}, 10(3):197--208, 2000.
+
+\bibitem{fortunato2010community}
+S.~Fortunato.
+\newblock Community detection in graphs.
+\newblock {\em Physics reports}, 486(3):75--174, 2010.
+
+\bibitem{frank1977survey}
+O.~Frank.
+\newblock Survey sampling in graphs.
+\newblock {\em Journal of Statistical Planning and Inference}, 1(3):235--264,
+  1977.
+
+\bibitem{frank1980sampling}
+O.~Frank.
+\newblock Sampling and inference in a population graph.
+\newblock {\em International Statistical Review}, pages 33--41, 1980.
+
+\bibitem{gile2010respondent}
+K.~J. Gile and M.~S. Handcock.
+\newblock Respondent-driven sampling: An assessment of current methodology.
+\newblock {\em Sociological methodology}, 40(1):285--327, 2010.
+
+\bibitem{girvan2002community}
+M.~Girvan and M.~E. Newman.
+\newblock Community structure in social and biological networks.
+\newblock {\em PNAS}, 99(12):7821--7826, 2002.
+
+\bibitem{gjoka2010walking}
+M.~Gjoka, M.~Kurant, C.~T. Butts, and A.~Markopoulou.
+\newblock Walking in facebook: a case study of unbiased sampling of osns.
+\newblock In {\em Infocom}, pages 1--9. IEEE, 2010.
+
+\bibitem{goodman1961snowball}
+L.~A. Goodman.
+\newblock Snowball sampling.
+\newblock {\em The annals of mathematical statistics}, pages 148--170, 1961.
+
+\bibitem{hastings1970monte}
+W.~K. Hastings.
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock {\em Biometrika}, 57(1):97--109, 1970.
+
+\bibitem{heckathorn1997respondent}
+D.~D. Heckathorn.
+\newblock Respondent-driven sampling: a new approach to the study of hidden
+  populations.
+\newblock {\em Social problems}, 44(2):174--199, 1997.
+
+\bibitem{henzinger1998computing}
+M.~R. Henzinger, P.~Raghavan, and S.~Rajagopalan.
+\newblock Computing on data streams.
+\newblock Technical report, Technical Note 1998-011, Digital Systems Research
+  Center, Palo Alto, CA, 1998.
+
+\bibitem{hubert1985comparing}
+L.~Hubert and P.~Arabie.
+\newblock Comparing partitions.
+\newblock {\em Journal of classification}, 2(1):193--218, 1985.
+
+\bibitem{Kolaczyk:2009}
+E.~D. Kolaczyk.
+\newblock {\em Statistical Analysis of Network Data: Methods and Models}.
+\newblock Springer, 1st edition, 2009.
+
+\bibitem{kolascyk2013statistical}
+E.~Kolascyk.
+\newblock Statistical analysis of network data.
+\newblock {\em SAMSI program on Complex networks. Boston university}, 2013.
+
+\bibitem{lancichinetti2008benchmark}
+A.~Lancichinetti, S.~Fortunato, and F.~Radicchi.
+\newblock Benchmark graphs for testing community detection algorithms.
+\newblock {\em Physical review E}, 78(4):046110, 2008.
+
+\bibitem{leskovec2006sampling}
+J.~Leskovec and C.~Faloutsos.
+\newblock Sampling from large graphs.
+\newblock In {\em SIGKDD}, pages 631--636. ACM, 2006.
+
+\bibitem{maiya2010sampling}
+A.~S. Maiya and T.~Y. Berger-Wolf.
+\newblock Sampling community structure.
+\newblock In {\em WWW}, pages 701--710. ACM, 2010.
+
+\bibitem{maiya2011benefits}
+A.~S. Maiya and T.~Y. Berger-Wolf.
+\newblock Benefits of bias: Towards better characterization of network
+  sampling.
+\newblock In {\em ACM SIGKDD}, pages 105--113. ACM, 2011.
+
+\bibitem{manning2008introduction}
+C.~D. Manning, P.~Raghavan, and H.~Sch{\"u}tze.
+\newblock Introduction to information retrieval, 2008.
+
+\bibitem{newman2004analysis}
+M.~E. Newman.
+\newblock Analysis of weighted networks.
+\newblock {\em Physical review E}, 70(5):056131, 2004.
+
+\bibitem{newman2004fast}
+M.~E. Newman.
+\newblock Fast algorithm for detecting community structure in networks.
+\newblock {\em Physical review E}, 69(6):066133, 2004.
+
+\bibitem{PalEtAl05}
+G.~Palla, I.~Derenyi, I.~Farkas, and T.~Vicsek.
+\newblock Uncovering the overlapping community structure of complex networks in
+  nature and society.
+\newblock {\em Nature}, 435(7043):814--818, 2005.
+
+\bibitem{pons2005computing}
+P.~Pons and M.~Latapy.
+\newblock Computing communities in large networks using random walks.
+\newblock In {\em International Symposium on Computer and Information
+  Sciences}, pages 284--293. Springer, 2005.
+
+\bibitem{rasti2009respondent}
+A.~H. Rasti, M.~Torkjazi, R.~Rejaie, N.~Duffield, W.~Willinger, and
+  D.~Stutzbach.
+\newblock Respondent-driven sampling for characterizing unstructured overlays.
+\newblock In {\em INFOCOM}, pages 2701--2705. IEEE, 2009.
+
+\bibitem{ribeiro2010estimating}
+B.~Ribeiro and D.~Towsley.
+\newblock Estimating and sampling graphs with multidimensional random walks.
+\newblock In {\em Proceedings of the 10th ACM SIGCOMM conference on Internet
+  measurement}, pages 390--403. ACM, 2010.
+
+\bibitem{rosvall2007information}
+M.~Rosvall and C.~T. Bergstrom.
+\newblock An information-theoretic framework for resolving community structure
+  in complex networks.
+\newblock {\em PNAS}, 104(18):7327--7331, 2007.
+
+\bibitem{rosvall2008maps}
+M.~Rosvall and C.~T. Bergstrom.
+\newblock Maps of random walks on complex networks reveal community structure.
+\newblock {\em PNAS}, 105(4):1118--1123, 2008.
+
+\bibitem{tong2016novel}
+C.~Tong, Y.~Lian, J.~Niu, Z.~Xie, and Y.~Zhang.
+\newblock A novel green algorithm for sampling complex networks.
+\newblock {\em Journal of Network and Computer Applications}, 59:55--62, 2016.
+
+\bibitem{wasserman1994social}
+S.~Wasserman and K.~Faust.
+\newblock {\em Social network analysis: Methods and applications}, volume~8.
+\newblock Cambridge university press, 1994.
+
+\bibitem{west2014exploiting}
+R.~West, H.~S. Paskov, J.~Leskovec, and C.~Potts.
+\newblock Exploiting social network structure for person-to-person sentiment
+  analysis.
+\newblock {\em arXiv preprint arXiv:1409.2450}, 2014.
+
+\bibitem{yang2015defining}
+J.~Yang and J.~Leskovec.
+\newblock Defining and evaluating network communities based on ground-truth.
+\newblock {\em KIAS}, 42(1):181--213, 2015.
+
+\bibitem{PhysRevE.78.046115}
+Z.~Ye, S.~Hu, and J.~Yu.
+\newblock Adaptive clustering algorithm for community detection in complex
+  networks.
+\newblock {\em PRE}, 78:046115, Oct 2008.
+
+\end{thebibliography}

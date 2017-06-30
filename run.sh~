@@ -1,0 +1,12 @@
+rm thesis_tanmoy.aux
+rm thesis_tanmoy.idx
+rm thesis_tanmoy.lof
+rm thesis_tanmoy.log
+rm thesis_tanmoy.lot
+rm thesis_tanmoy.out
+rm thesis_tanmoy.toc
+pdflatex thesis_tanmoy.tex 
+bibtex thesis_tanmoy.aux 
+pdflatex thesis_tanmoy.tex 
+pdflatex thesis_tanmoy.tex
+rm thesis_tanmoy.aux

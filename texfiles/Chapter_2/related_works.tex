@@ -1,0 +1,45 @@
+
+\begin{table}[!t]\scriptsize
+\centering
+\caption{\label{notation}Important notations used in this paper.}
+\scalebox{0.9}{
+\begin{tabular}{l | l}
+\hline
+{\bf Notation} & {\bf Description} \\\hline
+$S$ & Graph stream $\{e_1,e_2,
+\dots\}$ \\
+$n$ & Required sample size (in terms of nodes)\\
+$G_s$ & $G_s=(V_s,E_s)$, final graph sample\\ 
+$C_s$ & Community structure of $G_s$\\
+%$\beta$ & Community-centric edge density threshold\\
+$\alpha$ & Initial fraction of nodes inserted\\
+$Algo$ & Algorithm used to detect initial community structure\\
+$N(x)$ & Neighbor of $x$\\
+$P(x)$ & Parent of $x$\\
+$\mathcal{H}$ & Buffer consisting of $\mathcal{H}_c$ and $\mathcal{H}_p$ \\ 
+$\mathcal{H}_c$ & Dictionary tracking number of times each node is encountered\\
+$\mathcal{H}_p$ & Dictionary storing the recent parent of each node\\
+$n_d$ & Size of $\mathcal{H}$ \\
+$D_s$ & Sum of degree of all nodes inside set $s$ \\
+$C(v)$ & Community of node $v$\\\hline
+
+\end{tabular}}
+\vspace{-5mm}
+\end{table}
+
+\vspace{-5mm}
+\section{Related work}
+%The related works section goes here..
+The problem of sampling from a population has long been studied in social sciences \cite{frank1977survey,frank1980sampling}, such as snowball sampling  \cite{goodman1961snowball},  respondent-driven sampling  \cite{heckathorn1997respondent, gile2010respondent} etc. Most of the relevant works on sampling deal with estimating global properties of the  population (see a survey in \cite{kolascyk2013statistical}).
+
+With the advent of large-scale graph data, sampling problem has received a renewed interest with an initial attempt in \cite{leskovec2006sampling}. Although several sampling algorithms have been proposed since then \cite{ribeiro2010estimating,rasti2009respondent}, it is very difficult to obtain a universally representative sample that preserves {\em all} the properties of the original graph \cite{ahmed2010reconsidering,maiya2010sampling,maiya2011benefits}. 
+
+% streaming graph and sampling in streaming graph
+Most sampling algorithms work on static graphs, meaning that the entire graph should be available in advance. With increasing interest in sampling more practical social graph (which are mostly dynamic in nature), the focus has recently shifted towards sampling from streaming graphs \cite{henzinger1998computing}. A streaming graph is considered to be a stream of incoming edges (see Figure  \ref{fig_algo}).~\cite{aggarwal2011outlier} proposed a streaming edge sampling (SE) algorithm for outlier detection.~\cite{ahmed2014network} proposed streaming node sampling (SN), streaming BFS (Breadth First Search, SBFS) and Partially Induced Edge Sampling (PIES) algorithms. All of these algorithms aim to preserve the general graph properties of the original graph in the sample.
+
+%decide on selecting a node for sampling randomly. Hence they fail to obtain a sample with a representative community structure.
+
+
+
+In this work we propose a sampling algorithm \compas~ for streaming graphs that is primarily designed to obtain a sample which is most representative of the original graph in terms of the underlying community structure.~\cite{tong2016novel} claimed that their proposed Green Algorithm (GA) can generate sample from a {\em static graph} that preserves the community structure (as we attempt here), although they did not produce the community structure explicitly. To the best our knowledge, {\em ours is the first attempt toward obtaining a sample that preserves the community structure of the streaming graph}. Further, our algorithm is quite competitive in retaining the other graph properties (such as degree distribution, clustering coefficient) in the sample (see Section \ref{graph_evaluation}). 
+% what we contribute that has not been done

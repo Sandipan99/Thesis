@@ -1,0 +1,69 @@
+\noindent
+{\bf Broadcast algorithm based on diffusion model:} The study of broadcast over unstructured and mobile networks always assumes that the 
+size of the message is  small enough to be transfered from one node to other 
+on the short durations of contacts between the nodes. 
+Contrary to this, we here explore
+ the idea of ``segmented messages'' where we assume that the duration of a contact 
+between the nodes is not always sufficient for the transfer and therefore the message might need to be 
+segmented/divided into sub-parts and sent individually. 
+At the ethernet level such techniques of segmented broadcast are often termed as pipelined broadcast 
+~\cite{patarasuk2008techniques, watts1995pipelined}. Note that this is equivalent to diffusion model we proposed earlier with number of contacts ($k$) replaced by number 
+of packets in a message. 
+We systematically study the effect of the size and partition structure of the message on the broadcast time.
+ %considering different variants of the basic push-pull transfer protocol. 
+% \textcolor{red}{Note that we essentially deal with a theoretical abstraction of the problem of segmented message spreading and show that it is 
+% significantly different from the classical epidemic spreading.}{\bf we have not shown this.} \todo{Have we shown this?}
+%The transmission algorithms that we propose might require suitable adjustments when it is adapted for a specific type of a dynamic network.      
+
+%\todo{The two paragraphs need to be discussed, n, m, k, s are extremely confusing and need to be simplified}
+{In specific, we investigate in details the effect of message segmentation as well as the message transfer protocols on the overall 
+broadcast delay and message wastage. 
+We assume that a big file is split into $k$ ($>1$) packets and 
+%the packets are grouped into $s$ ($\geq 1$) segments, each containing $k$ packets. 
+at the beginning, there is only one sender node in the network that has all the packets. 
+Further, a node can transfer only one  packet in a single contact opportunity, and it can do so only when it has received all the 
+packets constituting at least one segment of the message. When all the nodes present in the network have eventually received all the packets, 
+broadcasting is assumed to be complete. 
+
+Initially, we investigate the push transfer protocol whereby messages are `pushed'
+by the node holding a message to the node not having the message ~\cite{demers1987epidemic,lo2008some}. 
+We attempt to study the effect in different types of topologies e.g., complete graph, $d$-regular tree, $d$-regular graph, random graph (with average degree $d$). 
+%For a complete graph topology of size $n$ and the simple push case  
+%we show that the overall time required for the broadcast in case of segmented messages scales as $n^{\frac{k-1}{k}}$ where $k>1$ is the number of packets. 
+%This is in sharp contrast to the single message case ($k$ = $1$) where it has been shown that broadcasting time 
+%scales as $\log{(n)}$ ~\cite{rumarSreadingPushPull,rumourSpreading_evolvingGraph_PushPull}. 
+A remarkable observation is that in topologies like $d$ regular tree, $d$ regular graph and random graph,
+for even the simple push transfer protocol, one can find an optimal value of $d (d>1)$, for which the broadcast delay and wastage is minimum. (section ~\ref{suggestions}).
+As a corollary, through simulations on real traces, we identify that for two networks with the same number of nodes, broadcast 
+time required is far smaller for the one with lesser edge density. 
+%On removing some edges from the original network while maintaining the network connectivity 
+%substantially reduces the broadcast time.
+This finding, 
+we believe, indicates a very crucial point -- a sparse communication network per se is not disadvantageous. 
+
+However, we observe that push transfer protocol results in a large number of useless contacts.  
+%In order to reduce the same, we propose in this paper, a ``give-up'' mechanism whereby nodes attempt to discover 
+%their neighborhood by maintaining a history of all previous contacts and stop attempting to perform any further 
+%push after a certain number of unique unsuccessful contacts (reduces to 10\%, message size = 2). 
+An unsuccessful/useless contact here refers to a case 
+where a sender node attempts to send a packet to another node who already has the packet. 
+In order to reduce both broadcast time and wastage we propose a combined strategy whereby the nodes in the system initially push and then switch over 
+to pull after a certain percentage (say $x$) of the nodes have received the full message. We observe that if $x$ is carefully chosen, both gain in  
+broadcast time and reduction in wastage is achieved. However, to determine that $x$\% of the nodes have indeed received the message, the system needs to maintain a global information 
+which is not feasible in a distributed setting like this.
+% An unsuccessful/useless contact here refers to a case 
+% where a sender node attempts to send a packet to another node who already has the packet. 
+% Nevertheless, such a ``give-up'' strategy results in drastic reduction in the number of nodes 
+% finally receiving the message especially for larger values of $m$ (55\%, message size = 16). 
+In order to circumvent this problem, we introduce a distributed version of the previous technique along with ``give-up'' mechanism 
+whereby nodes attempt to discover 
+their neighborhood by maintaining a history of all previous contacts and stops participating in the broadcast 
+after a certain number of unique unsuccessful contacts.  
+This algorithm when tested over Gnutella topologies is found to yield  lesser broadcast delay 
+without significant increase in wastage.
+We believe, our algorithm with minor modifications is applicable to a 
+wide range of dynamic networks ~\cite{eugster2003many,jin2010epidemic,sanghavi2007gossiping}.
+
+
+
+\medskip

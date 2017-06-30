@@ -1,0 +1,4 @@
+\chapter[Related Work]{Related Work} In this chapter, we discuss relevant studies related to the objectives of this thesis.???
+
+\input{texfiles/Related_work/community.tex}
+\input{texfiles/Related_work/application.tex}

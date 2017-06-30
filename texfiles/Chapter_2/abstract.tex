@@ -1,0 +1,11 @@
+In the era of big data, graph sampling is inevitable in many settings. Existing sampling methods are mostly designed for static graphs, and aim to preserve {\em major} structural properties of the original graph  (such as degree distribution, clustering coefficient etc.) in the sample. We posit that for any sampling method it is impossible to produce universal representative which can preserve {\em all} the properties of the original graph; rather sampling should be application specific (such as preserving hubs for information diffusion). Here we consider {\em community detection} as an application and  propose \compas, a novel sampling strategy that unlike previous methods, is not only designed for {\em streaming graphs} (which is more realistic representation of a graph) 
+but also {\em preserves the community structure} of the original graph in the sample. \compas~interweaves graph sampling and community detection in such a way that each gets benefits from the other to produce a community-preserved sample as well as its associated community structure (as a bi-product). 
+%These generated sample may be viewed as stratified sample in that it consists of members from most or all communities in the original graph.
+
+Empirical results on both synthetic and different real-world graphs show that \compas~is the best to preserve the underlying community structure and quite competitive in maintaining general graph properties with average performance reaching 85.5\% of the most informed algorithm on static graphs.
+Finally, we present additional benefits of \compas~through two applications -- selection of right community detection algorithm for a particular graph 
+%message spreading in streaming graphs 
+and selection of training set for online learning. For both the applications \compas~ performs almost as good as the most informed baseline for static graphs. 
+%We obtain a performance that is within {\color{red} y\% of} the most informed algorithm available for static graphs.%\TODO{Report improvements here again.} 
+
+

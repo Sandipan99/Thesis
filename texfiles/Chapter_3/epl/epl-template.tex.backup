@@ -1,0 +1,271 @@
+%\documentclass[doublecol]{epl2} 
+% or \documentclass[page-classic]{epl2} for one column style
+
+% \usepackage{amsfonts}
+% \usepackage{graphicx}
+% \usepackage{url}
+% \usepackage{float}
+% \usepackage{latexsym}
+% \usepackage{amsmath,amssymb}
+% \usepackage{dcolumn}
+% \usepackage{epsfig}
+% \usepackage{textcomp}
+% \usepackage{mathtools}
+% \usepackage{multirow}
+% \usepackage{algorithm}
+% \usepackage{algorithmic}
+% \usepackage{soul}
+% \usepackage{color}
+% \usepackage{amsmath}
+% \usepackage{adjustbox}
+%\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Sunday, February 28, 2016 13:36:09}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\def\dint{\mathop{\displaystyle \int}}
+\def\diint{\mathop{\displaystyle \iint }}
+\def\diiint{\mathop{\displaystyle \iiint }}
+\def\diiiint{\mathop{\displaystyle \iiiint }}
+\def\didotsint{\mathop{\displaystyle \idotsint }}
+\def\doint{\mathop{\displaystyle \oint}}
+\def\dsum{\mathop{\displaystyle \sum }}
+\def\dprod{\mathop{\displaystyle \prod }}
+\def\dbigcap{\mathop{\displaystyle \bigcap }}
+\def\dbigwedge{\mathop{\displaystyle \bigwedge }}
+\def\dbigoplus{\mathop{\displaystyle \bigoplus }}
+\def\dbigodot{\mathop{\displaystyle \bigodot }}
+\def\dbigsqcup{\mathop{\displaystyle \bigsqcup }}
+\def\dcoprod{\mathop{\displaystyle \coprod }}
+\def\dbigcup{\mathop{\displaystyle \bigcup }}
+\def\dbigvee{\mathop{\displaystyle \bigvee }}
+\def\dbigotimes{\mathop{\displaystyle \bigotimes }}
+\def\dbiguplus{\mathop{\displaystyle \biguplus }}
+\def\BF#1{{\bf {#1}}}
+\def\NEG#1{\leavevmode\hbox{\rlap{\thinspace/}{$#1$}}}
+
+
+
+% \title{Threshold-based epidemic dynamics in systems with memory}
+% \shorttitle{Threshold-based epidemic} %Insert here a short version of the title if it exceeds 70 characters
+% 
+% \author{Marcin Bodych\inst{2}, Niloy Ganguly\inst{1}, Tyll Krueger\inst{2}, Animesh Mukherjee\inst{1}, Rainer Siegmund-Schultze\inst{3} \and Sandipan Sikdar\inst{1}}
+% \shortauthor{M. Bodych \etal}
+% 
+% \institute{                    
+%   \inst{1} Indian Institute of Technology Kharagpur - Kharagpur, India - 721302\\
+%   \inst{2} Wroclaw University of Technology - 27 50-370 Wrocław, Poland \\
+%   \inst{3} Technical University Berlin - 10623 Berlin, Germany
+% }
+% \pacs{89.75.Hc}{First pacs description}
+% \pacs{89.75.Fb}{Second pacs description}
+%\pacs{nn.mm.xx}{Third pacs description}
+
+
+% \abstract{
+% In this article we analyze an epidemic dynamics model (SI) where 
+% we assume that there are $k$ susceptible states, that is a node would require multiple ($k$) contacts before it gets infected. 
+% In specific, we provide a theoretical framework for studying diffusion rate in 
+% complete graphs and $d$-regular trees with extensions to dense random graphs. We observe that irrespective of the topology, the diffusion process could be 
+% divided into two distinct phases: (i) the {\em initial} phase, where the diffusion process is slow, followed by (ii) {\em residual} phase where the diffusion rate 
+% increases manifold. In fact, the initial phase acts as an indicator for the total diffusion time in dense graphs. 
+% The most remarkable lesson from this investigation is that such a diffusion process {\em could be controlled and even contained if acted upon within its initial phase}.}
+% 
+% 
+% \begin{document}
+% 
+% \maketitle
+
+
+% \section{Section title}
+% Insert here the text.
+% See fig.~\ref{fig.1}, table~\ref{tab.1} and eq.~(\ref{eq.1}).
+% See also~\cite{b.a,b.b}.
+% \begin{equation}
+% \label{eq.1}
+% 0\neq1
+% \end{equation}
+% 
+% 
+% \begin{figure}
+% \onefigure{epl-template.eps}
+% \caption{Figure caption.}
+% \label{fig.1}
+% \end{figure}
+% 
+% 
+% \begin{table}
+% \caption{Table caption.}
+% \label{tab.1}
+% \begin{center}
+% \begin{tabular}{lcr}
+% first  & table & row\\
+% second & table & row
+% \end{tabular}
+% \end{center}
+% \end{table}
+\chapter{Diffusion in temporal networks}
+Previous two chapters dealt with analyzing structural properties of temporal networks. This chapter is devoted towards the functional aspect of time-varying networks.  
+In specific, we are interested in studying diffusion dynamics in these networks. 
+This chapter is divided into two parts - 
+\begin{itemize}
+ \item we propose a threshold based diffusion model and perform a
+\end{itemize}
+
+
+\input{./texfiles/Chapter_3/epl/introduction}
+\input{./texfiles/Chapter_3/netsci/Infocom2015_introduction}
+\input{./texfiles/Chapter_3/epl/diffusion_model}
+
+
+\input{./texfiles/Chapter_3/epl/complete_graph}
+
+\input{./texfiles/Chapter_3/epl/d-reg_tree}
+
+\input{./texfiles/Chapter_3/epl/discussion}
+
+
+
+
+% \acknowledgments
+% Marcin Bodych and Tyll Krueger were supported by Indian Institute of Technology Kharagpur, Wroclaw University of Technology and the National Science Centre Poland (NCN) through grant no. 2013/11/B/HS4/01061: Agent based modeling of innovation diffusion.
+% 
+% \begin{thebibliography}{10}
+% \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+% 
+% \bibitem{anderson1992infectious}
+% \Name{Anderson R.~M., May R.~M. \and Anderson B.} \Book{Infectious diseases of
+%   humans: dynamics and control} Vol.~28 (Wiley Online Library) 1992.
+% 
+% \bibitem{watts2002simple}
+% \Name{Watts D.~J.} \REVIEW{Proceedings of the National Academy of
+%   Sciences}{99}{2002}{5766}.
+% 
+% \bibitem{dodds2004universal}
+% \Name{Dodds P.~S. \and Watts D.~J.} \REVIEW{Physical review
+%   letters}{92}{2004}{218701}.
+% 
+% \bibitem{pnas1}
+% \Name{Kramer A.~D., Guillory J.~E. \and Hancock J.~T.} \REVIEW{Proceedings of
+%   the National Academy of Sciences}{111}{2014}{8788}.
+% 
+% \bibitem{pnas2}
+% \Name{Aral S., Muchnik L. \and Sundararajan A.} \REVIEW{Proceedings of the
+%   National Academy of Sciences}{106}{2009}{21544}.
+% 
+% \bibitem{tang2009epidemic}
+% \Name{Tang M., Liu Z. \and Li B.} \REVIEW{EPL (Europhysics
+%   Letters)}{87}{2009}{18005}.
+% 
+% \bibitem{son2012percolation}
+% \Name{Son S.-W., Bizhani G., Christensen C., Grassberger P. \and Paczuski M.}
+%   \REVIEW{EPL (Europhysics Letters)}{97}{2012}{16006}.
+% 
+% \bibitem{takaguchi2013bursty}
+% \Name{Takaguchi T., Masuda N. \and Holme P.} \REVIEW{PloS
+%   one}{8}{2013}{e68629}.
+% 
+% \bibitem{karsai2011small}
+% \Name{Karsai M., Kivel{\"a} M., Pan R.~K., Kaski K., Kert{\'e}sz J.,
+%   Barab{\'a}si A.-L. \and Saram{\"a}ki J.} \REVIEW{Physical Review
+%   E}{83}{2011}{025102}.
+% 
+% \bibitem{karimi2013threshold}
+% \Name{Karimi F. \and Holme P.} \REVIEW{Physica A: Statistical Mechanics and its
+%   Applications}{392}{2013}{3476}.
+% 
+% \bibitem{backlund2014effects}
+% \Name{Backlund V.-P., Saram{\"a}ki J. \and Pan R.~K.} \REVIEW{Physical Review
+%   E}{89}{2014}{062815}.
+% 
+% \bibitem{rocha2013bursts}
+% \Name{Rocha L.~E. \and Blondel V.~D.} \REVIEW{PLoS Comput
+%   Biol}{9}{2013}{e1002974}.
+% 
+% \bibitem{masuda2013predicting}
+% \Name{Masuda N. \and Holme P.} \REVIEW{F1000 prime reports}{5}{2013}{6}.
+% 
+% \bibitem{prl1}
+% \Name{Bogu{\~n}{\'a} M., Castellano C. \and Pastor-Satorras R.}
+%   \REVIEW{Physical review letters}{111}{2013}{068701}.
+% 
+% \bibitem{van2012epidemic}
+% \Name{Van~Mieghem P.} \REVIEW{EPL (Europhysics Letters)}{97}{2012}{48004}.
+% 
+% \bibitem{zhang2014susceptible}
+% \Name{Zhang Y.-Q. \and Li X.} \REVIEW{EPL (Europhysics
+%   Letters)}{108}{2014}{28006}.
+% 
+% \bibitem{joh2009dynamics}
+% \Name{Joh R.~I., Wang H., Weiss H. \and Weitz J.~S.} \REVIEW{Bulletin of
+%   mathematical biology}{71}{2009}{845}.
+% 
+% \bibitem{sanghavi2007gossiping}
+% \Name{Sanghavi S., Hajek B. \and Massouli{\'e} L.} \REVIEW{IEEE Transactions on
+%   Information Theory}{53}{2007}{4640}.
+% 
+% \bibitem{qiu2004modeling}
+% \Name{Qiu D. \and Srikant R.} \Book{Modeling and performance analysis of
+%   bittorrent-like peer-to-peer networks} in proc. of \Book{ACM SIGCOMM computer
+%   communication review} Vol.~34 (ACM) 2004 pp. 367--378.
+% 
+% \bibitem{romero2011differences}
+% \Name{Romero D.~M., Meeder B. \and Kleinberg J.} \Book{Differences in the
+%   mechanics of information diffusion across topics: idioms, political hashtags,
+%   and complex contagion on twitter} in proc. of \Book{Proceedings of the 20th
+%   international conference on World wide web} (ACM) 2011 pp. 695--704.
+% 
+% \bibitem{granovetter1978threshold}
+% \Name{Granovetter M.} \REVIEW{American journal of sociology}{}{1978}{1420}.
+% 
+% \bibitem{sur1}
+% \Name{Mollison D.} \Book{Epidemic models: their structure and relation to data}
+%   Vol.~5 (Cambridge University Press) 1995.
+% 
+% \bibitem{volz2007susceptible}
+% \Name{Volz E. \and Meyers L.~A.} \REVIEW{Proceedings of the Royal Society of
+%   London B: Biological Sciences}{274}{2007}{2925}.
+% 
+% \bibitem{kaplan1977generalization}
+% \Name{Kaplan N.} \REVIEW{Journal of Applied Probability}{}{1977}{212}.
+% 
+% \bibitem{wald}
+% \Name{Wald A.} \REVIEW{The Annals of Mathematical Statistics}{15}{1944}{283}.
+% 
+% \bibitem{erdos1959random}
+% \Name{Erd{\"o}s P. \and R{\'e}nyi A.} \REVIEW{Publicationes Mathematicae
+%   (Debrecen)}{6}{1959}{290}.
+% 
+% \bibitem{barabasi1999emergence}
+% \Name{Barab{\'a}si A.-L. \and Albert R.} \REVIEW{science}{286}{1999}{509}.
+% 
+% \end{thebibliography}
+% 
+% 
+% \end{document}
+

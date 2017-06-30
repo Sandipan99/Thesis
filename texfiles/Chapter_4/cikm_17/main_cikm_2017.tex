@@ -1,0 +1,146 @@
+% \documentclass[sigconf]{acmart}
+% 
+% \usepackage{booktabs} % For formal tables
+% \usepackage{color}
+% \usepackage{textcomp}
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+% \usepackage{todonotes}
+% \usepackage{multirow}
+% \usepackage{subcaption}
+% \usepackage{adjustbox}
+% \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% \newcommand\mycheck[1]{\textcolor{red}{#1}}
+% \newcommand\mycheckng[1]{\textcolor{red}{NG: #1}}
+% \newenvironment{function1}[1][htb]
+%   {\renewcommand{\thealgocf}{1}
+%   \renewcommand{\algorithmcfname}{Function}% Update algorithm name
+%    \begin{algorithm}
+%   }{\end{algorithm}}  
+% 
+% 
+% \frenchspacing
+% \setlength{\pdfpagewidth}{8.5in}
+% \setlength{\pdfpageheight}{11in}
+% % \pdfinfo{
+% % /Title (Insert Your Title Here)
+% % /Author (Put All Your Authors Here, Separated by Commas)}
+% %\setcounter{secnumdepth}{0}  
+%  \begin{document}
+% % The file aaai.sty is the style file for AAAI Press 
+% % proceedings, working notes, and technical reports.
+% %
+% \title{On the effectiveness of multiple reviewers in a peer-review system: A case study of two high impact Physics journals}
+% %\subtitle{A large-scale comparison of single vs multiple peer-review system}
+% % \author{AAAI Press\\
+% % Association for the Advancement of Artificial Intelligence\\
+% % 2275 East Bayshore Road, Suite 160\\
+% % Palo Alto, California 94303\\
+% % }
+% \renewcommand{\shorttitle}{Effectiveness of multiple reviewers in a peer-review system}
+% 
+% \begin{abstract}
+% Peer-review is considered as one of the most  important steps to maintain the quality of research publication.
+% The research community is however reaching a consensus that although scientific peer-review is highly relevant, 
+% it is nonetheless flawed. One of the most important steps in the peer-review process is the assignment of peers or referees who are 
+% handed the responsibility of judging the quality of the submission. Hence the training and the knowledge of all the referees are critical in proper quality judgment of the work. It is usually believed that to make the review process as fair as possible, decisions 
+% from multiple referees should be favored over a single referee.  
+% We in this paper consider peer-review data 
+% of leading scientific journals and systematically study the cases where a single reviewer is involved and compare these with the cases where multiple reviewers are 
+% involved. We observe that on average single refereed papers are more cited compared to multi-refereed papers. However, papers reviewed by multiple referees constitute the majority of the most cited (top 25\%) papers in our dataset. Further, analyzing the review reports we find that in a multi-referee system, in many cases the referees fail to reach consensus on their decision possibly leading to wrong overall judgments. All these observations lead us to believe 
+% that a multiple referees in the context of a peer-review system, although effective, suffers due to assignment of irreconcilable referees. This observation leads us to further propose a 
+% framework based on genetic algorithms to recommend compatible referee groups (based on the time since last assignment and fraction of papers 
+% accepted) in case of a multiple referee system. 
+% In fact across the two datasets our framework on average could correctly recommend 
+% reviewer groups in $\sim$ 78\% of the cases showing that multi-referee groups can work well only when the group members are chosen appropriately. Our framework further ensures fairness in referee assignment by not encumbering the better-performing referees. 
+%  
+% \end{abstract}
+% 
+% \begin{CCSXML}
+% <ccs2012>
+% <concept>
+% <concept_id>10003120.10003130.10003233</concept_id>
+% <concept_desc>Human-centered computing~Collaborative and social computing systems and tools</concept_desc>
+% <concept_significance>500</concept_significance>
+% </concept>
+% </ccs2012>
+% \end{CCSXML}
+% 
+% \ccsdesc[500]{Human-centered computing~Collaborative and social computing systems and tools}
+% 
+% 
+% % We no longer use \terms command
+% %\terms{Theory}
+% 
+% \keywords{peer-review; genetic algorithm; citation; reviewer}
+% 
+% 
+% \maketitle
+
+%\vspace{-8mm}
+% \input{./texfiles/Chapter_4/cikm_17/introduction}
+%\vspace{-4mm}
+%\input{related_works}
+%\vspace{-3mm}
+%\input{dataset}
+%\vspace{-3mm}
+
+\begin{figure}
+ \centering
+ \includegraphics[scale = 0.4]{./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1.eps}
+ \caption{\label{citation:jhep} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JHEP dataset.} 
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[scale = 0.4]{./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1.eps}
+ \caption{\label{citation:jstat} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JSTAT dataset.}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/best_paper.eps}
+ \caption{\label{fig:best} Fraction of multi-refereed papers in the top $k$ most cited papers where $k = 1,50,100,500,1000,2000$.}
+\end{figure}
+
+\if{0}
+\begin{figure}[!ht]
+ \centering
+ \begin{subfigure}[b]{0.4\textwidth}
+ \centering
+  \includegraphics[scale = 0.4]{./texfiles/Chapter_4/cikm_17/figures/jhep_all.eps}
+  \caption{\label{disagree:jhep}JHEP}
+ \end{subfigure}%
+ ~
+ \begin{subfigure}[b]{0.4\textwidth}
+ \centering
+  \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/jstat_all.eps}
+  \caption{\label{disagree:jstat}JSTAT}
+ \end{subfigure}
+
+ \caption{ Fraction of cases where the reviewers disagreed with respect to (1) length (2) sentiment and (3) content for (a) JHEP and (b) JSTAT 
+  datasets.}
+  
+\end{figure}
+\fi
+
+% \begin{figure*}
+% \centering
+% \begin{tabular}{cc}
+% \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/jhep_all.eps} & \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/jstat_all.eps}
+% \end{tabular}
+% \caption{\label{disagree:jhep} Fraction of cases where the reviewers disagreed with respect to (1) length (2) sentiment and (3) content for (a) JHEP and (b) JSTAT 
+%   datasets.}
+% \end{figure*}  
+
+\input{./texfiles/Chapter_4/cikm_17/multiple_vs_single}
+
+\input{./texfiles/Chapter_4/cikm_17/reviewer}
+
+\input{./texfiles/Chapter_4/cikm_17/group_referee}
+%\vspace{-4mm}
+\input{./texfiles/Chapter_4/cikm_17/editor_importance}
+
+\input{./texfiles/Chapter_4/cikm_17/conclusion}
+
+

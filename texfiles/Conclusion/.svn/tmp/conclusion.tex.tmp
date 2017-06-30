@@ -1,0 +1,325 @@
+<<<<<<< .mine
+\chapter[Conclusion and Future Work]{Conclusion and Future Work} In this chapter we elaborate important contributions from this thesis and
+finally wrap up this thesis by pointing to some future research directions that have been opened by this thesis.
+
+\section{Summary of Contributions} Community analysis of a network has remained in constant focus among the researchers since last one and
+half decades. Most of the work tried to design algorithms for community detection. In this thesis, the major focus has been
+to interpret the notion of belongingness of a node within a community, which has often been ignored due to the assumption that nodes  have
+an equal extent of belongingness within a community. To explore this point, we have started our investigation to observe the variability of
+a
+community detection algorithm in producing output for a certain network. Then we have proposed different metrics to measure the extent to
+which a vertex belongs to a (non-overlapping and overlapping) community. Next, we have developed algorithms to detect communities
+from the networks. Following this, we have exhaustively studied the real-world community structure of a large citation network. 
+Finally, we use the community information further to design two applications. In the following, we summarize the contributions for each
+problem separately.
+
+
+\subsection{Constant Communities in Networks}
+
+
+Constant communities are regions of the network whose community structure is invariant under different perturbations and community detection
+algorithms. They, thereby, represent the similar relationships in the network. The existence of multiple results for community
+detection is well known; however, this is one of the first studies of the invariant subgraphs that occur in a network.  The contributions of
+this work are summarized as follows.
+
+\begin{itemize}
+ 
+\item First, we
+observe that constant communities do not always have more internal connections than external connections. Rather, the strength of the
+community is determined by the number of different external communities to which it is connected. We propose a metric to quantify
+the pull that a vertex experiences from the external communities and the relative permanence of the said vertex
+indicating its inertia to stay in its own community.
+
+
+\item Second, in most networks, constant communities cover only a subset of the vertices. Depending on the size of the constant
+communities it
+may not be correct or necessary to assign every vertex to a community, as is the focus of most community detection algorithms. Furthermore,
+even if when we insist on assigning a community to each vertex, the constant communities can be leveraged to produce results with higher
+modularity and lower variance. 
+% Thus, as discussed earlier, constant communities form the smallest indivisible units in the networks and
+% particularly in the case of agglomerative methods can be used to hierarchically build larger communities.
+
+\item Third, the high functional cohesion among the vertices of the constant community can render meaning to the community structure of
+the
+networks. This
+conclusion is much more apparent for labeled graphs where the vertices are associated with certain functional
+properties. If we stop at
+detecting only the constant communities and treat them as the actual community structure of the graph, we observe that sometimes they act as
+a hard bound since no further community detection might be possible. Therefore, we suggest that the prior
+detection of these building blocks is always significant in order to further decide to
+merge them into more coarse-grained communities pertaining to a diluted functional cohesion.
+
+
+
+\item The fourth and most important observation is that not all networks have significant constant community structure. The two such
+examples in our test suites are Power and Email graphs. The absence of constant communities in the networks indicate that either communities
+in general do
+not exist (such as Power network) or they are highly overlapped and therefore do not have a significant constant region.  A set of
+professional
+emails within correspondents in the same university is likely to have more overlaps than clear cut communities.
+
+
+\item Finally, we demonstrate evidence that the modularity measure is not enough to judge the inherent compartmental structure of a
+network.
+For instance, Email and Power networks have reasonably higher modularities compared to the others. Still, no consensus is observed in their
+community structures. Rather their sensitivity measures indicate that each node might separate out as individual constant community in the
+further iterations. Therefore, the goodness metric of the community detection algorithm should be redefined in a way that can effectively
+capture the modular structure of the network.
+
+\end{itemize}
+
+\subsection{Permanence and Network Communities}
+In this chapter, we introduce two vertex-based metrics, permanence (Perm) and overlapping permanence (OPerm) for evaluating the
+goodness of communities in networks. From our experiments we observe that the scores of these metrics have a good correlation
+with the quality of the ground-truth communities. In addition, these two metrics also
+provide some significant advantages compared to other popular community scoring functions. We summarize the contributions of this chapter as
+follows.
+\begin{itemize}
+ \item The values of Perm and OPerm strongly correlate to the community like structure of the network. Therefore, these metrics can also be
+used to identify whether the network is at all suitable for community detection.
+
+\item We believe that the advantages of the proposed metrics arise because these are local vertex-based metrics as opposed to the more
+common global/mesoscopic metrics. At the same time, these metrics also derive the benefits of a global metric to a certain extent by looking
+into the exact community assignments of the external neighbors of the vertex considered. Perfectly global metrics tend to aggregate the
+effect of the connections of all the vertices in a community, which can lead to a loss of information, particularly if the distribution of
+the connections is skewed. A vertex-based metric is more fine-grained, and therefore allows partial estimation of communities in a network
+whose entire structure is not known.
+
+\item The algorithms, named MaxPerm and MaxOperm are able to detect meaningful communities from both synthetic and real-world
+networks. Moreover, these are highly resilient to the problems, such as resolution limit, degeneracy of solutions that are often observed
+in most of the state-of-the-art algorithms.
+
+\item Finally, for the first time the community assignment of a vertex has been studied in such finer details by  checking the community
+assignment of each individual vertex in a network. This in turn establishes more strongly the correctness of the algorithm in finding the
+modular structure of a
+network. 
+\end{itemize}
+
+
+\subsection{Analyzing Ground-truth Communities}
+In this chapter, we analyze the communities (research areas) of a large scale citation network. The ground-truth labeling has
+allowed us to study rise and fall of scientific research in computer science domain over the last 50 years. Next, we study the
+interdisciplinary activities in computer science domain and unfold the evolution dynamics of core and interdisciplinary fields.
+Finally, we study the research field adaptation process of a researcher in her research career and develop a stochastic model
+to mimic this real-world phenomenon. In summary, this chapter shows that the usual consensus on the fact that suggesting an
+efficient community detection technique usually marks the ``endpoint'' in research in this area might not be true; in contrast, it possibly
+triggers the beginning of a new dimension of research, whereby, the temporal interaction, influence, shape and size of the communities so
+obtained can be suitably analyzed thus allowing for newer insights into the complex system under investigation. The contributions of this
+chapter are as follows:
+\begin{itemize}
+ \item We provide a large scale real-world network with the labeled ground-truth community structure. We believe this dataset would
+help in the evaluation of various future community detection algorithms. 
+
+\item The longitudinal analysis of the community interactions has revealed a complete picture of the paradigm shift in computer science
+domain. We also draw a correlation of this shift with the NSF funding statistics.
+
+
+\item We propose a bunch of metrics to measure the interdisciplinarity of the research fields. Few fields such as Data Mining, WWW,
+Natural Language Processing, Computational Biology, Computer Vision, Computer Education provide clear indications of interdisciplinarity in
+terms of all the metrics proposed here. These metrics further allow us to
+develop a classification model to identify core and interdisciplinary fields of a particular domain.
+
+\item The core-periphery organization of citation network has revealed that the interdisciplinary fields are accelerating steadily toward
+the core of computer science domain.
+
+\item We explain the field adaptation process of a researcher through a dynamic model. We notice that the
+highly-cited researchers typically follow ``scatter-gather'' process by working on diverse fields throughout the entire career, while
+remaining focused on a single field in each time period. 
+
+\item For a partially field-tagged publication dataset, the stochastic model can be useful to tag the appropriate field information of a
+paper whose tags are missing. 
+\end{itemize}
+
+
+\subsection{Community-based Applications}
+In this chapter, we designed two applications pertaining to the citation networks by leveraging the community information of the
+network. First, we analyzed the various citation profiles of scientific articles after publications and categorized them into six
+classes. We exhaustively studied these categories separately and designed a growth model to substantiate these categories in the real
+citation network. Then we leveraged this information to develop a stratified learning framework that can predict the number of citations
+ that an article would receive after certain years from its publication. Finally, we designed a faceted recommendation system for scientific
+articles (FeRoSA) that in addition to recommending the relevant scientific papers for a given query paper, would provide the information as
+to how these recommended papers are related to the query paper. The contributions of this chapter are as follows:
+
+\begin{itemize}
+ \item The categorization of scientific citation profiles provides a set of new approaches to characterizing each individual
+category as well as to study the dynamics of their evolution over time.
+
+\item Leveraging on these behavioral signatures of the citation categories, we are able to design a novel dynamical model to synthesize
+the real-world network evolving over time. This model in turn intrinsically unfolds the citation patterns of different categories, which
+show a significant resemblance to that obtained from the real data.
+
+\item The categorization information was proved to be remarkably useful in predicting future citation counts within a stratified learning
+model where we first divided the
+training samples into different strata and systematically used these strata for predicting future citation count of an article.
+
+\item We introduced a bunch of features in the task of future citation prediction. We observed that author-centric features are the
+most distinguishing ones; among these, average productivity of authors seem to make a paper attractive.
+
+\item We further showed that adding the citation counts accumulated within the first year after publication as a feature can improve the
+prediction accuracy.
+
+\item The idea of stratification was also used in the task of designing faceted recommendation system where we divided the dataset into four
+facets
+and conducted the random walks with restarts separately for the different facets. To the best of our knowledge this is the first
+recommendation
+system for scientific papers where the recommendations are further divided into different facets depending of the semantic relation to the
+query
+paper.
+
+\item  FeRoSA achieves a reasonably high precision for the query papers with low citations and low cosine similarity,
+thus indicating the robustness of the proposed framework.
+
+\item FeRoSA is designed to be lightweight, so that it can easily be deployed as an online system.
+\end{itemize}
+ 
+  
+
+
+\section{Future Direction}
+
+In this section we discuss several new avenues of research that have been opened up by this thesis.
+  
+\subsection{Constant Communities in Networks}
+Future directions of this works are mentioned as follows:
+\begin{itemize}
+ \item Most of the experiments conducted in this chapter focused solely on agglomerative modularity maximization methods. We plan to
+continue our studies on the effect of vertex perturbations on other types of community detection algorithms such as divisive and spectral
+methods as well as different optimization objectives. 
+
+\item It is important to understand how the randomness of a network in the community assignment could be quantified in order to develop
+algorithms that take into
+account the variation in randomness for determining the quality of the communities.
+
+\item Most importantly, we would like to develop an automated algorithm that can detect such constant communities from a network.
+\end{itemize}
+
+
+\subsection{Permanence and Network Communities}
+From this chapter, several interesting extensions are possible.
+\begin{itemize}
+\item Since Perm and OPerm are vertex-centric metric, we plan to use these metrics for large networks whose complete information is
+missing. In this direction, we would also like to detect meaningful communities from noisy incomplete networks.
+
+ \item We plan to extend these metrics for dynamic and weighted networks. We believe that this metric will help in 
+formulating a strong theoretical foundation for identifying community structures where the ground-truth is not known.
+
+\item We have shown that the layered structure of a community is nicely revealed through the value of OPerm. Moreover, these values
+provide a ranking of vertices within a community, which can be leveraged in different applications, such as initiator selection during
+message spreading. Therefore, another direction of research could be to have a deeper understanding of this layered structure and to apply
+the proposed metrics in several other applications.  
+
+
+\end{itemize}
+
+\subsection{Analyzing Ground-truth Communities}
+The interesting future research agenda that can be enumerated from this chapter are as follows.
+
+\begin{itemize}
+\item The present empirical study marks the foundation for the design and implementation of a specialized recommendation engine that would
+be capable of answering search queries pertaining to the (a) impact of papers/authors, (b) field at the forefront (currently and in the near
+future), (c) seminal papers within a field and many such other factors. These results can be useful for (i) the funding agencies to make
+appropriate decisions as to how to distribute project funds, (ii) the universities in their faculty recruitment procedure. 
+
+\item To prove the robustness of the proposed metrics for measuring the interdisciplinarity of a research field, we would like to apply
+the set of metrics to other domains such as physics and biology.
+
+%  \item The stochastic model mimic field adaptation process of researchers is non-parametric. In future, we would like to include several
+% other factors pertaining to the field selection process of a researcher such as the current popular research field, the effect of group
+% collaboration into the model to make it more robust and generic.
+
+\item Finally, we would like to explain how the global dynamics of scientific paradigm shift influences a researcher's career and
+vice versa.
+
+\end{itemize}
+
+
+\subsection{Community-based Applications}
+The possible future agenda that can be formulated from this chapter are as follows.
+\begin{itemize}
+ \item The categorization of citation profiles offers a necessary first step towards reformulating the existing quantifiers available in
+Scientometrics that should leverage the signature of different citation patterns in order to formulate robust measures.
+
+\item We plan to extend our studies on the datasets of other domains such as physics and biology to verify the universality of such
+categorizations.
+ 
+\item We are keen to understand the micro-level dynamics controlling the behavior of PeakMul category which is significantly different
+from the others. In future, we would like to conduct a detailed analysis to understand the different characteristic features particularly
+for the PeakMul category.
+
+\item Regarding the task of future citation count prediction, we plan to extend this work by looking into different research fields
+separately.
+
+\item We plan to further explore new features that can provide additional signals not captured by the features used in this study.
+We suspect that the content features seem to provide weak signals because of the coarse representation of the content
+in terms of topic modeling. A more sophisticated and systematic mining of meaningful features from the content is an immediate future task.
+
+\item We also intend to investigate whether similar techniques could be used to predict the scholarly impact of higher level entities (e.g.,
+researchers and universities). 
+ 
+\item Regarding FeRoSA, we are also interested in the design aspects related to the ergonomics of the user interface so that it can
+significantly reduce user's cognitive overload, while providing high user satisfaction at the same time. 
+
+\item In general, the framework used in FeRoSA can be used to provide faceted recommendations for items such as movies, books, videos etc.
+
+\end{itemize}
+=======
+\chapter[Conclusion and Future Work]{Conclusion and Future Work} In this chapter we elaborate important contributions from this thesis and finally wrap up this thesis pointing to some future research directions that have been opened from this thesis.
+
+\section{Summary of Contribution} The demand for data through mobile devices would continue to increase thus leading to an exponential growth in Internet traffic. Merely increasing network capacity by means of infrastructure can not solve Internet traffic issue completely. In addition to it several protocol level modifications are needed. In this regard this thesis contributes in a meaningful way. We discuss contributions of this thesis corresponding to the objectives laid out in the beginning of the thesis.
+
+\subsection{Efficient Offload using WiFi Network} Cellular networks are becoming heavily congested due to huge data demand. One very promising approach to reduce the load of congested cellular network is to offload its traffic to some other networks like the Wi-Fi network. With availability of cheap storage, Wi-Fi APs (or base stations) can act as edge server with caching support. Caching of popular files may restrict significant traffic within local network. Applying this notion, this work provides a framework for local area CDN which enables uninterrupted video watching for users with high mobility. Contributions from this work are summarized as follows. 
+
+\begin{itemize}
+\item Use Wi-Fi APs as edge server to bring popular contents closer to users which results in significant reduction in data access delay.\\
+\item Develop a methodology for systematic chunk distribution across network based on prior knowledge of human mobility pattern and hence ensure just in time streaming.\\
+\item Performance of this system is independent of the city map pattern and hence can be applied to any city with any road map.\\
+\item Short association duration with AP for users with high mobility was the main obstacle for smooth streaming; proposed system with caching support enables video streaming for the users with high mobility.\\
+\item Simulation results confirm that the proposed system can do a sizeable offload over a wide variation of speed (more than $80\%$ offload in the speed range between $20$km/hour - $60$km/hour). \\
+\item Performance degrades gracefully with increasing traffic, however waiting due to traffic signal increases performance for high traffic scenario.\\
+\item Even with very low density of Wi-Fi AP, system offloads the load significantly (when APs are placed at every 300m, system can offload more than $85\%$).\\
+\end{itemize}
+\subsection{Managing Heterogeneous Traffic} Many recent studies pointed out that load distribution across network is not homogeneous which in effect creates issue with overall system performance and user satisfaction. In most of the cases few base stations remain over loaded while others remain under utilized. In recent years Wi-Fi networks are going through an architectural shift. Wi-Fi APs are being connected via high speed wires. This change brings new opportunity to out of band communication among APs. The present work exploits this new architecture to collect a global view of load distribution across network and applies max-flow based strategy for resource allocation and association control. Contributions from this work are summarized as follows. 
+
+
+\begin{itemize}
+\item Exploiting the architectural shift, proposed system with minimum cost (out of band communication) can create a global load distribution view necessary for optimal association strategy.\\
+\item Pressing association control protocol is mapped to the classical max-flow algorithm where APs are considered as source of bandwidth and mobile devices are considered as sink of bandwidth and maximum flow of bandwidth from source nodes to sink nodes ensures maximum device satisfaction.\\
+\item Along with maximum device satisfaction, proposed association control protocol ensures fair chance of association for devices spatially distributed across network.\\
+\item With distributed design, proposed association control protocol is highly scalable.\\
+\item Proposed association control protocol can admit up to $10\%$ more devices than standard RSSI and LLF based association in the viable load range.\\
+\item Simulation results confirm that the proposed system can easily cope up with user mobility.\\
+\end{itemize}
+\subsection{Restricting Unauthorized Traffic} Among the three objectives of this thesis, this objective is least studied in literature. However, recent studies are pointing out the importance of restricting such traffic both from the point of view of service provider's revenue and unwanted extra traffic in network. In this work we have proposed another dimension of metric to be checked for authentication algorithm namely {\em shareability} along with existing dimension of security and simplicity to restrict unwanted traffic. An authentication system is proposed based on user's daily activity to restrict password sharing. This work empirically provides a proof to our hypothesis that {\em users can remember their own activity mostly while it is very difficult to be guessed by even close friends}. Contributions from this work are summarized as follows. 
+
+\begin{itemize}
+\item This work proposes a new dimension of metric to authentication -- {\em shareability}.\\
+\item This work identifies and empirically proves that our daily activity can be used in a meaningful way for authentication purpose.\\
+\item An integrated system is developed for evaluating the potential of proposed system which is capable of automatic activity collection, selection of potential activities for challenge generation and an interface for challenge response.\\
+\item Proposed system inherently provides security to any number of accounts with dynamic challenges and easy maintainability as users need to remember activities of recent past.\\ 
+\item User survey suggests that they are interested to use such system for password recovery instead of static (hint) question answer based password recovery.\\
+\item Our experiment shows that legitimate users can successfully pass through our authentication system in $95\%$ cases whereas impostors can go through only for $5.5\%$ cases.\\
+\item We have made some important observations from this study, for example a) outlier activities do have more potential to be a good candidate of challenge generation, b) text based question with little hint is more effective, c) user can remember well last 2-3 days activities etc.
+\end{itemize}
+
+\section{Future Direction} In this section we discuss some new research issues that have been opened up by this thesis.
+\subsection{Efficient Offload using WiFi Network} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item This work does not consider the file selection strategy for caching and how the cache should be modified with time. So an important direction for an integrated system will be to focus on the file selection strategy which can be modulated based upon feedback from user.\\
+\item Feasibility of live streaming support with proposed framework can be studied.\\
+\item With this proposed framework, we want to study the feasibility in supporting live streaming and the solution thereof.\\
+\item In a high traffic scenario, due to bandwidth division, clients suffer from low streaming rate. However, in this scenario, a P2P kind of strategy might boost up efficiency significantly. A future direction could be to study the performance of such system in high traffic scenario.\\
+\end{itemize}
+\subsection{Managing Heterogeneous Traffic} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item In this work, we have assumed very low mobility of users and a simplistic mobility protocol. More practical mobility model applicable for university campus and city may be studied.\\
+\item An anticipatory association based on mobility prediction will help in faster association. One can, in future, study the feasibility of this scheme and, subsequently explore the effect of such a strategy.\\
+\item Another important direction could be to study the effect of a sophisticated channel allocation strategy on reduction of interference during association.\\
+\end{itemize}
+
+\subsection{Restricting Unauthorized Traffic} Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item As a proof of concept we explored very few information sources; as a future step, one might explore more information sources like information from wearable devices, smartphone sensors etc.\\
+\item Another concept could be to develop architectures for utilizing proposed methodology in different scenarios of authentication like architecture for utilizing proposed system in user's own smartphone will be different from the architecture when it is going to be used by some third party.\\
+\item There is always a potential of privacy leaks as this system works with user's private data. So in future it would be important to investigate the methods of securing privacy in greater detail.\\
+\end{itemize}
+>>>>>>> .r42

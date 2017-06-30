@@ -1,0 +1,128 @@
+% % \begin{table*}[!ht]
+% % \centering
+% %  \includegraphics[scale=0.4]{./Fig/picture.pdf}
+% % % \caption{A schematic diagram of our proposed framework (SVM: Support vector Machine, SVR: Support Vector Regression). Here we assume
+% that % %the query paper in mapped to `MonIncr' class by SVM module.}\label{model}
+% % \end{table*}
+
+
+\subsection{Proposed Framework}\label{sec:model}
+
+The prediction is done through a two-stage learning process where the learning task is defined as follows: 
+
+\noindent {\bf Learning task:} Given a set of  features $F=\{f_1, f_2,..., f_n\}$, our goal is to learn a 
+function $\psi$ to predict the citation count of an
+article $d$ at a given time period $\Delta t$ after its publication. Formally, this can be written as:
+\begin{equation}
+ \psi(d|F,\Delta t) \rightarrow C_T(d|\Delta t)
+\end{equation}
+
+ where {\em citation count}, $C_T$ is as defined below. 
+
+
+\noindent  {\bf Citation count:} As defined by Yan et al.~\cite{Yan:2011}, given the set of scientific articles $D$, the citation count ($C_T (.)$)
+of an article $d \in D$ is defined as:
+\begin{center}
+$ citing(d) = \{d' \in D : d'\ cites\ d\}$ \\
+$C_T(d) = |citing(d)|$ 
+\end{center}
+
+Note that in this paper, we consider $\Delta t \in [1,5]$.
+
+We now elaborate the two-stage learning process undertaken to accomplish the above mentioned task.
+
+
+\begin{figure}[t!]
+\begin{center}
+\centering
+\includegraphics[scale=0.35]{./texfiles/Chapter_4/Fig/citation_slides_NG.pdf}
+\end{center}
+\caption{ A schematic of our proposed framework (SVM: Support Vector Machine, SVR: Support
+Vector Regression). Here we assume that the query paper is mapped to
+`MonIncr' class by the SVM module.}\label{model}
+\end{figure}
+
+
+
+\subsubsection*{Two-stage prediction model}\label{2-stage-model}
+The schematic diagram of our proposed two-stage model for predicting future citation count is shown in Figure \ref{model}. 
+In the first stage, a sample (paper) is classified into one of the six identified categories which is done by using a multi-class SVM. In
+the second stage, the actual citation count of the paper is computed by employing a customized SVR model.  
+In the rest of the section, we explain each of the stages separately.
+
+
+%\noindent {\bf(b) Rule-based approach:} 
+%%The training samples are now classified into six categorizes as mentioned in section~\ref{sec:profile}. After an exhaustive analysis of different possible patterns of citation profiles present in our dataset, 
+%We build a set of rules to classify the training articles into six
+%categories (mentioned in Figure \ref{algo}). 
+%%The main reason behind this first-level classification is to remove the noisy data points from the training set in the final regression model which is a standard approach in stratification learning method. 
+%After normalizing each citation profile, we use the following two heuristics to detect
+%peaks: (i) the height
+%of a peak should be at least 75\% of the maximum peak-height, and (ii) two consecutive peaks should be separated by more than 2 years,
+%otherwise they are treated as a single peak. The rule-based approach yields six different categories of training samples based on the number
+%and
+%position of the peaks in different time-stamps of the citation profiles shown in Figure \ref{profile}. This categorization serves as
+%the
+%gold-standard for the SVM model discussed later. \\
+%%Note that, the peak detection strategy is a heuristic and it might need some adaptation depending upon the nature of the applications.\\
+
+%\noindent {\bf(c) Static features:} The same set of static features discussed in
+%section~\ref{sec:feature} is used for the classification model as well
+%as the regression analysis. 
+
+%\todo{We need to decide whether it is six class or category -- there is confusion}
+
+\textbf{Stage I:} 
+For each training sample, we identify its category among the six defined categories using the set of rules mentioned in Section
+\ref{six_category}. We also extract the features (mentioned in Section \ref{sec:feature}) for each training sample. 
+Hence the   multi-class Support Vector Machine (SVM)~\cite{Lee2004} receives the category and the feature (author-centric, paper-centric, venue-centric) information of each member in the training set.
+ Subsequently, given a test sample (query paper) along with its set of features, the multi-class SVM outputs the category of the sample. 
+For training and classification phases of SVM, we
+use Weka-LibSVM
+toolkit\footnote{\url{http://www.cs.waikato.ac.nz/ml/weka/}} applying
+pairwise multi-class decision approach. The best
+results are obtained for the polynomial
+kernel setting. 
+The overall accuracy and the importance of each feature in the classification task are reported in Section~\ref{result}. 
+
+
+\textbf{Stage II:} 
+Support Vector Machine can be applied not only to classification problems but also to the case of
+regression often termed as {\it Support Vector Regression} ({\it SVR}) \cite{Smola:2004}.
+% An overview of the basic ideas underlying support vector machines for regression and function estimation can be found
+%in~\cite{Smola:2004}.
+We use LibSVM (epsilon-SVR)\footnote{ \url{http://www.csie.ntu.edu.tw/~cjlin/libsvm/}} for this analysis with the
+default parameter settings. 
+We train separate SVR models for each category $C$ as well as for each time instance $\Delta t$; each SVR is identified by the
+notation $SVR(C, \Delta t)$. Recently, Yan et al.~\cite{Yan:2011} used four prediction models, namely Linear Regression,
+k-Nearest Neighbor, CART and SVR and showed that SVR outperforms other models in predicting future citation counts. Therefore, in our
+experiment we use SVR for the final prediction.
+
+
+The training set for SVR pertaining to a certain category (say, MonIncr) contains the papers whose citation patterns fall into that
+category. Besides taking the features of the papers as input,  $SVR(C, \Delta t)$ also takes as input the number of citations the
+constituent training papers in that category have received at $\Delta t$ time after their publication. That is, if $\Delta t$ = 5, the
+citation count of a paper at the fifth year of its publication available from the training sample is taken into consideration. For example,
+if a paper has been published in 1975 (1978), the number of citations it received in the year 1980 (1983) is taken as input.
+
+\noindent {\bf Handling information leakage:} 
+In order to make predictions for the query paper, we always consider the information available before the publication of the query paper (i.e., we avoid any information \emph{at or after} the publication year of the query paper). For instance, when predicting the future citation count of an article (published in 1996) 5 years after its year of publication, all the articles
+published in the year 1990 or before are processed in the training samples; all the other articles published after 1990 are discarded. The
+reason is
+that for 5-years future citation prediction of the papers published in 1996, if we use the papers published in 1992 in the training phase,
+their citation counts in the year 1997 would become the data points in the training space of the regression model for $\Delta t=5$. This implies that we are using the information of
+the citations at 1997 in order to predict the citation count of the paper published in the year 1996, which leads to  information leakage. 
+\if{0}
+Similar argument
+is applicable for not considering the papers published within 1997-2000 in the training phase. Therefore, we adopt this policy so that
+we could refrain from using quantities that are observable only in future time points since it is inappropriate (leading to information
+leakage) to employ quantities from future to predict the future. 
+\fi
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+\chapter[Related Work]{Related Work} In this chapter, we discuss relevant studies related to the objectives of this thesis. Particularly,
+the literature review is conducted in two broad directions: first, we shall describe the metrics and methods used in community detection,
+and second, we shall elaborate the analysis of community structure and its usage in various applications
+
+\input{texfiles/Related_work/community.tex}
+\input{texfiles/Related_work/application.tex}

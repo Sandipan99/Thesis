@@ -1,0 +1,161 @@
+\contentsline {chapter}{Table of Contents}{xv}{section*.12}
+\contentsline {chapter}{List of Figures}{xix}{section*.14}
+\contentsline {chapter}{List of Tables}{xxv}{section*.16}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.18}
+\contentsline {section}{\numberline {1.1}Major Challenges}{2}{section.19}
+\contentsline {section}{\numberline {1.2}Objectives}{3}{section.20}
+\contentsline {section}{\numberline {1.3}Constant Communities in Networks}{4}{section.21}
+\contentsline {section}{\numberline {1.4}Permanence and Network Communities}{6}{section.22}
+\contentsline {section}{\numberline {1.5}Analyzing Ground-truth Communities}{7}{section.23}
+\contentsline {section}{\numberline {1.6}Community-based Applications}{9}{section.25}
+\contentsline {section}{\numberline {1.7}Contributions}{11}{section.26}
+\contentsline {subsection}{\numberline {1.7.1}Constant Communities in Networks}{11}{subsection.27}
+\contentsline {subsection}{\numberline {1.7.2}Permanence and Network Communities}{13}{subsection.34}
+\contentsline {section}{\numberline {1.8}Efficient Offload using WiFi Network}{15}{section.36}
+\contentsline {subsection}{\numberline {1.8.1}Analyzing Ground-truth Communities}{15}{subsection.40}
+\contentsline {section}{\numberline {1.9}Challenges}{18}{section.49}
+\contentsline {subsection}{\numberline {1.9.1}Community-based Applications}{18}{subsection.53}
+\contentsline {section}{\numberline {1.10}Organization of the Thesis}{20}{section.64}
+\contentsline {chapter}{\numberline {2}Related Work}{23}{chapter.65}
+\contentsline {section}{\numberline {2.1}Survey on Community Detection and Evaluation}{23}{section.66}
+\contentsline {subsection}{\numberline {2.1.1}Non-overlapping Community Detection}{23}{subsection.67}
+\contentsline {subsection}{\numberline {2.1.2}Overlapping Community Detection}{31}{subsection.76}
+\contentsline {subsection}{\numberline {2.1.3}Community Scoring Metrics}{34}{subsection.83}
+\contentsline {section}{\numberline {2.2}Survey on Post-hoc Analysis of Communities}{38}{section.91}
+\contentsline {subsection}{\numberline {2.2.1}Tracking Communities over Time}{38}{subsection.92}
+\contentsline {subsection}{\numberline {2.2.2}Analyzing Community Evolution in Networks}{40}{subsection.93}
+\contentsline {subsection}{\numberline {2.2.3}Community Structure in Link Prediction}{40}{subsection.94}
+\contentsline {subsection}{\numberline {2.2.4}Community Structure in Information Diffusion}{41}{subsection.95}
+\contentsline {subsection}{\numberline {2.2.5}Community Structure in Recommendation Systems}{41}{subsection.96}
+\contentsline {chapter}{\numberline {3}Analyzing structural properties of temporal networks}{43}{chapter.97}
+\contentsline {section}{\numberline {3.1}Introduction}{43}{section.98}
+\contentsline {section}{\numberline {3.2}Mapping Temporal network to time series}{45}{section.99}
+\contentsline {section}{\numberline {3.3}Description of the dataset}{46}{section.102}
+\contentsline {section}{\numberline {3.4}Analysis of time series}{48}{section.106}
+\contentsline {subsection}{\numberline {3.4.1}Time domain characteristics}{48}{subsection.109}
+\contentsline {subsection}{\numberline {3.4.2}Frequency domain analysis}{50}{subsection.110}
+\contentsline {section}{\numberline {3.5}Prediction framework}{51}{section.111}
+\contentsline {subsection}{\numberline {3.5.1}Selecting a window}{53}{subsection.114}
+\contentsline {section}{\numberline {3.6}Prediction results}{56}{section.117}
+\contentsline {subsection}{\numberline {3.6.1}Enhancing the prediction scheme through spectrogram}{59}{subsection.123}
+\contentsline {section}{\numberline {3.7}An attack strategy using prediction framework}{60}{section.124}
+\contentsline {section}{\numberline {3.8}Summary of this chapter}{61}{section.126}
+\contentsline {chapter}{\numberline {4}Sampling temporal graphs}{63}{chapter.127}
+\contentsline {section}{\numberline {4.1}Introduction}{63}{section.128}
+\contentsline {section}{\numberline {4.2}Problem Definition}{65}{section.130}
+\contentsline {section}{\numberline {4.3}Proposed Algorithm: COMPAS}{67}{section.134}
+\contentsline {section}{\numberline {4.4}Experimental Setup}{79}{section.153}
+\contentsline {subsection}{\numberline {4.4.1}Sampling algorithms}{79}{subsection.154}
+\contentsline {subsection}{\numberline {4.4.2}Datasets}{79}{subsection.156}
+\contentsline {section}{\numberline {4.5}Evaluation}{80}{section.161}
+\contentsline {subsection}{\numberline {4.5.1}Community-centric evaluation}{81}{subsection.163}
+\contentsline {subsubsection}{\numberline {4.5.1.1}Evaluation criteria}{81}{subsubsection.164}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Parameter estimation}{82}{subsubsection.167}
+\contentsline {subsubsection}{\numberline {4.5.1.3}Comparison of sampling algorithms}{83}{subsubsection.170}
+\contentsline {subsection}{\numberline {4.5.2}Graph-centric evaluation}{83}{subsection.171}
+\contentsline {subsection}{\numberline {4.5.3}Effect of edge ordering and sample size}{84}{subsection.173}
+\contentsline {section}{\numberline {4.6}Applications of compas}{85}{section.175}
+\contentsline {subsection}{\numberline {4.6.1}Ranking community detection algorithms}{85}{subsection.176}
+\contentsline {subsection}{\numberline {4.6.2}Selecting training set for online learning}{86}{subsection.178}
+\contentsline {section}{\numberline {4.7}Summary of the chapter}{87}{section.180}
+\contentsline {chapter}{\numberline {5}Diffusion in temporal networks}{89}{chapter.181}
+\contentsline {section}{\numberline {5.1}Introduction}{89}{section.182}
+\contentsline {section}{\numberline {5.2}Diffusion model}{92}{section.183}
+\contentsline {section}{\numberline {5.3}On Complete graph}{93}{section.186}
+\contentsline {section}{\numberline {5.4}On $d$-regular tree:}{101}{section.209}
+\contentsline {section}{\numberline {5.5}Innoculation strategy}{102}{section.212}
+\contentsline {section}{\numberline {5.6}Broadcast algorithm based on the diffusion model}{104}{section.213}
+\contentsline {subsection}{\numberline {5.6.1}Agent configuration and network setup}{104}{subsection.214}
+\contentsline {subsection}{\numberline {5.6.2}Message configuration}{104}{subsection.215}
+\contentsline {subsection}{\numberline {5.6.3}Transfer protocol}{105}{subsection.216}
+\contentsline {subsection}{\numberline {5.6.4}Metrics of interest}{106}{subsection.217}
+\contentsline {subsection}{\numberline {5.6.5}Broadcast algorithms}{106}{subsection.218}
+\contentsline {subsubsection}{\numberline {5.6.5.1}Blind push (B-P)}{106}{subsubsection.219}
+\contentsline {subsubsection}{\numberline {5.6.5.2}Blind pull}{107}{subsubsection.220}
+\contentsline {subsubsection}{\numberline {5.6.5.3}Strategy-x\%, automatic switch from push to pull}{107}{subsubsection.222}
+\contentsline {subsubsection}{\numberline {5.6.5.4}A distributed version of X-P-P strategy}{108}{subsubsection.223}
+\contentsline {subsection}{\numberline {5.6.6}Dynamic topology}{108}{subsection.224}
+\contentsline {section}{\numberline {5.7}Experiment on different network topologies}{108}{section.225}
+\contentsline {subsection}{\numberline {5.7.1}Blind push on different topologies}{109}{subsection.226}
+\contentsline {subsection}{\numberline {5.7.2}Comparison of different broadcast strategies on Gnutella Topology}{112}{subsection.231}
+\contentsline {subsubsection}{\numberline {5.7.2.1}Effect of Degree on Broadcast time}{113}{subsubsection.234}
+\contentsline {section}{\numberline {5.8}Summary of the chapter}{113}{section.236}
+\contentsline {chapter}{\numberline {6}Application of temporal network analysis in peer-review network}{115}{chapter.237}
+\contentsline {section}{\numberline {6.1}Introduction}{115}{section.238}
+\contentsline {section}{\numberline {6.2}Dataset}{121}{section.240}
+\contentsline {section}{\numberline {6.3}Reviewer-reviewer interaction network}{123}{section.245}
+\contentsline {subsection}{\numberline {6.3.1}Degree (Deg)}{124}{subsection.247}
+\contentsline {subsection}{\numberline {6.3.2}Betweenness centrality (BC)}{125}{subsection.248}
+\contentsline {subsection}{\numberline {6.3.3}Closeness centrality (CC)}{125}{subsection.249}
+\contentsline {subsection}{\numberline {6.3.4}Clustering coefficient (Clus)}{125}{subsection.250}
+\contentsline {subsection}{\numberline {6.3.5}PageRank (PR)}{126}{subsection.251}
+\contentsline {section}{\numberline {6.4}Supporting features}{126}{section.252}
+\contentsline {subsection}{\numberline {6.4.1}Paper based features}{127}{subsection.253}
+\contentsline {subsubsection}{\numberline {6.4.1.1}Number of review rounds (RR)}{127}{subsubsection.254}
+\contentsline {subsubsection}{\numberline {6.4.1.2}Team size (TS)}{128}{subsubsection.257}
+\contentsline {subsection}{\numberline {6.4.2}Review report based features}{129}{subsection.259}
+\contentsline {subsubsection}{\numberline {6.4.2.1}Length of the reports (RL)}{129}{subsubsection.260}
+\contentsline {subsubsection}{\numberline {6.4.2.2}Sentiments (SNT)}{129}{subsubsection.261}
+\contentsline {subsubsection}{\numberline {6.4.2.3}Linguistic quality indicators (LQI)}{131}{subsubsection.264}
+\contentsline {subsection}{\numberline {6.4.3}Author based features}{132}{subsection.266}
+\contentsline {subsubsection}{\numberline {6.4.3.1}Author reputation (AR)}{132}{subsubsection.268}
+\contentsline {subsubsection}{\numberline {6.4.3.2}Author productivity (AP)}{133}{subsubsection.270}
+\contentsline {subsection}{\numberline {6.4.4}Reviewer based features}{134}{subsection.272}
+\contentsline {subsubsection}{\numberline {6.4.4.1}Accept ratio (RAC)}{134}{subsubsection.273}
+\contentsline {subsubsection}{\numberline {6.4.4.2}Time since last assignment (TA)}{135}{subsubsection.276}
+\contentsline {subsubsection}{\numberline {6.4.4.3}Delay in submitting the report (DR)}{136}{subsubsection.277}
+\contentsline {section}{\numberline {6.5}Determining the fate of the paper}{136}{section.278}
+\contentsline {section}{\numberline {6.6}Irregular cases}{137}{section.279}
+\contentsline {section}{\numberline {6.7}Publisher's views}{138}{section.282}
+\contentsline {section}{\numberline {6.8}Conclusion}{139}{section.283}
+\contentsline {section}{\numberline {6.9}Anomalous behavior}{140}{section.284}
+\contentsline {subsection}{\numberline {6.9.1}Editor}{140}{subsection.285}
+\contentsline {subsubsection}{\numberline {6.9.1.1}Mean Editor Assignment Time (MEAT)}{141}{subsubsection.289}
+\contentsline {subsubsection}{\numberline {6.9.1.2}Self Review Index (SRI)}{142}{subsubsection.290}
+\contentsline {subsubsection}{\numberline {6.9.1.3}Referee-Author pair Diversity Index (RADI)}{143}{subsubsection.291}
+\contentsline {subsubsection}{\numberline {6.9.1.4}Referee Diversity Index (RDI)}{143}{subsubsection.292}
+\contentsline {subsection}{\numberline {6.9.2}Reviewer}{144}{subsection.293}
+\contentsline {subsubsection}{\numberline {6.9.2.1}Mean Reviewer Assignment Time (MRAT)}{144}{subsubsection.294}
+\contentsline {subsubsection}{\numberline {6.9.2.2}Mean Report Sending Delay (MRSD)}{145}{subsubsection.295}
+\contentsline {subsubsection}{\numberline {6.9.2.3}Topic Diversity Index (TDI)}{145}{subsubsection.296}
+\contentsline {subsubsection}{\numberline {6.9.2.4}Editor Diversity Index (EDI)}{146}{subsubsection.297}
+\contentsline {subsubsection}{\numberline {6.9.2.5}Mean Time to Decline (MTD)}{146}{subsubsection.299}
+\contentsline {subsubsection}{\numberline {6.9.2.6}Acceptance Ratio (AR)}{147}{subsubsection.300}
+\contentsline {subsubsection}{\numberline {6.9.2.7}Decline Fraction Index (DFI)}{148}{subsubsection.302}
+\contentsline {section}{\numberline {6.10}Identifying anomalous Editors and Reviewers}{149}{section.303}
+\contentsline {subsection}{\numberline {6.10.1}Editors}{149}{subsection.305}
+\contentsline {subsection}{\numberline {6.10.2}Reviewers}{150}{subsection.306}
+\contentsline {section}{\numberline {6.11}Profiling Anomalous Reviewers}{150}{section.308}
+\contentsline {section}{\numberline {6.12}Conclusion}{151}{section.310}
+\contentsline {section}{\numberline {6.13}Single vs multiple referee system}{152}{section.314}
+\contentsline {subsection}{\numberline {6.13.1}Citation}{153}{subsection.315}
+\contentsline {subsection}{\numberline {6.13.2}Top cited papers}{153}{subsection.317}
+\contentsline {subsection}{\numberline {6.13.3}Conflict in review reports}{154}{subsection.318}
+\contentsline {subsubsection}{\numberline {6.13.3.1}Length}{155}{subsubsection.319}
+\contentsline {subsubsection}{\numberline {6.13.3.2}Sentiment}{155}{subsubsection.320}
+\contentsline {subsubsection}{\numberline {6.13.3.3}Content}{156}{subsubsection.322}
+\contentsline {subsection}{\numberline {6.13.4}Impact of discordance}{157}{subsection.325}
+\contentsline {section}{\numberline {6.14}Analyzing reviewer tendencies}{158}{section.327}
+\contentsline {subsection}{\numberline {6.14.1}Factors determining performance of the referees}{159}{subsection.329}
+\contentsline {subsection}{\numberline {6.14.2}Action with under-performing reviewers}{160}{subsection.331}
+\contentsline {section}{\numberline {6.15}Forming reviewer groups}{161}{section.334}
+\contentsline {subsection}{\numberline {6.15.1}Problem definition}{162}{subsection.335}
+\contentsline {subsection}{\numberline {6.15.2}Methodology}{162}{subsection.336}
+\contentsline {subsubsection}{\numberline {6.15.2.1}Selecting a population}{162}{subsubsection.337}
+\contentsline {subsubsection}{\numberline {6.15.2.2}Initialization}{163}{subsubsection.338}
+\contentsline {subsubsection}{\numberline {6.15.2.3}Fitness evaluation}{163}{subsubsection.340}
+\contentsline {subsubsection}{\numberline {6.15.2.4}Crossover}{165}{subsubsection.342}
+\contentsline {subsection}{\numberline {6.15.3}Evaluation}{165}{subsection.344}
+\contentsline {section}{\numberline {6.16}Importance of the editor}{168}{section.348}
+\contentsline {section}{\numberline {6.17}Conclusion}{171}{section.350}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{173}{chapter.351}
+\contentsline {section}{\numberline {7.1}Summary of Contribution}{173}{section.352}
+\contentsline {subsection}{\numberline {7.1.1}Efficient Offload using WiFi Network}{173}{subsection.353}
+\contentsline {subsection}{\numberline {7.1.2}Managing Heterogeneous Traffic}{175}{subsection.354}
+\contentsline {subsection}{\numberline {7.1.3}Restricting Unauthorized Traffic}{176}{subsection.355}
+\contentsline {section}{\numberline {7.2}Future Direction}{178}{section.356}
+\contentsline {subsection}{\numberline {7.2.1}Efficient Offload using WiFi Network}{178}{subsection.357}
+\contentsline {subsection}{\numberline {7.2.2}Managing Heterogeneous Traffic}{179}{subsection.358}
+\contentsline {subsection}{\numberline {7.2.3}Restricting Unauthorized Traffic}{180}{subsection.359}
+\contentsline {chapter}{Bibliography}{181}{section*.360}
+\contentsline {chapter}{\numberline {A}Appendix}{201}{appendix.362}

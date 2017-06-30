@@ -1,0 +1,30 @@
+\noindent
+\section{Related works}
+\label{relatedworks}
+Most of the initial works attempted to study temporal networks by aggregating the network across all times and then analyzing this aggregated network.
+However, it was found that
+time ordering is an important issue and destroying this ordering information severely affects the understanding of the true nature of the network. 
+Several ways have been therefore devised to represent temporal networks. Basu et al. 
+have shown in ~\cite{journals/corr/abs-1012-0260} a way of representing temporal networks as a time series of static graph snapshots and have proposed a stochastic model for generating 
+temporal networks. Perra et al. in ~\cite{perra2012activity} have provided an activity driven modeling of temporal networks. They define activity potential which is a time 
+invariant function characterizing the agents' interactions and propose a formal model of temporal networks based on this idea. Random walks have been introduced in 
+temporal networks ~\cite{starnini2012random} to single out the role of the different properties of the empirical networks. It has also been shown that random walk 
+exploration is slower on temporal networks than it is on the aggregate projected network. Several other modeling frameworks for temporal networks have also 
+been proposed (see ~\cite{vespignani2011modelling,hill2010dynamic,hanneke2010discrete} for references). Apart from the attempts to generate temporal networks several other properties of these networks have also been investigated.
+Temporal networks of human communication has been observed to be bursty in nature in ~\cite{barabasi2005origin}. Dynamics of human face-to-face interactions have been studied in ~\cite{zhao2011social}.
+~\cite{tang2009temporal} shows how the presence of burstiness affects the dynamics of diffusion process. Further different metrics to study the properties of temporal networks 
+have also been proposed in ~\cite{pan2011path}.  
+
+On the other hand, time series have found a lot of applications in economic 
+analysis and financial forecasting ~\cite{hamilton1989new}. It has also been applied in tweet analysis ~\cite{o2010tweets}. 
+However, temporal networks have not 
+been studied in details so far as a time series problem except for preliminary attempts in ~\cite{scherrer2008description,hempel2011inner}.
+\textcolor{blue}{In ~\cite{scherrer2008description} the authors analyze temporal networks as time series but to the best of our knowledge this is the first 
+work which leverages the time series forecasting tools to predict the network properties at a future time instant. 
+Frequency domain analysis on the time series representing 
+temporal network and its implication also remain unexplored to the best of our knowledge.}
+ Therefore we propose to leverage in this paper the standard 
+techniques of time series analysis (both in time and frequency domain) to understand the dynamical properties of temporal networks.
+Our prime contribution is to develop a unified framework to analyze and predict different properties of temporal networks based on time-series modeling.
+
+\medskip

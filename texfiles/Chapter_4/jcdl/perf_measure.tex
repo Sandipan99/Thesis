@@ -1,0 +1,26 @@
+%\vspace{-8mm}
+\section{Determining the fate of the paper}
+\label{performance_measure}
+
+\begin{table*}[]
+\centering
+\caption{The F-statistics value for all the features used for predicting the long-term citation of the paper.}
+\label{tab:f_score}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Feature      & Deg  & BC    & CC    & Clus  & PR    & RR   & TS   & RL   & SNT  & AR    & AP    & RAC  & TA   & DR   \\ \hline
+F-statistics & {\bf 26.1} & {\bf 29.21} & {\bf 27.72} & {\bf 17.82} & {\bf 23.34} & 6.17 & {\bf 25.6} & 14.1 & 0.94 & {\bf 18.52} & {\bf 16.49} & 3.49 & 8.68 & 7.59 \\ \hline
+\end{tabular}
+\end{table*}
+
+
+In this section we design a regression model to calculate the long-term citation impact of a paper. 
+We perform our prediction for papers that were accepted in JHEP between 2007 and 2012. Note that for each paper, its citation till 2015 is available. Hence papers published in 2004 would have a higher citation on average compared to papers which were published in 2010 (say) due to higher exposure time. Thus, instead of calculating  the exact citation value we predict the citation rank (for each year we rank the papers based on the citations they have accrued till 2015). Further note that the papers are sorted based on the date of submission and given a paper we construct the reviewer-reviewer interaction network until its submission date (excluding). This ensures that there is no data leakage. Similarly for supporting features like acceptance ratio of an author we consider information only up to his/her last submission. 
+
+\noindent{\bf Network features only:} Considering only the network features, we obtain the best result using support vector regression (RBF kernel) with parameters $C=100$ and $\gamma=0.01$. We perform a 10-fold cross-validation and obtain a high $R^2$ of {\bf 0.79} and a low $RMSE$ of {\bf 0.496}. 
+
+\noindent{\bf Network + supporting features:} Considering both the network and the supporting features we obtain a further overall improvement. In specific, using support vector regression (RBF kernel) we obtain a high $R^2$ of {\bf 0.81} and a low $RMSE$ of {\bf 0.46}. The parameters were set as parameters $C=100$ and $\gamma=0.02$. We further calculate the $F$-Statistic values for all the features used in the regression task (refer to table~\ref{tab:f_score}) and observe that the network features, are in general, are more suited to the task of prediction.
+
+
+Thus our system is correctly able to predict the citation rank of the paper. We believe our system could be useful in assisting the editors in deciding whether to accept or reject the papers especially in cases where the reports are contradictory. 
+\medskip

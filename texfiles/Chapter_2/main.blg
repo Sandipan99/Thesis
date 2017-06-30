@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: sigproc.bib
+Repeated entry---line 314 of file sigproc.bib
+ : @article{danon2005comparing
+ :                            ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in si
+You've used 39 entries,
+            2118 wiz_defined-function locations,
+            733 strings with 9382 characters,
+and the built_in function-call counts, 13652 in all, are:
+= -- 1391
+> -- 565
+< -- 11
++ -- 225
+- -- 184
+* -- 939
+:= -- 2199
+add.period$ -- 124
+call.type$ -- 39
+change.case$ -- 209
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 531
+empty$ -- 1107
+format.name$ -- 184
+if$ -- 2914
+int.to.chr$ -- 0
+int.to.str$ -- 39
+missing$ -- 38
+newline$ -- 197
+num.names$ -- 76
+pop$ -- 212
+preamble$ -- 1
+purify$ -- 170
+quote$ -- 0
+skip$ -- 386
+stack$ -- 0
+substring$ -- 961
+swap$ -- 134
+text.length$ -- 11
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 152
+warning$ -- 1
+while$ -- 140
+width$ -- 41
+write$ -- 431
+(There was 1 error message)

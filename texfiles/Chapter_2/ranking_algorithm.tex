@@ -1,0 +1,11 @@
+\section{Applications of compas}
+Here we present two additional applications of \compas~-- ranking community detection algorithms, and selecting appropriate training set for (restricted) online learning. 
+\subsection{Ranking community detection algorithms} As pointed out in \cite{maiya2010sampling}, there is always a trade-off between quality and running time for discovering the community structure from a graph. While some algorithms discover excellent community structure with larger running time, others compromise  quality by achieving lesser running time. Further, it is not possible to identify beforehand which community detection algorithm is more useful given a large graph. In this case, one is forced to run several algorithms on the large graph and converge on the best performing one. This may lead to a large computation cost and is especially detrimental in resource-scarce situations (absence of parallel infrastructures, distributed systems etc.).
+
+In case of community detection on large streaming graphs, we 
+posit that one may first execute \compas~and obtain a community-preserved sample. Then different community detection algorithms can be tested on the sample (which is much smaller in size compared to the original graph) and the best performing algorithm can be used for the original large graph. To this end, we execute five community detection (CD) algorithms (CNM \cite{clauset2004finding}, Fast-Greedy \cite{newman2004fast}, Walktrap \cite{pons2005computing}, Infomod \cite{rosvall2007information}, Infomop \cite{rosvall2008maps}) separately on each sample obtained from the sampling algorithms. Then we rank the CD algorithms based on their performance in terms of  modularity~\cite{newman2004analysis}. We further rank the CD algorithms in the same way considering the {\em entire graph}. We report the Kendall's $\tau$ rank correlation in Table~\ref{comp_wiki}(a) between these two ranks for individual sampling algorithms across all the datasets. We find GA and \compas~ performing the best. Therefore, \compas~can be used for selecting a CD algorithm quickly before running on a large streaming graph.
+
+%This leads us to believe sample obtained through \compas~correctly ranks the performance of the community detection algorithms. 
+
+
+

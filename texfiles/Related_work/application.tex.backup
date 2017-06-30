@@ -1,0 +1,90 @@
+\section{Survey on Community Analysis}
+In this section, we survey the current literature pertaining to the analysis of detected communities and how this community information can
+be used in the development of various systems. 
+
+\subsection{Tracking Communities over Time}
+In real world, the membership of communities tend to change gradually. Backstrom et al. observed this on the communities of LiveJournal
+users
+and communities of conference publications on DBLP \cite{Backstrom:2006}. So it is important not only to detect communities but also to
+track the changes in membership over time. Now the questions are: which community in one snapshot becomes a certain
+community in the next snapshot? How and what fraction of membership changes in between? The problem of tracking communities is
+motivated by a problem in behavioral ecology in studying animals which live in fission-fusion societies such as zebra and the Asiatic wild
+ass \cite{citeulike:938243}. A natural question is
+which group that we observe today is the same group that were previously observed. Groups in this setting are manifestations of perpetual
+communities. Inversely, a community is a consistent string of groups seen on different days. This is the problem of tracking communities
+over time. Loosely speaking, it is about how to string different groups from the same day into communities which span multiple days. 
+
+There is a handful of work specifically on the problem of tracking communities over time. Berger-Wolf and Saia \cite{Berger-Wolf:2006}
+proposed a framework which defines communities as independent local patterns. There, a community (or, metagroup) is a sequence of groups
+which have sufficiently high similarity. The similarity between two groups is the number of common members normalized by the sizes of the
+two groups. Characteristics of communities are studied via community-based statistical measures such as number of all possible communities,
+their sizes and life spans. Also, they proposed an approach to study the survival of the communities via finding a critical set of groups
+whose removal leaves only short-lived communities.
+
+Spiliopoulou et al. \cite{Spiliopoulou:2006} proposed a framework, called {\em MONIC}, for tracking communities over time. The framework
+utilizes a similarity function of groups at different time steps. The function takes into account the number of common members, the sizes of
+the groups, and the time decay between the groups. Then, two groups are strung together as being in the same community if their similarity
+is above a certain threshold. The framework not only strings groups into communities but also detects splitting and merging of communities
+by a separate sets of threshold parameters. 
+
+Tantipathananandh et al. proposed the first framework which rigorously formulates the problem of tracking communities as an optimization
+problem \cite{Tantipathananandh:2007}. Although the appealing aspect of this framework is the social costs model which
+has its roots in the
+social sciences view of group dynamics \cite{Pearson_drif}, the framework has a strong assumption that all time steps must have the same
+length. Tantipathananandh et al. \cite{Tantipathananandh:2009} further introduced an improved framework which can handle data with times
+teps
+of variable length. 
+
+\subsection{Analyzing Community Evolution in Networks}
+Slightly different to the direction of community tracking is the study of how community evolves over time. This problem attacks a lot of
+research interests due to its enormous applications in real-world scenario. For example, in a blog network we might wish to detect which
+communities of blogs are relatively stable in size over a period of time \cite{Lin:2008}. In a mobile phone network, changes in community
+size over a timeframe can reveal calling patterns and customer churns \cite{5562773,citeulike:1206611}. In other contexts such as scientific
+collaboration networks, communities of researchers that span many years suggest long-term research collaboration \cite{citeulike:1206611}.
+Such communities can be further investigated to uncover researchers in particular fields who are consistently productive over a period of
+time \cite{Lin:2008}. Previous work along this line analyzed community changes using a life-cycle model comprising events such as birth,
+death, expand, contract, merge, and split \cite{5562773,citeulike:1206611}. Asur et al. \cite{Asur:2009} emphasized the life-cycle of nodes,
+an emphasis that is impractical in networks with millions of nodes and
+irrelevant when an overview of how communities evolve is required. Palla et al. \cite{citeulike:1206611} used the above events to quantify
+the evolution of a phone call network and a coauthorship network, whereas Greene et al. \cite{5562773} used the events to investigate
+community evolution in a phone call network. Except for \cite{citeulike:1206611}, little attention was paid to modeling an event as a
+function of time. Recently,  Lu\"{z}ar et al. \cite{Povh} studied interdisciplinarity of research communities detected in the coauthorship
+network of Slovenian scientists over time.
+
+\subsection{Community Structure in Link Prediction}
+The information of community of a nodes can also be leveraged in the task of link prediction. Clauset et al. \cite{Clauset.Moore} proposed a
+method to determine the hierarchical structure of a network by using MCMC sampling to create a binary dendrogram that joins nodes into
+groups. Since this method was introduced, a variety of similar methods and models have been produced. Valverde-Rebaza and de Andrade
+Lopes \cite{6412391} described experiments to analyze the viability of applying the within and inter cluster (WIC) measure for predicting
+the existence of a future link on a large-scale online social network. They further proposed three measures for the link prediction task
+which take into account all different communities that users belong to \cite{Valverde-RebazaICSA2014}. Sachan and Ichise \cite{5460690} We
+proposed to build a link predictor in a co-authorship network, and showed that the knowledge of a pair of researchers lying in the same
+dense community can be used to improve the accuracy of our predictor further. Recently, Fenhua et al. \cite{Li2014432} proposed a link
+prediction method based on clustering and global information.
+
+\subsection{Community Structure in Information Diffusion}
+Communities are vehicles for efficiently disseminating news, rumors, and opinions in human social networks. Several approaches studied this
+phenomenon using the community structure of the network. Belak et al. \cite{6425767} studies information diffusion across communities and
+showed that one can achieve high community (and user) spreading using an efficient targeting strategy. Nematzadeh et al. \cite{Nematzadeh}
+used
+the linear threshold model to systematically study how community structure affects global information diffusion. Kimura et al.
+\cite{KimuraYSM08} used community analysis to find  influential nodes for information diffusion on a social network under the independent
+cascade model. Weng et al. \cite{Weng13} focused on understanding interactions between community structures and information diffusion, and
+developing predictive models of information diffusion based on community structure. Chen et al. \cite{Chen20121848} employed the network to
+investigate the impact of overlapping community structure on susceptible–infected–susceptible (SIS) epidemic spreading process. Similarly,
+Xiangwei et al. \cite{Xiangwei}  studied epidemic spreading in weighted scale-free networks with community structure. Recently, Shang et
+al. \cite{Shang6903136} classified vertices into overlapping and non-overlapping ones, and investigate in detail how they affect epidemic
+spreading respectively.
+
+\subsection{Community Structure in Recommendation Systems}
+Community detection algorithms and clustering functions provide a powerful tool to analyze effect of recommender systems on the networks.
+Zhuhadar et al. \cite{Zhuhadar} used the community detection method to design a visual recommender system to recommend learning resources to
+cyberlearners within the same community. Lisboa et al. \cite{Isboa} proposed a method to improve recommendation systems by taking into
+consideration changes in the behavior of users over time. For that, communities are first detected using a network analysis method and
+recommendations are made for each community with Na\"{i}ve Bayes modeling. Kamahara et al. \cite{Kamahara:2005} proposed a recommendation
+method in which a user can find new interests that are partially similar to the user's taste, where partial similarity is an aspect of the
+user's preference which is projected by the community in which the user belongs. Musto et al. \cite{Musto_atag} particularly studied user
+community behavior in OSN and developed {\em STaR} to suggest a set of relevant keywords for the resources to be annotated. Fatemi and
+Tokarchuk \cite{Fatemi} proposed novel Community Based Social Recommender System (CBSRS) which utilizes the social data to provide
+personalized recommendations based on communities constructed from the users' social interaction history with the items in the target
+domain.

@@ -1,0 +1,77 @@
+\noindent
+\section{Introduction}
+\label{introduction}
+\if{0}
+Recently the research community is reaching a consensus that many real 
+networks have nodes and edges entering or leaving the system dynamically, thus making temporal networks a better way of representing these networks. 
+Initial studies on temporal networks have been performed by aggregating the nodes and edges over all time 
+steps and then analyzing the behavior of the aggregated network. This strategy however hides the time ordering of the nodes and the edges 
+which may have a significant role in the understanding of 
+the true nature of such temporal networks.
+Researchers have subsequently come up with growth models and have proposed several metrics. Tang et al. have showed in ~\cite{TSMML10:smallworld} 
+the presence of correlation and small world 
+behavior in temporal networks. In ~\cite{stehle2010dynamical} the temporal network of human communication has been identified to be bursty in nature.
+\fi
+Understanding the structural properties of temporal network is of primary importance. To this end the research community was initially inclined towards 
+aggregating the nodes and edges over all time 
+steps and then analyzing the behavior of the aggregated network. This strategy however was found to hide the time ordering of the nodes and the edges 
+which plays a significant role in understanding  
+the true nature of such temporal networks. This led researchers to come up with various growth 
+% To the best of our knowledge no work has been done which provides a time series analysis of temporal networks in both 
+% time and frequency domains. 
+%In ~\cite{shimada2012networks} Shimada et al. propose a framework for transforming a static complex network to a time series using classical multi-dimensional scaling.
+Recently, new network applications have cropped up where an estimate of the network properties are helpful even though the network structure is itself unavailable. 
+For instance, in order to launch a targeted attack on the network one might not require the full knowledge of the network structure. Instead, an approximate estimate of some 
+of the properties might be useful in finding the order in which the nodes and the edges may be removed. 
+
+In this work, 
+we propose a simple strategy to represent a temporal network as time series. Essentially, we consider a temporal network as a set of static snapshots collected 
+at consecutive time intervals and represent each of them in terms of the properties of the network. In specific, we consider eight properties namely number of 
+active nodes, average degree, clustering coefficient, number of active edges, betweenness centrality, closeness 
+centrality, modularity and edge-emergence ~\cite{sur2014attack}. 
+%Note that this framework serves as a remarkable handle for transforming a network analysis problem to a classical time series analysis problem. Indeed
+
+We then use the known analytical tools for time series predictions to predict the network properties at a future time instance. 
+Note that the time series framework can be particularly effective as it is impossible to 
+define a unified network evolution/growth model for temporal networks simply because the  
+rules of temporality are varied across systems. Hence the feasible alternative could be to learn 
+the evolution pattern (which we do through time-series analysis) and then predict the later time steps. 
+
+Due to various irregularities in the time series, predictions at certain points are erroneous. Therefore we 
+further refine our prediction framework using spectrogram analysis by identifying beforehand the cases where the 
+prediction error is high i.e., unsuitable for prediction. In fact we observe that the accuracy of the framework is 
+enhanced further by 7.96 (for error level $\leq 20\%$) on an average across all datasets 
+if we remove 
+the cases which are deemed unsuitable for prediction by spectrogram analysis.
+
+As an application we also propose a strategy to launch targeted attacks based on our prediction framework and show that this scheme beats the state-of-the-art ranking method 
+used for such attacks. We believe that our framework could be used in designing ranking schemes for nodes in temporal networks at a future time step  
+albeit the network structure at that time step itself is unknown.
+%\textcolor{blue} {%In particular, 
+% We perform our experiments on two types of human face-to-face communication network, 
+% we observe that the properties could be segregated based on time domain and frequency domain analysis 
+
+%  As an additional objective, we perform frequency domain 
+%  analysis of these time series in order to enrich our predictions. 
+%We use three types of data sources for our experiments: (i) time-varying human face-to-face interaction networks, (ii) Twitter hashtag co-occurrence graph 
+%varying over the period of an event (e,g., London Olympics) and (iii) Facebook posts graph of a set of users. 
+
+%\todo{This paragraph needs to be discussed}
+%We report our prediction results on real world time-varying networks. 
+We perform our experiments on five different human face-to-face communication networks 
+and observe that the above properties could be segregated based on time domain and frequency domain (spectrogram) characteristics. 
+In general this method allows us to make predictions with very low errors.   
+ Importantly, the frequency domain analysis also nicely separates out those properties that can be predicted with low errors from those for which it is not 
+ possible.
+\if{0} 
+Rest of the paper is organized as follows. In Section ~\ref{relatedworks} we present a brief review of the literature. 
+Section ~\ref{mapping} describes the framework for mapping temporal networks to time series. 
+Section ~\ref{dataset} provides a brief description of the datasets we use for 
+our experiments.
+  In section ~\ref{properties} we perform a detailed time domain and frequency domain analysis of the time series. 
+Section ~\ref{prediction} outlines the description of our prediction framework. In Section ~\ref{result} we provide the detailed results of our prediction framework on the 
+human face-to-face communication networks. We also show how the prediction scheme could be enhanced using the spectrogram analysis. We further 
+propose an attack strategy based on the prediction scheme and show that it beats the state-of-the-art methods (section ~\ref{attack}). 
+We conclude in section ~\ref{conclusion} by summarizing our main contributions and pointing to certain future directions.
+\fi
+\medskip

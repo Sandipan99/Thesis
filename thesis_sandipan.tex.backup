@@ -1,0 +1,427 @@
+\documentclass[twoside,phd]{iitkgp}
+
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[centertags]{amsmath}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{footnote}
+\usepackage{times}
+\usepackage{tikz}
+\usetikzlibrary{shapes,shadows,arrows}
+\usepackage{lscape}
+\usepackage[bottom]{footmisc}
+\usepackage{enumerate}
+%\usepackage{algorithm}
+\usepackage{amsthm}
+%\usepackage{algorithm2e}
+%\usepackage[numbered]{algo}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{multirow}
+%\usepackage{subfigure}
+\usepackage{epigraph}
+%\usepackage{caption}
+%\usepackage{subcaption}
+%\usepackage{subcaption}
+%\captionsetup{compatibility=false}
+\usepackage{subfigure}
+%\usepackage{slashbox}
+\usepackage{balance}
+% \usepackage[noend]{algpseudocode}
+ \usepackage{epstopdf}
+ \usepackage{multirow}
+\usepackage{rotating}
+\usepackage{fontenc}
+\usepackage[demo]{graphicx}
+%\usepackage{amsmath}
+%\usepackage{psfrag}
+%\usepackage{tipa}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage{float}
+\usepackage{latexsym}
+\usepackage{amsmath,amssymb}
+\usepackage{dcolumn}
+\usepackage{epsfig}
+\usepackage{textcomp}
+\usepackage{mathtools}
+\usepackage{multirow}
+%\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{soul}
+\usepackage{color}
+%\usepackage{amsmath}
+\usepackage{adjustbox}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+% \usepackage{booktabs}
+% \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% \usepackage{color}
+% \usepackage[table,xcdraw]{xcolor}
+% \usepackage{colortbl}
+% \newtheorem{prop}{Proposition}
+% \newtheorem{mydef}{Definition}
+% \usepackage{adjustbox}
+% \newcommand{\compas}{{\tt ComPAS}}
+% \newcommand\TODO[1]{\textcolor{red}{#1}}
+% \usepackage{multirow}
+% \usepackage{hyperref}
+% \usepackage[table,xcdraw]{xcolor}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{color}
+%\usepackage[table,xcdraw]{xcolor}
+%\usepackage{colortbl}
+
+\usepackage{adjustbox}
+\newcommand{\compas}{{\tt ComPAS}}
+%\newcommand\TODO[1]{\textcolor{red}{#1}}
+\usepackage{multirow}
+\usepackage{hyperref}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{colortbl}
+% \usepackage{subfig}
+%\usepackage[hyphens]{url}
+%\usepackage{hyperref}
+%\usepackage{amsmath,amssymb}
+%\usepackage{url}
+\setlength{\parindent}{0in}
+\usepackage{soul}
+\usepackage{xcolor}
+
+
+%\usepackage[backend=biber]{biblatex}
+%\setcounter{biburllcpenalty}{7000}
+
+%\usepackage[lined,algonl,algochapter,algoruled]{algorithm2e}
+% these are for the algorithms style file, for writing algorithms
+%\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+%\renewcommand{\algorithmicensure}{\textbf{Output:}}
+%\renewcommand{\algorithmiccomment}[1]{\begin{small}/* #1 */\end{small}}
+%\renewcommand{\algorithmiccomment}[1]{/* #1 */}
+%\newcommand{\markup}[1]{{\color{blue}{#1}}}
+%\graphicspath{{fig/}}
+
+
+% The fancyhdr package allows you to easily customize the page header.
+% The settings below produce a nice, well separated header.
+\usepackage{fancyhdr}
+  \fancyhead{}
+  \fancyhead[LO]{\slshape \rightmark}
+  \fancyhead[RO,LE]{\textbf{\thepage}}
+  \fancyhead[RE]{\slshape \leftmark}
+  \fancyfoot{}
+  \pagestyle{fancy}
+  \renewcommand{\chaptermark}[1]{\markboth{\chaptername \ \thechapter \ \ #1}{}}
+  \renewcommand{\sectionmark}[1]{\markright{\thesection \ \ #1}}
+
+% The caption package allows us to change the formatting of figure captions.
+% The commands here change to the suggested caption format: single spaced and a bold tag
+% Change the \DeclareCaptionFormat line below to make the captions fully bold
+\usepackage{caption}
+%\DeclareCaptionFormat{suggested}{\singlespace#1#2 #3\par\doublespace}
+\DeclareCaptionFormat{suggested}{\singlespace \textbf{#1}\textbf{#2}#3 \doublespace}
+\captionsetup{format=suggested}
+
+%To instruct Latex to try to fit each paragraph into 1 less line
+\let\markeverypar\everypar
+\newtoks\everypar
+\everypar\markeverypar
+\markeverypar{\the\everypar\looseness=-1\relax}
+
+
+%\newcommand{\captionfonts}{\small}
+
+% The cite package cleans up the way citations are handled.  For example, it
+% changes the citation [1,2,3,6,7,8,9,10,11] into [1-3,6-11].  If your advisor
+% wants superscript citations, use the overcite package instead of the cite package.
+\usepackage{cite}
+%\usepackage[tone]{tipa}
+
+
+
+% The makeidx package makes your index for you.  To make an index entry,
+% go to the place in the book that should be referenced and type
+%  \index{key}
+% An index entry labeled "key" (or whatever you type) will then
+% be included and point to the correct page.
+\usepackage{makeidx}
+\makeindex
+
+
+%\usepackage[hyphens]{url}
+%\urlstyle{rm}
+
+% If you have a lot of equations, you might be interested in the amstex package.
+% It defines a number of environments and macros that are helpful for mathematics.
+% We don't do much math in this example, so we haven't used amstex here.
+%
+% To include a link in your pdf use \href{URL}{Text to be displayed}.  If your
+% display text is the URL, you probably should use the \url{} command discussed
+% above.
+%
+% To add a bookmark in the pdf you can use \pdfbookmark.  You can look up its usage
+% in the hyperref package documentation
+%\usepackage[bookmarksnumbered,pdfpagelabels=true,plainpages=false,colorlinks=true,
+%            linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+%\usepackage[hyphenbreaks]{breakurl}
+
+% ---------------- Fill in these fields for the preliminary pages -------------------
+%
+% For Senior and honors this is the year and month that you submit the thesis
+% For Masters and PhD, this is your graduation date
+
+\newcommand{\bigsize}{\fontsize{14pt}{20pt}\selectfont}
+
+\Year{2017}
+\Month{July}
+\Author{Sandipan Sikdar}
+\degree{Doctor of Philosophy}
+% If you have a long title, split it between two lines. The \TitleBottom field defines the second line
+% A two line title should be an "inverted pyramid" with the top line longer than the bottom.
+\TitleTop{{\bigsize \bf Temporal Networks: }}
+\TitleBottom{{\bigsize \bf Structure, Function and Applications}}
+
+% Your research advisor
+\AdvisorA{Dr. Animesh Mukherjee\\and\\Prof. Niloy Ganguly}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% APPROVAL BY DSC COMMITTEE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Approval{
+\singlespace
+\hspace{9cm}
+%Date:\hspace{.8cm}$\backslash \ \ \ \ \  \ \backslash$ 20  \\  \\
+Date:\hspace{.8cm}$/ \ \ \ \ \  \ /$ 20  \\  \\
+Certified that the thesis entitled {\bf ``Temporal networks: Structure, function and applications''} 
+submitted by Sandipan Sikdar to the Indian Institute
+of Technology, Kharagpur, for the award of the degree of Doctor of Philosophy
+has been accepted by the external examiners and that the student has successfully
+defended the thesis in the viva-voce examination held today.
+
+\vspace{0.5in}
+
+%\noindent
+%Signature:~~~~~~~~~~\hfill Signature:~~~~~\hfill Signature:\hfill~
+
+%\noindent
+%Name:~~~~~~~~~~~~~~~\hfill Name:~~~~~~~~~~\hfill Name:~~~~~\hfill~
+
+\vspace{1in}
+\noindent
+(Member of DSC)~~~~~\hfill(Member of DSC)~~~~~\hfill(Member of DSC)
+
+\vspace{0.3in}
+%\hspace{2cm}
+%Signature:
+\vspace{0.5in}
+%\hspace{2cm}
+%Name:
+\noindent
+%\hspace{2cm}
+(Member of DSC)~~~~~\hfill(Supervisor)\hfill ~~~~~~~ %(Co-Supervisor)\hfill ~~~~~~~
+
+\vspace{0.3in}
+%\hspace{2cm}
+%Signature:~~~~~~~~~~~~~~~~~~\hfill Signature:\hfill ~~~
+
+%\hspace{2cm}
+%Name:~~~~~~~~~~~~~~~~~~~~~~~\hfill Name:~~~~~\hfill ~~~~
+
+\vspace{0.5in}
+%\hspace{2cm}
+\noindent
+(External Examiner)~~~~~~~~~\hfill(Chairman)\hfill ~~~~~~~
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% CERTIFICATE BY SUPERVISOR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Certificate{
+\noindent%
+{\em This is to certify that the thesis entitled {\bf ``Temporal networks: Structure, function and applications''}, submitted by {\bf
+Sandipan Sikdar} to the Indian Institute of Technology, %%@
+Kharagpur, for the award of the degree of Doctor of Philosophy, is a record of bona fide %%@
+research work carried out by him under my supervision and guidance.
+The thesis, in my opinion, is worthy of consideration for the award of the degree of Doctor of Philosophy 
+%in accordance with the regulations 
+of the Institute. To the best of my knowledge, the results embodied in this thesis %%@
+have not been submitted to any other University or Institute for the award of any other Degree or Diploma.} %%@
+
+\vspace{-5mm}
+
+\noindent \signaturebox{Animesh Mukherjee \\Assistant Professor\\CSE, IIT Kharagpur}
+
+
+\noindent \signaturebox{Niloy Ganguly\\Professor\\CSE, IIT Kharagpur}\\
+\hfill\hspace*{20pt}
+\hfill \datebox
+   %\vskip 0pt plus 2fill
+    %\noindent Accepted for the Department\hfill%
+    %\signaturebox{\@DepRep, \@DepRepTitle\\Department of Physics and
+    %Astronomy }{} \vfill \noindent Accepted for the College\hfill
+    %\signaturebox{\@Dean, \@DeanTitle \\
+    %College of Mathematics and Physical Sciences}
+
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% DECLARATION BY STUDENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Declaration{
+\noindent
+I certify that
+\begin{enumerate}
+\item[a.]   The work contained in this thesis is original and has been done by myself under 
+the general supervision of my supervisors.
+\item[b.]   The work has not been submitted to any other Institute for any degree or diploma.
+\item[c.]   I have followed the guidelines provided by the Institute in writing the thesis.
+\item[d.]   I have conformed to the norms and guidelines given in the Ethical Code of Conduct of the Institute.
+\item[e.]   Whenever I have used materials (data, theoretical analysis, figures, and text) from other sources, I have given due credit to them by citing them in the text of the thesis and giving their details in the references.  %Further, I have taken permission from the copyright owners of the sources, whenever necessary.
+\item[f.]   Whenever I have quoted written materials from other sources, I have put them under quotation marks and given due credit to the sources by citing them and giving required details in the references.
+\end{enumerate}
+
+\vspace{0.6in}
+
+\hfill Sandipan Sikdar ~ ~ ~
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% ACKNOWLEDGEMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Acknowledgments{
+\input{texfiles/acknowledgement}
+\medskip
+\bigskip\medskip
+\noindent
+Sandipan Sikdar\\
+Kharagpur, India\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% Curriculam %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Curriculams{
+\input{texfiles/curriculumvita}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ %The text of your abstract
+\Abstract{
+\input{texfiles/abstract}
+}
+
+%\fussy
+
+\begin{document}\sloppy
+
+ % Start page counting in roman numerals
+ \frontmatter
+
+
+\makepreliminarypages
+
+ \singlespace
+
+ % Make the table of contents.
+ \tableofcontents
+ \clearemptydoublepage
+
+% \phantomsection \addcontentsline{toc}{chapter}{Author's Biography}
+% \input{texfiles/curriculumvita}
+%  \clearemptydoublepage
+
+ % Make the list of figures
+ \listoffigures
+ \clearemptydoublepage
+
+ % Make the list of tables
+ \listoftables
+ \clearemptydoublepage
+
+
+
+
+\onehalfspace
+
+
+\mainmatter
+\addtolength{\parskip}{0.7\baselineskip}
+
+\abovedisplayskip=13pt
+\belowdisplayskip=13pt
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+%\input{./texfiles/Chapter_3/epl/tcilatex}
+
+\input{texfiles/Introduction/intro.tex}
+% \clearpage
+\input{texfiles/Related_work/main_text.tex}
+% \clearpage
+
+
+
+\input{texfiles/Chapter_1/template.tex}
+%\cleardoublepage
+\clearpage
+\clearpage
+\input{texfiles/Chapter_2/main.tex}
+\clearpage
+\clearpage
+
+
+\input{texfiles/Chapter_3/epl/epl-template.tex}
+\input{texfiles/Chapter_3/netsci/Infocom2015_main.tex}
+%\clearemptydoublepage
+\clearpage
+\clearpage
+
+
+\input{texfiles/Chapter_4/jcdl/JCDL_2017_main.tex}
+\input{texfiles/Chapter_4/cikm/main.tex}
+\input{texfiles/Chapter_4/cikm_17/main_cikm_2017.tex}
+%\clearemptydoublepage
+\clearpage
+\clearpage
+
+\input{texfiles/Conclusion/conclusion.tex}
+%\clearemptydoublepage
+\clearpage
+\clearpage
+
+
+
+\appendix
+\bibliographystyle{abbrv}
+\clearemptydoublepage
+\singlespace
+\bibliography{bib/intro,bib/chapter_1_ref,bib/chapter_2_ref,bib/related_work,bib/chapter_3_ref,bib/chapter_3_1_ref,bib/chapter_4_ref,bib/chapter_4_c_ref,bib/chapter_4_c_1_ref}
+
+\input{texfiles/Appendix/publication.tex}
+
+
+\end{document}

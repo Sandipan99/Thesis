@@ -1,0 +1,26 @@
+\section{Summary of this Chapter}
+  
+
+
+The lack of reliable ground-truth communities has made network community detection a very challenging task. In this chapter, we 
+developed ground-truth overlapping communities of a directed paper-paper citation network that emerge from the natural
+grouping of research papers in various fields of the computer science domain. We conduced a set of experiments to understand this network
+and the community structure from diverse perspectives. We conclude by summarizing our main observations in this chapter as follows: 
+\begin{itemize}
+  \item Quite remarkably, for the last fifty years one observes a very robust behavior of the dynamics -- the field that is the
+strongest contender of the field currently at the forefront almost surely emerges as the top ranked field after the transition.
+  \item The key factors that keep a field at the forefront include the citations from the backup field, the inception of the
+seminal papers and the existence of high-impact papers.
+  \item Funding statistics obtained from NSF is in very good agreement with the results predicted by our method.
+  \item Four indicative features quite efficiently unfold the extent of interdisciplinarity of a field that further help in building
+the classification model.
+  \item For already very interdisciplinary fields, such as Data Mining, the indicators may have a certain ``saturation'' effect
+forcing it towards the core region of the computer science domain. 
+  \item The average behavior of a researcher's career indicates that a researcher tends to adopt few research fields in her
+entire research career, though she seems to prefer to work simultaneously on various fields.
+ \item Researchers who have worked in many fields in their entire careers but remained confined in few fields in each time window
+get high importance in terms of citations compared to the others. 
+ \end{itemize}
+
+
+

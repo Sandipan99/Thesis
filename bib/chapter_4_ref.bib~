@@ -1,0 +1,296 @@
+@Article{ garfield1,
+	author = "E. Garfield",
+	journal = "Nature",
+	number = "6837",
+	title = "Impact factors, and why they won't go away",
+	volume = "411",
+	year = "2001"
+}
+
+@Article{ Abhaya,
+	author = "Abhaya V. Kulkarni and Jason W. Busse and Iffat Shams",
+	journal = "PLoS ONE",
+	publisher = "Public Library of Science",
+	title = "Characteristics Associated with Citation Rate of the Medical Literature",
+	year = "2007",
+	month = "05",
+	volume = "2",
+	pages = "e403",
+	number = "5"
+}
+
+@article{garfield_86,
+  author = {Garfield, E.},
+  journal = {Annals of Internal Medicine},
+  number = 2,
+  pages = {313-20},
+  title = {{Which medical journals have the greatest impact?}},
+  volume = 105,
+  year = 1986
+}
+
+@Article{RePEc:eee,
+  author={Hajra, Kamalika Basu and Sen, Parongama},
+  title={{Aging in citation networks}},
+  journal={Physica A: Statistical Mechanics and its Applications},
+  year=2005,
+  volume={346},
+  number={1},
+  pages={44-48}
+  }
+
+@article{Albert2002,
+  author = {Albert, R\'eka and Barab\'asi, Albert-L\'aszl\'o},
+  journal = {Rev. Mod. Phys.},
+  month = jan,
+  number = 1,
+  pages = {47--97},
+  publisher = {American Physical Society},
+  title = {Statistical mechanics of complex networks},
+  volume = 74,
+  year = 2002
+}
+
+@Article{ bornmann,
+	author = "L. Bornmann and Hans-Dieter Daniel",
+	journal = "Journal of Documentation",
+	number = "1",
+	pages = "45--80",
+	publisher = "Emerald Group Publishing Limited",
+	title = "{What do citation counts measure? A review of studies on citing behavior}",
+	volume = "64",
+	year = "2008"
+}
+
+@article{ Schreiber,
+	author = "M. Schreiber",
+	journal ="Europhysics Letters",
+	pages = "1-6",
+	volume= "78",
+	title = "{Self-citation corrections for the Hirsch index}",
+	year = "2007"
+}
+
+@article{Rosvall,
+author ="Rosvall, M. and Bergstrom, C. T.",
+title = {Mapping change in large networks},
+journal = {PLoS ONE},
+volume = {5},
+year = {2010},
+pages = {e8694}
+}
+
+@book{harris2008,
+  title={Combinatorics and Graph Theory},
+  author={Harris, J. and Hirst, J.L. and Mossinghoff, M.J.},
+  series={Springer Undergraduate Texts in Mathematics and Technology},
+  year={2008},
+  publisher={Springer}
+}
+
+@article{Barabasi99,
+  author = {Barabasi, Albert-Laszlo and Albert, Reka},
+  journal = {Science},
+  number = 5439,
+  pages = {509-512},
+  title = {Emergence of Scaling in Random Networks},
+  volume = 286,
+  year = 1999
+}
+
+@Article{ Gingras,
+        author={Gingras, Y. and Larivier, V. and Macaluso, B. and Robitaille, J-P.},
+	journal = "PLoS ONE",
+	number = "12",
+	pages = "e4048",
+	title = "{The Effects of Aging on Researchers' Publication and Citation Patterns}",
+	volume = "3",
+        year = "2008"
+}
+
+@inproceedings{Yan:2011,
+ author = {Yan, Rui and Tang, Jie and Liu, Xiaobing and Shan, Dongdong and Li, Xiaoming},
+ title = {Citation Count Prediction: Learning to Estimate Future Citations for Literature},
+ booktitle = {CIKM},
+ year = {2011},
+ pages = {1247--1252},
+ address = {New York, USA},
+ }
+
+@incollection{NIPS2006_3015,
+title = {Stratification Learning: Detecting Mixed Density and Dimensionality in High Dimensional Point Clouds},
+author = {Gloria Haro and Gregory Randall and Sapiro, Guillermo},
+booktitle = {NIPS},
+pages = {553--560},
+year = {2006},
+url = {http://papers.nips.cc/paper/3015-stratification-learning-detecting-mixed-density-and-dimensionality-in-high-dimensional-point-clouds.pdf},
+}
+
+@article{hirsch2005,
+  author = {Hirsch, J. E.},
+  journal = {PNAS},
+  number = 46,
+  pages = {16569-16572},
+  title = {An index to quantify an individual's scientific research output},
+  volume = 102,
+  year = 2005
+}
+
+
+
+@article{Blei:20037,
+ author = {Blei, David M. and Ng, Andrew Y. and Jordan, Michael I.},
+ title = {Latent Dirichlet Allocation},
+ journal = {J. Mach. Learn. Res.},
+ volume = {3},
+ month = mar,
+ year = {2003},
+ pages = {993--1022},
+ publisher = {JMLR.org},
+}
+
+@article{Lee2004,
+  author = {Lee, Y. and Lin, Y. and Wahba, G.},
+  journal = {Journal of the American Statistical Association},
+  number = 465,
+  pages = {67-82},
+  publisher = {American Statistical Association},
+  title = {Multicategory Support Vector Machines: Theory and Application to
+	the Classification of Microarray Data and Satellite Radiance Data.},
+  volume = 99,
+  year = 2004
+}
+
+@article{Smola:2004,
+ author = {Smola, Alex J. and Sch\"{o}lkopf, Bernhard},
+ title = {A Tutorial on Support Vector Regression},
+ journal = {Statistics and Computing},
+ volume = {14},
+ number = {3},
+ month = aug,
+ year = {2004},
+ pages = {199--222},
+ publisher = {Kluwer Academic Publishers},
+ address = {Hingham, MA, USA},
+ }
+
+@inproceedings{bethard2010,
+  address = {New York, NY, USA},
+  author = {Bethard, Steven and Jurafsky, Dan},
+  booktitle = {CIKM},
+  pages = {609--618},
+  publisher = {ACM},
+  title = {Who should I cite: learning literature search models from citation behavior},
+  year = 2010
+}
+
+@inproceedings{Castillo,
+  author = {Castillo, Carlos and Donato, Debora and Gionis, Aristides},
+  booktitle = {SPIRE},
+  pages = {107--117},
+  series = {LNCS},
+  title = {Estimating the Number of Citations using Author Reputation},
+  volume = 4726,
+  year = 2007
+}
+
+@inproceedings{Daniel,
+  author    = {Daniel McNamara and
+               Paul Wong and
+               Peter Christen and
+               Kee Siong Ng},
+  title     = {Predicting High Impact Academic Papers Using Citation Network
+               Features},
+  booktitle = {PAKDD Workshops},
+  year      = {2013},
+  pages     = {14-25},
+ }
+
+@article{Radev109,
+  year = {2013},
+  journal = {LREC},
+  title = {The ACL anthology network corpus},
+  publisher = {Springer Netherlands},
+  author = {Radev, DragomirR. and Muthukrishnan, Pradeep and Qazvinian, Vahed and Abu-Jbara, Amjad},
+  pages = {1-26},
+  }
+
+@Article{ hu2013citations,
+	title = "Where are citations located in the body of scientific articles? A study of the distributions of citation locations",
+	author = "Zhigang Hu and Chaomei Chen and Zeyuan Liu",
+	journal = "Journal of Informetrics",
+	volume = "7",
+	number = "4",
+	pages = "887--896",
+	year = "2013",
+	publisher = "Elsevier"
+}
+
+@inproceedings{He:2010,
+ author = {He, Qi and Pei, Jian and Kifer, Daniel and Mitra, Prasenjit and Giles, Lee},
+ title = {Context-aware Citation Recommendation},
+ booktitle = {WWW},
+ year = {2010},
+ pages = {421--430},
+ publisher = {ACM},
+ address = {New York, NY, USA}
+} 
+
+@incollection{baseline,
+  author = {Liang, Yicong and Li, Qing and Qian, Tieyun},
+  booktitle = {Web-Age Information Management},
+  pages = {403--414},
+  publisher = {Springer},
+  title = {Finding Relevant Papers Based on Citation Relations},
+  volume = 6897,
+  year = 2011
+}
+
+@InProceedings{councill2008parscit,
+	title = "ParsCit: an Open-source CRF Reference String Parsing Package.",
+	author = "Isaac G Councill and C Lee Giles and Min-Yen Kan",
+	booktitle = "LREC",
+	year = "2008",
+        address = {Marrakech, Morocco}
+}
+
+@InProceedings{pan2004automatic,
+	title = "Automatic multimedia cross-modal correlation discovery",
+	author = "Jia-Yu Pan and Hyung-Jeong Yang and Christos Faloutsos and Pinar Duygulu",
+	booktitle = "SIGKDD",
+	pages = "653--658",
+        address = "Seattle, WA", 
+	year = "2004"
+}
+
+@Article{ pihur2009rankaggreg,
+	title = "RankAggreg, an R package for weighted rank aggregation",
+	author = "Vasyl Pihur and Susmita Datta and Somnath Datta",
+	journal = "BMC bioinformatics",
+	volume = "10",
+	number = "1",
+	pages = "62",
+	year = "2009",
+	publisher = "BioMed Central Ltd"
+}
+
+@inproceedings{NanbaO99,
+  author = {Nanba, Hidetsugu and Okumura, Manabu},
+  booktitle = {IJCAI},
+  pages = {926-931},
+  publisher = {Morgan Kaufmann},
+  title = {Towards Multi-paper Summarization Using Reference Information.},
+  year = 1999
+}
+
+@article{lee2014large,
+  title={Large-scale linear ranksvm},
+  author={Lee, Ching-Pei and Lin, Chih-Jen},
+  journal={Neural computation},
+  volume={26},
+  number={4},
+  pages={781--817},
+  year={2014},
+  publisher={MIT Press}
+}
+

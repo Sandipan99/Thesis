@@ -1,0 +1,16 @@
+\section{Summary of this Chapter}
+  
+In this chapter, we utilize the citation network and the community structure together to build
+real applications. The contributions of this chapter are as follows. 
+\begin{itemize}
+\item The categorization of citation profiles offers a necessary first step
+towards reformulating the existing quantifiers available in Scientometrics (e.g., impact factor) that should
+leverage on the different categories of citation patterns in order to enhance their meaningfulness.
+
+\item We further use the category information in a prediction system where the training samples are stratified to enhance the accuracy of
+the predictions.
+
+\item We also perform a semantic stratification of the data that further helps us designing FeRoSA which outperforms the baselines in
+both faceted and flat
+recommendations; in addition the recommendations per facets are also quite accurate.
+\end{itemize}

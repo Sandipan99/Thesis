@@ -1,0 +1,25 @@
+\begin{table}[!t]
+\centering
+\caption{\label{comp_wiki} Rank correlation of community detection algorithms based on the performance on the sample (generated from individual sampling methods) and the original graph. (b) Performance of SVM using the training set obtained from sampling methods.}
+\scalebox{0.71}{
+\begin{tabular}{|c|c|c|c|c|c|c |c|c|}
+\multicolumn{6}{c}{(a)} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{(b)}\\ \cline{1-6}\cline{8-9}
+Algo & Facebook & hep-th & Youtube & DBLP & LFR & &AUC & F-Score \\\cline{1-6}\cline{8-9}
+
+\compas & {\bf 0.8} & {\bf 0.8} & {\bf 0.8} & {\bf 1.0} & {\bf 1.0}& & {\bf 0.48} & {\bf 0.61}  \\
+SN & 0.4 & 0.6 & 0.4 &  0.6 & 0.6& & 0.31 & 0.35 \\
+SE & 0.4 & 0.4& 0.4 &  0.6 & 0.4& & 0.25 & 0.28 \\
+SBFS & 0.6 & 0.7 & 0.6 & 0.8 & 0.6& & 0.28 & 0.31 \\
+PIES & 0.6 & 0.6 & 0.8 & 0.7 & 0.8& & 0.36 & 0.43\\
+GA   & {\bf 1.0} & {\bf 0.8} & {\bf 0.8} & {\bf 1.0} & {\bf 1.0} & & {\bf 0.53} & {\bf 0.64} \\\cline{1-6}\cline{8-9}
+\end{tabular}}
+\end{table}
+
+
+\subsection{Selecting training set for online learning}
+
+In online learning, sometimes memory is limited and it is required to train the model on limited number of instances. In such situations it is important to choose a training set in such a way that it consists of members from most or all parts of the original dataset.
+
+We hypothesize that more diverse the chosen set, better would be the performance. \compas~ is useful in such cases since it tries to sample from several communities, hence improving the diversity of the training set. To this end, we consider Wiki-Rfa\footnote{https://snap.stanford.edu/data/wiki-RfA.html} \cite{west2014exploiting}, a streaming signed graph in which nodes represent Wikipedia members and edges (with time-stamp) represent votes. Each vote is typically accompanied by a short comment. The task is to predict the vote (+1, 0, -1) of an incoming edge based on the textual features -- (i) word count, (ii) sentiment value, and (iii) LIWC features of the statement corresponding to the edge. We allow training instances to be included till a certain time period $t$ (first 75\% of the edges are allowed to enter) and run the sampling algorithms in parallel. However not all instances can be considered for training due to the memory constraint. We assume $n$, the sample size as the allowed training size and obtain sampled training set from individual sampling algorithms. We train SVM with linear kernel (see \cite{si} for other classifiers) on each sampled training set, and predict the labels (votes) of those instances coming after $t$. Table \ref{comp_wiki}(b) shows that GA and \compas~perform the best in terms of AUC and F-Score. 
+ This once again emphasizes the fact that \compas~selects most representative training instances for (restricted) online learning.
+ 

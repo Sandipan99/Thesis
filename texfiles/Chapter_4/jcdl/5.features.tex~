@@ -1,0 +1,123 @@
+\section{Predicting Future Citations of Scientific Articles}
+
+The next objective is to show that the categorization of citation profiles has significant consequences to early prediction of citation
+itinerary of
+scientific papers. Such a prediction scheme can be of significant interest not only for the scholars at universities and research institutes
+but also for the engineers and policy makers in business and government domains. The very limited number of studies on this
+topic~\cite{Yan:2011} have mostly modeled the problem as a learning task -- given a set of features and a particular time
+interval, a regression model is trained on the entire set of the training population, and accordingly, the future citation count of a query
+paper is estimated. A common underlying implicit assumption in these approaches is that the citation itinerary of all published papers have
+similar characteristics. However, we observe that such an assumption is flawed and therefore seriously affects the accuracy of the
+prediction. Consequently,
+we propose to categorize the complete set of data samples into different subparts each of which corresponds to one of the six citation
+itineraries
+observed. This approach is commonly termed as {\em stratified learning}~\cite{NIPS2006_3015} in the literature where the members of the
+stratified space are divided into homogeneous subgroups (aka strata) before sampling. This indeed reduces the extent of variability and
+increases the representativeness of the data samples in each individual strata thus enhancing the learning scheme. 
+
+
+\subsection{Distinctive Features}\label{sec:feature}
+Here we provide a brief description of the set of features learned by the classifiers.
+ The
+features can be broadly
+classified into three classes, namely the author-centric features, the venue-centric features and the paper-centric features. Note that for
+a particular paper, all the features are calculated with respect to the year of its publication. 
+For features which are still unobserved, e.g., new authors or new venues, we do not assign zero values; 
+instead we set them to the minimum value observed across all the samples available at that particular time point.
+
+\textbf{(i) Author-centric features:}
+For all the author-centric features mentioned here, we measure both the
+average ({\bf Avg}) and the maximum ({\bf Max}) values for each paper to incorporate the notion of both team-effect and individual leadership
+respectively in the final citation count prediction. 
+
+ {\bf(a) Author productivity:} 
+%According to~\cite{bethard2010}, authors have tendencies to cite their own papers. 
+Yan et al.~\cite{Yan:2011} noticed that the more papers an author
+publishes (productivity of the author), the higher average citation counts she can expect.
+Therefore, for each paper, we calculate the productivity of
+its authors ({\bf ProAuth}) that indeed
+indicates how the influence of productive authors regulates the citation profile of a paper.
+
+{\bf(b) Author h-index:} H-index is a standard metric to measure both the productivity and the impact of the published work of an
+author~\cite{hirsch2005}. Therefore for each paper, we measure the h-index ({\bf Hindex}) of authors.
+
+{\bf(c) Author diversity:} The
+diversity of an author $a$ denoted by {$AuthDiv(a)$}, indicating the breadth of expertise of $a$. It is measured by the entropy of
+the research fields where she publishes and is given by 
+\begin{equation}\label{div}
+ AuthDiv(a)= -\sum_{i=1}^{24} p(n_i|n) \times log (p(n_i|n))
+\end{equation}
+where $n_i$ denotes the number of papers written by author $a$ belonging to the field $i$ (total 24 fields are available in the dataset),
+and $n$ denotes the total number of papers written by $a$. For each paper, we include the diversity of authors ({\bf AuthDiv}) as a feature.
+Note that these two
+features have not been considered in earlier works \cite{Yan:2011}.
+
+{\bf(d) Sociality of author:} Since the authors tend to cite papers of
+their previous collaborators, it is natural to assume that the paper from a widely connected authors has a larger
+probability to be
+cited by different coauthors. A simple measurement is to count the number of coauthors ({\bf NOCA}) of each author present in a
+paper~\cite{Yan:2011}.
+
+\noindent{\bf(ii) Venue-centric features:}  
+We consider the three features listed below to signify the importance of venue.
+
+\noindent {\bf (a) Long term venue prestige:}  To measure the
+prestige of a publication venue ({\bf VenPresL}), we calculate the average citations received by the papers published so far in that
+venue.
+
+
+{\bf (b) Short term venue prestige:} 
+It is measured as the average number of citations received per paper published in that venue
+during {\it at most} two preceding years ({\bf VenPresS}). The basic difference between {\bf VenPresL} and {\bf VenPresS} is that while the
+former measures the overall impact of a venue by considering all the papers published so far in that venue, the latter only measures
+the recent impact of the venue. {\bf VenPresS} is conceptually similar to the impact factor of a journal as defined in~\cite{garfield1}.
+
+{\bf (c) Venue diversity:} {\bf VenDiv} can be measured by considering the different fields covered by the papers published in that venue. 
+A formula similar to Equation~\ref{div} gives a quantitative measure of {\bf VenDiv}. This is another new feature
+introduced in this study for the first time.
+
+\noindent{\bf(iii) Paper-centric features:}
+% We also investigate features directly related to a paper. The content of the paper, that is, the abstract and keywords of a paper, can
+%also provide clues regarding its novelty. 
+Among the paper-centric features mentioned below, third and fourth features are newly introduced in this study.
+
+{\bf (a) Team-size:} It has been observed that there exists a critical value of team-size corresponding to
+which
+the citation accumulation is maximum. Hence, we directly take into account the number of authors of a paper ({\bf Team}).
+
+{\bf (b) Reference count:} Sometimes, only the
+number of references serves as a feature to distinguish regular and survey papers.
+Therefore, we directly use the reference count of a paper ({\bf RefCount}) as a feature in our study.
+
+{\bf (c) Reference diversity:} Earlier in Section \ref{index} we proposed a measure called Reference Diversity Index ({\bf RDI}) as an
+indicator of interdisciplinarity that
+attempts to quantify the diversity in terms of the number of fields being cited by a paper. It is also measured similarly using Equation
+\ref{div}; here $n$ ($n_i$) indicates the total number of references (number of references to the papers belonging to field $i$).
+
+{\bf (d) Keyword diversity:} As mentioned in Section \ref{sec:data}, MAS assigns keywords, from a global set of keywords, against each paper
+in order to characterize it
+properly. 
+For each paper, we measure how diverse
+its keywords are ({\bf KDI}) similarly by Equation~\ref{div}; here $n_i$
+indicates the fraction of keywords of paper $x$ belonging to the field $i$.  
+Note that, a keyword may appear in multiple fields. For them,
+we consider multiple instances one for each field. 
+
+{\bf (e) Topic diversity:} 
+We use the unsupervised Latent Dirichlet Allocation\footnote{We
+use GibbsLDA++ (\url{ http://gibbslda.sourceforge.net/}) with the default settings.} \cite{Blei:20037} as mentioned by Yan et
+al.~\cite{Yan:2011} to discover topics for each paper. We
+empirically set the number of topics as 100, i.e., for each of our 100 topics, the topic model calculates $p(topic_i|d)$, the inferred probability of topic $i$ in document $d$ ({\bf Topic}). The topic distribution $\tau(d)$ over all topics in the document $d$ is then:
+ $\tau(d)=\{ p(topic_1|d),p(topic_2|d), . . . ,p(topic_{100}|d) \}$. 
+ 
+ 
+%  Then we distribute the references of the article $R_T(d)$ according to the topic
+% distribution ({\bf Topic}). To calculate the total reference counts of a
+% particular topic from article $d$, denoted by $R_T(topic_i|d)$, we distribute the references of the article $R_T(d)$ according to the topic distribution $\tau(d)$, i.e., $R_T(topic_i|d) = R_T(d) \times p(topic_i|d)$, which again indicates how the idea of a given article is generated by the cross-fertilization of ideas from different topics. 
+% %%PG: But why is R_T(d) important? You can get this idea from \tau(d) itself.
+
+
+
+
+  
+ 

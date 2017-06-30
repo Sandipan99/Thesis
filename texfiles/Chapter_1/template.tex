@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a template file for The European Physical Journal
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{filecontents}{leer.eps}
+% %!PS-Adobe-2.0 EPSF-2.0
+% %%CreationDate: Mon Jul 13 16:51:17 1992
+% %%DocumentFonts: (atend)
+% %%Pages: 0 1
+% %%BoundingBox: 72 31 601 342
+% %%EndComments
+% 
+% % gsave
+% % 72 31 moveto
+% % 72 342 lineto
+% % 601 342 lineto
+% % 601 31 lineto
+% % 72 31 lineto
+% % showpage
+% % grestore
+% %%Trailer
+% %%DocumentFonts: Helvetica
+% \end{filecontents}
+% %
+% \documentclass[epj]{svjour}
+% % Remove option referee for final version
+% %
+% % Remove any % below to load the required packages
+% %\usepackage{latexsym}
+% \usepackage{graphics}
+% \usepackage{lineno,hyperref}
+% \usepackage{graphicx}
+% \usepackage{url}
+% \usepackage{float}
+% \usepackage{latexsym}
+% \usepackage{amsmath,amssymb}
+% \usepackage{dcolumn}
+% \usepackage{epsfig}
+% \usepackage{textcomp}
+% \usepackage{multirow}
+% \usepackage{soul}
+% \usepackage{color}
+% \usepackage{todo}
+% \usepackage{adjustbox}
+% \modulolinenumbers[5]
+% % etc
+% %
+% \begin{document}
+%
+% \title{Time series analysis of temporal networks}
+% %\subtitle{Do you have a subtitle?\\ If so, write it here}
+% \author{Sandipan Sikdar\inst{1} \, Niloy Ganguly\inst{1} \and Animesh Mukherjee\inst{1}% etc
+% % \thanks is optional - remove next line if not needed
+% %\thanks{\emph{Present address:} Insert the address here if needed}%
+% }                     % Do not remove
+% %
+% \offprints{}          % Insert a name or remove this line
+% %
+% \institute{\inst{1}Indian Institute of Technology Kharagpur, Kharagpur, India}
+% %
+% \date{Received: date / Revised version: date}
+% % The correct dates will be entered by Springer
+% %
+% \abstract{
+% A common but an important feature of all real-world
+% networks is that they are temporal in nature, i.e., the network structure changes over time.
+% Due to this dynamic nature, it becomes difficult to propose suitable growth models 
+% that can explain the various important characteristic properties of these networks. 
+% In fact, in many application oriented studies only knowing these properties is sufficient. For instance, if one wishes to launch a targeted attack on a network, 
+% this can be done even without the knowledge of the full network structure; rather an estimate of some of the properties is sufficient enough to launch the attack.
+% We, in this paper show that even if the network structure at a future time point is not available one can still manage to estimate its properties.
+% We propose a novel method to map a temporal network to a set of time series instances, 
+% analyze them and using a standard forecast model of time series, 
+% try to predict the properties of a temporal network at a later time instance. To our aim, we consider 
+% eight properties such as number of active nodes, average degree, clustering coefficient etc. and apply our prediction framework on them. 
+% We mainly focus on the temporal network of human face-to-face contacts and observe that 
+% it represents a 
+% stochastic process with memory that can be modeled as Auto-Regressive-Integrated-Moving-Average (ARIMA). 
+% We use 
+% cross validation techniques to find the percentage accuracy of our predictions. 
+% \textcolor{blue}{An important observation is that the frequency domain properties of the time series obtained from spectrogram analysis could be used to refine the 
+% prediction framework by identifying beforehand the cases where the error in prediction is likely to be 
+%  high. This leads to an improvement of {\bf 7.96\%} (for error level $\leq 20\%$) in prediction accuracy on an average across all datsets.}
+%  %\todo{How much improvement - please write} 
+% As an application we show how such prediction scheme can be used to launch targeted attacks on temporal networks.
+% %
+% \PACS{
+%       {PACS}{89.75.Hc,89.75.Fb}   
+% %       {89.75.Fb}
+%      } % end of PACS codes
+% } %end of abstract
+% %
+% \maketitle
+
+\chapter{Analyzing structural properties of temporal networks}
+This chapter is devoted to out first objective - understanding and predicting structural properties of temporal networks.
+
+\input{./texfiles/Chapter_1/temp_introduction}
+
+%\input{temp_related_works}
+
+\input{./texfiles/Chapter_1/temp_mapping_network_time_series}
+
+\input{./texfiles/Chapter_1/temp_dataset_description}
+
+\input{./texfiles/Chapter_1/temp_properties_time_series}
+ 
+\input{./texfiles/Chapter_1/temp_spectrogram}
+
+\input{./texfiles/Chapter_1/temp_prediction}
+ 
+
+\input{./texfiles/Chapter_1/temp_result_discussion}
+
+\input{./texfiles/Chapter_1/temp_insights}
+
+\input{./texfiles/Chapter_1/temp_conclusion}
+
+% \bibliographystyle{unsrt}
+
+
+%\bibliography{ref}
+
+
+
+%\end{document}
+
+% end of file template.tex
+

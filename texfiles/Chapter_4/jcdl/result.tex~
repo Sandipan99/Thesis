@@ -1,0 +1,378 @@
+
+
+
+
+
+
+\subsection{Six Categories of Citation Profiles}\label{six_category}
+Since the primary focus of our study is to analyze citation growth of a paper after publication, an in-depth understanding of how the number
+of citations after publication of a paper varies over the years is necessary. We therefore conduct an exhaustive analysis of the citation
+patterns of different papers present in our dataset. Some of the previous experimental results \cite{garfield} show that the trend
+of citations received by a paper after its publication date is not linear in general; rather there is a fast growth of citations within the
+initial few years, followed by an exponential decay. Here we take all the papers having at least
+10 years of citation history, and consider maximum 20
+years of their citation history. Then we design our own heuristics based on the number and the position of the peaks to categorize the
+citation profile of each paper.
+
+In order to decipher the trends of citation, we perform various processing on the data set. 
+First of all, to smoothen the time
+series data points in the citation
+profile of a paper,
+we use five-years moving average filtering; then, we scale the data points by normalizing them with the maximum value present in the
+time series (i.e, maximum citations received by the paper in a particular year); finally, we run local peak detection
+algorithm\footnote{{\tiny The peak detection algorithm is available
+in Matlab Spectral Analysis package - \url{http://www.mathworks.in/help/signal/ref/findpeaks.html}; we use `MINPEAKDISTANCE'=2 and
+`MINPEAKHEIGHT'=0.75 and the default values for the other parameters.}} to detect peaks in the citation profile.
+Over and above, we apply the following two heuristics to specify peaks: (i) the height
+of a peak should be at least 75\% of the maximum peak-height, and (ii) two consecutive peaks 
+should be separated by more than 2 years, otherwise they are treated as a single peak. 
+
+
+\begin{figure*}[t!]
+\centering
+\scalebox{0.35}{
+\includegraphics{./texfiles/Chapter_4/Fig/profile.pdf}}
+\caption{ Citation itineraries for the first five categories. In each frame, the belt bounded by the
+lines $Q_1$ and
+$Q_3$ represent the first
+and the third quartiles of the data points respectively. For each category, one representative citation itinerary is shown at the middle of
+the
+belt. The percentage mentioned in each frame indicates the proportion of papers in each category. The major proportion of papers (44.8\%)
+lies in category `Oth' which does not have any specific pattern and is not shown in this diagram.
+}\label{profile}
+\end{figure*}
+
+
+Remarkably, we notice that a major proportion of papers do not follow the traditional citation profile mentioned in the earlier studies,
+rather there exist six different types of citation profiles of research papers based on the count and the position of peaks present in the
+profile as shown in Figure \ref{belief} (in each frame, a citation belt is formed by the lines $Q_1$ and $Q_3$ which
+represent the first (10\% points lie below this line) 
+ and third  (10\% points lie above this line) quartiles
+ of the data points respectively (i.e., effectively 80\% points are within the citation belt), and the solid line drawn within the
+citation belt represents the average behavior of all the profiles corresponding to that category.)
+ The definitions of six types of citation profiles with the individual proportions in the entire dataset are give below.  \\
+{\bf (i) PeakInit:} Papers whose citation count peaks within 5 years of  publication (but not in the first year)  followed by an
+exponential decay (proportion: 25.2\%) (Figure ~\ref{profile}(a)). \\
+{\bf (ii) PeakMul:} Papers having multiple peaks at different time points of the citation itinerary (proportion: 23.5\%)
+(Figure ~\ref{profile}(b)).\\
+{\bf (iii) PeakLate:} Papers having very few citations at the beginning and then a single peak after at least 5 years of
+the
+publication which is followed by an exponential decay in citation count (proportion: 3.7\%) (Figure \ref{profile}(c)).\\
+{\bf (iv) MonDec:} Papers whose citation count peaks in the immediate next year of the publication followed by a monotonic decrease in the
+number of citations (proportion: 1.6\%) (Figure \ref{profile}(d)). \\
+{\bf (v) MonIncr:} Papers having a monotonic increase in the number of citations from the year of publication till the
+date of observation (i.e., it can be after 20 years of its publication) (proportion: 1.2\%) (Figure \ref{profile}(e)). \\
+{\bf (vi) Oth:} Apart from the above types, there exist a large number
+of papers which on an average usually receive less than one citation each year. For these papers, the evidences are not
+significant enough for
+assigning them into one of the above categories, and, therefore, they remain as a separate group altogether (proportion: 44.8\%).
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.7\columnwidth]{./texfiles/Chapter_4/Fig/citation_range_bucketing.jpg}
+\caption{Contribution of papers of each category in different citation buckets. }\label{citation_bucket}
+\end{figure}
+
+
+\subsection{Contribution of Categories in Different Citation Ranges}
+One of the fundamental aspects of analyzing scientific publications is to measure how acceptable they are to the research community. This
+is 
+often measured by the raw citation count -- the more an article receives citations from other publications, the more it is
+assumed to be admired  by the
+researchers and hence the more is the scientific impact \cite{bornmann}. In this current context, an interesting question is -- which
+among the six 
+categories contain papers that are admired most in terms of citations. In order to answer this question, we conduct a systematic study --
+the total citation range is divided
+into four buckets (the citation ranges are: 11-12, 13-15, 16-19, 20-11408) such that each citation bucket would contain almost equal
+number
+of papers. For a deeper analysis of the highest citation range, we further divide the last bucket (20-11408) into four more ranges, thus
+ obtaining seven buckets altogether.  
+Then we measure the proportion of papers contributed by a particular category to a citation bucket (see Fig. \ref{citation_bucket}).
+Note that in each citation bucket, the number of
+papers contributed by a category is normalized by the total number of papers belonging to that category. Therefore, this figure is
+ a histogram of conditional probability distribution -- probability that a randomly selected paper falls in citation bucket $i$ given that
+it belongs to
+category $j$. The normalization is required in order to avoid population bias across different categories.
+We observe that 
+the higher region of citation is mostly occupied by the papers in PeakLate and MonIncr categories followed by PeakMul and PeakInit. We
+also notice that the MonDec category which has the minimum proportion in the last citation bucket shows a monotonic downward fall in the
+fraction of papers as the citation range increases. These initial evidences present a general and non-intuitive interpretation of citation
+profiles that
+if a paper does not obtain high citations within the immediate few years after its publication, it does not necessarily mean that it will
+continue to remain low impact all through its lifetime; rather in future its citation growth rate might
+accelerate and it could indeed turn out to be a well accepted
+paper in the scientific community. We further explain this behavior in the subsequent parts of this section.
+ 
+
+
+
+
+
+\subsection{Characterizing Different Citation Profiles}
+
+The rich metadata information of the publication dataset further allows us to understand the characteristic features of each of these six
+categories at finer levels of detail. 
+
+\textbf{Influences of publication year and publication venues on the categorization:}  One might raise an immediate
+question that this categorization might be influenced by the time (year) when the papers are published, i.e.,
+the papers published earlier might be following the well-known behavior whereas the papers published recently might indicate a different
+behavior. In
+order to verify that the categorization is not biased by the publication time period, we measure the average year of publication of the
+papers in each category. From the second column of Table \ref{mean_year}, we can conclude that the citation pattern of the
+papers is not biased by the publication year since the average years more or less point to the same time period.
+
+% Hence these features are true over years and can therefore be expected to
+% be
+% independent of period on which the papers are published. There are no other parameters related to time line that may affect citation
+%profile
+% and hence the patterns are expected to be influenced from intrinsic features of the papers itself.
+
+\begin{table}[!t]
+\centering
+\caption{Mean publication year (Y) (its standard deviation, $\sigma(Y)$) and the proportion of papers (in \%) in conferences and journals
+for each category of citation profile.}\label{mean_year}
+\scalebox{0.9}{
+\begin{tabular}{|c|c|c|c|}\hline
+Category & Mean publication & \% of conference & \% of journal \\
+         &  year ($\sigma(Y)$) & papers & papers \\\hline
+PeakInit &  1994 (5.19) & 64.35 & 35.65 \\\hline
+PeakMul & 1991 (6.68) & 39.03 & 60.97 \\\hline
+PeakLate &  1992 (6.54)& 39.89 & 60.11 \\\hline
+MonDec & 1994 (5.44) & 60.73 & 39.27\\\hline
+MonIncr & 1993 (7.36) & 25.26 & 74.74 \\\hline
+\end{tabular}}
+
+\end{table}
+
+
+
+%\noindent \textit{\textbf{Influence of publication venue on the categorization.} }
+On the other hand, the mode of publication in conferences is significantly different from that of journals, and therefore the citation profiles of papers
+published in these two venues are also expected to be different. To analyze the venue effect on the categorization, we measure
+the fraction of papers published in journals vis-a-vis in conferences for each category as shown in the third and the fourth columns of
+Table
+\ref{mean_year} respectively. We observe that while most of the papers in PeakInit (64.35\%) and MonDec (60.73\%) categories are published in
+conferences, papers belonging to PeakLate (60.11\%) and MonIncr (74.74\%) categories are mostly published in journals. 
+Hence, if a publication starts receiving greater attention or citations at a later part of its lifetime,
+it is more likely to be published in a journal and vice versa. These results put forth two immediate conclusions. First,  due
+to the increasing popularity of conferences in an applied domain like computer science, the conference papers get
+quick publicity within a few years after publication, which is also the reason for the rapid decay of their popularity. In contrast,
+journal papers usually take time to get published and hence to get popularity, thus being mostly admired much later
+ after publication. However, most of the journal  papers remain consistent in receiving citations even after long years of their
+publications.  
+%PG: The above statements needs to be rephrased. DONE
+Another interesting point to be noted from these results is that although the existing formulation of the journal impact factor
+\cite{garfield} has been defined taking into consideration the citation profile as shown in Fig. \ref{belief}, most of the journal
+papers which fall in PeakLate or MonIncr do not follow such a profile at all; at least for papers in PeakLate category, the metric does not
+focus on the most-relevant time frame of the citation profile (mostly after first 5 years of  publication). In the light of the current
+results, the appropriateness of the formulation of the bioliogaphic metrics such as journal impact factor remain doubtful.
+
+
+
+
+\textbf{Effect of self-citation on the categorization:}
+Another factor that often affects citation rate is self-citation.
+ We also conduct a similar experiment to notice the effect of self-citation on the categorization of citation profiles. Essentially, we
+first 
+dispose the citation from the dataset if the citing and the cited papers have at least one author in common, and then measure what fraction
+of papers in each category migrate to the other category due to this disposal. We observe in Table \ref{self_citation} that papers in MonDec
+are vastly affected
+by the self-citation phenomenon. We find that around 35\% of papers in MonDec would have been in the `Oth' category had it not been due to
+the self-citations. We also observe that the self citation is usually used in
+initial periods
+of the publication by the authors in attempt to increase the visibility of their publications in the scientific community. This effect is
+more
+prominent for MonDec category which is followed by Oth and PeakInit.  
+
+\begin{table}
+\centering
+\caption{ Confusion matrix representing the transition of categories due to the removal of self-citations. A value $x$ in the
+cell $(i,j)$ represents that $x$ fraction of papers in category $i$ would have fallen in category $j$ if self-citations were absent in the
+entire dataset. Note that, no row has been specified for Oth category because papers from this category
+can never be moved to the other categories by any deletion of citations.}\label{self_citation}
+\scalebox{0.77}{
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+ Category & PeakInit & PeakMul & PeakLate & MonDec & MonIncr & Other \\\hline\hline
+PeakInit & 0.72 & 0.10 & 0.03 & 0.01 & 0 & 0.15 \\\hline
+PeakMul & 0.02 & 0.81 & 0.04 & 0 & 0.1 & 0.11 \\\hline
+PeakLate & 0.01 & 0.06 & 0.86 & 0 & 0.01 & 0.06 \\\hline
+MonDec & 0.05 & 0.14 & 0 & 0.41 &  0 & 0.35 \\\hline
+MonIncr & 0 & 0.02 & 0.01 & 0.01 & 0.88 & 0.09 \\\hline
+\end{tabular}}
+
+\end{table}
+
+
+%PG: Please rephrase - it should have a consistent and well acceptance to the other researchers. DONE
+
+% This brings us two important conclusions on the effect of self-citations in the categorization of citation profiles: (i) self
+% citation is usually put in initial periods of the publication by the authors in attempt to increase its visibility in scientific community.
+% Authors therefore do
+% not tend to cite their own papers written long back. (ii) Although self citation may attract immediate attention, its long term impact is
+% reasonably low to raise the impact of a papers. From the above table we address two problems theoretically, identification of self citation
+% from citation pattern of papers and properties of self citation. \\
+
+
+% PG: The results in this Table are not sufficient to make these claims. You are talking about self-citations in terms of the citation profile, but you should talk in terms of citation category. There is no focus on the fact that most of the papers in PeakLate and MonIncr remain there. DONE
+
+% \begin{table}
+% \scalebox{0.77}{
+% \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+%  Category & PeakInit & PeakMul & PeakLate & MonDec & MonIncr & Oth \\\hline\hline
+% PeakInit & 0.72 & 0.10 & 0.03 & 0.01 & 0 & 0.15 \\\hline
+% PeakMul & 0.02 & 0.81 & 0.04 & 0 & 0.1 & 0.11 \\\hline
+% PeakLate & 0.01 & 0.06 & 0.86 & 0 & 0.01 & 0.06 \\\hline
+% MonDec & 0.05 & 0.14 & 0 & 0.41 &  0 & 0.35 \\\hline
+% MonIncr & 0 & 0.02 & 0.01 & 0.01 & 0.88 & 0.09 \\\hline
+% \end{tabular}
+% \caption{Confusion matrix representing the transition of categorization due to the removal of self-citations. A value $x$ in the
+% cell $(i,j)$ represents that $x$ fraction of papers in category $i$ would have fallen in category $j$ if we remove self-citations
+% from the entire dataset. Note that, no row has been specified for Oth category because papers in this category
+% can never be moved to the other categories by any deletion of citations.}}\label{self_citation}
+% \end{table}
+
+
+
+\begin{figure*}[!t]
+\centering
+\scalebox{0.3}{
+\includegraphics{./texfiles/Chapter_4/Fig/alluvial.jpg}}
+\caption{Alluvial diagram representing  the evolution of papers in different categories and the flows between the categories
+in time $T+10$, $T+15$ and $T+20$. The colored blocks correspond to different categories. The size of the block indicates the number of
+papers in that category, and the shaded waves joining the regions represent flow of papers between the regions, such that the width of the
+flow corresponds to the fraction of papers. The total width of incoming flows is equal to the width of the corresponding
+region.}\label{alluvial}
+\end{figure*}
+
+
+
+\subsection{Analyzing Stabilities of Different Categories}
+The number of citations for a paper changes over time depending on its long/short lasting effect on the scientific community which in turn
+might
+change the shape of the citation profile. Therefore, studying the temporal evolution of each citation profile can help us
+understand the stability of the categories individually. Since, we know the category of those papers that have at least 20 years of citation
+history, for each such paper we further analyze how the shape of the profile evolves through this 20 years timeline. Essentially, after
+publication
+of a paper at time $T$, we identify its category at time $T+10$, $T+15$ and $T+20$ based on the heuristics discussed earlier. We
+hypothesize that a stable citation category tends to maintain its shape throughout the entire timeline. The
+colored blocks of the alluvial diagram in Fig. \ref{alluvial}  correspond to the different
+categories for three different timestamps.  We observe that apart from the Oth category which has a
+major
+proportion of papers, MonDec seems to be the most stable, which is followed by PeakInit. However, papers which are assumed to fall in Oth
+category quite often turn out to be MonIncr
+papers in the later time periods. This analysis indeed demonstrates a systematic approach to unfold the transition from one category to
+another  taking place in scientific research with the increase of citations.
+%PG: Last line on its own doesn't look good. DONE
+
+
+
+
+
+
+
+
+\subsection{Core-periphery Analysis}
+\if{0}
+Although Fig. \ref{citation_bucket} provides the impact of different categories in terms of raw citation count,  it neither indicates the
+significance of the papers in each category forming the core of the network nor gives us any information regarding the temporal evolution of
+the structure. For a better and more detailed understanding, we perform $k$-core analysis \cite{harris2008, seidman1983network,
+ShaiCarmi07032007, Kumar} of the evolving citation network by decomposing the network for each year into its $k^s$-shells (see Materials
+and Methods), such that an inner shell index of a paper reflects a central position in the core of the network. For better
+visualization in Fig. \ref{k-shell}, we divide the total number of shells identified from the citation network in each year into six broad
+shells; thus the core-periphery structure in each year has six concentric layers. The idea is to show how the papers in each category
+(identified at the year 2000) migrates from one shell to another after getting citations in the next 10 years. It also allows us to
+observe how persistent a category is in a particular shell.
+
+In Fig. \ref{k-shell}, we notice that the majority of papers in the Oth category lie in the periphery and its proportion in the periphery
+increases
+over time which indicates that the papers in this category are becoming increasingly less popular in time. PeakMul category exhibits a
+decent presence in all the shells at 2000; over time gradually it leaves the peripheral region and mostly occupies the two innermost
+shells. 
+PeakInit and MonDec shows almost similar behavior with a major proportion of papers in inner cores in the initial year but
+gradually shifting towards peripheral regions. Their placement in the inner core might be due to the fact that they are associated to high
+ranked authors and include self citations. Hence due to the highly
+connected and cited neighborhoods, some of them make a position in the central core. On the other
+hand, MonIncr and PeakLate show
+expected behavior with their proportion increasing towards inner shells over time indicating their rising relevance as time progresses.
+
+This study helps us identify temporal evolution of the importance of different categories in terms of how each of
+them contributes to the central position of the citation network. 
+
+\fi
+
+
+
+Although Fig. \ref{citation_bucket} provides the impact of different categories in terms of raw citation count,  it neither indicates the
+significance of the papers in each category forming the core of the network nor gives us any information regarding the temporal evolution of
+the structure. For a better and more detailed understanding, we perform $k$-core analysis \cite{harris2008} of the
+evolving citation network by decomposing the network for each year into its $k^s$-shells,
+such that an inner shell index of a paper reflects a central position in the core of the network. The idea is to show how the papers in each
+category
+(identified at the year 2000) migrates from one shell to another after getting citations in the next 10 years. It also allows us to
+observe how persistent a category is in a particular shell. In Fig. \ref{k-shell}, we notice that the majority of papers in the Oth
+category lie in the periphery and its proportion in the periphery
+increases
+over time which indicates that the papers in this category are becoming increasingly less popular in time. PeakMul category gradually leaves
+the peripheral region over time and mostly occupies the two innermost shells. PeakInit and MonDec show almost similar behavior with a major
+proportion of papers in inner cores in the initial year but gradually shifting towards peripheral regions. On the other
+hand, MonIncr and PeakLate show expected behavior with their proportion increasing towards inner shells over time indicating their rising
+relevance as time progresses. This study helps us identify temporal evolution of the importance of different categories in terms of how each
+of
+them contributes to the central position of the citation network. 
+
+\begin{figure*}[t!]
+\centering
+\scalebox{0.25}{
+\includegraphics{./texfiles/Chapter_4/Fig/multilevel.jpg}}
+\caption{Multi-level pie chart for year 2000,2004, 2007 and 2010 showing the composition of each of the categories in different $k^s$-shell
+regions; where the colors represent different categories and the area covered by each colored region in each $k^s$-shell denotes the
+proportion of papers in the corresponding category occupied in that shell. The innermost shell is the core region and the outermost shell
+is the periphery region. For better
+visualization, we divide the total number of shells identified from the citation network in each year into six broad
+shells; thus the core-periphery structure in each year has six concentric layers.}\label{k-shell}
+\end{figure*}
+
+\if{0}
+\subsection{Modeling citation profiles using dynamical growth model}
+There has been extensive research done in developing growth models to explain the evolution of citation networks.
+Models like Barab\'asi-Albert \cite{Barabasi99}, Price \cite{Price} etc.  attempt to generate scale-free networks using
+preferential attachment mechanism. Most of these works attempt to explain the emergence of mainly the degree distribution of the network. In
+this paper, we propose a novel dynamical growth model to synthesize the citation network with the aim of representing the citation
+categories obtained from the
+real-world
+dataset. To the best of our knowledge, this model is the first of its kind which takes into account two major components,
+namely preferential
+attachment \cite{Albert2002} and aging \cite{Gingras} in order to mimic the real-world
+citation profiles.
+
+
+In order to avoid the cold-start problem \cite{Schein:2002}, we include in the model certain information of the initial few years (nodes
+and their categories, year of publication, citation
+edges) from the real dataset to perform bootstrapping. We also use the following
+distributions as inputs to the model for a fair comparison with the real-world citation profiles: distribution of the number of papers over
+the
+years (to determine the
+influx of papers into the system at each time step), reference distribution (to determine the outward citation that would emanate from an
+incoming node). Now in each time step (corresponding to a particular year), a number of nodes (papers) are selected with the outdegree
+(reference) for each of them determined preferentially from the reference distribution. Then the vertex
+is assigned preferentially to a certain category based on the size of the categories (number of papers in the categories) at that time
+step. For determining the other end point of each edge associated with the incoming node,  we first select a category preferentially based
+on
+the in-citation information of each category and then within the category select a node preferentially based on its {\em attractiveness}.
+The {\em attractiveness} of a node (paper) is determined by the time elapsed since its publication (aging) and the number of citation
+accumulated till that time (preferential attachment).  Note that, the formulation of the attractiveness in our model also varies for
+different categories (see Materials and Methods section for detailed description of the model).
+
+
+We observe a remarkable resemblance between the real-world citation profiles and that obtained from the model as shown in Fig.
+\ref{profile} (bottom panel: $(a1)$-$(e1)$).  Each frame of this figure contains three lines depicting first quartile (10\% points lie below
+this
+line), third quartile (10\% points lie above this line) and the mean behavior. Hence Our model presents
+a holistic view of the evolution of a citation network over time and the intra- and inter-category interactions that 
+account for the observable properties of the real-world system. 
+\fi
+
+
+

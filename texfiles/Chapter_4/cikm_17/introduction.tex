@@ -1,0 +1,77 @@
+\noindent
+%\section{Introduction}
+The scientific community relies heavily on the peer-review system to judge the quality of a new research contribution. In this process a set of 
+peers or reviewers are handed the responsibility of judging whether the work is flawed and should be discarded or is relevant enough to be brought to the 
+notice of the research community. Since the reviewers are the most important entities of the entire peer-review process, their knowledge and training are 
+highly critical to the proper functioning of the review process. 
+In fact in may cases when more than one referees are involved in reviewing a paper, lack of consensus among them might make it difficult for the editor to judge the 
+true quality of the work, which then might lead to a severe mistake.
+
+\noindent{{\bf Single or multiple reviewers:}}
+So a natural query arises: whether peer-reviewing comprising multiple referees should be preferred over a single referee system? 
+To answer this question, we in this paper for the first time, 
+analyze the peer-review information of all the papers that were submitted to two leading physics journals together consisting of approximately $36k$ papers with 
+about $19m$ lines of review texts. 
+An exploratory analysis of citation information of the papers reveals that papers 
+reviewed by multiple referees, on acceptance tend to be cited less (on average) while on rejection tend to be cited more (on average) compared to the papers which get reviewed 
+by a single referee.
+However, papers reviewed by multiple reviewers constitute the majority of the most cited (top 25\%) papers. 
+In fact, the observations 
+are consistent across both these datasets. The dichotomy in this observations raises a natural question 
+that why multiple refereeing does not work well on average. We hypothesize that this is mainly due to lack of consensus among the referees in the multi-reviewer system.
+
+\noindent{{\bf Lack of consensus among reviewers:}}
+In~\cite{cole1981chance} the authors demonstrated that in multi-refereed papers the referees often fail to reach consensus. As an immediate next step following the 
+previous observations, we investigate the review reports of the multi-refereed papers. Leveraging several natural language processing (NLP) tools we 
+establish the lack of consensus among reviewers for such papers. In fact, we observe that in terms of report length, sentiment and content, the referees 
+differ in almost 30\% of the cases on average across the two datasets.
+
+\noindent{{\bf Analyzing multi-referee behavior:}} 
+Further analysis of the peer-review system reveals that 
+the performance of a reviewer can be quantified by his/her  
+ (a). frequency of assignment and (b). tendency to be too critical (tends to reject most of the papers assigned to them) 
+or too liberal (tends to accept majority of assignments). The discordance also occurs when such reviewers are grouped together, which perhaps
+leads to acceptance of paper without due diligence. In contrast, we find that even when under-performing
+reviewers are grouped with well-performing reviewers, the overall quality of acceptance improves. 
+Remarkably, we also observe, that the most under-performing groups have the highest lack of consensus, which further corroborates our hypothesis.
+
+\if{0}
+In~\cite{sikdar2016anomalies} the authors pointed out several factors which might be indicative of anomalous behavior (under-performance) of 
+the editors and the referees. We observe 
+that the anomalous editors often tend to assign multiple referees. All the above results should indicate that it is better to assign single referees instead 
+of multiple ones. But a deeper analysis indicates that anomalous referees when assigned a paper as single reviewer often fail to correctly judge the 
+quality of the paper while when part of a multi-referee system performs much better. We further observe that while for some topics generally single reviewer 
+is assigned for the paper, for others multiple reviewers are assigned. This might be due to the fact that some topics are so definitive that it is difficult 
+to find multiple knowledgeable reviewers while for the generic topics it is easier to find multiple reviewers.
+\fi
+
+
+\noindent{{\bf Recommending reviewer groups:}}
+From the above observations we hypothesize that multi-referee systems mostly fail due to lack of proper selection and the assignment of the referees. 
+We in this paper propose a systematic scheme 
+for recommending reviewer groups to the editor. We argue that the problem of assigning multiple referees to a paper is similar to the problem of forming compatible 
+groups from a population, which has already been studied in great detail in the context of collaborative learning. In fact, genetic algorithm (GA) 
+based frameworks have been shown to be very effective in such a setting \cite{moreno2012genetic,ani2010method}. 
+We hence propose a GA based framework which, given a paper, 
+its topic and a reviewer pool with past information, is able to recommend a 
+set of groups of compatible referees to assist the editor in assignment of referees. 
+We observe that in cases where the reviews led to acceptance and the paper garnered a 
+large number of citations, our algorithm is able to correctly identify almost \textbf{ $78\%$} of the group of referees 
+involved on average across the two datasets. 
+\if{0}
+In the lines of~\cite{sikdar2016anomalies}, we further observe that the accept ratio of a 
+reviewer (fraction of papers accepted) and the time to the last assignment are indicators of reviewer performance which we leverage to calculate 
+the fitness score of each reviewer and a reviewer group as well.  
+\fi
+
+\noindent{{\bf Importance of editor intervention:}}
+The above results might give a false impression that given a set of topics and reviewer history, 
+our system can recommend reviewer groups without the expert intervention of the editor. 
+Using a carefully designed simulation setup, we show that intervention of the editor in selecting a reviewer group 
+from the set of recommended groups is highly critical to the proper functioning of the system in long term. In fact 
+we show that the ability of correctly identifying the reviewer groups reduces to almost  \textbf{ $45\%$ (from $78\%$)} if 
+the editor is not involved in the peer-review process.
+
+
+\medskip
+
