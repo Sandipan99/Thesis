@@ -128,110 +128,22 @@
 % 
 % %\input{introduction}
 % \vspace{-4mm}
+\chapter{Application of temporal network analysis in peer-review network}
+
+leverage temporal network analysis techniques to improve peer-review system.
+
 \section{Introduction}
 
-Peer-review system has been relied upon by the scientific community for determining the correctness and the quality of the findings presented in a research article. The authenticity and, hence, the need for this process has long been debated since in many cases flawed research has got into the literature even though the peer-review process was rigorous \cite{bohannon2013s}. Similarly, there have been cases where excellent research was misjudged by the peer-review process and therefore rejected \cite{braatz2014papers}. The publishing house makes significant investments into ensuring the quality of editing and reviewing of the received submissions and, therefore, identifying the necessity of this entire system is of prime importance. 
 
-\noindent{\bf Debates on the scientific peer-review:} 
-The effectiveness of peer-review have been studied to a large extent in the domain of medical sciences where peer-review is heavily relied upon for judging the quality of a research article ~\cite{jefferson2006editorial,kassirer1994peer,
-rennie1990editorial}. The effect of blinding on the quality of peer review has also been studied in detail~\cite{jefferson2002measuring, mcnutt1990effects}. It was observed that blinding improves the quality of reviews. Several limitations of the review process have also been pointed out~\cite{horrobin1990philosophical}. In~\cite{cole1981chance} the authors show that there is a high degree of disagreement within the population of eligible reviewers.~\cite{braatz2014papers} also shows that there are a significant number of papers that receive more citations after rejection. All these together point to limitations of the review process and have resulted in the scientific community questioning the requirement of this process. 
-
-\noindent{\bf A massive peer-review dataset:} In this paper, we investigate the effectiveness of the peer-review system through a rigorous and large-scale analysis of the scientific review data. In particular, we consider a set of around $29k$ papers along with roughly $70k$ unique review reports containing $12m$ lines of review text submitted to the Journal of High Energy Physics (JHEP) between 1997 and 2015. We would like to point out here that this dataset is unique as well as very rich and we do not know of any other work that presents such a large-scale analytics of an equivalent dataset. Informed with the details of the number of reviews per paper, the content of the review reports and the citation counts we perform, for the first time, a series of systematic measurements to determine whether the peer-review process is indeed able to correctly differentiate between high impact contributions and the rest.
-
-\noindent{\bf Citation impact of accepted papers:}  Assuming that citation count of a paper is representative of its overall quality, we observe that on average those papers which were accepted at JHEP after passing through the peer-review process, are cited more often compared to those which got rejected at JHEP and eventually got accepted at a different venue. While this is true for the majority, there are a few exception cases where either a rejected paper is found to receive high citations or an accepted paper is found to receive (almost) no citation. 
-
-\noindent{\bf Reviewer-reviewer interaction network:} One of the central contributions of this work is the introduction of a novel reviewer-reviewer interaction network built as the one-mode projection of the editor-reviewer bipartite network. The reviewer-reviewer interaction network has nodes as the reviewers and two reviewers are connected by an edge if they have been assigned by the same editor. Surprisingly, the network related structural features such as the degree, the clustering coefficient and the centrality values (closeness, betweenness etc.) of the reviewer nodes in the reviewer-reviewer network strongly correlate with the  long-term citations received by the papers these reviewers refereed. 
-
-\noindent{\bf Supporting features:} Another unique contribution of this paper is that we also build a set of supporting features based on the various characteristics of the papers submitted as well as the authors and the referees of the submitted papers. {\em Papers}: The highly cited papers tend to undergo lesser rounds of review and there also exists an optimal team size (number of contributing authors) for which the accrued citation is maximum.
-{\em Review Reports}: For the accepted papers, the length of the review reports seem to be indicator of the long-term citation. Moreover there exists an optimal length for which the citation obtained by the corresponding paper is maximum. On performing sentiment analysis, we observe the review reports to be mostly neutral as the referees hardly use highly polar words in their reports. However, we observe several linguistic quality indicators which can be extracted from the review text that determines whether a paper is going to be cited well in the future. {\em Authors}: From the author specific analysis we observe that for authors who have a higher acceptance to submission ratio tend to receive more citations than others who have a lower acceptance to submission ratio. In addition, the reviews received by authors having higher acceptance to submission ratio tend to contain more positive sentiments on average. {\em Reviewers}: In a previous work~\cite{sikdar2016anomalies} the authors showed that the reviewers who tend to accept or reject most of the papers assigned to them fail to correctly judge the quality of the papers. We include such history based features of the reviewers in the set of supporting features. 
-
-Two further interesting observations from the analysis of the supporting features are -- the low cited accepted papers got in due to the higher accept history of the authors and the lenience of the referees; the high cited rejected papers could not make a place because of lower accept history of the authors and the strictness of the referees.
-
-\begin{figure*}
-\centering
-\begin{tabular}{ccc}
-\includegraphics[scale=.15]{figures/paper_year_dis.eps} & \includegraphics[scale=.15]{figures/citation_distribution.eps} & \includegraphics[scale=0.15]{figures/review_distribution.eps}
-\end{tabular}
-\caption{{\bf (Left)} Number of accepted and rejected papers per year from 1997 to 2015. {\bf (Middle)} Citation distribution of both the accepted and the rejected papers. {\bf (Right)} Distribution of number of reviews for accepted and rejected papers.}
-\label{fig1}
-\end{figure*}
-
-\noindent{\bf Determining the fate of the paper:} 
-Based on the network features built above, we propose a supervised model which quite accurately predicts ($R^2$ = {\bf 0.79}, $RMSE$ = {\bf 0.496}) the long-term citation of a paper. In addition, if we also include the supporting features into the model we obtain further gains ($R^2$ = {\bf 0.81}, $RMSE$ = {\bf 0.46}). Analysis of the importance of the features shows that the network features are the strongest predictors for this task.
-We believe that our system would be of immense help in assisting the editor in deciding acceptance or rejection of the paper specifically in cases when the review reports are contradictory. 
-Note that while our work is a case study of JHEP, the formulations that we report are very general and can be extended to any other available dataset. 
-
-%\input{related_works}
-\vspace{-4mm}
-\section{Related works}
-\label{related_works}
-
-The importance and effectiveness of peer-review have long been studied across diverse platforms. The benefits of collaborative learning has been studied extensively in~\cite{reily2009two}. In fact the authors find that peer reviews are accurate compared to accepted evaluation standard. The benefits of peer-review in classroom environment has been summarized in~\cite{hamer2005method}. The social media has also been using peer-review to filter information~\cite{diakopoulos2011towards,lampe2004slash}.  
-In fact Wikipedia, Reddit and Quara rely largely on peer-review for improving the quality of the content \cite{stvilia2008information}. Peer-review in online collaboration context has also been studied in great detail \cite{brindley2009creating, huang2016effectiveness}.  %{\color{red}{\bf Add more references from CSCW conference and journal.}}
-
-In the scientific community also peer-review system has long been relied upon for preventing flawed research from getting into the literature ~\cite{kassirer1994peer}. However, several concerns about the limitations of this system have been conveyed~\cite{ingelfinger1974peer,relman1989good,smith2006peer} in the context of scientific peer-review. The most significant of them is the presence of bias while evaluating the quality of the research~\cite{lee2013bias}.  In~\cite{mcnutt1990effects}, authors showed that blinding significantly improved the quality of the reviews. Further, reviewers seem to fail to reach consensus while determining whether the contribution of a scientific article is novel enough~\cite{cole1981chance}. 
-
-This has led to serious debate in the research community regarding the credibility of the peer-review process. With the total number of published articles reaching $1.3$ million in 2006 (~\cite{bjork2009scientific}) and expected to grow at even faster rate, we believe a thorough analysis of the reliability of the peer-review process is needed since a large amount of time as well as cost is involved in this process. 
-
-
-The relationship between reviews and citations for a paper has not been studied previously to the best of our knowledge except for some preliminary attempts in~\cite{braatz2014papers, coupe2013peer}.
-In~\cite{coupe2013peer} it has been showed that the papers that are declared as best papers at a publication venue end up getting lesser number of citations while~\cite{braatz2014papers} points out that rejected papers tend to get more citations in the long run. 
-
-
-Although there are several works on determining usefulness of user supplied reviews especially in the e-commerce domain~\cite{ghose2011estimating, kim2006automatically}, similar analysis for review reports of scientific articles have remained mostly unexplored. We believe that our findings will not only re-establish the need for a well-moderated peer-review process but also provide important insights as to how such a supportive process could be further improved. In this paper, we consider a very rich dataset to address some of the issues that remained unattended so far in the literature. The observations that we make are very unique and the conclusions that we draw, thereby, are significantly novel adding huge value to the rich digital library literature.
-
+\input{./texfiles/Chapter_4/jcdl/introduction}
+\input{./texfiles/Chapter_4/cikm/introduction}
+\input{./texfiles/Chapter_4/cikm_17/introduction}
 
 %\input{dataset}
 
 \section{Dataset}
-\label{dataset}
 
-
-
-The main aim of this work is to understand the importance of the review process and especially the contribution of the referees in this process. Such an analysis requires detailed information of reviews like the number of rounds of review, final decisions and the text of the review report in each round and, lastly, the number of citations for each paper. 
-
-{\em Obtained data:} As stated earlier, for our analysis, we consider the dataset of the {\em Journal of High Energy Physics} (JHEP). It is one of the leading journals in its field and publishes theoretical, experimental and phenomenological papers. Among JHEP's most direct competitors there are Physical Review D, Nuclear Physics, EPJC, Physics Letters B and Physical Review Letters.
-This dataset consists of {\bf 28871} papers that were submitted between 1997 (year of inception) and 2015 of which {\bf 20384} were accepted and {\bf 7073} were rejected. The rest of the papers were either withdrawn by the authors or the final decisions were not available. The number of distinct review reports is {\bf 70k} containing {\bf 12m} lines of review text. For each paper we have the title, the abstract, the authors, the date of publication (in case it was accepted) and the number of citations for the accepted papers. The dataset further contains for each paper the number of rounds of reviews it received before it was accepted (rejected) as well as the detailed text of the report submitted by the assigned reviewer and the editor.
-
-
-\noindent{\em Pre-processing:} To obtain the necessary information for the rejected papers we queried the ``Inspire'' search engine\footnote{\url{https://inspirehep.net}} by their corresponding arXiv\footnote{\url{http://arxiv.org/}} ids. We could obtain for each paper the citation information, the abstract, the title, the authors and also the publishing journal (if at all it got published). Note that all through our analysis we refer to number of citations as the cumulative number of citations that a paper/author obtained at the end of 2015. 
-We further had to disambiguate the names of the authors and assign each of them a unique id.  
-
-\noindent{\em Some basic facts about the dataset:} In fig.~\ref{fig1}{\bf(Left)} we plot the year-wise distribution of the accepted and the rejected papers from 1997 to 2015. We observe an increasing trend in the number of submissions except for the year 2015 for which the data is incomplete. 
-\begin{table}[htpb]
-\centering
-\vspace{-4mm}
-\caption{General information of the dataset.\vspace{-2mm}}
-\label{tab1}
-\resizebox{!}{1.6cm}{
-\begin{tabular}{|l|l|}
-\hline
-Number of papers                                                                 & 28871 \\ \hline
-\hline
-\begin{tabular}[c]{@{}l@{}}Number of papers (accepted)\end{tabular}            & 20384 \\ \hline
-\begin{tabular}[c]{@{}l@{}}Number of papers (rejected)\end{tabular}            & 7073  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Average number of reviews (accepted papers)\end{tabular}   & 1.76  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Average number of reviews (rejected papers)\end{tabular}   & 1.35  \\ \hline
-\begin{tabular}[c]{@{}l@{}}Average number of citations (accepted papers)\end{tabular} & 31.89 \\ \hline
-\begin{tabular}[c]{@{}l@{}}Average number of citations (rejected papers)\end{tabular} & 9.45  \\ \hline
-\end{tabular}}
-\vspace{-4mm}
-\end{table}
-
-In fig.~\ref{fig1}{\bf(Middle)} we plot the citation distribution of the accepted and the rejected papers. Both the distributions seem to follow a power-law behavior. We further plot 
-the distribution of the number of reviews for the accepted and the rejected papers in fig.~\ref{fig1}{\bf(Right)}. An important observation is that for JHEP, majority of the 
-papers undergo one or two rounds of reviews after which they are either accepted or rejected. 
-We note certain general information related to the dataset in table~\ref{tab1}.
-Each submitted paper in the dataset also consists of the list of authors. There are {\bf 15127} unique authors in the dataset with at least one submission to JHEP and {\bf 12434} authors with at least one accepted paper. The average number of submissions per author is {\bf 5.18} while the number of authors per paper is {\bf 2.87}. 
-
-\noindent{\em Peer-review process in JHEP:} For every submitted paper the administrator assigns an editor for it. The editor selects a single or a small set of reviewers for judging the quality of the contributions in the paper. The reviewer sends back his views in the form of a report. Based on this report the editor decides whether to accept or reject the paper. The editor may also ask the authors to reshape the paper based on the feedback of the reviewer(s) and in which case they have to resubmit before a decision on its acceptance could be taken. In fig.~\ref{peer_review}, we present a schematic showing the peer-review process in JHEP.
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.3]{figures/peer_review.jpg}
-\caption{\label{peer_review} Peer-review system in JHEP\vspace{-5mm}}
-\end{figure}
-%\input{rev_int_network}
+\input{./texfiles/Chapter_4/jcdl/dataset}
 
 \section{Reviewer-reviewer interaction network}
 \label{rev_int_net}
@@ -241,13 +153,13 @@ The reviewer-reviewer interaction network is created with each node representing
 
 \begin{figure*}
 \centering
-\includegraphics[width = 0.95\textwidth]{figures/citation_.eps} 
+\includegraphics[width = 0.95\textwidth]{./texfiles/Chapter_4/jcdl/figures/citation_.eps} 
 \caption{\label{fig:net_citation} Cumulative distribution function (CDF) of citations received by the papers (accepted) reviewed by referees in top 25\% and bottom 25\% reviewers ranked according to (a) degree, (b) betweenness centrality, (c) closeness centrality (d) clustering coefficient values and (e) PageRank in the reviewer-reviewer interaction network.}
 \end{figure*}
-\vspace{-3mm}
+
 \subsection{Degree (Deg)}
 Degree of a node $v$ is the number of other nodes it is connected to in the network. A node with a higher degree in the reviewer-reviewer interaction network would indicate (i) assignment from multiple editors, (ii) assignment from a reputed editor (with large number of assignments) which in turn would indicate the reputation of the reviewer. To verify our hypothesis, we rank the reviewers based on their degree in the network and calculate the mean citation of the papers reviewed by the reviewers in the top and the bottom 25\% of the rank list. We observe that  the papers reviewed by the top 25\% reviewers receive much higher citations than the those reviewed by the bottom 25\% reviewers (refer to fig.~\ref{fig:net_citation}(a)).    
-\vspace{-3mm}
+
 \subsection{Betweenness centrality (BC)}
 
 Betweenness centrality of a node quantifies the position of a node based on the number of shortest paths the node is part of. For every  pair of nodes in the network there exists a shortest path between them. Betweenness centrality of a node ($v$) is the fraction of all such paths that pass through $v$. In the reviewer-reviewer interaction network, a high  centrality value would indicate assignment by multiple editors and that this node acts as a bridge between them. We again rank the reviewers based on the betweenness centrality values and calculate the average citation of the papers. We find that the papers accepted by the top 25\% reviewers tend to be cited more compared to those accepted by the bottom 25\% (refer to fig.~\ref{fig:net_citation}(b)). 
@@ -260,7 +172,7 @@ are cited more often compared to the bottom 25\% reviewers.
 \subsection{Clustering coefficient (Clus)}
 
 Clustering coefficient of a node is measured as the fraction of connections among the neighbors of the node. For the reviewer-reviewer interaction network, every reviewer assigned by a common editor is connected to every other reviewer in the network. A reviewer assigned by many editors would actually act as a bridge between two cliques and hence would have a lower clustering coefficient value compared to a reviewer who is part of a single clique (always assigned by a single editor). This is further demonstrated in  fig.~\ref{fig:net_citation}(d) where we observe that the papers accepted by reviewers having lower clustering coefficient tend to be cited more.
-\vspace{-3mm}
+
 \subsection{PageRank (PR)}
 
 PageRank is a link analysis based algorithm that calculates for each node its relative importance within 
@@ -291,7 +203,7 @@ We further consider all the accepted and the rejected papers and segregate them 
  \centering
  %\vspace{-4mm}
  \begin{tabular}{ccc}
- \includegraphics[scale=0.15]{figures/citation_bucket_frac_paper} & \includegraphics[scale=0.15]{figures/citation_bucket_reviews_all-eps-converted-to.pdf} & \includegraphics[scale=0.15]{figures/cit_rnd_rev-eps-converted-to.pdf}
+ \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-converted-to.pdf} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to.pdf}
  \end{tabular}
   \caption{{\bf (Left)} Fraction of accepted and rejected papers in different citation buckets. {\bf (Middle)} Average number of reviews for accepted and rejected papers in different citation buckets. For both {\bf (Left)} and {\bf(Middle) } bucket sizes are in increasing powers of 2. E.g. $\leq 1$, $2$, ($>2$ and $\leq 4$) and so on. {\bf (Right)} Average citation of the top 20 percentile  papers for a given number of rounds of review request.}
    \label{fig4}
@@ -303,7 +215,7 @@ We next check whether the {\bf review rounds} improve the quality of the paper. 
 
 \begin{figure}
 \centering
-\includegraphics[scale  = 0.25]{figures/team_citation}
+\includegraphics[scale  = 0.25]{./texfiles/Chapter_4/jcdl/figures/team_citation}
 \caption{\label{team:citation} Average citation versus team size. Note that we segregate the papers based on the teams size and calculate the average citation.}
 \end{figure}
 
@@ -317,10 +229,9 @@ The authors in~\cite{chakraborty2014towards} hypothesized that there exits an op
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.25]{figures/len_citation.eps}
+\includegraphics[scale=0.25]{./texfiles/Chapter_4/jcdl/figures/len_citation.eps}
 \caption{Mean length of referee reports in terms of number of words at different rounds of review. Typically the buckets are $< 100$, ($\geq 100, < 200$) and so on}
 \label{fig:length}
-\vspace{-4mm}
 \end{figure}
 
 
@@ -340,25 +251,13 @@ We next perform sentiment analysis on the review reports. To determine the senti
 \begin{figure}[htpb]
 \centering
 %\vspace{-5mm}
-\includegraphics[scale=0.23]{figures/year_sent_cit-eps-converted-to.pdf}
+\includegraphics[scale=0.23]{./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf}
 \caption{Sentiment score versus citations for both accepted and rejected papers for the years 2005, 2007 and 2009. We find similar trends for other years as well.}
 \label{fig12}
-\vspace{-2mm}
 \end{figure}
 
 To determine whether the overall sentiment of the reviews of a paper is related to the number of citations received by it, we plot for each paper (both accepted and rejected) the number of citations it received against the  sentiment score of the first round of review in fig.~\ref{fig12}. Note that we segregate the papers based on the year of the publication or the rejection. We observe that the highly cited papers mostly have reviews with neutral or positive sentiment. Accepted papers with positive reviews are, on average, found to receive $25.27$ citations while those with negative reviews are found to receive $13.56$ citations.
 However, there are cases where the accepted paper received highly positive reviews but was not cited. Conversely, there are cases where the sentiment was neutral but the paper garnered a large number of citations. Shown below are two such examples -- {\bf Case 1:} Year of publication: 2006, sentiment score: 0.0234 (almost neutral), citations: 5812; {\bf Case 2:} Year of publication: 2008, sentiment score: 0.65 (highly positive), citations: 6.
-
-
-For the rejected papers we observe that those which received neutral reviews but were rejected, tend to garner higher citations later compared to the ones which received negative reviews. There are certain exceptions as well, two of which are -- {\bf Case 1:} Year of rejection: 2010, sentiment score: 0.27 (positive), citations: 1; {\bf Case 2:} Year of rejection: 2007, sentiment score: -0.14 (negative), citations: 711.
-Manual investigation of the review text shows that the papers which are highly cited after rejection were mainly rejected for not being in the scope of JHEP and not because of flawed results. 
-
-\subsubsection{Linguistic quality indicators (LQI)}
-
-Here we check whether there are linguistic quality features present in the review reports which can serve as an indicator of the future impact of the paper. To our aim we use the LIWC\footnote{\url{http://liwc.wpengine.com/}} (Linguistic Inquiry and Word Count) text analysis tool~\cite{pennebaker2007development}. The tool provides, as output, percentage of words in different categories for an input text. The categories are broadly divided into linguistic (21 dimensions like pronouns, articles etc.), psychological (41 dimensions like affect, cognition etc.), personal concern (6 dimensions), informal language markers and punctuation apart from some general features like word count, words per sentence etc. We apply the LIWC tool on the review reports for our analysis and mainly focus on the linguistic and the psychological categories.
-Next we check whether the LIWC features discussed earlier can also serve as indicators differentiating high and low cited papers. We rank the papers based on the number of citations they have received and consider the top 10\% as highly cited and the bottom 10\% as low cited papers. Note that we only consider the papers that were published before 2012 so that the papers have at least three years of citation history. In table~\ref{tab3} we report the mean percentage of words in different LIWC categories across all the papers (both high and low cited). We find several quality indicators here as well. The key observations are: (i) future tense is used more significantly in case of review reports of highly cited papers compared to low cited papers. On manually investigating the reviews of some of the highly cited papers we observe that statements like ``its result will become a useful addition to ..'' are prevalent; (ii) insightful and inclusive words are also used to a greater extent in review reports of highly cited papers compared to low cited papers; (iii) positive words are also more prevalent in highly cited papers as well.\\
-Thus, these indicators show that the reviewers were, in many cases, indeed able to guess the quality of the paper as is evident from the review reports.
-
 \begin{table}
 \centering
 \caption{Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.}
@@ -378,6 +277,34 @@ Affective                   & \begin{tabular}[c]{@{}l@{}}Positive \\ emotion\end
 %\vspace{-2mm}
 \end{table}
 
+For the rejected papers we observe that those which received neutral reviews but were rejected, tend to garner higher citations later compared to the ones which received negative reviews. There are certain exceptions as well, two of which are -- {\bf Case 1:} Year of rejection: 2010, sentiment score: 0.27 (positive), citations: 1; {\bf Case 2:} Year of rejection: 2007, sentiment score: -0.14 (negative), citations: 711.
+Manual investigation of the review text shows that the papers which are highly cited after rejection were mainly rejected for not being in the scope of JHEP and not because of flawed results. 
+
+\subsubsection{Linguistic quality indicators (LQI)}
+
+Here we check whether there are linguistic quality features present in the review reports which can serve as an indicator of the future impact of the paper. To our aim we use the LIWC\footnote{\url{http://liwc.wpengine.com/}} (Linguistic Inquiry and Word Count) text analysis tool~\cite{pennebaker2007development}. The tool provides, as output, percentage of words in different categories for an input text. The categories are broadly divided into linguistic (21 dimensions like pronouns, articles etc.), psychological (41 dimensions like affect, cognition etc.), personal concern (6 dimensions), informal language markers and punctuation apart from some general features like word count, words per sentence etc. We apply the LIWC tool on the review reports for our analysis and mainly focus on the linguistic and the psychological categories.
+Next we check whether the LIWC features discussed earlier can also serve as indicators differentiating high and low cited papers. We rank the papers based on the number of citations they have received and consider the top 10\% as highly cited and the bottom 10\% as low cited papers. Note that we only consider the papers that were published before 2012 so that the papers have at least three years of citation history. In table~\ref{tab3} we report the mean percentage of words in different LIWC categories across all the papers (both high and low cited). We find several quality indicators here as well. The key observations are: (i) future tense is used more significantly in case of review reports of highly cited papers compared to low cited papers. On manually investigating the reviews of some of the highly cited papers we observe that statements like ``its result will become a useful addition to ..'' are prevalent; (ii) insightful and inclusive words are also used to a greater extent in review reports of highly cited papers compared to low cited papers; (iii) positive words are also more prevalent in highly cited papers as well.\\
+Thus, these indicators show that the reviewers were, in many cases, indeed able to guess the quality of the paper as is evident from the review reports.
+
+% \begin{table}
+% \centering
+% \caption{Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.}
+% \label{tab3}
+% \resizebox{4.5cm}{!}{
+% \begin{tabular}{|l|l|l|l|}
+% \hline
+% Category                    & Dimension                                                   & \begin{tabular}[c]{@{}l@{}}High cited\\ papers\end{tabular} & \begin{tabular}[c]{@{}l@{}}Low cited\\ papers\end{tabular} \\ \hline \hline
+% \multirow{2}{*}{Linguistic} & Future tense                                                & 1.17                                                          & 1.05                                                         \\ \cline{2-4} 
+%                             & Negation                                                    & 0.72                                                          & 0.84                                                         \\ \hline
+% \multirow{4}{*}{Cognitive}  & Insight                                                     & 3.52                                                          & 3.16                                                         \\ \cline{2-4} 
+%                             & Causation                                                   & 2.60                                                          & 2.38                                                         \\ \cline{2-4} 
+%                             & Inclusive                                                   & 3.70                                                          & 3.43                                                         \\ \cline{2-4} 
+%                             & Exclusive                                                   & 1.28                                                          & 1.52                                                         \\ \hline
+% Affective                   & \begin{tabular}[c]{@{}l@{}}Positive \\ emotion\end{tabular} & 2.84                                                          & 2.70                                                         \\ \hline
+% \end{tabular}}
+% %\vspace{-2mm}
+% \end{table}
+
 \subsection{Author based features}
 \label{author_analysis}
 
@@ -385,7 +312,7 @@ We next look into some of the author based features like author reputation and a
 \begin{figure*}
 \centering
 \begin{tabular}{ccc}
-\includegraphics[scale=0.15]{figures/citation_succes_ratio.eps} & \includegraphics[scale=0.15]{figures/review_succes_ratio.eps} & \includegraphics[scale=0.15]{figures/sentiment_succes_ratio-eps-converted-to.pdf}
+\includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/citation_succes_ratio.eps} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/review_succes_ratio.eps} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/sentiment_succes_ratio-eps-converted-to.pdf}
 \end{tabular}
 \caption{{\bf (Left)} Mean number of citations per paper versus acceptance ratio. {\bf (Middle)} Mean number of reviews per paper versus acceptance ratio. {\bf (Right)} Mean sentiment score per paper versus acceptance ratio. Note that in each case we use acceptance ratio buckets where buckets correspond to acceptance ratio ($\geq 0.1$ and $< 0.2$), ($\geq 0.2$ and $<0.3$) and so on.}
 \label{fig13}
@@ -396,7 +323,7 @@ where $accept_{i}$ and $reject_{i}$ represents respectively the number of accept
 We observe that mean acceptance ratio across all the authors is $0.56$. In fact, for almost 7\% of the authors, the acceptance ratio is 1. Next we check whether the authors with high acceptance ratio have higher citations per paper. To this aim we segregate authors based on the acceptance ratio and calculate the mean number of citations per paper for these authors (refer to fig.~\ref{fig13}{\bf (Left)}). We observe an increasing trend suggesting that the authors with higher acceptance ratio tend to have higher citations. 
 \begin{figure}
 \centering
-\includegraphics[scale=0.25]{figures/prod_citation.eps}
+\includegraphics[scale=0.25]{./texfiles/Chapter_4/jcdl/figures/prod_citation.eps}
 \caption{Mean citation of the papers versus the average time(in days) between two submission. Note that  we use time buckets where buckets correspond to $<100$,($\geq 100$ and $< 200$), ($\geq 200$ and $<300$) and so on.\vspace{-2mm}}
 \label{fig:prod}
 \end{figure}
@@ -416,11 +343,12 @@ The papers are segregated based on the corresponding author's $s_t$ and then the
 \centering
 \caption{The F-statistics value for all the features used for predicting the long-term citation of the paper.}
 \label{tab:f_score}
+\resizebox{15cm}{!}{
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
 Feature      & Deg  & BC    & CC    & Clus  & PR    & RR   & TS   & RL   & SNT  & AR    & AP    & RAC  & TA   & DR   \\ \hline
 F-statistics & {\bf 26.1} & {\bf 29.21} & {\bf 27.72} & {\bf 17.82} & {\bf 23.34} & 6.17 & {\bf 25.6} & 14.1 & 0.94 & {\bf 18.52} & {\bf 16.49} & 3.49 & 8.68 & 7.59 \\ \hline
-\end{tabular}
+\end{tabular}}
 \end{table*}
 
 \subsection{Reviewer based features}
@@ -434,7 +362,7 @@ where $accept_{j}$ and $reject_{j}$ respectively represent the number of papers 
 \begin{figure*}
 \centering
 \begin{tabular}{ccc}
-\includegraphics[scale=0.15]{figures/reviewer_citation_ratio-eps-converted-to.pdf} & \includegraphics[scale=0.15]{figures/reviewer_review_ratio-eps-converted-to.pdf} & \includegraphics[scale=0.15]{figures/reviewer_sentiment_ratio-eps-converted-to.pdf}
+\includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-to.pdf} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/reviewer_review_ratio-eps-converted-to.pdf} & \includegraphics[scale=0.135]{./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_ratio-eps-converted-to.pdf}
 \end{tabular}
 \caption{{\bf (Left)} Mean number of citations per paper versus accept ratio. {\bf (Middle)} Mean number of reviews per paper versus accept ratio. {\bf (Right)} Mean sentiment score per paper versus accept ratio. Note that in each case we use accept ratio buckets where the buckets correspond to accept ratio ($\geq 0.1$ and $< 0.2$), ($\geq 0.2$ and $<0.3$) and so on.}
 \label{fig16}
@@ -450,9 +378,9 @@ To complete the analysis we also investigate the average sentiment score of the 
 
 \begin{figure}
 \centering
-\includegraphics[scale = 0.28]{figures/rev_all.eps}
+\includegraphics[scale = 0.28]{./texfiles/Chapter_4/jcdl/figures/rev_all.eps}
 \caption{\label{fig:rev} Mean citation of the papers versus (a) time since the last assignment for the assigned reviewer and (b) time taken by the reviewer to send the report. Note that for both the cases the times are divided into equi-sized buckets. For (a) bucket sizes are 100 each while for (b) it is 25.
-\vspace{-6mm}}
+}
 \end{figure}
 
 \subsubsection{Time since last assignment (TA)}
@@ -487,16 +415,16 @@ Thus our system is correctly able to predict the citation rank of the paper. We 
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.17]{figures/highly_cited_rejected-eps-converted-to.pdf}
-\caption{CDF of (a) acceptance ratio of authors and (b) accept ratio of reviewers for accepted papers and highly cited rejected papers.\vspace{-5mm}}
+\includegraphics[scale=0.17]{./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.pdf}
+\caption{CDF of (a) acceptance ratio of authors and (b) accept ratio of reviewers for accepted papers and highly cited rejected papers.}
 \label{fig10}
 %\vspace{-1mm}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.17]{figures/low_cited_accepted-eps-converted-to.pdf}
-\caption{CDF of (a) accept ratio of reviewers, (b) acceptance ratio of authors (c) length of the review text (\# words) for rejected papers and low cited accepted papers.\vspace{-5mm}}
+\includegraphics[scale=0.17]{./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-eps-converted-to.pdf}
+\caption{CDF of (a) accept ratio of reviewers, (b) acceptance ratio of authors (c) length of the review text (\# words) for rejected papers and low cited accepted papers.}
 \label{fig11}
 %\vspace{-1mm}
 \end{figure}
@@ -512,7 +440,7 @@ Manually looking into some of the review text we observed that in several cases 
 
 \noindent{\em Low cited accepted papers:} We now look into the complementary i.e., the papers which were accepted but failed to make impact on the scientific community and accrued very low citations (typically $< 10$). Ideally, these papers should have been rejected, hence we investigate how different these are in terms of author's acceptance ratio and reviewer's accept ratio. While the authors of these papers have higher acceptance ratio (fig.~\ref{fig11}(a)), they were also assigned to reviewers who are less strict (fig.~\ref{fig11}(b)). These observations indicate that either the contributing author's reputation might have played a role in their acceptance or were lucky to have been reviewed by lenient referees. Review report also seem to be sloppy in many cases with the reviewer not even mentioning the reason for acceptance. We also observe the length of the review report (in terms of the number of words) on average to be less than that of the rejected papers (fig.~\ref{fig11}(c)). 
 
-\vspace{-2mm}
+
 %\input{implications}
 
 \section{Publisher's views}
@@ -525,7 +453,7 @@ We further requested the JHEP journal administrators to survey our findings. The
 (v) that a significant fraction of authors have high acceptance rate at JHEP indicates a presence of at least a weak bias in the peer-review process and hence needs to be investigated;
 
 %\input{discussion}
-\vspace{-4mm}
+%\vspace{-4mm}
 %\input{conclusion}
 \section{Conclusion}
 \label{conclusion}
@@ -541,14 +469,5 @@ In the process of designing these features, we also made some key observations w
 Apart from being a large-scale study that attempts to provide quantitative evidences supporting its necessity, ours is the first work that proposes definitive ways of improving the effectiveness of the scientific peer-review system.  
 
 
-\vspace{-3mm}
-\section{Acknowledgements}
-The authors would like to thank the publication team of
-Journal of High Energy Physics (JHEP) for providing 
-the necessary data and they were the only ones willing to
-provide it.
-\vspace{-3mm}
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{sigproc} 
+%\vspace{-3mm}
 
-\end{document}

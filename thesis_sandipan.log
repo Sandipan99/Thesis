@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.15)  29 JUN 2017 19:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.15)  30 JUN 2017 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1028,16 +1028,10 @@ LaTeX Warning: Label `fig1' multiply defined.
 LaTeX Warning: Label `conclusion' multiply defined.
 
 
+LaTeX Warning: Label `introduction' multiply defined.
+
+
 LaTeX Warning: Label `fig1' multiply defined.
-
-
-LaTeX Warning: Label `dataset' multiply defined.
-
-
-LaTeX Warning: Label `fig13' multiply defined.
-
-
-LaTeX Warning: Label `conclusion' multiply defined.
 
 
 LaTeX Warning: Label `fig3' multiply defined.
@@ -1046,13 +1040,7 @@ LaTeX Warning: Label `fig3' multiply defined.
 LaTeX Warning: Label `prediction' multiply defined.
 
 
-LaTeX Warning: Label `conclusion' multiply defined.
-
-
 LaTeX Warning: Label `reviewer' multiply defined.
-
-
-LaTeX Warning: Label `conclusion' multiply defined.
 
 )
 \openout1 = `thesis_sandipan.aux'.
@@ -1168,7 +1156,7 @@ l.347 \makepreliminarypages
                            
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 347.
- <logo.pdf, id=708, 357.335pt x 388.45125pt>
+ <logo.pdf, id=696, 357.335pt x 388.45125pt>
 File: logo.pdf Graphic file (type pdf)
 
 <use logo.pdf>
@@ -1507,12 +1495,6 @@ ons re-ceived by the
 Underfull \hbox (badness 1107) in paragraph at lines 39--39
  [][] [][]\T1/ptm/b/n/12 (Left) \T1/ptm/m/n/12 Frac-tion of ac-cepted and re-je
 cted pa-pers in dif-fer-ent ci-ta-tion 
- []
-
-
-Underfull \hbox (badness 1127) in paragraph at lines 43--43
- [][] [][]\T1/ptm/b/n/12 (Left) \T1/ptm/m/n/12 Mean num-ber of ci-ta-tions per 
-pa-per ver-sus ac-cep-tance ra-tio. 
  []
 
 
@@ -1913,7 +1895,7 @@ Chapter 3.
 
 ])
 (./texfiles/Chapter_1/temp_mapping_network_time_series.tex
-<./texfiles/Chapter_1/fig/Presentation_d-eps-converted-to.pdf, id=1847, 722.7pt
+<./texfiles/Chapter_1/fig/Presentation_d-eps-converted-to.pdf, id=1826, 722.7pt
  x 543.02875pt>
 File: ./texfiles/Chapter_1/fig/Presentation_d-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1927,7 +1909,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [44]
-<./texfiles/Chapter_1/fig/ede_em-eps-converted-to.pdf, id=1855, 504.88625pt x 2
+<./texfiles/Chapter_1/fig/ede_em-eps-converted-to.pdf, id=1834, 504.88625pt x 2
 11.79124pt>
 File: ./texfiles/Chapter_1/fig/ede_em-eps-converted-to.pdf Graphic file (type p
 df)
@@ -1959,7 +1941,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [47]) (./texfiles/Chapter_1/temp_properties_time_series.tex
-<./texfiles/Chapter_1/fig/infocom_all-eps-converted-to.pdf, id=1900, 1056.94875
+<./texfiles/Chapter_1/fig/infocom_all-eps-converted-to.pdf, id=1879, 1056.94875
 pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/infocom_all-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -1968,7 +1950,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/infocom_all-eps-converted-to.
 pdf used on input line 10.
 (pdftex.def)             Requested size: 390.25534pt x 163.07098pt.
 
-<./texfiles/Chapter_1/fig/sigcomm_all-eps-converted-to.pdf, id=1902, 1056.94875
+<./texfiles/Chapter_1/fig/sigcomm_all-eps-converted-to.pdf, id=1881, 1056.94875
 pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/sigcomm_all-eps-converted-to.pdf Graphic file (t
 ype pdf)
@@ -1977,7 +1959,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/sigcomm_all-eps-converted-to.
 pdf used on input line 20.
 (pdftex.def)             Requested size: 390.25534pt x 163.07098pt.
 
-<./texfiles/Chapter_1/fig/highschool_2011_psd-eps-converted-to.pdf, id=1904, 10
+<./texfiles/Chapter_1/fig/highschool_2011_psd-eps-converted-to.pdf, id=1883, 10
 56.94875pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/highschool_2011_psd-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1987,7 +1969,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/highschool_2011_psd-eps-conve
 rted-to.pdf used on input line 23.
 (pdftex.def)             Requested size: 411.93767pt x 172.12823pt.
 
-<./texfiles/Chapter_1/fig/highschool_psd-eps-converted-to.pdf, id=1906, 1056.94
+<./texfiles/Chapter_1/fig/highschool_psd-eps-converted-to.pdf, id=1885, 1056.94
 875pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/highschool_psd-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -1997,7 +1979,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/highschool_psd-eps-converted-
 to.pdf used on input line 68.
 (pdftex.def)             Requested size: 411.93767pt x 172.12823pt.
 
-<./texfiles/Chapter_1/fig/hospital_psd-eps-converted-to.pdf, id=1908, 1056.9487
+<./texfiles/Chapter_1/fig/hospital_psd-eps-converted-to.pdf, id=1887, 1056.9487
 5pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/hospital_psd-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2027,7 +2009,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 [50 <./texfiles/Chapter_1/fig/highschool_psd-eps-converted-to.pdf> <./texfiles/
 Chapter_1/fig/hospital_psd-eps-converted-to.pdf>])
 (./texfiles/Chapter_1/temp_prediction.tex
-<./texfiles/Chapter_1/fig/jaccard-eps-converted-to.pdf, id=1960, 341.275pt x 18
+<./texfiles/Chapter_1/fig/jaccard-eps-converted-to.pdf, id=1939, 341.275pt x 18
 5.69376pt>
 File: ./texfiles/Chapter_1/fig/jaccard-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -2060,7 +2042,7 @@ neigh-bors
  []
 
 
-<./texfiles/Chapter_1/fig/age_all_5-eps-converted-to.pdf, id=1961, 1495.5875pt 
+<./texfiles/Chapter_1/fig/age_all_5-eps-converted-to.pdf, id=1940, 1495.5875pt 
 x 548.0475pt>
 File: ./texfiles/Chapter_1/fig/age_all_5-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -2082,7 +2064,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [53]
-<./texfiles/Chapter_1/fig/error_similarity_val-eps-converted-to.pdf, id=2002, 1
+<./texfiles/Chapter_1/fig/error_similarity_val-eps-converted-to.pdf, id=1981, 1
 056.94875pt x 441.65pt>
 File: ./texfiles/Chapter_1/fig/error_similarity_val-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2092,7 +2074,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/error_similarity_val-eps-conv
 erted-to.pdf used on input line 119.
 (pdftex.def)             Requested size: 325.215pt x 135.89249pt.
 
-<./texfiles/Chapter_1/fig/error_dist_all-eps-converted-to.pdf, id=2003, 1495.58
+<./texfiles/Chapter_1/fig/error_dist_all-eps-converted-to.pdf, id=1982, 1495.58
 75pt x 519.9425pt>
 File: ./texfiles/Chapter_1/fig/error_dist_all-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2112,7 +2094,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 [55 <./texfiles/Chapter_1/fig/error_dist_all-eps-converted-to.pdf> <./texfiles/
 Chapter_1/fig/error_similarity_val-eps-converted-to.pdf>]
-<./texfiles/Chapter_1/fig/psd_pred-eps-converted-to.pdf, id=2034, 1056.94875pt 
+<./texfiles/Chapter_1/fig/psd_pred-eps-converted-to.pdf, id=2013, 1056.94875pt 
 x 441.65pt>
 File: ./texfiles/Chapter_1/fig/psd_pred-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -2121,7 +2103,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/psd_pred-eps-converted-to.pdf
  used on input line 70.
 (pdftex.def)             Requested size: 385.92152pt x 161.25818pt.
 
-<./texfiles/Chapter_1/fig/no_of_edges1-eps-converted-to.pdf, id=2035, 1056.9487
+<./texfiles/Chapter_1/fig/no_of_edges1-eps-converted-to.pdf, id=2014, 1056.9487
 5pt x 537.00626pt>
 File: ./texfiles/Chapter_1/fig/no_of_edges1-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2131,7 +2113,7 @@ Package pdftex.def Info: ./texfiles/Chapter_1/fig/no_of_edges1-eps-converted-to
 .pdf used on input line 78.
 (pdftex.def)             Requested size: 303.53267pt x 154.21193pt.
 
-<./texfiles/Chapter_1/fig/Prediction.pdf, id=2036, 721.2546pt x 296.307pt>
+<./texfiles/Chapter_1/fig/Prediction.pdf, id=2015, 721.2546pt x 296.307pt>
 File: ./texfiles/Chapter_1/fig/Prediction.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_1/fig/Prediction.pdf>
@@ -2152,7 +2134,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 [58 <./texfiles/Chapter_1/fig/no_of_edges1-eps-converted-to.pdf> <./texfiles/Ch
 apter_1/fig/Prediction.pdf>]
-<./texfiles/Chapter_1/fig/attack_all-eps-converted-to.pdf, id=2078, 1540.75626p
+<./texfiles/Chapter_1/fig/attack_all-eps-converted-to.pdf, id=2057, 1540.75626p
 t x 492.84125pt>
 File: ./texfiles/Chapter_1/fig/attack_all-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2294,7 +2276,7 @@ es/demo-eps-converted-to.pdf ./texfiles/Chapter_2/figures/demo.eps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_2/figures/demo-eps-converted-to.pdf, id=2225, 1932.21875pt 
+<./texfiles/Chapter_2/figures/demo-eps-converted-to.pdf, id=2204, 1932.21875pt 
 x 683.55376pt>
 File: ./texfiles/Chapter_2/figures/demo-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -2377,7 +2359,7 @@ Underfull \hbox (badness 10000) detected at line 368
  []
 
 
-<./texfiles/Chapter_2/figures/percolation.png, id=2342, 1964.33875pt x 947.54pt
+<./texfiles/Chapter_2/figures/percolation.png, id=2321, 1964.33875pt x 947.54pt
 >
 File: ./texfiles/Chapter_2/figures/percolation.png Graphic file (type png)
  <use ./texfiles/Chapter_2/figures/percolation.png>
@@ -2429,7 +2411,7 @@ ate.eps>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_2/figures/param_estimate-eps-converted-to.pdf, id=2426, 903
+<./texfiles/Chapter_2/figures/param_estimate-eps-converted-to.pdf, id=2405, 903
 .375pt x 361.35pt>
 File: ./texfiles/Chapter_2/figures/param_estimate-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2465,7 +2447,7 @@ imate_1.eps>
 (epstopdf)             \includegraphics on input line 182.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_2/figures/param_estimate_1-eps-converted-to.pdf, id=2461, 9
+<./texfiles/Chapter_2/figures/param_estimate_1-eps-converted-to.pdf, id=2440, 9
 03.375pt x 289.08pt>
 File: ./texfiles/Chapter_2/figures/param_estimate_1-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2513,7 +2495,7 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [91]) (./texfiles/Chapter_3/epl/diffusion_model.tex
-<./texfiles/Chapter_3/epl/figs1/dynamics.pdf, id=2558, 909.87929pt x 362.07271p
+<./texfiles/Chapter_3/epl/figs1/dynamics.pdf, id=2537, 909.87929pt x 362.07271p
 t>
 File: ./texfiles/Chapter_3/epl/figs1/dynamics.pdf Graphic file (type pdf)
  <use ./texfiles/Chapter_3/epl/figs1/dynamics.pdf>
@@ -2534,7 +2516,7 @@ igs1/plot_all-eps-converted-to.pdf ./texfiles/Chapter_3/epl/figs1/plot_all.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/epl/figs1/plot_all-eps-converted-to.pdf, id=2559, 867.24p
+<./texfiles/Chapter_3/epl/figs1/plot_all-eps-converted-to.pdf, id=2538, 867.24p
 t x 397.485pt>
 File: ./texfiles/Chapter_3/epl/figs1/plot_all-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2620,7 +2602,7 @@ plot_var_n_k_complete.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/epl/figs1/plot_var_n_k_complete-eps-converted-to.pdf, id=
-2637, 831.105pt x 404.51125pt>
+2616, 831.105pt x 404.51125pt>
 File: ./texfiles/Chapter_3/epl/figs1/plot_var_n_k_complete-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -2648,7 +2630,7 @@ ph_result.eps>
 (epstopdf)             \includegraphics on input line 431.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/epl/figs1/ER_graph_result-eps-converted-to.pdf, id=2654, 
+<./texfiles/Chapter_3/epl/figs1/ER_graph_result-eps-converted-to.pdf, id=2633, 
 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_3/epl/figs1/ER_graph_result-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2686,7 +2668,7 @@ _tree.eps>
 (epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/epl/figs1/plot_reg_tree-eps-converted-to.pdf, id=2666, 83
+<./texfiles/Chapter_3/epl/figs1/plot_reg_tree-eps-converted-to.pdf, id=2645, 83
 8.13126pt x 361.35pt>
 File: ./texfiles/Chapter_3/epl/figs1/plot_reg_tree-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2738,7 +2720,7 @@ l_at_su.eps>
 (epstopdf)             \includegraphics on input line 110.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/netsci/figs1/ps_pl_at_su-eps-converted-to.pdf, id=2698, 1
+<./texfiles/Chapter_3/netsci/figs1/ps_pl_at_su-eps-converted-to.pdf, id=2677, 1
 056.94875pt x 413.545pt>
 File: ./texfiles/Chapter_3/netsci/figs1/ps_pl_at_su-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2773,7 +2755,7 @@ t_N200_m4_k2_varyD_ps_plRes1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/DiffTopologyRegularTree_delay_cost_N200_m4_k
-2_varyD_ps_plRes1-eps-converted-to.pdf, id=2720, 423.5825pt x 403.5075pt>
+2_varyD_ps_plRes1-eps-converted-to.pdf, id=2698, 423.5825pt x 403.5075pt>
 File: ./texfiles/Chapter_3/netsci/figs1/DiffTopologyRegularTree_delay_cost_N200
 _m4_k2_varyD_ps_plRes1-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2799,7 +2781,7 @@ texfiles/Chapter_3/netsci/figs1/DiffTopology_varyN200_varyD_push_pullRes_m4_k21
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/DiffTopology_varyN200_varyD_push_pullRes_m4_
-k21-eps-converted-to.pdf, id=2721, 424.58624pt x 421.575pt>
+k21-eps-converted-to.pdf, id=2699, 424.58624pt x 421.575pt>
 File: ./texfiles/Chapter_3/netsci/figs1/DiffTopology_varyN200_varyD_push_pullRe
 s_m4_k21-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2823,7 +2805,7 @@ igs1/random_graphs_delay1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/random_graphs_delay1-eps-converted-to.pdf, i
-d=2722, 1057.9525pt x 425.59pt>
+d=2700, 1057.9525pt x 425.59pt>
 File: ./texfiles/Chapter_3/netsci/figs1/random_graphs_delay1-eps-converted-to.p
 df Graphic file (type pdf)
 
@@ -2847,7 +2829,7 @@ i/figs1/random_graphs_wastage1-eps-converted-to.pdf ./texfiles/Chapter_3/netsci
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/random_graphs_wastage1-eps-converted-to.pdf,
- id=2723, 1057.9525pt x 440.64626pt>
+ id=2701, 1057.9525pt x 440.64626pt>
 File: ./texfiles/Chapter_3/netsci/figs1/random_graphs_wastage1-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -2870,7 +2852,7 @@ s>
 (epstopdf)             \includegraphics on input line 185.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/netsci/figs1/xperbt-eps-converted-to.pdf, id=2724, 1056.9
+<./texfiles/Chapter_3/netsci/figs1/xperbt-eps-converted-to.pdf, id=2702, 1056.9
 4875pt x 402.50375pt>
 File: ./texfiles/Chapter_3/netsci/figs1/xperbt-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -2893,7 +2875,7 @@ s>
 (epstopdf)             \includegraphics on input line 186.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/netsci/figs1/xperwa-eps-converted-to.pdf, id=2725, 1056.9
+<./texfiles/Chapter_3/netsci/figs1/xperwa-eps-converted-to.pdf, id=2703, 1056.9
 4875pt x 402.50375pt>
 File: ./texfiles/Chapter_3/netsci/figs1/xperwa-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -2924,7 +2906,7 @@ gs1/gnutella25_bt_wa_co.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/gnutella25_bt_wa_co-eps-converted-to.pdf, id
-=2726, 1055.945pt x 416.55624pt>
+=2704, 1055.945pt x 416.55624pt>
 File: ./texfiles/Chapter_3/netsci/figs1/gnutella25_bt_wa_co-eps-converted-to.pd
 f Graphic file (type pdf)
 
@@ -2947,7 +2929,7 @@ _gnut_4.eps>
 (epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/netsci/figs1/comp_gnut_4-eps-converted-to.pdf, id=2728, 1
+<./texfiles/Chapter_3/netsci/figs1/comp_gnut_4-eps-converted-to.pdf, id=2706, 1
 055.945pt x 518.93875pt>
 File: ./texfiles/Chapter_3/netsci/figs1/comp_gnut_4-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2970,7 +2952,7 @@ _gnut_6.eps>
 (epstopdf)             \includegraphics on input line 67.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_3/netsci/figs1/comp_gnut_6-eps-converted-to.pdf, id=2730, 1
+<./texfiles/Chapter_3/netsci/figs1/comp_gnut_6-eps-converted-to.pdf, id=2708, 1
 055.945pt x 518.93875pt>
 File: ./texfiles/Chapter_3/netsci/figs1/comp_gnut_6-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -3019,7 +3001,7 @@ gs1/gnutella1_gnutella2.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_3/netsci/figs1/gnutella1_gnutella2-eps-converted-to.pdf, id
-=2805, 1055.945pt x 401.5pt>
+=2784, 1055.945pt x 401.5pt>
 File: ./texfiles/Chapter_3/netsci/figs1/gnutella1_gnutella2-eps-converted-to.pd
 f Graphic file (type pdf)
 
@@ -3037,9 +3019,9 @@ f>]))
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[114] (./texfiles/Chapter_4/jcdl/JCDL_2017_main.tex
+[114]
 Chapter 6.
-[115
+(./texfiles/Chapter_4/jcdl/introduction.tex [115
 
 
 
@@ -3051,22 +3033,22 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[117]
+[117]) (./texfiles/Chapter_4/cikm/introduction.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[118] (./texfiles/Chapter_4/cikm_17/introduction.tex
+[118]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[119]
+[119]) (./texfiles/Chapter_4/cikm_17/introduction.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[120])
+[120]) (./texfiles/Chapter_4/jcdl/dataset.tex
 
 LaTeX Warning: File `./texfiles/Chapter_4/jcdl/figures/paper_year_dis.eps' not 
-found on input line 182.
+found on input line 5.
 
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/paper_ye
 ar_dis.eps>
@@ -3077,22 +3059,22 @@ ar_dis-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/paper_year_dis-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/p
 aper_year_dis.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf, id=2895
+<./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf, id=2877
 , 1056.94875pt x 518.93875pt>
 File: ./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-c
-onverted-to.pdf used on input line 182.
-(pdftex.def)             Requested size: 142.68192pt x 70.0537pt.
+onverted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 126.82837pt x 62.26996pt.
 
 
 LaTeX Warning: File `./texfiles/Chapter_4/jcdl/figures/citation_distribution.ep
-s' not found on input line 182.
+s' not found on input line 5.
 
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/citation
 _distribution.eps>
@@ -3103,23 +3085,23 @@ _distribution-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/citation_distribution-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/fi
 gures/citation_distribution.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/jcdl/figures/citation_distribution-eps-converted-to.pdf, 
-id=2896, 1056.94875pt x 537.00626pt>
+id=2878, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/citation_distribution-eps-converted-to.
 pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/citation_distribution-eps-converted-to.p
 df>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/citation_distributio
-n-eps-converted-to.pdf used on input line 182.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
+n-eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 
 LaTeX Warning: File `./texfiles/Chapter_4/jcdl/figures/review_distribution.eps'
- not found on input line 182.
+ not found on input line 5.
 
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/review_d
 istribution.eps>
@@ -3130,48 +3112,45 @@ istribution-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/review_distribution-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figu
 res/review_distribution.eps>
-(epstopdf)             \includegraphics on input line 182.
+(epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/jcdl/figures/review_distribution-eps-converted-to.pdf, id
-=2897, 1056.94875pt x 537.00626pt>
+=2879, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/review_distribution-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/review_distribution-eps-converted-to.pdf
 >
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/review_distribution-
-eps-converted-to.pdf used on input line 182.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-
-Overfull \hbox (30.42575pt too wide) in paragraph at lines 181--184
- [][] 
- []
-
+eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[121 <./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf> <.
+[121]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[122 <./texfiles/Chapter_4/jcdl/figures/paper_year_dis-eps-converted-to.pdf> <.
 /texfiles/Chapter_4/jcdl/figures/citation_distribution-eps-converted-to.pdf> <.
 /texfiles/Chapter_4/jcdl/figures/review_distribution-eps-converted-to.pdf>]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[122]
-<./texfiles/Chapter_4/jcdl/figures/peer_review.jpg, id=2933, 527.07259pt x 327.
+<./texfiles/Chapter_4/jcdl/figures/peer_review.jpg, id=2913, 527.07259pt x 327.
 70706pt>
 File: ./texfiles/Chapter_4/jcdl/figures/peer_review.jpg Graphic file (type jpg)
 
  <use ./texfiles/Chapter_4/jcdl/figures/peer_review.jpg>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/peer_review.jpg used
- on input line 259.
+ on input line 42.
 (pdftex.def)             Requested size: 158.12299pt x 98.31287pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[123 <./texfiles/Chapter_4/jcdl/figures/peer_review.jpg>]
+[123 <./texfiles/Chapter_4/jcdl/figures/peer_review.jpg>])
+(./texfiles/Chapter_4/jcdl/JCDL_2017_main.tex
+(./texfiles/Chapter_4/jcdl/rev_int_network.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/citation
 _.eps>
 (epstopdf)                    date: 2017-04-19 15:43:04
@@ -3183,27 +3162,28 @@ _-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/citation_-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/citati
 on_.eps>
-(epstopdf)             \includegraphics on input line 272.
+(epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf, id=2938, 867
+<./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf, id=2922, 867
 .24pt x 289.08pt>
 File: ./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/citation_-eps-conver
-ted-to.pdf used on input line 272.
-(pdftex.def)             Requested size: 411.93767pt x 137.31442pt.
+ted-to.pdf used on input line 10.
+(pdftex.def)             Requested size: 390.25534pt x 130.0848pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[124 <./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf>]
+[124]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[125]
+[125 <./texfiles/Chapter_4/jcdl/figures/citation_-eps-converted-to.pdf>])
+(./texfiles/Chapter_4/jcdl/analysis.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
@@ -3219,53 +3199,45 @@ _bucket_frac_paper-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/citation_bucket_frac_paper-eps-converted-to.pdf ./texfiles/Chapter_4/jc
 dl/figures/citation_bucket_frac_paper.eps>
-(epstopdf)             \includegraphics on input line 322.
+(epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper-eps-converted-to.
-pdf, id=2969, 1056.94875pt x 537.00626pt>
+pdf, id=2950, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper-eps-converte
 d-to.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper-eps-converted
 -to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac
-_paper-eps-converted-to.pdf used on input line 322.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
+_paper-eps-converted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 <./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-converted-to
-.pdf, id=2970, 1056.94875pt x 537.00626pt>
+.pdf, id=2951, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-convert
 ed-to.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-converte
 d-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/citation_bucket_revi
-ews_all-eps-converted-to.pdf used on input line 322.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
+ews_all-eps-converted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
-<./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to.pdf, id=2971, 1
+<./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to.pdf, id=2952, 1
 056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-conv
-erted-to.pdf used on input line 322.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-
-Overfull \hbox (30.42575pt too wide) in paragraph at lines 321--324
- [][] 
- []
-
+erted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[127 <./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper-eps-converte
-d-to.pdf> <./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-co
-nverted-to.pdf> <./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to
-.pdf>]
+[127]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/team_cit
 ation.eps>
 (epstopdf)                    date: 2017-04-19 15:43:04
@@ -3277,18 +3249,26 @@ ation-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/team_citation-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/te
 am_citation.eps>
-(epstopdf)             \includegraphics on input line 334.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf, id=2993,
+<./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf, id=2962,
  838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/team_citation-eps-co
-nverted-to.pdf used on input line 334.
+nverted-to.pdf used on input line 32.
 (pdftex.def)             Requested size: 209.5323pt x 90.33728pt.
+
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[128 <./texfiles/Chapter_4/jcdl/figures/citation_bucket_frac_paper-eps-converte
+d-to.pdf> <./texfiles/Chapter_4/jcdl/figures/citation_bucket_reviews_all-eps-co
+nverted-to.pdf> <./texfiles/Chapter_4/jcdl/figures/cit_rnd_rev-eps-converted-to
+.pdf>]) (./texfiles/Chapter_4/jcdl/text_analysis.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/len_cita
 tion.eps>
 (epstopdf)                    date: 2017-04-19 15:43:04
@@ -3300,192 +3280,83 @@ tion-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/len_citation-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/len
 _citation.eps>
-(epstopdf)             \includegraphics on input line 348.
+(epstopdf)             \includegraphics on input line 3.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf, id=2996, 
+<./texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf, id=2984, 
 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/len_citation-eps-con
-verted-to.pdf used on input line 348.
+verted-to.pdf used on input line 3.
 (pdftex.def)             Requested size: 209.5323pt x 90.33728pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[128 <./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf>]
-<./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf, id=3008,
+[129 <./texfiles/Chapter_4/jcdl/figures/team_citation-eps-converted-to.pdf> <./
+texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf>]
+<./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf, id=3001,
  1056.94875pt x 386.44376pt>
 File: ./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-co
-nverted-to.pdf used on input line 370.
+nverted-to.pdf used on input line 25.
 (pdftex.def)             Requested size: 243.0931pt x 88.88019pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[129 <./texfiles/Chapter_4/jcdl/figures/len_citation-eps-converted-to.pdf>]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
 [130 <./texfiles/Chapter_4/jcdl/figures/year_sent_cit-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/citation
-_succes_ratio.eps>
-(epstopdf)                    date: 2017-04-19 15:43:06
-(epstopdf)                    size: 9147 bytes
-(epstopdf)             Output file: <./texfiles/Chapter_4/jcdl/figures/citation
-_succes_ratio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-21 14:55:20
-(epstopdf)                    size: 7305 bytes
-(epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
-figures/citation_succes_ratio-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/fi
-gures/citation_succes_ratio.eps>
-(epstopdf)             \includegraphics on input line 431.
-Package epstopdf Info: Output file is already uptodate.
-
-<./texfiles/Chapter_4/jcdl/figures/citation_succes_ratio-eps-converted-to.pdf, 
-id=3034, 1056.94875pt x 537.00626pt>
-File: ./texfiles/Chapter_4/jcdl/figures/citation_succes_ratio-eps-converted-to.
-pdf Graphic file (type pdf)
-
-<use ./texfiles/Chapter_4/jcdl/figures/citation_succes_ratio-eps-converted-to.p
-df>
-Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/citation_succes_rati
-o-eps-converted-to.pdf used on input line 431.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/review_s
-ucces_ratio.eps>
-(epstopdf)                    date: 2017-04-19 15:43:06
-(epstopdf)                    size: 8841 bytes
-(epstopdf)             Output file: <./texfiles/Chapter_4/jcdl/figures/review_s
-ucces_ratio-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-21 14:55:21
-(epstopdf)                    size: 7352 bytes
-(epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
-figures/review_succes_ratio-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figu
-res/review_succes_ratio.eps>
-(epstopdf)             \includegraphics on input line 431.
-Package epstopdf Info: Output file is already uptodate.
-
-<./texfiles/Chapter_4/jcdl/figures/review_succes_ratio-eps-converted-to.pdf, id
-=3035, 1056.94875pt x 537.00626pt>
-File: ./texfiles/Chapter_4/jcdl/figures/review_succes_ratio-eps-converted-to.pd
-f Graphic file (type pdf)
-
-<use ./texfiles/Chapter_4/jcdl/figures/review_succes_ratio-eps-converted-to.pdf
->
-Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/review_succes_ratio-
-eps-converted-to.pdf used on input line 431.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-
-<./texfiles/Chapter_4/jcdl/figures/sentiment_succes_ratio-eps-converted-to.pdf,
- id=3036, 1056.94875pt x 537.00626pt>
-File: ./texfiles/Chapter_4/jcdl/figures/sentiment_succes_ratio-eps-converted-to
-.pdf Graphic file (type pdf)
-
-<use ./texfiles/Chapter_4/jcdl/figures/sentiment_succes_ratio-eps-converted-to.
-pdf>
-Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/sentiment_succes_rat
-io-eps-converted-to.pdf used on input line 431.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-
-Overfull \hbox (30.42575pt too wide) in paragraph at lines 430--433
- [][] 
- []
-
-
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[131]
-Package epstopdf Info: Source file: <./texfiles/Chapter_4/jcdl/figures/prod_cit
-ation.eps>
-(epstopdf)                    date: 2017-04-19 15:43:04
-(epstopdf)                    size: 21429 bytes
-(epstopdf)             Output file: <./texfiles/Chapter_4/jcdl/figures/prod_cit
-ation-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-04-21 14:55:21
-(epstopdf)                    size: 6746 bytes
-(epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
-figures/prod_citation-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/pr
-od_citation.eps>
-(epstopdf)             \includegraphics on input line 442.
-Package epstopdf Info: Output file is already uptodate.
-
-<./texfiles/Chapter_4/jcdl/figures/prod_citation-eps-converted-to.pdf, id=3045,
- 838.13126pt x 361.35pt>
-File: ./texfiles/Chapter_4/jcdl/figures/prod_citation-eps-converted-to.pdf Grap
-hic file (type pdf)
-
-<use ./texfiles/Chapter_4/jcdl/figures/prod_citation-eps-converted-to.pdf>
-Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/prod_citation-eps-co
-nverted-to.pdf used on input line 442.
-(pdftex.def)             Requested size: 209.5323pt x 90.33728pt.
-
+[131]) (./texfiles/Chapter_4/jcdl/reviewer_analysis.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[132 <./texfiles/Chapter_4/jcdl/figures/citation_succes_ratio-eps-converted-to.
-pdf> <./texfiles/Chapter_4/jcdl/figures/review_succes_ratio-eps-converted-to.pd
-f> <./texfiles/Chapter_4/jcdl/figures/sentiment_succes_ratio-eps-converted-to.p
-df>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 458.
-
-
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[133 <./texfiles/Chapter_4/jcdl/figures/prod_citation-eps-converted-to.pdf>]
+[132]
 <./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-to.pdf
-, id=3080, 1056.94875pt x 537.00626pt>
+, id=3030, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-to
 .pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ra
-tio-eps-converted-to.pdf used on input line 481.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
+tio-eps-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 <./texfiles/Chapter_4/jcdl/figures/reviewer_review_ratio-eps-converted-to.pdf, 
-id=3081, 1056.94875pt x 537.00626pt>
+id=3031, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/reviewer_review_ratio-eps-converted-to.
 pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/reviewer_review_ratio-eps-converted-to.p
 df>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/reviewer_review_rati
-o-eps-converted-to.pdf used on input line 481.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
+o-eps-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 <./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_ratio-eps-converted-to.pd
-f, id=3082, 1056.94875pt x 537.00626pt>
+f, id=3032, 1056.94875pt x 537.00626pt>
 File: ./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_ratio-eps-converted-
 to.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_ratio-eps-converted-t
 o.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_r
-atio-eps-converted-to.pdf used on input line 481.
-(pdftex.def)             Requested size: 142.68192pt x 72.4927pt.
-
-Overfull \hbox (30.42575pt too wide) in paragraph at lines 480--483
- [][] 
- []
-
+atio-eps-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 126.82837pt x 64.43796pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[134 <./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-t
+[133 <./texfiles/Chapter_4/jcdl/figures/reviewer_citation_ratio-eps-converted-t
 o.pdf> <./texfiles/Chapter_4/jcdl/figures/reviewer_review_ratio-eps-converted-t
 o.pdf> <./texfiles/Chapter_4/jcdl/figures/reviewer_sentiment_ratio-eps-converte
 d-to.pdf>]
@@ -3500,62 +3371,65 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/jcdl/
 figures/rev_all-eps-converted-to.pdf ./texfiles/Chapter_4/jcdl/figures/rev_all.
 eps>
-(epstopdf)             \includegraphics on input line 497.
+(epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf, id=3105, 838.1
+<./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf, id=3055, 838.1
 3126pt x 361.35pt>
 File: ./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converte
-d-to.pdf used on input line 497.
+d-to.pdf used on input line 29.
 (pdftex.def)             Requested size: 234.67516pt x 101.1773pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[135 <./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf>]
+[134 <./texfiles/Chapter_4/jcdl/figures/rev_all-eps-converted-to.pdf>])
+(./texfiles/Chapter_4/jcdl/perf_measure.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 5.
+
+
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[136]
+[135]) (./texfiles/Chapter_4/jcdl/irregular_cases.tex
 <./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.pdf, 
-id=3123, 1056.94875pt x 430.60875pt>
+id=3074, 1056.94875pt x 430.60875pt>
 File: ./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.
 pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.p
 df>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/highly_cited_rejecte
-d-eps-converted-to.pdf used on input line 534.
+d-eps-converted-to.pdf used on input line 7.
 (pdftex.def)             Requested size: 179.67891pt x 73.20251pt.
 
 <./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-eps-converted-to.pdf, id=
-3124, 1495.5875pt x 542.025pt>
+3075, 1495.5875pt x 542.025pt>
 File: ./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-e
-ps-converted-to.pdf used on input line 542.
+ps-converted-to.pdf used on input line 15.
 (pdftex.def)             Requested size: 254.2465pt x 92.14302pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[137 <./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.
+[136 <./texfiles/Chapter_4/jcdl/figures/highly_cited_rejected-eps-converted-to.
 pdf> <./texfiles/Chapter_4/jcdl/figures/low_cited_accepted-eps-converted-to.pdf
->]
+>]) (./texfiles/Chapter_4/jcdl/implications.tex)
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[138]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[139]) (./texfiles/Chapter_4/cikm/main.tex
+[137]) (./texfiles/Chapter_4/cikm/main.tex
+(./texfiles/Chapter_4/cikm/anomalies.tex) (./texfiles/Chapter_4/cikm/editor.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/editor_a
 ll.eps>
 (epstopdf)                    date: 2016-08-17 03:36:08
@@ -3567,18 +3441,18 @@ ll-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/editor_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figures/edito
 r_all.eps>
-(epstopdf)             \includegraphics on input line 283.
+(epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf, id=3153, 79
+<./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf, id=3100, 79
 4.97pt x 259.97125pt>
 File: ./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/editor_all-eps-conve
-rted-to.pdf used on input line 283.
-(pdftex.def)             Requested size: 390.25534pt x 127.62503pt.
+rted-to.pdf used on input line 7.
+(pdftex.def)             Requested size: 346.89731pt x 113.44359pt.
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/RDI_RDI_
 diversity.eps>
 (epstopdf)                    date: 2016-08-17 03:36:10
@@ -3590,18 +3464,18 @@ diversity-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/RDI_RDI_diversity-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figure
 s/RDI_RDI_diversity.eps>
-(epstopdf)             \includegraphics on input line 289.
+(epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm/figures/RDI_RDI_diversity-eps-converted-to.pdf, id=3
-154, 838.13126pt x 361.35pt>
+102, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm/figures/RDI_RDI_diversity-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/RDI_RDI_diversity-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/RDI_RDI_diversity-ep
-s-converted-to.pdf used on input line 289.
-(pdftex.def)             Requested size: 335.24657pt x 144.53743pt.
+s-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 251.44131pt x 108.40584pt.
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/reviewer
 _all.eps>
 (epstopdf)                    date: 2016-08-17 03:36:10
@@ -3613,32 +3487,40 @@ _all-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/reviewer_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figures/rev
 iewer_all.eps>
-(epstopdf)             \includegraphics on input line 295.
+(epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf, id=3155, 
+<./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf, id=3103, 
 838.13126pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-con
-verted-to.pdf used on input line 295.
-(pdftex.def)             Requested size: 390.25534pt x 188.34885pt.
+verted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 346.89731pt x 167.42462pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[140]
+[138]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[141 <./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf> <./tex
+[139 <./texfiles/Chapter_4/cikm/figures/editor_all-eps-converted-to.pdf> <./tex
 files/Chapter_4/cikm/figures/RDI_RDI_diversity-eps-converted-to.pdf>]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[142 <./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf>]
+[140 <./texfiles/Chapter_4/cikm/figures/reviewer_all-eps-converted-to.pdf>]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[141]) (./texfiles/Chapter_4/cikm/reviewer.tex
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[142]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
@@ -3651,10 +3533,6 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [145]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[146]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/DFI_dec_
 month.eps>
 (epstopdf)                    date: 2016-08-17 03:36:10
@@ -3666,27 +3544,24 @@ month-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/DFI_dec_month-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figures/DF
 I_dec_month.eps>
-(epstopdf)             \includegraphics on input line 447.
+(epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf, id=3213,
+<./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf, id=3167,
  838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-co
-nverted-to.pdf used on input line 447.
-(pdftex.def)             Requested size: 335.24657pt x 144.53743pt.
-
+nverted-to.pdf used on input line 98.
+(pdftex.def)             Requested size: 251.44131pt x 108.40584pt.
+)
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[147]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[148 <./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf>]
+[146 <./texfiles/Chapter_4/cikm/figures/DFI_dec_month-eps-converted-to.pdf>]
+(./texfiles/Chapter_4/cikm/prediction.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/editor_a
 ll_anom.eps>
 (epstopdf)                    date: 2016-08-17 03:36:10
@@ -3698,23 +3573,23 @@ ll_anom-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/editor_all_anom-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figures/
 editor_all_anom.eps>
-(epstopdf)             \includegraphics on input line 485.
+(epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf, id=323
-0, 838.13126pt x 361.35pt>
+<./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf, id=318
+1, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-
-converted-to.pdf used on input line 485.
+converted-to.pdf used on input line 11.
 (pdftex.def)             Requested size: 226.29846pt x 97.5658pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[149 <./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf>]
+[147 <./texfiles/Chapter_4/cikm/figures/editor_all_anom-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/reviewer
 _all_anom.eps>
 (epstopdf)                    date: 2016-08-17 03:36:10
@@ -3726,18 +3601,19 @@ _all_anom-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/reviewer_all_anom-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figure
 s/reviewer_all_anom.eps>
-(epstopdf)             \includegraphics on input line 509.
+(epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-eps-converted-to.pdf, id=3
-246, 838.13126pt x 361.35pt>
+196, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-ep
-s-converted-to.pdf used on input line 509.
-(pdftex.def)             Requested size: 335.24657pt x 144.53743pt.
+s-converted-to.pdf used on input line 34.
+(pdftex.def)             Requested size: 226.29846pt x 97.5658pt.
+) (./texfiles/Chapter_4/cikm/reviewer_profile.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm/figures/profile_
 all.eps>
 (epstopdf)                    date: 2016-08-17 03:36:08
@@ -3749,29 +3625,26 @@ all-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm/
 figures/profile_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm/figures/prof
 ile_all.eps>
-(epstopdf)             \includegraphics on input line 528.
+(epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf, id=3250, 7
+<./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf, id=3200, 7
 94.97pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm/figures/profile_all-eps-conv
-erted-to.pdf used on input line 528.
-(pdftex.def)             Requested size: 317.98236pt x 144.53743pt.
-
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[150 <./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-eps-converted-to.pdf>
-]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[151 <./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf>])
+erted-to.pdf used on input line 12.
+(pdftex.def)             Requested size: 238.49284pt x 108.40584pt.
+))
 (./texfiles/Chapter_4/cikm_17/main_cikm_2017.tex
+(./texfiles/Chapter_4/cikm_17/multiple_vs_single.tex
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[148 <./texfiles/Chapter_4/cikm/figures/reviewer_all_anom-eps-converted-to.pdf>
+]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_jhep_1.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3783,18 +3656,18 @@ ion_jhep_1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/citation_jhep_1-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/fi
 gures/citation_jhep_1.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 13.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1-eps-converted-to.pdf, id=
-3269, 838.13126pt x 361.35pt>
+3210, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1-e
-ps-converted-to.pdf used on input line 90.
-(pdftex.def)             Requested size: 335.24657pt x 144.53743pt.
+ps-converted-to.pdf used on input line 13.
+(pdftex.def)             Requested size: 293.35033pt x 126.4744pt.
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_jstat_1.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3806,19 +3679,25 @@ ion_jstat_1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/citation_jstat_1-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/f
 igures/citation_jstat_1.eps>
-(epstopdf)             \includegraphics on input line 96.
+(epstopdf)             \includegraphics on input line 20.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-eps-converted-to.pdf, id
-=3270, 838.13126pt x 361.35pt>
+=3211, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-eps-converted-to.pdf
 >
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-
-eps-converted-to.pdf used on input line 96.
-(pdftex.def)             Requested size: 335.24657pt x 144.53743pt.
+eps-converted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 293.35033pt x 126.4744pt.
+
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[149 <./texfiles/Chapter_4/cikm/figures/profile_all-eps-converted-to.pdf> <./te
+xfiles/Chapter_4/cikm_17/figures/citation_jhep_1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/best_
 paper.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3830,25 +3709,18 @@ paper-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/best_paper-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/figures
 /best_paper.eps>
-(epstopdf)             \includegraphics on input line 102.
+(epstopdf)             \includegraphics on input line 53.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf, id=3271,
+<./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf, id=3231,
  722.7pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf Grap
 hic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-co
-nverted-to.pdf used on input line 102.
-(pdftex.def)             Requested size: 202.35461pt x 113.26237pt.
-
-(./texfiles/Chapter_4/cikm_17/multiple_vs_single.tex
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[152 <./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1-eps-converted-to.pdf
-> <./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-eps-converted-to.pdf>]
+nverted-to.pdf used on input line 53.
+(pdftex.def)             Requested size: 180.67455pt x 101.12756pt.
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/jhep_
 all.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3860,18 +3732,18 @@ all-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/jhep_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/figures/j
 hep_all.eps>
-(epstopdf)             \includegraphics on input line 38.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf, id=3290, 7
+<./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf, id=3232, 7
 94.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-conv
-erted-to.pdf used on input line 38.
-(pdftex.def)             Requested size: 198.742pt x 101.12756pt.
+erted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 206.68732pt x 105.17044pt.
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/jstat
 _all.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3883,53 +3755,58 @@ _all-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/jstat_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/figures/
 jstat_all.eps>
-(epstopdf)             \includegraphics on input line 38.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm_17/figures/jstat_all-eps-converted-to.pdf, id=3291, 
+<./texfiles/Chapter_4/cikm_17/figures/jstat_all-eps-converted-to.pdf, id=3233, 
 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/jstat_all-eps-converted-to.pdf Graph
 ic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/jstat_all-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/jstat_all-eps-con
-verted-to.pdf used on input line 38.
-(pdftex.def)             Requested size: 198.742pt x 101.12756pt.
+verted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 206.68732pt x 105.17044pt.
 
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[153 <./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `disagree:jstat' on page 154 undefined on input line 8
-6.
-
-
-LaTeX Warning: Reference `disagree:jstat' on page 154 undefined on input line 8
-8.
+Overfull \hbox (3.75464pt too wide) in paragraph at lines 60--64
+ [][] 
+ []
 
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[154 <./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf> <./te
+[150 <./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1-eps-converted-to.pd
+f> <./texfiles/Chapter_4/cikm_17/figures/best_paper-eps-converted-to.pdf>]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[151 <./texfiles/Chapter_4/cikm_17/figures/jhep_all-eps-converted-to.pdf> <./te
 xfiles/Chapter_4/cikm_17/figures/jstat_all-eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `disagree:jstat' on page 155 undefined on input line 9
-4.
+LaTeX Warning: Reference `disagree:jstat' on page 152 undefined on input line 1
+10.
 
 
-LaTeX Warning: Reference `disagree:jstat' on page 155 undefined on input line 1
-13.
+LaTeX Warning: Reference `disagree:jstat' on page 152 undefined on input line 1
+12.
+
+
+LaTeX Warning: Reference `disagree:jstat' on page 152 undefined on input line 1
+18.
 
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[155]
+[152]
+
+LaTeX Warning: Reference `disagree:jstat' on page 153 undefined on input line 1
+37.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 142.
+               Default added (so using `tbp') on input line 166.
 
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_mul_all.eps>
@@ -3942,24 +3819,24 @@ ion_mul_all-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/citation_mul_all-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/f
 igures/citation_mul_all.eps>
-(epstopdf)             \includegraphics on input line 159.
+(epstopdf)             \includegraphics on input line 183.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-eps-converted-to.pdf, id
-=3329, 794.97pt x 404.51125pt>
+=3274, 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-eps-converted-to.pdf
 >
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-
-eps-converted-to.pdf used on input line 159.
+eps-converted-to.pdf used on input line 183.
 (pdftex.def)             Requested size: 238.49284pt x 121.35431pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[156]
+[153]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_mul_all_dis.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -3971,25 +3848,25 @@ ion_mul_all_dis-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/citation_mul_all_dis-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_
 17/figures/citation_mul_all_dis.eps>
-(epstopdf)             \includegraphics on input line 203.
+(epstopdf)             \includegraphics on input line 227.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_dis-eps-converted-to.pdf
-, id=3336, 794.97pt x 404.51125pt>
+, id=3281, 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_dis-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_dis-eps-converted-to
 .pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_
-dis-eps-converted-to.pdf used on input line 203.
+dis-eps-converted-to.pdf used on input line 227.
 (pdftex.def)             Requested size: 238.49284pt x 121.35431pt.
-) (./texfiles/Chapter_4/cikm_17/reviewer.tex
+
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[157 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-eps-converted-to.pd
-f>]
+[154 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all-eps-converted-to.pd
+f>]) (./texfiles/Chapter_4/cikm_17/reviewer.tex
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_delay_acpt_ratio_jhep.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -4005,7 +3882,7 @@ er_4/cikm_17/figures/citation_delay_acpt_ratio_jhep.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jhep-eps-conver
-ted-to.pdf, id=3346, 794.97pt x 404.51125pt>
+ted-to.pdf, id=3292, 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jhep-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -4018,13 +3895,13 @@ pt_ratio_jhep-eps-converted-to.pdf used on input line 27.
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[158 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_dis-eps-converted-t
+[155 <./texfiles/Chapter_4/cikm_17/figures/citation_mul_all_dis-eps-converted-t
 o.pdf> <./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jhep-eps
 -converted-to.pdf>]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[159]
+[156]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/citat
 ion_delay_acpt_ratio_jstat.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -4040,7 +3917,7 @@ ter_4/cikm_17/figures/citation_delay_acpt_ratio_jstat.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jstat-eps-conve
-rted-to.pdf, id=3370, 794.97pt x 404.51125pt>
+rted-to.pdf, id=3317, 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jstat-eps-
 converted-to.pdf Graphic file (type pdf)
 
@@ -4053,7 +3930,7 @@ pt_ratio_jstat-eps-converted-to.pdf used on input line 80.
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[160 <./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jstat-eps-
+[157 <./texfiles/Chapter_4/cikm_17/figures/citation_delay_acpt_ratio_jstat-eps-
 converted-to.pdf>]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/ref_p
 erformance.eps>
@@ -4070,7 +3947,7 @@ gures/ref_performance.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/ref_performance-eps-converted-to.pdf, id=
-3387, 838.13126pt x 361.35pt>
+3334, 838.13126pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/ref_performance-eps-converted-to.pdf
  Graphic file (type pdf)
 
@@ -4082,12 +3959,12 @@ ps-converted-to.pdf used on input line 109.
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[161 <./texfiles/Chapter_4/cikm_17/figures/ref_performance-eps-converted-to.pdf
+[158 <./texfiles/Chapter_4/cikm_17/figures/ref_performance-eps-converted-to.pdf
 >]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[162]
+[159]
 Underfull \hbox (badness 10000) detected at line 80
 [][]
  []
@@ -4096,23 +3973,32 @@ Underfull \hbox (badness 10000) detected at line 80
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[163]
+[160]
+<./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf, id=3356, 283.0575pt x 338
+.26375pt>
+File: ./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf Graphic file (type pd
+f)
+ <use ./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf>
+Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf us
+ed on input line 86.
+(pdftex.def)             Requested size: 90.58025pt x 108.2466pt.
+
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[164]
-<./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf, id=3428, 878.80322pt x 347.618
+[161]
+<./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf, id=3376, 878.80322pt x 347.618
 71pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf Graphic file (type pdf)
  <use ./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf used on
- input line 104.
+ input line 112.
 (pdftex.def)             Requested size: 281.22278pt x 111.24025pt.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[165 <./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf>]
+[162 <./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf>]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/param
 _estimate.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -4124,36 +4010,51 @@ _estimate-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/param_estimate-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/fig
 ures/param_estimate.eps>
-(epstopdf)             \includegraphics on input line 184.
+(epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 
 <./texfiles/Chapter_4/cikm_17/figures/param_estimate-eps-converted-to.pdf, id=3
-448, 903.375pt x 361.35pt>
+386, 903.375pt x 361.35pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/param_estimate-eps-converted-to.pdf 
 Graphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/param_estimate-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/param_estimate-ep
-s-converted-to.pdf used on input line 184.
+s-converted-to.pdf used on input line 142.
 (pdftex.def)             Requested size: 316.18599pt x 126.4744pt.
 
-Underfull \hbox (badness 1314) in paragraph at lines 132--188
-\T1/ptm/b/n/12 Comparison with base-line al-go-rithms: \T1/ptm/m/n/12 As our al
--go-rithm presents com-pu-ta-tional
+Underfull \hbox (badness 10000) in paragraph at lines 149--157
+
  []
 
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[166]
+[163 <./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf>]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[167]
+[164 <./texfiles/Chapter_4/cikm_17/figures/param_estimate-eps-converted-to.pdf>
+]
+Underfull \hbox (badness 1314) in paragraph at lines 182--203
+[]\T1/ptm/b/n/12 Comparison with base-line al-go-rithms: \T1/ptm/m/n/12 As our 
+al-go-rithm presents com-pu-ta-tional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--203
+
+ []
+
+
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[165]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 190.
+               Default added (so using `tbp') on input line 209.
 
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/G_A_b
 aseline.eps>
@@ -4166,29 +4067,24 @@ aseline-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=./texfiles/Chapter_4/cikm_
 17/figures/G_A_baseline-eps-converted-to.pdf ./texfiles/Chapter_4/cikm_17/figur
 es/G_A_baseline.eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 228.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf, id=345
-8, 794.97pt x 404.51125pt>
+<./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf, id=342
+2, 794.97pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
 <use ./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf>
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-
-converted-to.pdf used on input line 214.
+converted-to.pdf used on input line 228.
 (pdftex.def)             Requested size: 278.24367pt x 141.58105pt.
 )
 (./texfiles/Chapter_4/cikm_17/editor_importance.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[168 <./texfiles/Chapter_4/cikm_17/figures/param_estimate-eps-converted-to.pdf>
-]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[169 <./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf>]
+[166]
 Package epstopdf Info: Source file: <./texfiles/Chapter_4/cikm_17/figures/G_A_c
 omp.eps>
 (epstopdf)                    date: 2017-05-16 12:29:48
@@ -4203,7 +4099,7 @@ _A_comp.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
 
-<./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-converted-to.pdf, id=3481, 7
+<./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-converted-to.pdf, id=3427, 7
 22.7pt x 404.51125pt>
 File: ./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -4212,26 +4108,32 @@ c file (type pdf)
 Package pdftex.def Info: ./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-conv
 erted-to.pdf used on input line 10.
 (pdftex.def)             Requested size: 187.89757pt x 105.17044pt.
-)
+))
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[167 <./texfiles/Chapter_4/cikm_17/figures/G_A_baseline-eps-converted-to.pdf>]
+(./texfiles/Chapter_4/jcdl/conclusion.tex
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[168 <./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-converted-to.pdf>])
+(./texfiles/Chapter_4/cikm/conclusion.tex)
 (./texfiles/Chapter_4/cikm_17/conclusion.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[170 <./texfiles/Chapter_4/cikm_17/figures/G_A_comp-eps-converted-to.pdf>]))
+[169])
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[171] (./texfiles/Conclusion/conclusion.tex
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[172
+[170] (./texfiles/Conclusion/conclusion.tex
+Chapter 7.
+[171
 
 
 
 ]
-Chapter 7.
-[173]
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 []\T1/ptm/m/n/12 Use Wi-Fi APs as edge server to bring pop-u-lar con-tents clos
 er
@@ -4355,7 +4257,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[174]
+[172]
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 []\T1/ptm/m/n/12 Even with very low den-sity of Wi-Fi AP, sys-
  []
@@ -4439,7 +4341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[175]
+[173]
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 []\T1/ptm/m/n/12 Along with max-i-mum de-vice sat-is-fac-tion, pro-posed as-
  []
@@ -4504,7 +4406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[176]
+[174]
 Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
@@ -4622,7 +4524,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[177]
+[175]
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 []\T1/ptm/m/n/12 This work does not con-sider the file se-lec-
  []
@@ -4687,7 +4589,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[178]
+[176]
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 []\T1/ptm/m/n/12 In a high traf-fic sce-nario, due to band-width di-vi-
  []
@@ -4796,7 +4698,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[179]
+[177]
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 []\T1/ptm/m/n/12 As a proof of con-cept we ex-plored very few in-
  []
@@ -4885,13 +4787,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[180] (./thesis_sandipan.bbl [181
+[178] (./thesis_sandipan.bbl [179
 
 
 
 
 
 ]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[180]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[181]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
@@ -4904,14 +4814,6 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [184]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[185]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[186]
 Underfull \hbox (badness 1997) in paragraph at lines 534--538
 \T1/ptm/m/n/12 com-mu-ni-ties and their hi-er-ar-chy by lo-cally cal-cu-lat-ing
  community-changing
@@ -4921,7 +4823,7 @@ Underfull \hbox (badness 1997) in paragraph at lines 534--538
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[187]
+[185]
 Underfull \hbox (badness 1005) in paragraph at lines 573--576
 []\T1/ptm/m/n/12 L. Hu-bert and P. Ara-bie.  Com-par-ing par-ti-tions.  \T1/ptm
 /m/it/12 Jour-nal of clas-si-fi-ca-tion\T1/ptm/m/n/12 ,
@@ -4937,7 +4839,7 @@ Underfull \hbox (badness 1005) in paragraph at lines 578--581
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[188]
+[186]
 Underfull \hbox (badness 1412) in paragraph at lines 665--670
 \T1/ptm/m/n/12 an in-te-gra-tive ap-proach to de-ter-mine over-lap-ping net-wor
 k mod-ule hi-er-ar-chy,
@@ -4947,19 +4849,19 @@ k mod-ule hi-er-ar-chy,
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
+[187]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[188]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
 [189]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
 [190]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[191]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[192]
 Underfull \hbox (badness 1810) in paragraph at lines 953--957
 \T1/ptm/m/n/12 com-mu-nity struc-ture of com-plex net-works in na-ture and so-c
 i-ety.  \T1/ptm/m/it/12 Na-ture\T1/ptm/m/n/12 ,
@@ -4980,6 +4882,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 996--1000
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
+[191]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
+[192]
+Overfull \vbox (5.46625pt too high) has occurred while \output is active []
+
+
 [193]
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
@@ -4992,19 +4902,11 @@ Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[196]
+[196]) (./texfiles/Appendix/publication.tex
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[197]
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[198]) (./texfiles/Appendix/publication.tex
-Overfull \vbox (5.46625pt too high) has occurred while \output is active []
-
-
-[199] [200
+[197] [198
 
 
 ]
@@ -5015,25 +4917,25 @@ Underfull \hbox (badness 2698) in paragraph at lines 31--32
 e, Rainer
  []
 
-[201]
+[199]
 Underfull \hbox (badness 1286) in paragraph at lines 52--54
 \T1/ptm/m/n/12 Physics'', \T1/ptm/m/it/12 ACM In-ter-na-tional Con-fer-ence on 
 In-for-ma-tion and Knowl-edge-ment
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 428.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
 
 Overfull \vbox (5.46625pt too high) has occurred while \output is active []
 
 
-[202]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 428.
+[200]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
  (./thesis_sandipan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 428.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 428.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
 Package rerunfilecheck Info: File `thesis_sandipan.out' has not changed.
-(rerunfilecheck)             Checksum: 4E6F3AC0F360AC9EF18F485E99CC7BF5;12686.
+(rerunfilecheck)             Checksum: 5DC9EDC6B5FF80447C18DFE56077E733;12456.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -5045,7 +4947,7 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
  )
 (\end occurred inside a group at level 2)
 
@@ -5053,13 +4955,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 428.
 ### simple group (level 1) entered at line 19 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 24101 strings out of 493304
- 439107 string characters out of 6139870
- 702569 words of memory out of 5000000
- 25777 multiletter control sequences out of 15000+600000
+ 24124 strings out of 493304
+ 439412 string characters out of 6139870
+ 601206 words of memory out of 5000000
+ 25761 multiletter control sequences out of 15000+600000
  75773 words of font info for 123 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,20n,89p,2083b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,89p,2083b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/
@@ -5082,10 +4984,10 @@ w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis_sandipan.pdf (228 pages, 6301804 bytes).
+Output written on thesis_sandipan.pdf (226 pages, 6300537 bytes).
 PDF statistics:
- 3934 PDF objects out of 4296 (max. 8388607)
- 3452 compressed objects within 35 object streams
- 979 named destinations out of 1000 (max. 500000)
- 1909 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3889 PDF objects out of 4296 (max. 8388607)
+ 3414 compressed objects within 35 object streams
+ 973 named destinations out of 1000 (max. 500000)
+ 1882 words of extra memory for PDF output out of 10000 (max. 10000000)
 

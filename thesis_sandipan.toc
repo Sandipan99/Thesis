@@ -82,80 +82,77 @@
 \contentsline {section}{\numberline {5.8}Summary of the chapter}{113}{section.236}
 \contentsline {chapter}{\numberline {6}Application of temporal network analysis in peer-review network}{115}{chapter.237}
 \contentsline {section}{\numberline {6.1}Introduction}{115}{section.238}
-\contentsline {section}{\numberline {6.2}Dataset}{121}{section.240}
-\contentsline {section}{\numberline {6.3}Reviewer-reviewer interaction network}{123}{section.245}
-\contentsline {subsection}{\numberline {6.3.1}Degree (Deg)}{124}{subsection.247}
-\contentsline {subsection}{\numberline {6.3.2}Betweenness centrality (BC)}{125}{subsection.248}
-\contentsline {subsection}{\numberline {6.3.3}Closeness centrality (CC)}{125}{subsection.249}
-\contentsline {subsection}{\numberline {6.3.4}Clustering coefficient (Clus)}{125}{subsection.250}
-\contentsline {subsection}{\numberline {6.3.5}PageRank (PR)}{126}{subsection.251}
-\contentsline {section}{\numberline {6.4}Supporting features}{126}{section.252}
-\contentsline {subsection}{\numberline {6.4.1}Paper based features}{127}{subsection.253}
-\contentsline {subsubsection}{\numberline {6.4.1.1}Number of review rounds (RR)}{127}{subsubsection.254}
-\contentsline {subsubsection}{\numberline {6.4.1.2}Team size (TS)}{128}{subsubsection.257}
-\contentsline {subsection}{\numberline {6.4.2}Review report based features}{129}{subsection.259}
-\contentsline {subsubsection}{\numberline {6.4.2.1}Length of the reports (RL)}{129}{subsubsection.260}
-\contentsline {subsubsection}{\numberline {6.4.2.2}Sentiments (SNT)}{129}{subsubsection.261}
-\contentsline {subsubsection}{\numberline {6.4.2.3}Linguistic quality indicators (LQI)}{131}{subsubsection.264}
-\contentsline {subsection}{\numberline {6.4.3}Author based features}{132}{subsection.266}
-\contentsline {subsubsection}{\numberline {6.4.3.1}Author reputation (AR)}{132}{subsubsection.268}
-\contentsline {subsubsection}{\numberline {6.4.3.2}Author productivity (AP)}{133}{subsubsection.270}
-\contentsline {subsection}{\numberline {6.4.4}Reviewer based features}{134}{subsection.272}
-\contentsline {subsubsection}{\numberline {6.4.4.1}Accept ratio (RAC)}{134}{subsubsection.273}
-\contentsline {subsubsection}{\numberline {6.4.4.2}Time since last assignment (TA)}{135}{subsubsection.276}
-\contentsline {subsubsection}{\numberline {6.4.4.3}Delay in submitting the report (DR)}{136}{subsubsection.277}
-\contentsline {section}{\numberline {6.5}Determining the fate of the paper}{136}{section.278}
-\contentsline {section}{\numberline {6.6}Irregular cases}{137}{section.279}
-\contentsline {section}{\numberline {6.7}Publisher's views}{138}{section.282}
-\contentsline {section}{\numberline {6.8}Conclusion}{139}{section.283}
-\contentsline {section}{\numberline {6.9}Anomalous behavior}{140}{section.284}
-\contentsline {subsection}{\numberline {6.9.1}Editor}{140}{subsection.285}
-\contentsline {subsubsection}{\numberline {6.9.1.1}Mean Editor Assignment Time (MEAT)}{141}{subsubsection.289}
-\contentsline {subsubsection}{\numberline {6.9.1.2}Self Review Index (SRI)}{142}{subsubsection.290}
-\contentsline {subsubsection}{\numberline {6.9.1.3}Referee-Author pair Diversity Index (RADI)}{143}{subsubsection.291}
-\contentsline {subsubsection}{\numberline {6.9.1.4}Referee Diversity Index (RDI)}{143}{subsubsection.292}
-\contentsline {subsection}{\numberline {6.9.2}Reviewer}{144}{subsection.293}
-\contentsline {subsubsection}{\numberline {6.9.2.1}Mean Reviewer Assignment Time (MRAT)}{144}{subsubsection.294}
-\contentsline {subsubsection}{\numberline {6.9.2.2}Mean Report Sending Delay (MRSD)}{145}{subsubsection.295}
-\contentsline {subsubsection}{\numberline {6.9.2.3}Topic Diversity Index (TDI)}{145}{subsubsection.296}
-\contentsline {subsubsection}{\numberline {6.9.2.4}Editor Diversity Index (EDI)}{146}{subsubsection.297}
-\contentsline {subsubsection}{\numberline {6.9.2.5}Mean Time to Decline (MTD)}{146}{subsubsection.299}
-\contentsline {subsubsection}{\numberline {6.9.2.6}Acceptance Ratio (AR)}{147}{subsubsection.300}
-\contentsline {subsubsection}{\numberline {6.9.2.7}Decline Fraction Index (DFI)}{148}{subsubsection.302}
-\contentsline {section}{\numberline {6.10}Identifying anomalous Editors and Reviewers}{149}{section.303}
-\contentsline {subsection}{\numberline {6.10.1}Editors}{149}{subsection.305}
-\contentsline {subsection}{\numberline {6.10.2}Reviewers}{150}{subsection.306}
-\contentsline {section}{\numberline {6.11}Profiling Anomalous Reviewers}{150}{section.308}
-\contentsline {section}{\numberline {6.12}Conclusion}{151}{section.310}
-\contentsline {section}{\numberline {6.13}Single vs multiple referee system}{152}{section.314}
-\contentsline {subsection}{\numberline {6.13.1}Citation}{153}{subsection.315}
-\contentsline {subsection}{\numberline {6.13.2}Top cited papers}{153}{subsection.317}
-\contentsline {subsection}{\numberline {6.13.3}Conflict in review reports}{154}{subsection.318}
-\contentsline {subsubsection}{\numberline {6.13.3.1}Length}{155}{subsubsection.319}
-\contentsline {subsubsection}{\numberline {6.13.3.2}Sentiment}{155}{subsubsection.320}
-\contentsline {subsubsection}{\numberline {6.13.3.3}Content}{156}{subsubsection.322}
-\contentsline {subsection}{\numberline {6.13.4}Impact of discordance}{157}{subsection.325}
-\contentsline {section}{\numberline {6.14}Analyzing reviewer tendencies}{158}{section.327}
-\contentsline {subsection}{\numberline {6.14.1}Factors determining performance of the referees}{159}{subsection.329}
-\contentsline {subsection}{\numberline {6.14.2}Action with under-performing reviewers}{160}{subsection.331}
-\contentsline {section}{\numberline {6.15}Forming reviewer groups}{161}{section.334}
-\contentsline {subsection}{\numberline {6.15.1}Problem definition}{162}{subsection.335}
-\contentsline {subsection}{\numberline {6.15.2}Methodology}{162}{subsection.336}
-\contentsline {subsubsection}{\numberline {6.15.2.1}Selecting a population}{162}{subsubsection.337}
-\contentsline {subsubsection}{\numberline {6.15.2.2}Initialization}{163}{subsubsection.338}
-\contentsline {subsubsection}{\numberline {6.15.2.3}Fitness evaluation}{163}{subsubsection.340}
-\contentsline {subsubsection}{\numberline {6.15.2.4}Crossover}{165}{subsubsection.342}
-\contentsline {subsection}{\numberline {6.15.3}Evaluation}{165}{subsection.344}
-\contentsline {section}{\numberline {6.16}Importance of the editor}{168}{section.348}
-\contentsline {section}{\numberline {6.17}Conclusion}{171}{section.350}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{173}{chapter.351}
-\contentsline {section}{\numberline {7.1}Summary of Contribution}{173}{section.352}
-\contentsline {subsection}{\numberline {7.1.1}Efficient Offload using WiFi Network}{173}{subsection.353}
-\contentsline {subsection}{\numberline {7.1.2}Managing Heterogeneous Traffic}{175}{subsection.354}
-\contentsline {subsection}{\numberline {7.1.3}Restricting Unauthorized Traffic}{176}{subsection.355}
-\contentsline {section}{\numberline {7.2}Future Direction}{178}{section.356}
-\contentsline {subsection}{\numberline {7.2.1}Efficient Offload using WiFi Network}{178}{subsection.357}
-\contentsline {subsection}{\numberline {7.2.2}Managing Heterogeneous Traffic}{179}{subsection.358}
-\contentsline {subsection}{\numberline {7.2.3}Restricting Unauthorized Traffic}{180}{subsection.359}
-\contentsline {chapter}{Bibliography}{181}{section*.360}
-\contentsline {chapter}{\numberline {A}Appendix}{201}{appendix.362}
+\contentsline {section}{\numberline {6.2}Introduction}{115}{section.239}
+\contentsline {section}{\numberline {6.3}Introduction}{118}{section.240}
+\contentsline {section}{\numberline {6.4}Dataset}{122}{section.241}
+\contentsline {section}{\numberline {6.5}Reviewer-reviewer interaction network}{124}{section.247}
+\contentsline {subsection}{\numberline {6.5.1}Degree (Deg)}{124}{subsection.249}
+\contentsline {subsection}{\numberline {6.5.2}Betweenness centrality (BC)}{125}{subsection.250}
+\contentsline {subsection}{\numberline {6.5.3}Closeness centrality (CC)}{125}{subsection.251}
+\contentsline {subsection}{\numberline {6.5.4}Clustering coefficient (Clus)}{126}{subsection.252}
+\contentsline {subsection}{\numberline {6.5.5}PageRank (PR)}{126}{subsection.253}
+\contentsline {section}{\numberline {6.6}Supporting features}{127}{section.254}
+\contentsline {subsection}{\numberline {6.6.1}Paper based features}{127}{subsection.255}
+\contentsline {subsubsection}{\numberline {6.6.1.1}Number of review rounds (RR)}{128}{subsubsection.256}
+\contentsline {subsubsection}{\numberline {6.6.1.2}Team size (TS)}{129}{subsubsection.259}
+\contentsline {subsection}{\numberline {6.6.2}Review report based features}{129}{subsection.261}
+\contentsline {subsubsection}{\numberline {6.6.2.1}Length of the reports (RL)}{130}{subsubsection.262}
+\contentsline {subsubsection}{\numberline {6.6.2.2}Sentiments (SNT)}{130}{subsubsection.263}
+\contentsline {subsubsection}{\numberline {6.6.2.3}Linguistic quality indicators (LQI)}{131}{subsubsection.265}
+\contentsline {subsection}{\numberline {6.6.3}Reviewer based features}{132}{subsection.268}
+\contentsline {subsubsection}{\numberline {6.6.3.1}Accept ratio (RAC)}{133}{subsubsection.269}
+\contentsline {subsubsection}{\numberline {6.6.3.2}Time since last assignment (TA)}{134}{subsubsection.272}
+\contentsline {subsubsection}{\numberline {6.6.3.3}Delay in submitting the report (DR)}{135}{subsubsection.273}
+\contentsline {section}{\numberline {6.7}Determining the fate of the paper}{135}{section.274}
+\contentsline {section}{\numberline {6.8}Irregular cases}{136}{section.276}
+\contentsline {section}{\numberline {6.9}Publisher's views}{137}{section.279}
+\contentsline {section}{\numberline {6.10}Anomalous behavior}{138}{section.280}
+\contentsline {subsection}{\numberline {6.10.1}Editor}{139}{subsection.281}
+\contentsline {subsubsection}{\numberline {6.10.1.1}Mean Editor Assignment Time (MEAT)}{139}{subsubsection.285}
+\contentsline {subsubsection}{\numberline {6.10.1.2}Self Review Index (SRI)}{140}{subsubsection.286}
+\contentsline {subsubsection}{\numberline {6.10.1.3}Referee-Author pair Diversity Index (RADI)}{141}{subsubsection.287}
+\contentsline {subsubsection}{\numberline {6.10.1.4}Referee Diversity Index (RDI)}{141}{subsubsection.288}
+\contentsline {subsection}{\numberline {6.10.2}Reviewer}{142}{subsection.289}
+\contentsline {subsubsection}{\numberline {6.10.2.1}Mean Reviewer Assignment Time (MRAT)}{142}{subsubsection.290}
+\contentsline {subsubsection}{\numberline {6.10.2.2}Mean Report Sending Delay (MRSD)}{143}{subsubsection.291}
+\contentsline {subsubsection}{\numberline {6.10.2.3}Topic Diversity Index (TDI)}{143}{subsubsection.292}
+\contentsline {subsubsection}{\numberline {6.10.2.4}Editor Diversity Index (EDI)}{144}{subsubsection.293}
+\contentsline {subsubsection}{\numberline {6.10.2.5}Mean Time to Decline (MTD)}{144}{subsubsection.295}
+\contentsline {subsubsection}{\numberline {6.10.2.6}Acceptance Ratio (AR)}{145}{subsubsection.296}
+\contentsline {subsubsection}{\numberline {6.10.2.7}Decline Fraction Index (DFI)}{146}{subsubsection.298}
+\contentsline {section}{\numberline {6.11}Identifying anomalous Editors and Reviewers}{147}{section.299}
+\contentsline {subsection}{\numberline {6.11.1}Editors}{147}{subsection.301}
+\contentsline {subsection}{\numberline {6.11.2}Reviewers}{148}{subsection.302}
+\contentsline {section}{\numberline {6.12}Profiling Anomalous Reviewers}{148}{section.304}
+\contentsline {section}{\numberline {6.13}Single vs multiple referee system}{149}{section.306}
+\contentsline {subsection}{\numberline {6.13.1}Citation}{149}{subsection.309}
+\contentsline {subsection}{\numberline {6.13.2}Top cited papers}{151}{subsection.312}
+\contentsline {subsection}{\numberline {6.13.3}Conflict in review reports}{151}{subsection.313}
+\contentsline {subsubsection}{\numberline {6.13.3.1}Length}{152}{subsubsection.314}
+\contentsline {subsubsection}{\numberline {6.13.3.2}Sentiment}{152}{subsubsection.315}
+\contentsline {subsubsection}{\numberline {6.13.3.3}Content}{153}{subsubsection.317}
+\contentsline {subsection}{\numberline {6.13.4}Impact of discordance}{154}{subsection.320}
+\contentsline {section}{\numberline {6.14}Analyzing reviewer tendencies}{155}{section.322}
+\contentsline {subsection}{\numberline {6.14.1}Factors determining performance of the referees}{156}{subsection.324}
+\contentsline {subsection}{\numberline {6.14.2}Action with under-performing reviewers}{157}{subsection.326}
+\contentsline {section}{\numberline {6.15}Forming reviewer groups}{159}{section.329}
+\contentsline {subsection}{\numberline {6.15.1}Problem definition}{159}{subsection.330}
+\contentsline {subsection}{\numberline {6.15.2}Methodology}{159}{subsection.331}
+\contentsline {subsubsection}{\numberline {6.15.2.1}Selecting a population}{160}{subsubsection.332}
+\contentsline {subsubsection}{\numberline {6.15.2.2}Initialization}{160}{subsubsection.333}
+\contentsline {subsubsection}{\numberline {6.15.2.3}Fitness evaluation}{161}{subsubsection.335}
+\contentsline {subsubsection}{\numberline {6.15.2.4}Crossover}{162}{subsubsection.338}
+\contentsline {subsection}{\numberline {6.15.3}Evaluation}{163}{subsection.340}
+\contentsline {section}{\numberline {6.16}Importance of the editor}{166}{section.344}
+\contentsline {section}{\numberline {6.17}Summary of Chapter}{168}{section.346}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{171}{chapter.347}
+\contentsline {section}{\numberline {7.1}Summary of Contribution}{171}{section.348}
+\contentsline {subsection}{\numberline {7.1.1}Efficient Offload using WiFi Network}{171}{subsection.349}
+\contentsline {subsection}{\numberline {7.1.2}Managing Heterogeneous Traffic}{173}{subsection.350}
+\contentsline {subsection}{\numberline {7.1.3}Restricting Unauthorized Traffic}{174}{subsection.351}
+\contentsline {section}{\numberline {7.2}Future Direction}{176}{section.352}
+\contentsline {subsection}{\numberline {7.2.1}Efficient Offload using WiFi Network}{176}{subsection.353}
+\contentsline {subsection}{\numberline {7.2.2}Managing Heterogeneous Traffic}{177}{subsection.354}
+\contentsline {subsection}{\numberline {7.2.3}Restricting Unauthorized Traffic}{178}{subsection.355}
+\contentsline {chapter}{Bibliography}{179}{section*.356}
+\contentsline {chapter}{\numberline {A}Appendix}{199}{appendix.358}

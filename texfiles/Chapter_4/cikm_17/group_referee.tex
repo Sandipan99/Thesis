@@ -81,6 +81,13 @@ More importantly this scoring scheme further allows for ranking the groups.
 %\vspace{-8mm}
 %\mycheck{An example to illustrate the computation of the above fitness would be nice.Sandipan: added}
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.32]{./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf}
+\caption{\label{c_o} Crossover technique used in our framework}
+\vspace{4mm}
+\end{figure}
+
 To illustrate on how the fitness function is calculated we consider here a toy example. Consider a population of 16 reviewers (with ids 0 - 15), group size of 4 and 3 reviewer classes (1, 2, 3) with number of reviewers in each class being 6, 5 and 5 respectively. Let the reviewers with ids 0 - 5 are assigned to class 1, 6 - 10 to class 2 and rest are assigned to class 3. 
 So, $|RPC_1| = 1.5$, $|RPC_2| = 1.25$ and $|RPC_3| = 1.25$.
 %\mycheck{The calculation is not correct. Check $|RPC_3| = 1.25$} 
@@ -94,7 +101,8 @@ Crossover is the process in which two chromosomes combine the genetic material t
 Although several techniques for crossover exist~\cite{golberg1989genetic}, we here consider the one-point crossover technique. 
 One random position in the chromosome is chosen to determine the crossover point. In the offsprings produced, the data till the crossover point are copied verbatim from the parents while the data beyond the crossover point are swapped between the two parents. As a result, these new chromosomes or
 offsprings share some similar features from the parents chosen. If the crossover is not applied, offsprings are exact copies
-of the parents. We have set the crossover rate for our experiments to 70\%. 
+of the parents. Crossover technique is illustrated in figure \ref{c_o}.
+We have set the crossover rate for our experiments to 70\%. 
 Note that mutation process can also be used to maintain genetic diversity but we only stick to crossover for our experiments. 
 The process of crossover is repeated several times and the fitness score of the generation is calculated each time. The generation 
 with the best score is confirmed as the best possible reviewer grouping for the submitted paper.
@@ -103,6 +111,7 @@ with the best score is confirmed as the best possible reviewer grouping for the 
 \centering
 \includegraphics[scale=0.32]{./texfiles/Chapter_4/cikm_17/figures/r_d_g.pdf}
 \caption{\label{r_d_g} Block diagram demonstrating the work flow of our system.}
+\vspace{4mm}
 \end{figure}
 
 \subsection{Evaluation}
@@ -128,8 +137,16 @@ Since our algorithm allows for ranking of the groups based on the fitness score,
 % \end{figure}
 
 %\mycheck{put in the parameter estimation values}
+\begin{figure}
+\centering
+\includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/param_estimate.eps}
+\caption{\label{fig:param_estimte} Mean true positive (averaged over accepted and rejected papers) value while recommending a set of reviewer groups for papers across different values 
+of (a) $\alpha$ and (b) crossover rate. Experiments repeated for both JHEP and JSTAT datasets. $k = 15$}
+\vspace{4mm}
+\end{figure}
+%\vspace{2mm}
 
-\noindent{\bf Sensitivity to the parameters:}
+{\bf Sensitivity to the parameters:}
 As mentioned earlier, our algorithm requires two parameters, (i) $\alpha$ and (ii) the crossover rate. In figure~\ref{fig:param_estimte}(a) we plot the true positive rate 
 for different values of $\alpha$. We observe that TP (averaged over accepted and rejected cases) improves with increasing value of $\alpha$ after which it drops for 
 both JHEP and JSTAT datasets. Optimal result is obtained at $\alpha = 0.6$ for JHEP and $\alpha = 0.7$ for JSTAT. 
@@ -137,7 +154,8 @@ We hence set the value of $\alpha$ at 0.6 and 0.7 respectively for JHEP and JSTA
 We further look into the crossover rate as well. In figure~\ref{fig:param_estimte}(b), we plot TP for different crossover rates. TP is observed to be lower for 
 low crossover rate. This is because lower crossover rate allows for very low change of the chromosomes and since we set the number of generations to a constant  On the other hand, for very high crossover rate changes in the chromosome occurs at higher rates which increases the chances of obtaining the best solution. 
 Optimal TP is obtained at 70\% crossover rate and hence we set the crossover rate at $70\%$ for our experiments. The number of generations we examine is set at 500.\\ 
-\noindent{\bf Key results:}  
+
+{\bf Key results:}  
 For both JHEP and JSTAT mostly two reviewers are assigned per submission albeit there are cases where three reviewers have also been assigned. 
 For generating the results, we only consider the cases where the number of assigned reviewers were two. We calculate for each reviewer the accept ratio and time from the last assignment at the point of submission. 
 We then run our algorithm for each submission falling in highly cited and low cited accepted and rejected papers. 
@@ -157,8 +175,11 @@ Since our algorithm recommends reviewers leveraging the review history, these ca
 We further check our results for $k=5$ and $k=10$ which are also reported in 
 table~\ref{tab:k}. With $k=5$ we were able to obtain TP of 0.61 and 0.59 respectively for accepted and rejected papers in case of JHEP. For JSTAT the corresponding values 
 are 0.63 and 0.59. More importantly we could obtain a high TN of 0.91 (accepted) and 0.89 (rejected) for JHEP and 0.92, 0.82 for JSTAT. This is because we are 
-recommending a smaller number of groups which reduces the possibility of recommending a particular undesired/desired group.\\
-\noindent{\bf Comparison with baseline algorithms:} %\mycheck{rewrite the baseine algorithm..}
+recommending a smaller number of groups which reduces the possibility of recommending a particular undesired/desired group.
+
+
+
+{\bf Comparison with baseline algorithms:}
 As our algorithm presents computational overhead a natural question to ask is whether it is worth it. We hence design a simple 
 baseline (random) to compete with our algorithm. For a submission, initial population of suitable reviewers is obtained (in the same way as our GA based algorithm) and each reviewer is classified into one of L, M, H categories. A subset of reviewers is then selected randomly in such a way that the proportion of reviewers in each class (in the population) is maintained 
 in the chosen set. 
@@ -179,13 +200,11 @@ algorithm with those obtained from the baseline algorithm. The purpose of this i
 through random allocation. In specific, we measure the Jaccard similarity between the set of groups obtained through baseline and those obtained through our algorithm. Across 
 all the papers we obtain a low similarity value of 0.31 which further corroborates our hypothesis.\\
 %\mycheck{Two other ablation type baselines could be: Our GA framework with the fitness score calculated base on (i) only accept ratio and (ii) time since last assignment.}
-\begin{figure}
-\centering
-\includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/param_estimate.eps}
-\caption{\label{fig:param_estimte} Mean true positive (averaged over accepted and rejected papers) value while recommending a set of reviewer groups for papers across different values 
-of (a) $\alpha$ and (b) crossover rate. Experiments repeated for both JHEP and JSTAT datasets. $k = 15$}
-\end{figure}
 
+%\begin{figure}
+%\includegraphics[scale = 0.26]{figures/G_A_all.eps}
+%\caption{\label{fig:G_A} True positive (TP) and true negative (TN) cases while recommending a set of reviewer groups for both accepted and rejected papers for (a) JHEP and (b) JSTAT datsets.}
+%\end{figure}
 
 \begin{table}[]
 \centering
@@ -201,19 +220,14 @@ K       & \begin{tabular}[c]{@{}c@{}}TP\\ (accept,reject)\end{tabular} & \begin{
 15      &  0.81,0.75                                                   &  0.84,0.73                                                   &   0.79,0.74                                                  & 0.81,0.71                                                             \\ \hline \hline
 Average &  0.71,0.66                                                   &  0.87,0.80                                                   &   0.72,0.68                                                  & 0.86,0.76                                                             \\ \hline
 \end{tabular}%}
+\vspace{5mm}
 \end{table}
-%\begin{figure}
-%\includegraphics[scale = 0.26]{figures/G_A_all.eps}
-%\caption{\label{fig:G_A} True positive (TP) and true negative (TN) cases while recommending a set of reviewer groups for both accepted and rejected papers for (a) JHEP and (b) JSTAT datsets.}
-%\end{figure}
-
-
 
 \begin{figure}
 \centering
 \includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/G_A_baseline.eps}
 \caption{\label{fig:GA_base} Mean true positive (averaged over accepted and rejected papers) value with recommendation by our method (G\_A\_based) and the baseline. Results are 
-noted for (a) JHEP and (b) JSTAT. $k = 15$.}
+noted for (a) JHEP and (b) JSTAT. $k = 15$.\vspace{4mm}}
 \end{figure}
 
 \if{0}

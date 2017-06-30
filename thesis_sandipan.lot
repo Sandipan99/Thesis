@@ -12,12 +12,12 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the notations used.}}{95}{table.190}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces General information of the dataset.}}{122}{table.243}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.}}{130}{table.263}
-\contentsline {table}{\numberline {6.3}{\ignorespaces The F-statistics value for all the features used for predicting the long-term citation of the paper.}}{133}{table.271}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Features used for detecting anomalies.}}{147}{table.298}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Jaccard similarity between the cases identified as discordant by the different metrics.}}{156}{table.323}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since last assignment). }}{161}{table.333}
-\contentsline {table}{\numberline {6.7}{\ignorespaces True positive (TP) and true negative (TN) values across accepted and rejected papers measured for different values of $k$. Results are reported for JHEP and JSTAT datasets.}}{169}{table.346}
+\contentsline {table}{\numberline {6.1}{\ignorespaces General information of the dataset.}}{123}{table.245}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.\vspace {3mm}}}{132}{table.267}
+\contentsline {table}{\numberline {6.3}{\ignorespaces The F-statistics value for all the features used for predicting the long-term citation of the paper.}}{135}{table.275}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Features used for detecting anomalies.}}{145}{table.294}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Jaccard similarity between the cases identified as discordant by the different metrics.}}{154}{table.318}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since last assignment).\vspace {3mm} }}{158}{table.328}
+\contentsline {table}{\numberline {6.7}{\ignorespaces True positive (TP) and true negative (TN) values across accepted and rejected papers measured for different values of $k$. Results are reported for JHEP and JSTAT datasets.}}{166}{table.342}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
