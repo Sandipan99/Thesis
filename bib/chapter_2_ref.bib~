@@ -1,373 +1,432 @@
-@inproceedings{lf2009,
- author = {Fortunato, Santo and Lancichinetti, Andrea},
- title = {Community Detection Algorithms: A Comparative Analysis: Invited Presentation, Extended Abstract},
- booktitle = {Proceedings of the Fourth International ICST Conference on Performance Evaluation Methodologies and Tools},
- series = {VALUETOOLS '09},
+@article{frank1980sampling,
+  title={Sampling and inference in a population graph},
+  author={Frank, Ove},
+  journal={International Statistical Review},
+  pages={33--41},
+  year={1980},
+  publisher={JSTOR}
+}
+
+@article{frank1977survey,
+  title={Survey sampling in graphs},
+  author={Frank, Ove},
+  journal={Journal of Statistical Planning and Inference},
+  volume={1},
+  number={3},
+  pages={235--264},
+  year={1977},
+  publisher={Elsevier}
+}
+
+@article{goodman1961snowball,
+  title={Snowball sampling},
+  author={Goodman, Leo A},
+  journal={The annals of mathematical statistics},
+  pages={148--170},
+  year={1961},
+  publisher={JSTOR}
+}
+
+@article{granovetter1976network,
+  title={Network sampling: Some first steps},
+  author={Granovetter, Mark},
+  journal={American Journal of Sociology},
+  pages={1287--1303},
+  year={1976},
+  publisher={JSTOR}
+}
+
+@article{heckathorn1997respondent,
+  title={Respondent-driven sampling: a new approach to the study of hidden populations},
+  author={Heckathorn, Douglas D},
+  journal={Social problems},
+  volume={44},
+  number={2},
+  pages={174--199},
+  year={1997},
+  publisher={The Oxford University Press}
+}
+
+@article{gile2010respondent,
+  title={Respondent-driven sampling: An assessment of current methodology},
+  author={Gile, Krista J and Handcock, Mark S},
+  journal={Sociological methodology},
+  volume={40},
+  number={1},
+  pages={285--327},
+  year={2010},
+  publisher={Wiley Online Library}
+}
+
+@article{kolascyk2013statistical,
+  title={Statistical Analysis of Network Data},
+  author={Kolascyk, ED},
+  journal={SAMSI program on Complex networks. Boston university},
+  year={2013}
+}
+
+@inproceedings{leskovec2006sampling,
+  title={Sampling from large graphs},
+  author={Leskovec, Jure and Faloutsos, Christos},
+  booktitle={SIGKDD},
+  pages={631--636},
+  year={2006},
+  organization={ACM}
+}
+
+@inproceedings{ahmed2010reconsidering,
+  title={Reconsidering the foundations of network sampling},
+  author={Ahmed, Nesreen K and Neville, Jennifer and Kompella, Ramana},
+  booktitle={Proceedings of the 2nd Workshop on Information in Networks},
+  year={2010}
+}
+
+@inproceedings{maiya2010sampling,
+  title={Sampling community structure},
+  author={Maiya, Arun S and Berger-Wolf, Tanya Y},
+  booktitle={WWW},
+  pages={701--710},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{maiya2011benefits,
+  title={Benefits of bias: Towards better characterization of network sampling},
+  author={Maiya, Arun S and Berger-Wolf, Tanya Y},
+  booktitle={ACM SIGKDD},
+  pages={105--113},
+  year={2011},
+  organization={ACM}
+}
+
+@techreport{henzinger1998computing,
+  title={Computing on data streams},
+  author={Henzinger, M Rauch and Raghavan, Prabhakar and Rajagopalan, Sridhar},
+  year={1998},
+  institution={Technical Note 1998-011, Digital Systems Research Center, Palo Alto, CA}
+}
+
+@inproceedings{aggarwal2011outlier,
+  title={Outlier detection in graph streams},
+  author={Aggarwal, Charu C and Zhao, Yuchen and Philip, S Yu},
+  booktitle={ICDE},
+  pages={399--409},
+  year={2011},
+  organization={IEEE}
+}
+
+@article{ahmed2014network,
+  title={Network sampling: From static to streaming graphs},
+  author={Ahmed, Nesreen K and Neville, Jennifer and Kompella, Ramana},
+  journal={ACM TKDD},
+  volume={8},
+  number={2},
+  pages={7},
+  year={2014},
+  publisher={ACM}
+}
+
+@article{vitter1985random,
+  title={Random sampling with a reservoir},
+  author={Vitter, Jeffrey S},
+  journal={ACM TOMS},
+  volume={11},
+  number={1},
+  pages={37--57},
+  year={1985},
+  publisher={ACM}
+}
+
+@article{tong2016novel,
+  title={A novel green algorithm for sampling complex networks},
+  author={Tong, Chao and Lian, Yu and Niu, Jianwei and Xie, Zhongyu and Zhang, Yang},
+  journal={Journal of Network and Computer Applications},
+  volume={59},
+  pages={55--62},
+  year={2016},
+  publisher={Elsevier}
+}
+
+@inproceedings{viswanath2009evolution,
+  title={On the evolution of user interaction in facebook},
+  author={Viswanath, Bimal and Mislove, Alan and Cha, Meeyoung and Gummadi, Krishna P},
+  booktitle={Proceedings of the 2nd ACM workshop on Online social networks},
+  pages={37--42},
+  year={2009},
+  organization={ACM}
+}
+
+@article{yang2015defining,
+  title={Defining and evaluating network communities based on ground-truth},
+  author={Yang, Jaewon and Leskovec, Jure},
+  journal={KIAS},
+  volume={42},
+  number={1},
+  pages={181--213},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{lancichinetti2008benchmark,
+  title={Benchmark graphs for testing community detection algorithms},
+  author={Lancichinetti, Andrea and Fortunato, Santo and Radicchi, Filippo},
+  journal={Physical review E},
+  volume={78},
+  number={4},
+  pages={046110},
+  year={2008},
+  publisher={APS}
+}
+
+@article{newman2004analysis,
+  title={Analysis of weighted networks},
+  author={Newman, Mark EJ},
+  journal={Physical review E},
+  volume={70},
+  number={5},
+  pages={056131},
+  year={2004},
+  publisher={APS}
+}
+
+@misc{manning2008introduction,
+  title={Introduction to information retrieval},
+  author={Manning, Christopher D and Raghavan, Prabhakar and Sch{\"u}tze, Hinrich},
+  year={2008},
+  publisher={Cambridge University Press}
+}
+
+@article{danon2005comparing,
+  title={Comparing community structure identification},
+  author={Danon, Leon and Diaz-Guilera, Albert and Duch, Jordi and Arenas, Alex},
+  journal={Journal of Statistical Mechanics: Theory and Experiment},
+  volume={2005},
+  number={09},
+  pages={P09008},
+  year={2005},
+  publisher={IOP Publishing}
+}
+
+@book{Kolaczyk:2009,
+ author = {Kolaczyk, Eric D.},
+ title = {Statistical Analysis of Network Data: Methods and Models},
  year = {2009},
- pages = {27:1--27:2},
- publisher = {ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering)},
- address = {ICST, Brussels, Belgium, Belgium}
+ edition = {1st},
+ publisher = {Springer},
 } 
 
 
-@article{pom2009,
-     author = {Porter, M. A. and Onnela, J. P. and Mucha, P. J.},
-    journal = {Notices of the American Mathematical Society},
-    title = {Communities in networks},
-    volume = {56},
-    year = {2009},
-    pages ={1164-1166}
-}
-
-@article{ng2002,
-  added-at = {2009-02-23T16:43:14.000+0100},
-  author = {Newman, M. E. J. and Girvan, M.},
-  biburl = {http://www.bibsonomy.org/bibtex/263176454110326cb664a25fc249c8f7b/snarc},
-  interhash = {b9145040e35ccb4d2a0ce18105e64ff4},
-  intrahash = {63176454110326cb664a25fc249c8f7b},
-  journal = {Physical Review},
-  keywords = {imported},
-  number = 026113,
-  timestamp = {2009-02-23T16:43:14.000+0100},
-  title = {Finding and evaluating community structure in networks},
-  volume = {E 69},
-  year = 2004
-}
-
-@inproceedings{brandes2008,
-  added-at = {2011-07-05T00:00:00.000+0200},
-  author = {Brandes, Ulrik and Gaertler, Marco and Wagner, Dorothea},
-  biburl = {http://www.bibsonomy.org/bibtex/25a88eac89fd291358ec999576f99c244/dblp},
-  booktitle = {ESA},
-  editor = {Battista, Giuseppe Di and Zwick, Uri},
-  ee = {http://dx.doi.org/10.1007/978-3-540-39658-1_52},
-  interhash = {b527c5ab05bac6d10b7768c08fdf7860},
-  intrahash = {5a88eac89fd291358ec999576f99c244},
-  isbn = {3-540-20064-9},
-  keywords = {dblp},
-  pages = {568-579},
-  publisher = {Springer},
-  series = {Lecture Notes in Computer Science},
-  timestamp = {2011-07-05T00:00:00.000+0200},
-  title = {Experiments on Graph Clustering Algorithms.},
-  url = {http://dblp.uni-trier.de/db/conf/esa/esa2003.html#BrandesGW03},
-  volume = 2832,
-  year = 2003
-}
-
-
-@article{gmc2010,
-  added-at = {2011-08-07T14:20:54.000+0200},
-  author = {Good, B.H. and Montjoye, Y.A. De and Clauset, A.},
-  biburl = {http://www.bibsonomy.org/bibtex/246dff33e7c561f9189b804ee91c702fa/folke},
-  interhash = {566e454abb53f13641c4009e5327c6bc},
-  intrahash = {46dff33e7c561f9189b804ee91c702fa},
-  journal = {Physical Review E},
-  keywords = {analysis community detection modularity},
-  number = 4,
-  pages = 046106,
-  publisher = {APS},
-  timestamp = {2011-08-07T14:20:54.000+0200},
-  title = {Performance of modularity maximization in practical contexts},
-  volume = 81,
-  year = 2010
-}
-
-@TechReport{lldm2008,
-	author = "Jure Leskovec and Kevin J. Lang and Anirban Dasgupta and Michael W. Mahoney",
-	month = oct,
-	title = "{Community Structure in Large Networks: Natural Cluster Sizes and the Absence of Large Well-Defined Clusters}",
-	journal = "Corr",
-	year = "2008"
-}
-
-@article{sjri2012,
-booktitle={Complex Networks},
-volume={424},
-series={Studies in Computational Intelligence},
-editor={Menezes, Ronaldo and Evsukoff, Alexandre and Gonz{\'a}lez, Marta C.},
-doi={10.1007/978-3-642-30287-9\_10},
-title={Stable Community Cores in Complex Networks},
-url={http://dx.doi.org/10.1007/978-3-642-30287-9\_10},
-publisher={Springer Berlin Heidelberg},
-author={Seifi, Massoud and Junier, Ivan and Rouquier, Jean-Baptiste and Iskrov, Svilen and Guillaume, Jean-Loup},
-pages={87-98}
-}
-
-@article{lf2012,
-  added-at = {2012-10-10T00:00:00.000+0200},
-  author = {Lancichinetti, Andrea and Fortunato, Santo},
-  journal = {Nature Scientific Reports},
-  title = {Consensus clustering in complex networks},
-  volume = {2},
-  year = 2012
-}
-
-@Article{dyb2010,
-	author = "J. C. Delvenne and S. N. Yaliraki and M. Barahona",
-	journal = "Proceedings of the National Academy of Sciences",
-	month = jul,
-	number = "29",
-	pages = "12755--12760",
-	publisher = "National Academy of Sciences",
-	title = "{Stability of graph communities across time scales}",
-	volume = "107",
-	year = "2010"
-}
-
-@article{lln2010,
- author = {De Meo, Pasquale and Ferrara, Emilio and Fiumara, Giacomo and Provetti, Alessandro},
- title = {Enhancing Community Detection Using a Network Weighting Strategy},
- journal = {Inf. Sci.},
- issue_date = {February, 2013},
- volume = {222},
- month = feb,
- year = {2013},
- issn = {0020-0255},
- pages = {648--668},
- publisher = {Elsevier Science Inc.},
- address = {New York, NY, USA}
-}
-
-
-@INPROCEEDINGS{ogy2012,
-    author = {Michael Ovelgönne and Andreas Geyer-schulz},
-    title = {An Ensemble Learning Strategy for Graph Clustering},
-    booktitle = {10th DIMACS Implementation Challenge Graph Partitioning and Graph Clustering},
-    year = {2012}
-}
-
-@Article{gcr2012,
-	address = "Laboratoire de Biophysique Statistique, SB/ITP, Ecole Polytechnique F{\'e}d{\'e}rale de Lausanne, CH-1015 Lausanne, Switzerland.",
-	author = "David Gfeller and Jean-C{\'e}dric C. Chappelier and Paolo {De Los Rios}",
-	journal = "Physical review. E, Statistical, nonlinear, and soft matter physics",
-	month = nov,
-	number = "5 Pt 2",
-	pmid = "16383716",
-	posted-at = "2011-07-07 22:38:12",
-	priority = "2",
-	title = "{Finding instabilities in the community structure of complex networks.}",
-	url = "http://view.ncbi.nlm.nih.gov/pubmed/16383716",
-	volume = "72",
-	year = "2005"
-}
-
-
-@TechReport{reidy,
-	author = "Reidy, J. and Bader, D. A. and Jiang, K. and Pande, P. and Sharma, R.",
-	month = oct,
-	title = "{Detecting communities from given seeds in social networks}",
-	journal = "Technical Report",
-	year = "2011"
+@article{PalEtAl05,
+  added-at = {2009-02-23T16:43:09.000+0100},
+  author = {Palla, Gergely and Derenyi, Imre and Farkas, Illes and Vicsek, Tames},
+  journal = {Nature},
+  number = 7043,
+  pages = {814--818},
+  title = {Uncovering the overlapping community structure of complex networks in nature and society},
+  volume = 435,
+  year = 2005
 }
 
 
 
-@article{cnm2004,
-   author = {Clauset, Aaron and Newman, M. E. J. and and Cristopher Moore},
-  journal = {Physical Review E},
-  pages = {1- 6},
-  timestamp = {2010-04-10T15:44:13.000+0200},
-  title = {Finding community structure in very large networks},
-  url = {www.ece.unm.edu/ifis/papers/community-moore.pdf},
-  year = 2004
+@article{hubert1985comparing,
+  title={Comparing partitions},
+  author={Hubert, Lawrence and Arabie, Phipps},
+  journal={Journal of classification},
+  volume={2},
+  number={1},
+  pages={193--218},
+  year={1985},
+  publisher={Springer}
 }
 
-
-@article{bgll2008,
-  author    = {Blondel, V. D. and Guillaume, J. L. and Lambiotte, R.and Lefebvre, E.},
-  title     = {Fast unfolding of community hierarchies in large networks},
-  journal   = {J. Stat. Mech.},
-  volume    = {abs/0803.0476},
-  year      = {2008},
-  volume    ={10},
-  pages     ={P10008+}
+@article{blondel2008fast,
+  title={Fast unfolding of communities in large networks},
+  author={Blondel, Vincent D and Guillaume, Jean-Loup and Lambiotte, Renaud and Lefebvre, Etienne},
+  journal={Journal of statistical mechanics: theory and experiment},
+  volume={2008},
+  number={10},
+  pages={P10008},
+  year={2008},
+  publisher={IOP Publishing}
 }
 
-@article{PhysRevE.74.036104,
-  title = {Finding community structure in networks using the eigenvectors of matrices},
-  author = {Newman, M. E. J.},
-  journal = {Phys. Rev. E},
-  volume = {74},
-  issue = {3},
-  pages = {036104},
-  numpages = {19},
-  year = {2006},
-  month = {Sep},
+@inproceedings{ribeiro2010estimating,
+  title={Estimating and sampling graphs with multidimensional random walks},
+  author={Ribeiro, Bruno and Towsley, Don},
+  booktitle={Proceedings of the 10th ACM SIGCOMM conference on Internet measurement},
+  pages={390--403},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{rasti2009respondent,
+  title={Respondent-driven sampling for characterizing unstructured overlays},
+  author={Rasti, Amir Hassan and Torkjazi, Mojtaba and Rejaie, Reza and Duffield, Nick and Willinger, Walter and Stutzbach, Daniel},
+  booktitle={INFOCOM},
+  pages={2701--2705},
+  year={2009},
+  organization={IEEE}
+}
+
+@article{hastings1970monte,
+  title={Monte Carlo sampling methods using Markov chains and their applications},
+  author={Hastings, W Keith},
+  journal={Biometrika},
+  volume={57},
+  number={1},
+  pages={97--109},
+  year={1970},
+  publisher={Biometrika Trust}
+}
+
+@article{doucet2000sequential,
+  title={On sequential Monte Carlo sampling methods for Bayesian filtering},
+  author={Doucet, Arnaud and Godsill, Simon and Andrieu, Christophe},
+  journal={Statistics and computing},
+  volume={10},
+  number={3},
+  pages={197--208},
+  year={2000},
+  publisher={Springer}
+}
+
+@inproceedings{gjoka2010walking,
+  title={Walking in facebook: a case study of unbiased sampling of OSNs},
+  author={Gjoka, Minas and Kurant, Maciej and Butts, Carter T and Markopoulou, Athina},
+  booktitle={Infocom},
+  pages={1--9},
+  year={2010},
+  organization={IEEE}
+}
+
+@article{girvan2002community,
+  title={Community structure in social and biological networks},
+  author={Girvan, Michelle and Newman, Mark EJ},
+  journal={PNAS},
+  volume={99},
+  number={12},
+  pages={7821--7826},
+  year={2002},
+  publisher={National Acad Sciences}
+}
+
+@article{danon2005comparing,
+  title={Comparing community structure identification},
+  author={Danon, Leon and Diaz-Guilera, Albert and Duch, Jordi and Arenas, Alex},
+  journal={Journal of Statistical Mechanics: Theory and Experiment},
+  volume={2005},
+  number={09},
+  pages={P09008},
+  year={2005},
+  publisher={IOP Publishing}
+}
+
+@article{fortunato2010community,
+  title={Community detection in graphs},
+  author={Fortunato, Santo},
+  journal={Physics reports},
+  volume={486},
+  number={3},
+  pages={75--174},
+  year={2010},
+  publisher={Elsevier}
+}
+
+@book{wasserman1994social,
+  title={Social network analysis: Methods and applications},
+  author={Wasserman, Stanley and Faust, Katherine},
+  volume={8},
+  year={1994},
+  publisher={Cambridge university press}
+}
+
+@inproceedings{massa2007trust,
+  title={Trust-aware recommender systems},
+  author={Massa, Paolo and Avesani, Paolo},
+  booktitle={ACM conference on Recommender systems},
+  pages={17--24},
+  year={2007},
+  organization={ACM}
+}
+
+@article{clauset2004finding,
+  title={Finding community structure in very large networks},
+  author={Clauset, Aaron and Newman, Mark EJ and Moore, Cristopher},
+  journal={Physical review E},
+  volume={70},
+  number={6},
+  pages={066111},
+  year={2004},
+  publisher={APS}
+}
+@article{newman2004fast,
+  title={Fast algorithm for detecting community structure in networks},
+  author={Newman, Mark EJ},
+  journal={Physical review E},
+  volume={69},
+  number={6},
+  pages={066133},
+  year={2004},
+  publisher={APS}
+}
+
+@inproceedings{pons2005computing,
+  title={Computing communities in large networks using random walks},
+  author={Pons, Pascal and Latapy, Matthieu},
+  booktitle={International Symposium on Computer and Information Sciences},
+  pages={284--293},
+  year={2005},
+  organization={Springer}
+}
+
+@article{rosvall2007information,
+  title={An information-theoretic framework for resolving community structure in complex networks},
+  author={Rosvall, Martin and Bergstrom, Carl T},
+  journal={PNAS},
+  volume={104},
+  number={18},
+  pages={7327--7331},
+  year={2007},
+  publisher={National Acad Sciences}
+}
+
+@misc{si,
+  title = {{Supplementary Materials}},
+  howpublished = "\url{http://tinyurl.com/SI-ComPAS}",
+  note = "[Online; accessed 24-Oct-2016]"
+}
+
+@article{PhysRevE.78.046115,
+  title = {Adaptive clustering algorithm for community detection in complex networks},
+  author = {Ye, Zhenqing and Hu, Songnian and Yu, Jun},
+  journal = {PRE},
+  volume = {78},
+  issue = {4},
+  pages = {046115},
+  numpages = {6},
+  year = {2008},
+  month = {Oct},
   publisher = {American Physical Society},
-  doi = {10.1103/PhysRevE.74.036104},
-  url = {http://link.aps.org/doi/10.1103/PhysRevE.74.036104}
+  doi = {10.1103/PhysRevE.78.046115},
+  url = {http://link.aps.org/doi/10.1103/PhysRevE.78.046115}
 }
 
 
-@article{lfr2009,
-  author = {Lancichinetti, Andrea and Fortunato, Santo},
-  journal = {Phys. Rev. E},
-  month = jul,
-  number = 1,
-  pages = 016118,
-  publisher = {American Physical Society},
-  title = {Benchmarks for testing community detection algorithms on directed and weighted graphs with overlapping communities},
-  volume = 80,
-  year = 2009
+@article{rosvall2008maps,
+  title={Maps of random walks on complex networks reveal community structure},
+  author={Rosvall, Martin and Bergstrom, Carl T},
+  journal={PNAS},
+  volume={105},
+  number={4},
+  pages={1118--1123},
+  year={2008},
+  publisher={National Acad Sciences}
 }
 
-@misc{dimacs,
-   howpublished={10th DIMACS Implementation Challenge - Graph Partitioning and Graph
-Clustering. \url{http://www.cc.gatech.edu/dimacs10/archive/clustering.shtml} (12.01.2012)}
+@article{west2014exploiting,
+  title={Exploiting social network structure for person-to-person sentiment analysis},
+  author={West, Robert and Paskov, Hristo S and Leskovec, Jure and Potts, Christopher},
+  journal={arXiv preprint arXiv:1409.2450},
+  year={2014}
 }
-
-@article{jazz,
-  author = { Gleiser, P. and Danon, L.},
-  journal = {Adv. Complex Syst},
-  month = jul,
-  number = 565 ,
-  pages = 016118,
-  publisher = {American Physical Society},
-  title = {Jazz musicians network: List of edges of the network of Jazz musicians},
-  volume = 6,
-  year = 2003
-}
-
-@article{polbooks,
-  author = {Kreb, V.},
-  publisher = {American Physical Society},
-  title = {Books on US Politics\url{http://www.orgnet.com/}}  
-}
-
-@Article{chesapeake,
-	author = "D. Baird and R. E. Ulanowicz",
-	citeulike-article-id = "10702742",
-	journal = "Ecol. Monogr.",
-	keywords = "networks",
-	number = "4",
-	pages = "329--364",
-	posted-at = "2012-05-25 13:04:20",
-	priority = "1",
-	title = "{The Seasonal Dynamics of The Chesapeake Bay Ecosystem}",
-	volume = "59",
-	year = "1989"
-}
-
-@Article{dolphin,
-	author = "David Lusseau and Karsten Schneider and OliverJ Boisseau and Patti Haase and Elisabeth Slooten and SteveM Dawson",
-	booktitle = "Behavioral Ecology and Sociobiology",
-	journal = "Behavioral Ecology and Sociobiology",
-	number = "4",
-	pages = "396--405",
-	publisher = "Springer-Verlag",
-	title = "{The bottlenose dolphin community of Doubtful Sound features a large proportion of long-lasting associations}",
-	volume = "54",
-	year = "2003"
-}
-
-@article{football,
-  added-at = {2011-03-14T01:03:26.000+0100},
-  author = {Girvan, M. and Newman, M. E. J.},
-  biburl = {http://www.bibsonomy.org/bibtex/2da908a587645fb450af65cbbb63323a7/lantiq},
-  file = {full paper:Girvan2002.pdf:PDF},
-  groups = {public},
-  interhash = {ecd7a48a37f660ab421472140168c892},
-  intrahash = {da908a587645fb450af65cbbb63323a7},
-  journal = {Proceedings of the National Academy of Sciences},
-  keywords = {networks},
-  number = 12,
-  pages = {7821-7826},
-  timestamp = {2011-03-14T01:03:26.000+0100},
-  title = {Community structure in social and biological networks},
-  username = {lantiq},
-  volume = 99,
-  year = 2002
-}
-
-
-
-
-
-@article{email,
-  added-at = {2009-02-23T16:43:14.000+0100},
-  author = {Guimer{\`a}, R. and Danon, L. and D?az-Guilera, A. and Giralt, F. and Arenas, A.},
-  biburl = {http://www.bibsonomy.org/bibtex/2fd88bee845206268c5e10dd7ccc16262/snarc},
-  interhash = {4174fe9f1ebf948893710a95ce1bf8c7},
-  intrahash = {fd88bee845206268c5e10dd7ccc16262},
-  journal = {Physical Review},
-  keywords = {imported},
-  number = 065103,
-  timestamp = {2009-02-23T16:43:14.000+0100},
-  title = {Self-similar community structure in a network of human interactions},
-  volume = {E 68},
-  year = 2003
-}
-
-
-
-@book{nmi,
- author = {Manning, Christopher D. and Raghavan, Prabhakar and Sch\"{u}tze, Hinrich},
- title = {Introduction to Information Retrieval},
- year = {2008},
- isbn = {0521865719, 9780521865715},
- publisher = {Cambridge University Press},
- address = {New York, NY, USA},
-}
-
-@inproceedings{nmi_1,
- author = {Vinh, Nguyen Xuan and Epps, Julien and Bailey, James},
- title = {Information Theoretic Measures for Clusterings Comparison: Is a Correction for Chance Necessary?},
- booktitle = {Proceedings of the 26th Annual International Conference on Machine Learning},
- series = {ICML '09},
- year = {2009},
- isbn = {978-1-60558-516-1},
- location = {Montreal, Quebec, Canada},
- pages = {1073--1080},
- numpages = {8},
- url = {http://doi.acm.org/10.1145/1553374.1553511},
- doi = {10.1145/1553374.1553511},
- acmid = {1553511},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@article{nmi_2,
- author = {Strehl, Alexander and Ghosh, Joydeep},
- title = {Cluster Ensembles --- a Knowledge Reuse Framework for Combining Multiple Partitions},
- journal = {J. Mach. Learn. Res.},
- issue_date = {3/1/2003},
- volume = {3},
- month = mar,
- year = {2003},
- issn = {1532-4435},
- pages = {583--617},
- numpages = {35},
- url = {http://dx.doi.org/10.1162/153244303321897735},
- doi = {10.1162/153244303321897735},
- acmid = {944935},
- publisher = {JMLR.org},
- keywords = {cluster analysis, clustering, consensus functions, ensemble, knowledge reuse, multi-learner systems, mutual information, partitioning, unsupervised learning},
-}
-
-@unpublished{pho,
-  added-at = {2011-03-14T01:05:31.000+0100},
-  author = {Mukherjee, Animesh and Choudhury, Monojit and Basu, Anupam and Ganguly, Niloy},
-  biburl = {http://www.bibsonomy.org/bibtex/225409aeef179b9da92e53de51b731f14/lantiq},
-  file = {full text:Mukherjee2006.pdf:PDF},
-  groups = {public},
-  interhash = {514eddd09edc0baa57c8eeeab3bd9126},
-  intrahash = {25409aeef179b9da92e53de51b731f14},
-  keywords = {networks},
-  note = {arXiv:physics/0606132},
-  timestamp = {2011-03-14T01:05:31.000+0100},
-  title = {Modeling the Co-occurrence Principles of the Consonant Inventories: A Complex Network Approach},
-  username = {lantiq},
-  year = 2006
-}
-
-
-@article{del,
- author = {Delmotte, A. and Tate, E.W. and Yaliraki, S.N. and Barahona, M.},
- title = {Protein multi-scale organization through graph partitioning and robustness analysis: application to the myosin-myosin light chain interaction},
- journal = {Phys Biol.},
- volume = {8},
- year = {2011},
- pages = {055010}
-}
-

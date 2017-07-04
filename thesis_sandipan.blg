@@ -2,17 +2,17 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis_sandipan.aux
 The style file: abbrv.bst
-Reallocated field_info (elt_size=4) to 11049 items from 5000.
+Reallocated field_info (elt_size=4) to 10980 items from 5000.
 Database file #1: bib/intro.bib
 Database file #2: bib/chapter_1_ref.bib
 Database file #3: bib/chapter_2_ref.bib
-Repeated entry---line 243 of file bib/chapter_2_ref.bib
+Repeated entry---line 235 of file bib/chapter_2_ref.bib
  : @article{blondel2008fast
  :                         ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 314 of file bib/chapter_2_ref.bib
- : @article{danon2005comparing
- :                            ,
+Repeated entry---line 480 of file bib/chapter_2_ref.bib
+ : @article{rosvall2008maps
+ :                         ,
 I'm skipping whatever remains of this entry
 Database file #4: bib/related_work.bib
 Database file #5: bib/chapter_3_ref.bib
@@ -135,6 +135,7 @@ Warning--I didn't find a database entry for "Gregory1"
 Warning--I didn't find a database entry for "nmi"
 Warning--I didn't find a database entry for "McDaid"
 Warning--to sort, need author or key in si
+Warning--to sort, need author or key in d1
 Warning--empty year in Agarwal72
 Warning--empty title in Berry
 Warning--empty journal in caswellimproving
@@ -151,45 +152,45 @@ Warning--empty journal in cambridge-haggle-imote-infocom2006-2009-05-29
 Warning--empty year in SonSW
 Warning--empty booktitle in Valverde-RebazaICSA2014
 Warning--there's a number but no volume in Watts-1998
-You've used 249 entries,
+You've used 246 entries,
             2118 wiz_defined-function locations,
-            1991 strings with 45783 characters,
-and the built_in function-call counts, 91193 in all, are:
-= -- 9062
-> -- 4218
-< -- 78
-+ -- 1681
-- -- 1396
-* -- 6691
-:= -- 14785
-add.period$ -- 788
-call.type$ -- 249
-change.case$ -- 1418
+            1984 strings with 45826 characters,
+and the built_in function-call counts, 90161 in all, are:
+= -- 8956
+> -- 4200
+< -- 77
++ -- 1673
+- -- 1392
+* -- 6614
+:= -- 14621
+add.period$ -- 779
+call.type$ -- 246
+change.case$ -- 1409
 chr.to.int$ -- 0
-cite$ -- 266
-duplicate$ -- 3432
-empty$ -- 7113
-format.name$ -- 1396
-if$ -- 19322
+cite$ -- 264
+duplicate$ -- 3387
+empty$ -- 7008
+format.name$ -- 1392
+if$ -- 19108
 int.to.chr$ -- 0
-int.to.str$ -- 249
-missing$ -- 248
-newline$ -- 1240
-num.names$ -- 513
-pop$ -- 1362
+int.to.str$ -- 246
+missing$ -- 242
+newline$ -- 1225
+num.names$ -- 505
+pop$ -- 1354
 preamble$ -- 1
-purify$ -- 1182
+purify$ -- 1174
 quote$ -- 0
-skip$ -- 2526
+skip$ -- 2501
 stack$ -- 0
-substring$ -- 6157
-swap$ -- 853
-text.length$ -- 78
+substring$ -- 6035
+swap$ -- 847
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 971
-warning$ -- 17
-while$ -- 872
-width$ -- 252
-write$ -- 2777
+type$ -- 961
+warning$ -- 18
+while$ -- 856
+width$ -- 249
+write$ -- 2744
 (There were 27 error messages)

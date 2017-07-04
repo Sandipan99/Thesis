@@ -1,9 +1,14 @@
 \begin{thebibliography}{100}
 
+\bibitem{d1}
+{Facebook}.
+\newblock konect.uni-koblenz.de/networks/facebook-wosn-links, 2017.
+\newblock [Online; accessed 2017].
+
 \bibitem{si}
-{Supplementary Materials}.
-\newblock \url{http://tinyurl.com/SI-ComPAS}.
-\newblock [Online; accessed 24-Oct-2016].
+{Resources (anonymized)}.
+\newblock https://goo.gl/dQaZ7B, 2017.
+\newblock [Online; accessed 18-Feb-2017].
 
 \bibitem{Agarwal72}
 G.~Agarwal and D.~Kempe.
@@ -14,12 +19,6 @@ G.~Agarwal and D.~Kempe.
 C.~C. Aggarwal, Y.~Zhao, and S.~Y. Philip.
 \newblock Outlier detection in graph streams.
 \newblock In {\em ICDE}, pages 399--409. IEEE, 2011.
-
-\bibitem{ahmed2010reconsidering}
-N.~K. Ahmed, J.~Neville, and R.~Kompella.
-\newblock Reconsidering the foundations of network sampling.
-\newblock In {\em Proceedings of the 2nd Workshop on Information in Networks},
-  2010.
 
 \bibitem{ahmed2014network}
 N.~K. Ahmed, J.~Neville, and R.~Kompella.
@@ -312,6 +311,12 @@ L.~Danon, A.~Diaz-Guilera, J.~Duch, and A.~Arenas.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2005(09):P09008, 2005.
 
+\bibitem{de2016tri}
+L.~De~Stefani, A.~Epasto, M.~Riondato, and E.~Upfal.
+\newblock Tri$\backslash$est: Counting local and global triangles in
+  fully-dynamic streams with fixed memory size.
+\newblock {\em arXiv preprint arXiv:1602.07424}, 2016.
+
 \bibitem{demers1987epidemic}
 A.~Demers, D.~Greene, C.~Hauser, W.~Irish, J.~Larson, S.~Shenker, H.~Sturgis,
   D.~Swinehart, and D.~Terry.
@@ -342,11 +347,6 @@ P.~S. Dodds and D.~J. Watts.
 W.~E. Donath and A.~J. Hoffman.
 \newblock Lower bounds for the partitioning of graphs.
 \newblock {\em IBM J. Res. Dev.}, 17(5):420--425, Sept. 1973.
-
-\bibitem{doucet2000sequential}
-A.~Doucet, S.~Godsill, and C.~Andrieu.
-\newblock On sequential monte carlo sampling methods for bayesian filtering.
-\newblock {\em Statistics and computing}, 10(3):197--208, 2000.
 
 \bibitem{PhysRevE.72.}
 J.~Duch and A.~Arenas.
@@ -396,11 +396,6 @@ M.~Fatemi and L.~Tokarchuk.
 S.~Fortunato.
 \newblock Community detection in graphs.
 \newblock {\em Physics Reports}, 486(3-5):75 -- 174, 2010.
-
-\bibitem{fortunato2010community}
-S.~Fortunato.
-\newblock Community detection in graphs.
-\newblock {\em Physics reports}, 486(3):75--174, 2010.
 
 \bibitem{Fortunato:2007}
 S.~Fortunato and M.~Barthelemy.
@@ -524,12 +519,6 @@ M.~B. Hastings.
 \newblock Community detection as an inference problem.
 \newblock {\em Phys. Rev. E}, 74:035102, Sep 2006.
 
-\bibitem{hastings1970monte}
-W.~K. Hastings.
-\newblock Monte carlo sampling methods using markov chains and their
-  applications.
-\newblock {\em Biometrika}, 57(1):97--109, 1970.
-
 \bibitem{Havemann2010}
 F.~Havemann, M.~H. 0003, A.~Struck, and J.~Gläser.
 \newblock Identification of overlapping communities and their hierarchy by
@@ -541,6 +530,12 @@ D.~He, D.~Liu, W.~Zhang, D.~Jin, and B.~Yang.
 \newblock Discovering link communities in complex networks by exploiting link
   dynamics.
 \newblock {\em CoRR}, abs/1303.4699, 2013.
+
+\bibitem{henzinger1998computing}
+M.~R. Henzinger, P.~Raghavan, and S.~Rajagopalan.
+\newblock Computing on data streams.
+\newblock Technical report, Technical Note 1998-011, Digital Systems Research
+  Center, Palo Alto, CA, 1998.
 
 \bibitem{HlaouiW06}
 A.~Hlaoui and S.~Wang.
@@ -766,6 +761,13 @@ F.~Li, J.~He, G.~Huang, Y.~Zhang, and Y.~Shi.
 \newblock {\em Procedia Computer Science}, 29(0):432--442, 2014.
 \newblock 2014 International Conference on Computational Science.
 
+\bibitem{lim2015mascot}
+Y.~Lim and U.~Kang.
+\newblock Mascot: Memory-efficient and accurate sampling for counting local
+  triangles in graph streams.
+\newblock In {\em Proceedings of the 21th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, pages 685--694. ACM, 2015.
+
 \bibitem{Lin:2008}
 Y.-R. Lin, Y.~Chi, S.~Zhu, H.~Sundaram, and B.~L. Tseng.
 \newblock Facetnet: A framework for analyzing communities and their evolutions
@@ -893,11 +895,6 @@ M.~E. Newman.
 \newblock Analysis of weighted networks.
 \newblock {\em Physical review E}, 70(5):056131, 2004.
 
-\bibitem{newman2004fast}
-M.~E. Newman.
-\newblock Fast algorithm for detecting community structure in networks.
-\newblock {\em Physical review E}, 69(6):066133, 2004.
-
 \bibitem{newman2006modularity}
 M.~E. Newman.
 \newblock Modularity and community structure in networks.
@@ -937,6 +934,11 @@ A.~Y. Ng, M.~I. Jordan, and Y.~Weiss.
 \newblock On spectral clustering: Analysis and an algorithm.
 \newblock In {\em Advances in Neural Information Processing Systems 14}, pages
   849--856. MIT Press, 2001.
+
+\bibitem{pone.0091431}
+N.~P. Nguyen, T.~N. Dinh, Y.~Shen, and M.~T. Thai.
+\newblock Dynamic social community detection and its applications.
+\newblock {\em PLOS ONE}, 9(4):1--18, 04 2014.
 
 \bibitem{niwattanakul2013using}
 S.~Niwattanakul, J.~Singthongchai, E.~Naenudorn, and S.~Wanapu.
@@ -1014,12 +1016,6 @@ P.~Pons and M.~Latapy.
   {\em Lecture Notes in Computer Science}, pages 284--293. Springer Berlin
   Heidelberg.
 
-\bibitem{pons2005computing}
-P.~Pons and M.~Latapy.
-\newblock Computing communities in large networks using random walks.
-\newblock In {\em International Symposium on Computer and Information
-  Sciences}, pages 284--293. Springer, 2005.
-
 \bibitem{Pothen:1997}
 A.~Pothen.
 \newblock Graph partitioning algorithms with applications to scientific
@@ -1090,12 +1086,6 @@ M.~Rosvall and C.~T. Bergstrom.
   in complex networks.
 \newblock {\em Proceedings of the National Academy of Sciences},
   104(18):7327--7331, 2007.
-
-\bibitem{rosvall2007information}
-M.~Rosvall and C.~T. Bergstrom.
-\newblock An information-theoretic framework for resolving community structure
-  in complex networks.
-\newblock {\em PNAS}, 104(18):7327--7331, 2007.
 
 \bibitem{Rosvall290}
 M.~Rosvall and C.~T. Bergstrom.
@@ -1305,11 +1295,6 @@ K.~Wakita and T.~Tsurumi.
 A.~Wald.
 \newblock On cumulative sums of random variables.
 \newblock {\em The Annals of Mathematical Statistics}, 15(3):283--296, 1944.
-
-\bibitem{wasserman1994social}
-S.~Wasserman and K.~Faust.
-\newblock {\em Social network analysis: Methods and applications}, volume~8.
-\newblock Cambridge university press, 1994.
 
 \bibitem{Watts-1998}
 D.~Watts and S.~Strogatz.

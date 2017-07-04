@@ -1,4 +1,4 @@
-\vspace{-3mm}
+%\vspace{-3mm}
 
 \section{Introduction}
 
@@ -8,34 +8,59 @@
 %\item As mentioned earlier community detection algorithms are computationally expensive and hence running them on large graphs could be very expensive. Our algorithm is designed in such a way that community detection algorithm is executed on a small scale and then community of a new node is decided incrementally. We thereby obtain a representative cluster structure which is computationally much less expensive. 
 %\end{enumerate}
 \if{0}
-Sampling has been a fundamental part of statistics in is widely used in cases where it is difficult to perform analysis on the whole population. With proliferation of large scale graph data it is often required to measure properties of a large graph which are computationally very expensive. An obvious solution is to obtain a smaller representative sample of the graph and measure its properties assuming that the result would be similar to the original. But how to obtain a good representative sample? The question was first proposed in \cite{leskovec2006sampling} and the researchers have subsequently come up with several sampling algorithms \cite{ahmed2010reconsidering,maiya2010sampling,rasti2009respondent,ribeiro2010estimating}. Most of these works are mainly aimed at preserving specific graph properties. In \cite{maiya2010sampling} the authors argue that it is difficult to obtain a universally representative sample which preserves all the graph properties. 
+Sampling has been a fundamental part of statistics and is widely used in cases where it is difficult to perform analysis on the whole population. With the proliferation of large-scale graph data it is often required to measure properties of a large graph which are computationally very expensive. An obvious solution is to obtain a smaller representative sample of the graph and measure its properties assuming that the result would be similar to the original. But how to obtain a good representative sample? The question was first proposed in~\cite{leskovec2006sampling} and researchers have subsequently come up with several sampling algorithms~\cite{ahmed2010reconsidering,maiya2010sampling,rasti2009respondent,ribeiro2010estimating}. Most of these works are mainly aimed at preserving specific graph properties. In~\cite{maiya2010sampling} the authors argue that it is difficult to obtain a universally representative sample which preserves all the graph properties. 
 
 Another interesting observation is that most of the real-world graphs evolve over time with new nodes and edges being added to the graph. Such graphs are represented through a streaming graph model whereby the 
-\fi
+
 
 
 Nowadays graphs are so large that their analysis in entirety can be intractable and impractical. How then one should proceed in analyzing and mining these graphs? Traditional approaches include designing more efficient algorithms or leveraging computing power through parallelization or distributed computing. Unfortunately, these existing methods are not always easily available as an option. Another approach that has received recent attention is the technique of {\em sampling}~\cite{leskovec2006sampling}.
+\fi
+%Although data sampling is exhaustively studied in statistics~\cite{doucet2000sequential,hastings1970monte}, 
+Sampling from {\em static graphs} has been studied extensively~\cite{leskovec2006sampling,gjoka2010walking,maiya2010sampling,rasti2009respondent,ribeiro2010estimating}. However when it comes to the case of sampling from {\em streaming graphs}~\cite{henzinger1998computing} (where nodes/edges arrive in discrete time intervals), there is limited study~\cite{aggarwal2011outlier,ahmed2014network,lim2015mascot,de2016tri}. On the other hand, existing graph sampling methods are mostly designed for preserving general structural properties (such as degree distribution, clustering coefficient etc.) of the original graph in the sample. However, researchers are reaching a consensus that it is impossible for any sampling method to produce a universal representation that can preserve {\em all} sorts of graph properties of the original graph~\cite{maiya2010sampling}; rather graph sampling should be {\em application specific}. 
+%\textcolor{blue}{
+Ideally results obtained while simulating a process on a well-represented sample should be a good estimate of the same when simulated on the original graph.
+%} 
+For instance, sampling method 
+%\noteng{Why should sampling method be designed for information diffusion, give example??} 
+designed for information diffusion should preserve the hubs (high-degree nodes) in the sample; whereas sampling for outbreak detection (such as disease outbreak) should preserve the nodes with high local clustering coefficient.
 
-Although data sampling is exhaustively studied in statistics~\cite{doucet2000sequential,hastings1970monte}, sampling from graphs has got only limited attention~\cite{gjoka2010walking,maiya2010sampling,rasti2009respondent,ribeiro2010estimating}. Moreover, when it comes to the case of sampling from {\em streaming graphs} (where edges arrive in discrete time intervals) there is hardly any work beside~\cite{aggarwal2011outlier,ahmed2014network}. 
-Existing graph sampling methods are mostly designed for {\em static graphs} and aim at preserving general structural properties (such as degree distribution, clustering coefficient etc.) of the original graph in the sample. However we posit that it is impossible for any sampling method to produce a universal representation that can preserve {\em all} sorts of graph properties of the original graph; rather graph sampling should be {\em application specific}. For instance, sampling method designed for information diffusion should preserve the hubs (high-degree nodes) in the sample; whereas sampling for outbreak detection (such as disease outbreak) should preserve the nodes with high local clustering coefficient.
+In this paper, we propose a novel sampling algorithm that preserves the original {\em community structure}\footnote{In this paper, we consider disjoint community structure.} of streaming graphs. 
+~\cite{tong2016novel} claimed that their proposed Green Algorithm (GA) can generate sample that preserves the community structure (as we attempt here); however it is explicitly designed for {\em static graphs}. 
+%{\color{green}however they did not verify their claim by matching the community structure of sampled graph with that of the original graph.} 
+%although they did not produce the community structure explicitly \textcolor{blue}{with one needing to  simulate a community detection algorithm to detect the communities}. 
+%\noteng{Not clear}\textcolor{blue}{Re-written.}
+%A community in a graph is a cluster of nodes more densely connected among themselves than to others~\cite{wasserman1994social}. \iffalse{}Identifying community structure is important, as they represent the {\em mesoscopic view} of the graph and often correspond to real social groups, functional groups, or demographic similarity  etc.~\cite{girvan2002community}.\fi 
+A sample consisting of members from diverse communities has several important applications and hence the ability to construct one is of immense importance. For instance, in marketing, surveys often seek to construct stratified
+samples that collectively represent the diversity of the population \cite{Kolaczyk:2009}. 
+%Many popular community detection algorithms considered to be accurate are also computationally expensive~\cite{danon2005comparing,fortunato2010community}. Representative graph sampling, then, provides a potential solution for inferring and approximating global, latent properties such as these in large graphs. By sampling a representative subgraph, analysis can be performed on the sample instead of the larger graph. Results could, then, be generalized
+%to the larger population, which, in this case, is the original graph. 
+%However, if one still intends to run an accurate and computationally-expensive community detection algorithm on large graphs
+%and is confused which one algorithm to choose, she can run several potential algorithms on the sample graph and choose one that performs best. Then that algorithm can be used to detect communities from the original large graph.
 
-In this work, we propose a novel sampling algorithm that preserves the original {\em community structure}\footnote{In this work, we consider disjoint community structure.}. A community in a graph
-is a cluster of nodes more densely connected among themselves than to others \cite{wasserman1994social}. Identifying community structure is important, as they represent the {\em mesoscopic view} of the graph and often correspond to real social groups, functional groups, or demographic similarity etc.~\cite{girvan2002community}. The ability to easily construct a sample consisting of members from diverse communities has several important applications. For instance, in marketing, surveys often seek to construct stratified
-samples that collectively represent the diversity of the population \cite{Kolaczyk:2009}. Many popular community detection algorithms considered to be accurate are also computationally expensive~\cite{danon2005comparing,fortunato2010community}. Representative graph sampling, then, provides a potential solution for inferring and approximating global, latent properties such as these in large graphs. By sampling a representative subgraph, analysis can be performed on the sample instead of the larger graph. Results could, then, be generalized
-to the larger population, which, in this case, is the original graph. However, if one still intends to run an accurate and computationally-expensive community detection algorithm on large graphs
-and is confused which one algorithm to choose, she can run several potential algorithms on the sample graph and choose one that performs best. Then that algorithm can be used to detect communities from the original large graph.
-
-{\bf Our contributions:} We propose~\compas, a novel sampling algorithm on streaming graph (most realistic graph representation \cite{aggarwal2011outlier,ahmed2014network}) that is capable of
-representing and inferring community structure in the original graph. \compas~systematically interweaves graph sampling and community detection so that one gets benefits from the other to produce a more representative sample. In particular, our contributions are three-fold:
+ {\bf Our contributions:} In this paper, we propose~\compas, a novel sampling algorithm on streaming graph (most realistic graph representation \cite{aggarwal2011outlier,ahmed2014network}) that is capable of
+ preserving 
+ %\noteng{preserving??} 
+ the community structure of the original graph. {
+ %\color{green}
+\compas~is designed based on a novel hypothesis that  graph sampling and community detection can be interwoven together so that one gets benefits from the other} 
+ %\noteng{This is a dubious claim} 
+ to produce a more representative sample. In particular, our contributions are three-fold:
 \begin{itemize}
-\item To our knowledge \compas~is the first {\em community-preserving} sampling method for {\em streaming graphs}. Along with the sample, \compas~also produces the community structure of the sample.
+\item To the best of our knowledge \compas~is the first {\em community-preserving} sampling method for {\em streaming graphs}. Along with the sample, \compas~also produces the community structure of the sample.
 
-\item Empirical evidences on synthetic graph and different real-world graph demonstrate that the sample generated by \compas~is not only the most representative to preserve the community structure, but also is quite competitive in reproducing the other general graph properties. %\TODO{Report numbers here. For instance, our results are x\% better in preserving the community structure compared to the most competitive baseline. Similarly report for other properties.}
-The average performance of our algorithm reaches 85.5\% of the most informed algorithm (GA \cite{tong2016novel}) on static graphs.
+\item Empirical evidences on synthetic and real-world graphs demonstrate that the sample generated by \compas~ correctly preserves the community structure 
+%but also quite faithfully reproduces other general graph properties. %\TODO{Report numbers here. For instance, our results are x\% better in preserving the community structure compared to the most competitive baseline. Similarly report for other properties.}
+with average performance reaching 73.2\% of the most informed algorithm GA \cite{tong2016novel} on static graphs.
 
-\item We show additional benefits of \compas~through two applications -- (i) selection of right community detection algorithm for large graphs, and
+\item We show additional benefits of \compas~through an application -- 
+%(i) selection of right community detection algorithm for large graphs, and
 %(ii) message spreading in streaming graph, 
-(ii) selection of (limited) training set for online learning. We obtain a performance that is within 95.6\% and 90.5\% of the most informed algorithm (i.e., GA) available for static graphs for first and second applications respectively.
+ selection of (limited) training set for online learning. We obtain a performance that is within \iffalse 95.6\% and\fi 90.5\% of the most informed algorithm GA available for static graphs. %\tb{
+ For reproducibility, we have shared the resources (including code) related to our work in an anonymous link \cite{si}.
+ %}
+%\item \tb{For reproducibility, we will publicly share the resources (inlcuding code) once the paper gets accepted}   
+ \iffalse for first and second applications respectively.\fi
 %\TODO{Are the benefits compared to some baselines? Then again report improvements here.}
 \end{itemize}
 

@@ -1,37 +1,9 @@
 \section{Problem Definition}
 \label{prob_def}
 
-\begin{table}[!t]
-\centering
-\caption{\label{notation}Important notations used in this paper.}
-\begin{tabular}{l | l}
-\hline
-{\bf Notation} & {\bf Description} \\\hline
-$S$ & Graph stream $\{e_1,e_2,
-\dots\}$ \\
-$n$ & Required sample size (in terms of nodes)\\
-$G_s$ & $G_s=(V_s,E_s)$, final graph sample\\ 
-$C_s$ & Community structure of $G_s$\\
-%$\beta$ & Community-centric edge density threshold\\
-$\alpha$ & Initial fraction of nodes inserted\\
-$Algo$ & Algorithm used to detect initial community structure\\
-$N(x)$ & Neighbor of $x$\\
-$P(x)$ & Parent of $x$\\
-$\mathcal{H}$ & Buffer consisting of $\mathcal{H}_c$ and $\mathcal{H}_p$ \\ 
-$\mathcal{H}_c$ & Dictionary tracking number of times each node is encountered\\
-$\mathcal{H}_p$ & Dictionary storing the recent parent of each node\\
-$n_d$ & Size of $\mathcal{H}$ \\
-$D_s$ & Sum of degree of all nodes inside set $s$ \\
-$C(v)$ & Community of node $v$\\\hline
-
-\end{tabular}
-\end{table}
-
-
-
 We consider a graph stream $S$ represented by a set of edges $e_1, e_2,...$ with each edge $e_i$ arriving at 
 $i^{th}$ (discrete) time step. A graph $G$ at time $t$ is the aggregate of all the edges arriving till time $t$. 
-$V$ represents the set of unique nodes present in the graph $G$. The community structure of the graph $G$ is represented by $C$. We consider $G$ to be both unweighted and undirected (see Table \ref{notation} for the notations).
+$V$ represents the set of unique nodes present in  $G$. The community structure of $G$ is represented by $C$. We consider $G$ to be both unweighted and undirected. 
 %We further assume that the edges are unique and they arrive in an order $O$. 
 
 %\subsection{Sampling problem}
