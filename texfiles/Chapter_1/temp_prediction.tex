@@ -108,7 +108,7 @@ Figure~\ref{fig2} shows how we formulate this measure using the Jaccard similari
  Hence we consider the similarity value of $0.2$ as the threshold for calculating the lag. For our prediction framework the corresponding value of the lag acts as 
  the window for fitting the ARIMA model.
   
-  Let the size of the window be $w$ and we want to predict the value of the time series at time $t$. To our aim we consider the time series of the previous $w$ 
+  Let the size of the window be $w$ and we want to predict the value of the time series at time $t$. To this aim we consider the time series of the previous $w$ 
   time steps consisting of the values between time steps $t-1-w$ to $t-1$ and fit the ARIMA model to it and obtain its value at time step $t$. 
  We repeat this procedure for forecasting at every value of $t$. Thus, the time step $t$ is the test point and the series of points $t-w-1$ to $t-1$ form the 
   training set. One can imagine this process as a sliding window of size $w$ which is used for learning the auto-regressive equation and the point that falls immediately 
