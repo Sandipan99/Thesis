@@ -1,26 +1,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Properties of the dataset used.}}{48}{table.105}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Network property and the fraction of predictions with percentage error $\leq 20\%$ without (with) spectrogram analysis. The cases where more than $80\%$ of the points have prediction error $\leq 20\%$ have been highlighted in bold font and the cases where on using spectrogram analysis the improvement is more than $5\%$ have been underlined.}}{57}{table.118}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Properties of the dataset used.}}{48}{table.102}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Network property and the fraction of predictions with percentage error $\leq 20\%$ without (with) spectrogram analysis. The cases where more than $80\%$ of the points have prediction error $\leq 20\%$ have been highlighted in bold font and the cases where on using spectrogram analysis the improvement is more than $5\%$ have been underlined.}}{57}{table.115}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Datasets used for evaluation.}}{79}{table.154}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of the D-statistics (the lower, the better) values of the topological measures for Facebook. Top two values for each average result is highlighted.}}{80}{table.159}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Summary of the D-statistics values of the topological measures for arxiv hep-th graph.}}{80}{table.161}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Summary of the $D$-statistics (the lower, the better) values of the topological measures for Youtube dataset.}}{80}{table.162}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Summary of the D-statistics values of the topological measures for Com-dblp dataset.}}{81}{table.164}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Summary of the D-statistics values of the topological measures for LFR graph.}}{82}{table.165}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Purity (PU), NMI and ARI values between the ground-truth and community structure obtained from individual sampling algorithms for all datasets.}}{83}{table.167}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Performance of SVM using the training set obtained from sampling methods.\vspace {2mm}}}{85}{table.171}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Datasets used for evaluation.}}{79}{table.151}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of the D-statistics (the lower, the better) values of the topological measures for Facebook. Top two values for each average result is highlighted.}}{80}{table.156}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Summary of the D-statistics values of the topological measures for arxiv hep-th graph.}}{80}{table.158}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Summary of the $D$-statistics (the lower, the better) values of the topological measures for Youtube dataset.}}{80}{table.159}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Summary of the D-statistics values of the topological measures for Com-dblp dataset.}}{81}{table.161}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Summary of the D-statistics values of the topological measures for LFR graph.}}{82}{table.162}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Purity (PU), NMI and ARI values between the ground-truth and community structure obtained from individual sampling algorithms for all datasets.}}{83}{table.164}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Performance of SVM using the training set obtained from sampling methods.\vspace {2mm}}}{85}{table.168}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the notations used.}}{93}{table.182}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of the notations used.}}{93}{table.179}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces General information of the dataset.}}{121}{table.237}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.\vspace {3mm}}}{130}{table.259}
-\contentsline {table}{\numberline {6.3}{\ignorespaces The F-statistics value for all the features used for predicting the long-term citation of the paper.}}{133}{table.267}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Features used for detecting anomalies.}}{143}{table.286}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Jaccard similarity between the cases identified as discordant by the different metrics.}}{152}{table.310}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since last assignment).\vspace {3mm} }}{156}{table.320}
-\contentsline {table}{\numberline {6.7}{\ignorespaces True positive (TP) and true negative (TN) values across accepted and rejected papers measured for different values of $k$. Results are reported for JHEP and JSTAT datasets.}}{164}{table.334}
+\contentsline {table}{\numberline {6.1}{\ignorespaces General information of the dataset.}}{121}{table.234}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Mean values of percentages of various categories of words in review reports of high and low cited papers where the means differ significantly.\vspace {3mm}}}{130}{table.256}
+\contentsline {table}{\numberline {6.3}{\ignorespaces The F-statistics value for all the features used for predicting the long-term citation of the paper.}}{133}{table.264}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Features used for detecting anomalies.}}{143}{table.283}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Jaccard similarity between the cases identified as discordant by the different metrics.}}{152}{table.307}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since last assignment).\vspace {3mm} }}{156}{table.317}
+\contentsline {table}{\numberline {6.7}{\ignorespaces True positive (TP) and true negative (TN) values across accepted and rejected papers measured for different values of $k$. Results are reported for JHEP and JSTAT datasets.}}{164}{table.331}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
