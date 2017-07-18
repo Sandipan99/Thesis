@@ -1,7 +1,7 @@
 \noindent
 %\section{Broadcast algorithm based on the diffusion model}
 We now proceed to propose a broadcast algorithm based on the information diffusion model proposed earlier. 
-Note that contrary to the general assumption that size of a message is small enough to be transfered from one node to other 
+Note that contrary to the general assumption that size of a message is small enough to be transferred from one node to other 
 on the short durations of contacts between the nodes, we consider a more stringent case that is, the duration of a contact 
 between the nodes is not always sufficient for the transfer and therefore the message might need to be 
 segmented/divided into sub-parts and sent individually. Further note that our proposed diffusion model is a natural fit (which we elaborate on next) as the 
@@ -21,7 +21,7 @@ We consider that a message $\mathcal{M}$ is divided into a set of $m$ packets, i
  Packets in $\mathcal{M}$ are grouped into a set $\mathcal{S}$ of $s$ segments, 
 where each segment consists of $k = m/s$ packets (i.e., $s$ can take only those values for which $m \bmod s = 0$). 
 For instance, if $\mathcal{M}$ constitutes of 4 packets and 2 segments then each of the segment is composed of 2 packets. 
-Note that in this paper we mostly consider that there is only a single segment in the message ($m=k$) unless specified otherwise.
+%Note that we will mostly consider that there is only a single segment in the message ($m=k$) unless specified otherwise.
 
 %\vspace{-5.9mm}
 \subsection{Transfer protocol}

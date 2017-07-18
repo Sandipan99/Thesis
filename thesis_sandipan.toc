@@ -69,8 +69,8 @@
 \contentsline {subsection}{\numberline {5.6.6}Dynamic topology}{106}{subsection.213}
 \contentsline {section}{\numberline {5.7}Experiment on different network topologies}{106}{section.214}
 \contentsline {subsection}{\numberline {5.7.1}Blind push on different topologies}{107}{subsection.215}
-\contentsline {subsection}{\numberline {5.7.2}Comparison of different broadcast strategies on Gnutella Topology}{110}{subsection.220}
-\contentsline {subsubsection}{\numberline {5.7.2.1}Effect of Degree on Broadcast time}{111}{subsubsection.223}
+\contentsline {subsection}{\numberline {5.7.2}Comparison of different broadcast strategies on Gnutella Topology}{109}{subsection.218}
+\contentsline {subsubsection}{\numberline {5.7.2.1}Effect of Degree on Broadcast time}{110}{subsubsection.223}
 \contentsline {section}{\numberline {5.8}Summary of the chapter}{111}{section.225}
 \contentsline {chapter}{\numberline {6}Application of temporal network analysis in peer-review network}{113}{chapter.226}
 \contentsline {section}{\numberline {6.1}Introduction}{113}{section.227}
