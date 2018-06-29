@@ -16,23 +16,50 @@ GA   & {\bf 1.0} & {\bf 0.8} & {\bf 0.8} & {\bf 1.0} & {\bf 1.0} & & {\bf 0.53} 
 \end{tabular}}
 \end{table}
 \fi
+\section{Insights}
+In this section, we present certain micro-scale insights illustrating why \compas~outperforms the other algorithms in generating the community structure. 
+
+(i) \textbf{\compas~ admits high fidelity nodes and improves the modularity of the sample}: We observe how modularity, average clustering coefficient and average degree of the sample change over time as the edges arrive in a stream (refer to figure \ref{fig:discuss}(a)). All these factors increase over time. Here we report the results from the point the sample size ($n$) is reached for the first time up to the end of the stream.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/bias_nodes.eps}
+\vspace{4mm}
+\caption{\label{fig:discuss}(a) Modularity and average clustering coefficient of the sample as it evolves over time, (inset) evolution of average degree of the sample over time.(b) Average degree of nodes in each bin (total time for streaming is divided into 500 equi-sized buckets), (inset) fraction of nodes in each bucket of the sample obtained using \compas.  The experiment is performed on Facebook dataset.\vspace{4mm}}
+%\vspace{-3mm}
+\end{figure}
+
+(ii) \textbf{\compas~ retains a large fraction of intra-community edges ensuring a better community structure}:  We observe that intra-community edges in the sample account for $\sim$ 80\% of all the edges while in the original network the corresponding value is $\sim$ 67\%. 
+
+(iii) \textbf{\compas~ produces a sample that has an edge density which corresponds highly to the original graph}: Note that \compas~is node-based, 
+and $G_s$ consists of only those edges which
+arrive {\em after} their corresponding nodes appear in $G_s$ - hence an efficient \compas~would 
+insert the nodes  as early as possible. We compare the number of edges in $G_s$ against that in the subgraph ($\hat{G}_s$) induced by the sampled nodes in the original graph.
+We observe that on average $G_s$ retains $\sim71$\% of the edges of $\hat{G}_s$. 
+This indicates that the insertion time of nodes (in $G_s$) compared to their first 
+appearance in the stream is early as $G_s$ is 
+ able to retain most of the possible edges. 
+ 
+(iv) \textbf{\compas~samples high fidelity nodes uniformly over the time stretch}:
+\compas~ samples more high fidelity nodes in time stretches where such nodes appear more frequently compared to the other stretches. To this purpose we split the stream into a set of buckets and a node is placed into a bucket based on the time it first arrived and 
+calculate the average degree of each bucket (refer to figure \ref{fig:discuss}(b)). We observe that the average degree drops as we move from the first toward the subsequent buckets. We then consider the sample obtained from \compas~and calculate the fraction of sampled nodes in each bucket (figure \ref{fig:discuss}(a)(inset)). We observe a similar pattern indicating that \compas~ is not only able to sample the high degree nodes but the rate of sampling from each is roughly proportional to the average degree of each bucket.
 
 
 %\subsection{Selecting training set for online learning}
 \section{Applications of \compas~ in Online Learning}
 In online learning, sometimes memory is limited and it is required to train the model on limited number of instances. It is then important to choose a training set in such a way that it consists of members from most parts of the original dataset.
 
-We hypothesize that more diverse the chosen set, better would be the performance. \compas~ is useful in such cases since it tries to sample from several communities, hence improving the diversity of the training set. To this end, we consider Wiki-Rfa\footnote{https://snap.stanford.edu/data/wiki-RfA.html} \cite{west2014exploiting}, a streaming signed graph in which nodes represent Wikipedia members and edges (with time-stamp) represent votes. Each vote is typically accompanied by a short comment. The task is to predict the vote (+1, 0, -1) of an incoming edge based on the textual features -- (i) word count, (ii) sentiment value, and (iii) LIWC features of the statement corresponding to the edge. We allow training instances to be included till a certain time period $t$ (first 75\% of the edges are allowed to enter) and run the sampling algorithms in parallel. However not all instances can be considered for training due to the memory constraint. We assume $n$, the sample size as the allowed training size and obtain sampled training set from individual sampling algorithms. We train SVM with linear kernel (see \cite{si} for other classifiers) on each sampled training set, and predict the labels (votes) of those instances coming after $t$. Table \ref{comp_wiki} shows that GA and \compas~perform the best in terms of AUC and F-Score. 
- This once again emphasizes  that \compas~selects most representative training instances for (restricted) online learning.
+We hypothesize that more diverse the chosen set, better would be the performance. \compas~ is useful in such cases since it tries to sample from several communities, hence improving the diversity of the training set. To this end, we consider Wiki-Rfa\footnote{https://snap.stanford.edu/data/wiki-RfA.html} \cite{west2014exploiting}, a streaming signed graph in which nodes represent Wikipedia members and edges (with time-stamp) represent votes. Each vote is typically accompanied by a short comment. The task is to predict the vote (+1, -1) of an incoming edge based on the textual features -- (i) word count, (ii) sentiment value, and (iii) LIWC features of the statement corresponding to the edge. We allow training instances to be included till a certain time period $t$ (first 75\% of the edges are allowed to enter) and run the sampling algorithms in parallel. However not all instances can be considered for training due to the memory constraint. We assume $n$, the sample size as the allowed training size and obtain sampled training set from individual sampling algorithms. We train SVM with linear kernel and logistic regression on each sampled training set, and predict the labels (votes) of those instances coming after $t$. Table \ref{comp_wiki} shows that GA and \compas~perform the best in terms of AUC and F-Score. 
+ This once again emphasizes  that \compas~selects most representative training instances for (restricted) online learning. Although these initial results are encouraging, detailed analysis across datasets and classification methods needs to be performed before universality claims can be made.
  \begin{table}[!t]
 \centering
-\caption{\label{comp_wiki} Performance of SVM using the training set obtained from sampling methods.\vspace{2mm}}
+\caption{\label{comp_wiki} Performance of SVM, logistic regression using the training set obtained from sampling methods.\vspace{2mm}}
 %\scalebox{0.8}{
 \begin{tabular}{c|c|c|c|c|c|c}
 \cline{1-7}
  & \compas & SN & SE & SBFS & PIES & GA \\\hline
-AUC & \textbf{0.48} & 0.31 & 0.25 & 0.28 & 0.36 & \textbf{0.53} \\
-F-Score & \textbf{0.61} & 0.35 & 0.28 & 0.31 & 0.43 & \textbf{0.64} \\
+AUC & \textbf{0.48, 0.46} & 0.31, 0.28 & 0.25, 0.21 & 0.28, 0.24 & 0.36, 0.32 & \textbf{0.53, 0.49} \\
+F-Score & \textbf{0.61, 0.58} & 0.35, 0.32 & 0.28, 0.25 & 0.31, 0.28 & 0.43, 0.35 & \textbf{0.64, 0.60} \\
 \hline
 \end{tabular}
 \vspace{4mm}

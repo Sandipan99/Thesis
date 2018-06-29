@@ -1,8 +1,8 @@
 \noindent
-\section{Single vs multiple referee system}
+\subsection{Single vs multiple referee system}
 \label{mvs}
 %\mycheck{Put in significance test results....}
-In this section we systematically compare the papers which are reviewed by multiple peers (which we call multi-refereed) with those which are reviewed by a single peer 
+We systematically compare the papers which are reviewed by multiple peers (which we call multi-refereed) with those which are reviewed by a single peer 
 (which we call single-refereed). 
 To this aim 
 we first compare the long term citations of both of these classes of papers. We further analyze the review reports received from the peers and check whether 
@@ -15,16 +15,8 @@ the reviewers disagreed in their opinion about the paper.
  \vspace{3mm}
  \end{figure}
 
-\begin{figure}
- \centering
- \includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1.eps}
- \caption{\label{citation:jstat} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JSTAT dataset.}
- \vspace{3mm}
- \end{figure}
 
-
-
-\subsection{Citation}
+\subsubsection{Average citation}
 
 We first look into the long term citations of the papers which are reviewed by multiple peers as well as those reviewed by a single peer. 
 We consider the accepted papers and the rejected papers separately. 
@@ -48,24 +40,21 @@ mean citations for multi-refereed (10.92) and single-refereed (6.86) papers are 
 These results together 
 indicate that when working in groups the reviewers often fail (on average) to correctly judge the quality of the paper.
 
+
+
+
 \begin{figure}
  \centering
- \includegraphics[scale = 0.25]{./texfiles/Chapter_4/cikm_17/figures/best_paper.eps}
- \caption{\label{fig:best} Fraction of multi-refereed papers in the top $k$ most cited papers where $k = 1,50,100,500,1000,2000$.}
- \vspace{4mm}
-\end{figure}
+ \includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1.eps}
+ \caption{\label{citation:jstat} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JSTAT dataset.}
+ \vspace{3mm}
+ \end{figure}
 
-\begin{figure*}
-\centering
-\begin{tabular}{cc}
-\includegraphics[scale = 0.26]{./texfiles/Chapter_4/cikm_17/figures/jhep_all.eps} & \includegraphics[scale = 0.26]{./texfiles/Chapter_4/cikm_17/figures/jstat_all.eps}
-\end{tabular}
-\caption{\label{disagree:jhep} Fraction of cases where the reviewers disagreed with respect to (1) length (2) sentiment and (3) content for (a) JHEP and (b) JSTAT 
-  datasets.}
-  \vspace{4mm}
-\end{figure*}  
 
-\subsection{Top cited papers}
+
+
+
+\subsubsection{Top citations}
 
 The above results would indicate that it is always better to assign a single reviewer instead of multiple reviewers. However, 
 a deeper and a more microscopic analysis portrays a very different picture. 
@@ -79,7 +68,7 @@ We also observe that for 100 least cited papers only 26 of them are
 multi-reviewed which again indicates single-review may lead to several unappealing entry. 
 %This indicates that on average single-reviewed papers might be getting more citation but they also constitute the majority of least cited ones.  \mycheckng{Cant we draw a graph checking top 10/top 100 etc. and this should be put just before conflict}
 
-\subsection{Conflict in review reports}
+\subsubsection{Conflict in review reports}
 There may be various reasons behind the average under-performance of multiple reviewer system, 
 one of which could be the difference in opinions among the reviewers whereby the paper may have got accepted despite 
 a subset of  reviewers  not recommending the paper.
@@ -99,30 +88,41 @@ prime intention.
 %to check whether the peers agree.  \mycheckng{are we working only on accepted papers - mention that explicitly}
 
 
-\subsubsection{Length}
+\subsubsection*{(1) Length}
 
 We start by comparing the length of the review reports sent by each peer assigned for a given paper. Our hypothesis is that if the peers have a similar 
 opinion on the assigned paper, the length of their reports would be typically close. To this aim, we calculate the standard deviation of the lengths 
 (i.e., number of words) of the reviewer reports for every round of review for each paper and use it as a metric to judge whether a particular round is discordant 
 (i.e., the reviewers disagreed) or concordant (i.e., the reviewers agreed). If the standard deviation is greater than the length of the smallest-length review, 
 we classify the review round as discordant. Otherwise, we classify the review round as concordant.
-In figure~\ref{disagree:jhep}(1) we plot the fraction of multi-refereed papers where the peers disagreed in case of JHEP. The corresponding result for 
-JSTAT is shown in figure~\ref{disagree:jstat}(1). We observe that for JHEP the peers disagree in almost $35\%$ of the cases in the first round of the review 
+In figure~\ref{disagree:jhep} {\bf(Left)}(1) we plot the fraction of multi-refereed papers where the peers disagreed in case of JHEP. The corresponding result for 
+JSTAT is shown in figure~\ref{disagree:jhep} {\bf(Right)}(1). We observe that for JHEP the peers disagree in almost $35\%$ of the cases in the first round of the review 
 for the papers which are finally accepted and close to $30\%$ for the papers which are rejected. The corresponding numbers for JSTAT are $30.5\%$ and $35.7\%$ 
-respectively. In fact, even in the second round of reviews the peers tend to disagree as well (refer to figure~\ref{disagree:jhep}(1) and~\ref{disagree:jstat}(1)).
+respectively. In fact, even in the second round of reviews the peers tend to disagree as well (refer to figure~\ref{disagree:jhep} {\bf(Left)}(1) 
+and~\ref{disagree:jhep} {\bf(Right)}(1)).
 
-\subsubsection{Sentiment}
+\subsubsection*{(2) Sentiment}
 
 We next analyze the sentiments latent in the review reports. If for a document all the reviewers are of positive opinion or of negative opinion we 
 consider it as a concordant case. If the opinion of at least one of the reviewers differ from the rest we consider it as discordant. 
-To calculate the sentiment score of the reports we use nltk-sentiwordnet toolkit\footnote{http://www.nltk.org/}. In figures~\ref{disagree:jhep}(2) and~\ref{disagree:jstat}(2) 
+To calculate the sentiment score of the reports we use nltk-sentiwordnet toolkit\footnote{http://www.nltk.org/}. In figures~\ref{disagree:jhep} {\bf(Left)}(2) 
+and~\ref{disagree:jhep} {\bf(Right)}(2) 
 we plot the fraction of discordant cases for both the accepted and rejected papers for JHEP and JSTAT respectively. We observe that for JHEP, across the two versions on average 
 the referees 
 disagree in around 20\% of the cases for the accepted papers and in around 30\% of the cases for the rejected papers. In case of JSTAT the disagreement is even higher 
 with the corresponding numbers being around 40\% and 35\% respectively. 
 
 
-\subsubsection{Content}
+\begin{figure}
+ \centering
+ \includegraphics[scale = 0.25]{./texfiles/Chapter_4/cikm_17/figures/best_paper.eps}
+ \caption{\label{fig:best} Fraction of multi-refereed papers in the top $k$ most cited papers where $k = 1,50,100,500,1000,2000$.}
+ \vspace{4mm}
+\end{figure}
+
+
+
+\subsubsection*{(3) Content}
 
 %In multi-refereed cases although we have the content of the report, the explicit score of the reviewer is missing. 
 To further analyze if the contents in the review reports 
@@ -132,9 +132,9 @@ final round report of all the single-refereed accepted (rejected) papers. These 
 we are sure whether the review led to an acceptance (a rejection) of the paper. Next we construct the respective TF-IDF vectors corresponding to the accepted (rejected) 
 papers from the collated text. Let us call these {\em acceptance} ({\em rejection}) vectors. Finally, we compare the TF-IDF vector corresponding to each report of the 
 multi-refereed papers to check if it aligns more with
-the acceptance vector or the rejection vector. If the reviews from all the referees align to the same vector we consider it as a concordant case. Otherwise we consider 
+the acceptance vector or the rejection vector (we use cosine similarity). If the reviews from all the referees align to the same vector we consider it as a concordant case. Otherwise we consider 
 it as a discordant case. 
-In figures~\ref{disagree:jhep}(3) and~\ref{disagree:jstat}(3) we plot the fraction of discordant cases for JHEP and JSTAT respectively. We observe that for JHEP, 
+In figures~\ref{disagree:jhep} {\bf(Left)}(3) and~\ref{disagree:jhep} {\bf(Right)}(3) we plot the fraction of discordant cases for JHEP and JSTAT respectively. We observe that for JHEP, 
 across the two versions/rounds the reviewers disagree on average in almost 30\% of the cases for accepted papers and close to 25\% on average for rejected papers. 
 For JSTAT the reviewers disagree on 24\% cases in version 1 and 26\% cases in version 2 for accepted papers. The corresponding numbers for 
 the rejected papers are 17\% and 27\% respectively.
@@ -156,12 +156,20 @@ the rejected papers are 17\% and 27\% respectively.
 %  \caption{\label{disagree:jstat} Fraction of cases where the reviewers disagreed with respect to (a) length (b) sentiment and (c) content for JSTAT dataset}
 % \end{figure*}
 
-
+\begin{figure*}
+\centering
+\begin{tabular}{cc}
+\includegraphics[scale = 0.26]{./texfiles/Chapter_4/cikm_17/figures/jhep_all.eps} & \includegraphics[scale = 0.26]{./texfiles/Chapter_4/cikm_17/figures/jstat_all.eps}
+\end{tabular}
+\caption{\label{disagree:jhep} Fraction of cases where the reviewers disagreed with respect to (1) length (2) sentiment and (3) content for {\bf(Left)} JHEP and {\bf(Right)} JSTAT 
+  datasets.}
+  \vspace{4mm}
+\end{figure*}  
 
 In table~\ref{tab:jacc} we present the Jaccard similarity between the discordant cases as detected by the above three metrics (length, sentiment and content) to check 
 whether the same cases are identified by all the three metrics. 
 We observe high Jaccard similarity between cases identified as discordant by length and sentiment. This similarity is a bit lower with the cases identified as discordant 
-by content analysis.
+through content analysis.
 
 \begin{table}[]
 \centering
@@ -174,6 +182,7 @@ Length    &    1.0    &   0.63        &  0.37       \\
 Sentiment &    0.63    &   1.0        &  0.29       \\ 
 Content   &    0.37    &   0.29        &  1.0       \\ \hline
 \end{tabular}
+\vspace{4mm}
 \end{table}
 
 
@@ -185,6 +194,7 @@ Content   &    0.37    &   0.29        &  1.0       \\ \hline
  in terms of (a) length, (b) sentiment 
  and (c) content for JHEP. %We randomly selected single-reviewed papers equal in number to the concordant multi-reviewed sets for each type.
  }
+ \vspace{3mm}
 \end{figure}
 % \subsection{Deeper analysis of multi-reviewed papers}
 % \textcolor{blue}{The above results would indicate that it is always better to assign single reviewer instead of multiple reviewers. But a deeper analysis reveals a different 
@@ -195,7 +205,7 @@ Content   &    0.37    &   0.29        &  1.0       \\ \hline
 % fraction drops as we increase $k$ which indicates the least cited papers are mostly the single-reviewed ones.}
 
 %\textcolor{blue}{We previously showed that for multi-reviewed papers, often the reviewers reach consensus. If we consider the concordant (where the reviewers agreed) and discordant (where the reviewrs
-\subsection{Impact of discordance}
+\subsubsection{Impact of discordance}
 If we consider the concordant (where the reviewers agreed) and discordant (where the reviewers
 disagreed) papers separately, we observe that the concordant papers are often highly cited in the long run. In figure~\ref{con:citation} 
 we plot the cumulative distribution function 
@@ -228,6 +238,7 @@ the papers.
  \caption{\label{con:citation_dis} Cumulative distribution function of citations for single refereed papers and discordant multi-refereed papers in terms of (a) length, (b) sentiment 
  and (c) content for JSTAT.} 
  %We randomly selected single-reviewed papers equal in number to the discordant multi-reviewed sets for each type.}
-\end{figure}
+\vspace{3mm}
+ \end{figure}
 
 \medskip

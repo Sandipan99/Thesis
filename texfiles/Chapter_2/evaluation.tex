@@ -39,25 +39,21 @@ Dataset  & Facebook & arxiv hep-th & Youtube   & Dblp      & LFR     \\ \hline
 
 We perform our experiments on following five graphs  (first two are streaming graphs, and last three are static graphs):  
 
-(i) {\bf Facebook}~\cite{d1}, 
+(i) {\bf Facebook}~\cite{d1}: 
 %\footnote{konect.uni-koblenz.de/networks/facebook-wosn-links}: 
 An undirected graph where nodes (63,731) are users, and edges (817,035) are friendship links that are time-stamped;  % \TODO{Is there a ground truth community structure? Else how do you obtain communities here?} \textcolor{blue}{done}\\
 
-(ii) {\bf arxiv hep-th:}, 
- \footnote{konect.uni-koblenz.de/networks/ca-cit-HepTh}: 
+(ii) {\bf arxiv hep-th}\footnote{konect.uni-koblenz.de/networks/ca-cit-HepTh}: 
 Here nodes (22,908) are authors of arXiv's High Energy Physics papers and an edge exists between two authors if they have co-authored a paper; edges (2,444,798) are time-stamped by the publication date;% \TODO{Is there a ground truth community structure? Else how do you obtain communities here?}\textcolor{blue}{done}\\ 
  
- (iii) {\bf Youtube:}, 
-\footnote{snap.stanford.edu/data/com-Youtube.html}:
+ (iii) {\bf Youtube}\footnote{snap.stanford.edu/data/com-Youtube.html}:
 Nodes (1,134,890) represent Youtube users and edges (2,987,624) representing friendship.
 %User created groups in the network form the ground truth community structure. There are 8,385 communities in the ground truth.\\
 
-(iv) {\bf dblp:} 
-\footnote{snap.stanford.edu/data/com-DBLP.html}:
-This dataset consists of authors indexed in DBLP. The graph is same as arxiv hep-th (317,080 nodes and 1,049,866 edges);
-Publication venue defines ground truth communities. There are 13,477 communities in the ground truth.
+(iv) {\bf dblp}\footnote{snap.stanford.edu/data/com-DBLP.html}:
+This dataset consists of authors indexed in DBLP. The graph is same as arxiv hep-th (317,080 nodes and 1,049,866 edges).
 
-(v) {\bf LFR}~\cite{lancichinetti2008benchmark} This is a synthetic graph with underlying community structure implanted into it (Table \ref{tab:data}).
+(v) {\bf LFR}~\cite{lancichinetti2008benchmark}: This is a synthetic graph with underlying community structure implanted into it (Table \ref{tab:data}).
 We construct the graph with 25,000 nodes, 254,402 edges and 1,834 communities.
 %{\color{red} put \# of nodes and edges}
 %The first three datasets were presented by Yang et.~al. in \cite{yang2015defining}.
@@ -65,7 +61,7 @@ We construct the graph with 25,000 nodes, 254,402 edges and 1,834 communities.
 
 Since last three graphs are static, we consider that each edge arrives in a pre-decided (random) order, i.e., each edge has a (discrete) time of arrival. 
 The edge ordering, as we shall see, does not influence the inferences drawn from the results.
-Moreover, since first four graphs do not have any underlying ground-truth community structure, we run louvain algorithm %\cite{blondel2008fast} {\color{red} only louvain?} 
+Moreover, since first four graphs do not have any underlying ground-truth community structure, we run Louvain algorithm %\cite{blondel2008fast} {\color{red} only louvain?} 
 on the aggregated graph and obtain the disjoint community structure. This community structure is the best possible output that we can expect from our incremental modularity maximization method, and therefore serves as the ground-truth. 
 
 
@@ -74,15 +70,15 @@ on the aggregated graph and obtain the disjoint community structure. This commun
 \caption{Summary of the D-statistics (the lower, the better) values of the topological measures for Facebook. Top two values for each average result is highlighted.}
 \label{tab_fb}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{c|c c c c c c c c c c c c c }
+\begin{tabular}{c|c c c c c c c c c c c c c |c}
 \hline
-Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD \\ \hline
-Compas    & 0.08   & 0.11   & 0.15   & 0.32     & 0.28    & 0.14   & 0.12   & 0.16    & 0.09   & 0.14     & 0.11     & 0.41     & 0.16    \\ 
-SN        & 0.26   & 0.21   & 0.22   & 0.42     & 0.86    & 0.20   & 0.34   & 0.19    & 0.15   &  0.36    & 0.24     & 0.40     & 0.33    \\ 
-SE        & 0.19   & 0.15   & 0.21   & 0.28     & 0.57    & 0.27   & 0.24   & 0.20    & 0.17   & 0.41     & 0.25     & 0.37     & 0.25    \\ 
-SBFS      &  0.25  & 0.29   & 0.27   & 0.38     & 0.28    & 0.18   & 0.15   & 0.17    & 0.16   & 0.26     & 0.27     & 0.48     &  0.26   \\ 
-PIES      & 0.27   &  0.28  & 0.30   & 0.31     & 0.41    & 0.17   &  0.23  &  0.21   &  0.30  & 0.35     & 0.37     &  0.29    & 0.28    \\ 
-GA        & 0.14    &  0.17   &  0.21   & 0.12     &  0.09   &  0.06  & 0.09   &  0.13    & 0.15   & 0.11     &  0.07      & 0.10   & 0.12 \\ \hline
+Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD & Avg \\ \hline
+Compas    & 0.08   & 0.11   & 0.15   & 0.32     & 0.28    & 0.14   & 0.12   & 0.16    & 0.09   & 0.14     & 0.11     & 0.41     & 0.16 & {\bf 0.17}   \\ 
+SN        & 0.26         &  0.21   & 0.22   & 0.42     & 0.86    & 0.20   & 0.34   & 0.19    & 0.15   &  0.36    & 0.24     & 0.40     & 0.33 & 0.33    \\ 
+SE        & 0.19         &  0.15   & 0.21   & 0.28     & 0.57    & 0.27   & 0.24   & 0.20    & 0.17   & 0.41     & 0.25     & 0.37     & 0.25 & 0.27   \\ 
+SBFS      &  0.25        &  0.29   & 0.27   & 0.38     & 0.28    & 0.18   & 0.15   & 0.17    & 0.16   & 0.26     & 0.27     & 0.48     &  0.26 & 0.26   \\ 
+PIES      & 0.27         &  0.28  & 0.30   & 0.31     & 0.41    & 0.17   &  0.23  &  0.21   &  0.30  & 0.35     & 0.37     &  0.29    & 0.28 & 0.29   \\ 
+GA        & 0.14   &  0.17   &  0.21   & 0.12     &  0.09   &  0.06  & 0.09   &  0.13    & 0.15   & 0.11     &  0.07      & 0.10   & 0.12 & {\bf 0.12} \\ \hline
 \end{tabular}
 \end{adjustbox}
 \vspace{3mm}
@@ -100,15 +96,15 @@ We design a two-fold experimental setup. First, we show how  competing sampling 
 \caption{Summary of the D-statistics values of the topological measures for arxiv hep-th graph.}
 \label{tab_hep-th}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{c|c c c c c c c c c c c c c}
+\begin{tabular}{c|c c c c c c c c c c c c c | c}
 \hline
-Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD \\ \hline
-Compas    & 0.12 & 0.06 &0.09 & 0.06  &  0.14 & 0.13  &  0.10   & 0.09   & 0.07     &   0.16   &  0.06& 0.08   &  0.10   \\ 
-SN        & 0.29   & 0.25   & 0.28   &  0.22    &  0.19   & 0.32   &  0.24  &  0.20   & 0.21   & 0.28     & 0.33     &   0.26   &  0.31 \\ 
-SE        & 0.22   &  0.27  &  0.37  &  0.36    &  0.31   &  0.35  &  0.21  &  0.29   &  0.32  &  0.29    &  0.26    & 0.21     &  0.31   \\ 
-SBFS      &  0.22  & 0.27   &  0.26  &  0.18    &   0.38  &  0.31  & 0.34    &  0.21   & 0.25   &  0.23    & 0.25     &  0.26    &  0.22   \\ 
-PIES      & 0.15   &  0.21  &  0.23  &  0.27    &  0.14   & 0.24    & 0.26   & 0.23    &  0.17  & 0.21     &  0.13   &  0.19    &  0.29   \\ 
-GA        &  0.11  & 0.08   & 0.12   &   0.10   & 0.08    & 0.05   & 0.06   & 0.09    &   0.06 &  0.07    &  0.04    &  0.14 &  0.06 \\ \hline
+Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD & Avg\\ \hline
+Compas    & 0.12 & 0.06 &0.09 & 0.06  &  0.14 & 0.13  &  0.10   & 0.09   & 0.07     &   0.16   &  0.06& 0.08   &  0.10 & {\bf 0.10}  \\ 
+SN        & 0.29   & 0.25   & 0.28   &  0.22    &  0.19   & 0.32   &  0.24  &  0.20   & 0.21   & 0.28     & 0.33     &   0.26   &  0.31 & 0.26 \\ 
+SE        & 0.22   &  0.27  &  0.37  &  0.36    &  0.31   &  0.35  &  0.21  &  0.29   &  0.32  &  0.29    &  0.26    & 0.21     &  0.31 & 0.29  \\ 
+SBFS      &  0.22  & 0.27   &  0.26  &  0.18    &   0.38  &  0.31  & 0.34    &  0.21   & 0.25   &  0.23    & 0.25     &  0.26    &  0.22 & 0.26  \\ 
+PIES      & 0.15   &  0.21  &  0.23  &  0.27    &  0.14   & 0.24    & 0.26   & 0.23    &  0.17  & 0.21     &  0.13   &  0.19    &  0.29  & 0.21 \\ 
+GA        &  0.11  & 0.08   & 0.12   &   0.10   & 0.08    & 0.05   & 0.06   & 0.09    &   0.06 &  0.07    &  0.04    &  0.14 &  0.06 & {\bf 0.08}\\ \hline
 \end{tabular}
 \end{adjustbox}
 \vspace{3mm}
@@ -122,15 +118,15 @@ GA        &  0.11  & 0.08   & 0.12   &   0.10   & 0.08    & 0.05   & 0.06   & 0.
 
 
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{l|c c c c c c c c c c c c c |}
+\begin{tabular}{c|c c c c c c c c c c c c c | c}
 \hline
-Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD \\ \hline
-\compas     & 0.063   & 0.051   & 0.078    & 0.057     & 0.227    & 0.082   & 0.054   & 0.091    & 0.260   & 0.073    & 0.201     &  0.121    & 0.052  \\ 
-SN         & 0.164   &  0.171  & 0.471   & 0.061     & 0.542    & 0.581   & 0.112   & 0.265    & 0.064   & 0.157     & 0.182     & 0.092     &  0.216  \\ 
-SE         &  0.257  & 0.244   & 0.241   & 0.501     & 0.281    & 0.098   & 0.287   & 0.087    & 0.151   & 0.097     &  0.246    &  0.093    & 0.198   \\ 
-SBFS       &  0.126  & 0.131   & 0.172   &  0.106    & 0.454    & 0.145   & 0.056   & 0.165    & 0.045   &   0.257   & 0.108     & 0.076     & 0.181   \\ 
-PIES       &  0.234  & 0.241   &  0.252  & 0.190    & 0.409    & 0.042   & 0.051   & 0.049    & 0.061   &      0.157 & 0.042     & 0.053     & 0.121   \\ 
-GA         &   0.156 & 0.055   & 0.065   & 0.053     & 0.267    & 0.066   & 0.076   & 0.053    & 0.085   &   0.150   & 0.075     &  0.069    & 0.102   \\ \hline
+Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD & Avg \\ \hline
+\compas     & 0.06   & 0.05   & 0.08    & 0.06     & 0.23    & 0.08   & 0.05   & 0.09    & 0.26   & 0.07    & 0.20     &  0.12    & 0.05 & {\bf 0.10} \\ 
+SN         & 0.16   &  0.17 & 0.47   & 0.06     & 0.54    & 0.58   & 0.11   & 0.26    & 0.06   & 0.16     & 0.18     & 0.09     &  0.22 & 0.23 \\ 
+SE         &  0.26  & 0.24   & 0.24   & 0.50     & 0.28    & 0.10   & 0.29   & 0.09    & 0.15  & 0.10     &  0.25    &  0.09    & 0.20  & 0.21 \\ 
+SBFS       &  0.13  & 0.13   & 0.17   &  0.10    & 0.45    & 0.14   & 0.06   & 0.16    & 0.04   &   0.26   & 0.11     & 0.08     & 0.18 & 0.15  \\ 
+PIES       &  0.23  & 0.24   &  0.25  & 0.19    & 0.41    & 0.04   & 0.05   & 0.05    & 0.06   &      0.16 & 0.04    & 0.05     & 0.12  & 0.14 \\ 
+GA         &   0.15 & 0.05   & 0.06   & 0.05     & 0.27    & 0.07   & 0.08   & 0.05    & 0.08   &   0.15   & 0.07     &  0.07    & 0.10 & {\bf 0.09}  \\ \hline
 \end{tabular}
 \end{adjustbox}
 \vspace{3mm}
@@ -151,15 +147,15 @@ Note, for every individual community we obtain a score, and therefore a distribu
 \caption{Summary of the D-statistics values of the topological measures for Com-dblp dataset.}
 \label{tab_dblp}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{c|c c c c c c c c c c c c c}
+\begin{tabular}{c|c c c c c c c c c c c c c | c}
 \hline
-Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD \\ \hline
-Compas    & 0.13   & 0.07   & 0.13   & 0.10     & 0.12    & 0.12   & 0.11   & 0.13    & 0.11   & 0.37     & 0.05     & 0.41     & 0.16    \\ 
-SN        &  0.51  & 0.60   & 0.54   & 0.11    & 0.51    & 0.12   & 0.11   & 0.37    & 0.05   & 0.11     &   0.24   & 0.11     & 0.51    \\ 
-SE        &  0.51  & 0.49   & 0.48   & 0.27    & 0.24    & 0.12   & 0.13   & 0.12    & 0.11   & 0.21     & 0.12     &  0.18    & 0.23    \\ 
-SBFS      &  0.34  & 0.32   & 0.41   & 0.18     & 0.40    & 0.15   & 0.13   &  0.14   & 0.18   &  0.12    &   0.34   & 0.24     & 0.11    \\ 
-PIES      & 0.27   &  0.14  & 0.24   &  0.29    & 0.17    & 0.34   & 0.28   &  0.19   &  0.20  & 0.31     & 0.32     &  0.21    &  0.16   \\ 
-GA        & 0.13   & 0.16   & 0.11   &  0.05    &  0.17  & 0.08   &  0.15  &  0.14   & 0.19   & 0.07     &  0.10    &  0.09    & 0.12    \\ \hline
+Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD & Avg\\ \hline
+Compas    & 0.13   & 0.07   & 0.13   & 0.10     & 0.12    & 0.12   & 0.11   & 0.13    & 0.11   & 0.37     & 0.05     & 0.41     & 0.16 & {\bf 0.16}  \\ 
+SN        &  0.51  & 0.60   & 0.54   & 0.11    & 0.51    & 0.12   & 0.11   & 0.37    & 0.05   & 0.11     &   0.24   & 0.11     & 0.51  & 0.29  \\ 
+SE        &  0.51  & 0.49   & 0.48   & 0.27    & 0.24    & 0.12   & 0.13   & 0.12    & 0.11   & 0.21     & 0.12     &  0.18    & 0.23  & 0.25  \\ 
+SBFS      &  0.34  & 0.32   & 0.41   & 0.18     & 0.40    & 0.15   & 0.13   &  0.14   & 0.18   &  0.12    &   0.34   & 0.24     & 0.11 & 0.24   \\ 
+PIES      & 0.27   &  0.14  & 0.24   &  0.29    & 0.17    & 0.34   & 0.28   &  0.19   &  0.20  & 0.31     & 0.32     &  0.21    &  0.16 & 0.22  \\ 
+GA        & 0.13   & 0.16   & 0.11   &  0.05    &  0.17  & 0.08   &  0.15  &  0.14   & 0.19   & 0.07     &  0.10    &  0.09    & 0.12   & {\bf 0.12} \\ \hline
 \end{tabular}
 \end{adjustbox}
 \vspace{3mm}
@@ -169,7 +165,7 @@ GA        & 0.13   & 0.16   & 0.11   &  0.05    &  0.17  & 0.08   &  0.15  &  0.
 %We further measure the community quality based on the ground-truth community structure. Finally, we calculate the Kolgomorov-Smirnov $D$-statistics between the community score distribution obtained from the sample and the ground truth for each individual type of score. Note that $D$-statistics is applied as a part of Komogorov-Smirnov test to reject the null hypothesis. Here we use it to measure the agreement between the two distributions. 
 
 As a second level of evaluation, we use the {\bf community validation metrics} --  Purity~\cite{manning2008introduction}, Normalized Mutual Information (NMI)~\cite{danon2005comparing} and Adjusted Rand Index (ARI)~\cite{hubert1985comparing} to measure the similarity between the ground-truth and the obtained community structures. {\em The more the value of these metrics, the higher the similarity.}
-\if{0}
+\iffalse
 \begin{table*}[!t]
 \centering
 \caption{\label{g_metric_alg}Purity (PU), NMI and ARI values between the ground-truth and community structure obtained from individual sampling algorithms for all datasets.}
@@ -196,24 +192,24 @@ Average & 0.74 & 0.61 & 0.53 & 0.40 & 0.34 & 0.24 & 0.40 & 0.27 &0.19 & 0.54 & 0
 \caption{Summary of the D-statistics values of the topological measures for LFR graph.}
 \label{tab_lfr}
 \begin{adjustbox}{max width=\textwidth}
-\begin{tabular}{c|c c c c c c c c c c c c c}
+\begin{tabular}{c|c c c c c c c c c c c c c | c}
 \hline
-Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD \\ \hline
-Compas    &  0.16  &  0.23  &  0.18  &  0.12    &  0.08   & 0.20   &  0.24  &  0.13   & 0.21   &  0.28    &  0.27    &   0.15   & 0.09    \\ 
-SN        &  0.21  &  0.26  &  0.17  &  0.29    &  0.14   & 0.37   & 0.27   & 0.33    &  0.28  &  0.32    & 0.25     & 0.40     &  0.22   \\ 
-SE        & 0.32   & 0.36   &  0.41  &   0.46   &   0.23  & 0.31   & 0.45   &  0.28   & 0.19   &   0.38   &  0.18    &  0.26    & 0.33    \\ 
-SBFS      &  0.32  &  0.15  &  0.20  &  0.12    &  0.35   & 0.37   & 0.26   &  0.29   & 0.37   &   0.09   & 0.25     &  0.30    & 0.18    \\ 
-PIES      & 0.38   & 0.18   &  0.19  &  0.32    &  0.23   &  0.26  & 0.28   &  0.21   & 0.25   & 0.20     & 0.34     &  0.24    &  0.24   \\ 
-GA        &  0.18  &  0.27  & 0.11   & 0.12     &  0.07   & 0.12   &  0.05  &  0.06   & 0.14   &  0.08    &  0.21    &  0.17    & 0.14    \\ \hline
+Algorithm & ID & EI & AD & FOMD & TPR & EX & CR & CON & NC & AODF & MODF & FODF & MOD & Avg\\ \hline
+Compas    &  0.16  &  0.23  &  0.18  &  0.12    &  0.08   & 0.20   &  0.24  &  0.13   & 0.21   &  0.28    &  0.27    &   0.15   & 0.09 & {\bf 0.18}   \\ 
+SN        &  0.21  &  0.26  &  0.17  &  0.29    &  0.14   & 0.37   & 0.27   & 0.33    &  0.28  &  0.32    & 0.25     & 0.40     &  0.22 & 0.27  \\ 
+SE        & 0.32   & 0.36   &  0.41  &   0.46   &   0.23  & 0.31   & 0.45   &  0.28   & 0.19   &   0.38   &  0.18    &  0.26    & 0.33  & 0.32  \\ 
+SBFS      &  0.32  &  0.15  &  0.20  &  0.12    &  0.35   & 0.37   & 0.26   &  0.29   & 0.37   &   0.09   & 0.25     &  0.30    & 0.18  & 0.25  \\ 
+PIES      & 0.38   & 0.18   &  0.19  &  0.32    &  0.23   &  0.26  & 0.28   &  0.21   & 0.25   & 0.20     & 0.34     &  0.24    &  0.24 & 0.26  \\ 
+GA        &  0.18  &  0.27  & 0.11   & 0.12     &  0.07   & 0.12   &  0.05  &  0.06   & 0.14   &  0.08    &  0.21    &  0.17    & 0.14  & {\bf 0.14}  \\ \hline
 \end{tabular}
 \end{adjustbox}
 \vspace{3mm}
 \end{table}
 
 {\bf Parameter estimation}:
-As reported in Section~\ref{algorithm},~\compas consists of two parameters: (i) $\alpha$ (initial fraction of nodes inserted), (ii) $n_d$ (length of the buffer).
+As reported in Section~\ref{algorithm},~\compas~ consists of two parameters: (i) $\alpha$ (initial fraction of the nodes inserted), (ii) $n_d$ (length of the buffer).
 %In Figures \ref{param_est}(a) and \ref{param_est}(b) we plot the average  $D$-statistics for different values of $\alpha$ and $n_d$ respectively. 
-We observe that $D$-statistics is initially high and reduces as we increase $\alpha$ (Figures \ref{param_est}(a)). This is because for low $\alpha$, the community structure obtained initially by running a community-detection algorithm (Step 12 in Algorithm 1) is coarse. For large values of $\alpha$ even though initial community structure obtained is good, it is not allowed to evolve much. Similarly, in Figure~\ref{param_est}(b), given a small buffer size several nodes mostly arriving once would be added to the sample leading to formation of pendant vertices. As we increase the buffer size \compas~performs better till a certain point, after which the improvement is negligible. Since we are interested in using minimum space we fix $n_d$ at $0.0075 n$. Similarly $\alpha$ is set to $0.4$. 
+We observe that $D$-statistics is initially high and reduces as we increase $\alpha$ (figures \ref{param_est}(a)). This is because for low $\alpha$, the community structure obtained initially by running a community-detection algorithm (Step 12 in Algorithm 1) is coarse. For large values of $\alpha$ even though initial community structure obtained is good, it is not allowed to evolve much. Similarly, in figure~\ref{param_est}(b), given a small buffer size several nodes mostly arriving once would be added to the sample leading to formation of pendant vertices. As we increase the buffer size \compas~performs better till a certain point, after which the improvement is negligible. Since we are interested in using minimum space we fix $n_d$ at $0.0075 n$. Similarly $\alpha$ is set to $0.4$. 
 %Thus, for the rest of the experiments we set $\alpha$ to $0.5$ and $n_d$ to $0.0075n$ unless otherwise specified. 
 We also set $n$ to $0.4|V|$ as default (see Section \ref{sec:effect} for different values of $n$). Further note that apart from Louvain we also consider other algorithms (CNM~\cite{clauset2004finding}, GN~\cite{girvan2002community} and Infomap~\cite{rosvall2008maps}) for obtaining the initial community structure. 
 %{\color{red} may be Infomap, then remove "modularity optimization"}. 
@@ -223,7 +219,7 @@ Above results indicate that \compas~ is independent of the community detection a
 %\vspace{-2mm}
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\columnwidth]{./texfiles/Chapter_2/figures/param_estimate.eps}
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/param_estimate.eps}
 %\vspace{-12mm}
 \caption{\label{param_est}Average $D$-statistics value across all the topological measures.}
 \vspace{3mm}
@@ -268,9 +264,10 @@ Average & 0.74 & 0.61 & 0.53 & 0.40 & 0.34 & 0.24 & 0.40 & 0.27 &0.19 & 0.54 & 0
 \end{tabular}}
 \vspace{3mm}
 \end{table}
+
+
  {\bf Comparison of sampling algorithms}:
-We start by measuring the similarity between the obtained and the ground-truth community structures using topological measures. In tables~\ref{tab_fb},~\ref{tab_hep-th},
-~\ref{tab_yt},~\ref{tab_dblp} and ~\ref{tab_lfr} 
+We start by measuring the similarity between the obtained and the ground-truth community structures using topological measures. In tables \ref{tab_fb},  \ref{tab_hep-th}, \ref{tab_yt}, \ref{tab_dblp} and \ref{tab_lfr} 
 we summarize the $D$-statistics values of all the scoring functions for Facebook, arxiv hep-th, Youtube, dblp and LFR datasets respectively. 
 %for the other graphs we only present the average value (and standard deviation) across the $D$-statistics for different topological 
 %measures (detailed results on other datasets can be accessed in  \cite{si}). 
@@ -280,11 +277,43 @@ consideration the whole graph to obtain the sample. However, we stress that even
 {\em no subsequent community detection in the later steps}, we are able to reach very close to GA as well as to the ground-truth.
 
 Further we find \compas~is the second ranked algorithm after GA with an average 
-(over all datasets) purity, NMI and ARI of \fbox{{\bf 0.74}, {\bf 0.61} and {\bf 0.53}} respectively (see table \ref{g_metric_alg} for detailed results). 
+(over all datasets) purity, NMI and ARI of {\bf 0.74}, {\bf 0.61} and {\bf 0.53} respectively (see table \ref{g_metric_alg} for detailed results). 
 %(see Table \ref{g_metric_alg}  for NMI, details in \cite{si}).
 \iffalse As a second level of evaluation, we further calculate three validation metrics -- purity, NMI and ARI  between the ground-truth and the obtained community structure for all the algorithms . Once again we observe that \\ \fi
 
+\noindent{\bf Effect of edge ordering and sample size:}\label{sec:effect}
+In this section, we show that most of our inferences are valid irrespective of any edge ordering. We randomly pick one pair of edges and swap their arrival time. 
+We repeat it for $y$\% of edges (where $y$ varies between 5 and (as high as) 50) present in each aggregated graph. %\textcolor{red}{Put results starting from $x=5$ in steps of 5 up to 50.} 
+%Each value of $x$ represents a new ordering with a higher value representing higher disorder. 
+For each such ordering we obtain a representative sample (say $G_y$) and compare (average $D$-statistics)  with 
+the ground-truth community. 
+%the original graph ($S$). obtained considering the original arrival 
+%order. The comparison is done by obtaining the distribution of each community scoring function for $S_x$ and $S$ and, subsequently, calculating the $D$-statistics.  
+%For each value of $x$, we compare (through $D$-statistics) the distribution of each scoring function with the original order of edge arrivals. 
+In figure~\ref{param_est_1}(a) we plot the $D$-statistics value averaged over all the scoring functions for the Youtube dataset. The plot clearly shows that the edge-ordering  
+affects the final sample marginally.
+%shows that for the Youtube graph edge ordering does not affect the final sample much (the pattern is same for LFR graph, see \cite{si}).
+%\TODO{Mention how you obtained the ordering each time? Is it different random order or is there some strategic order also. You should make it explicit and say that~\compas~is tolerant to only these orders. DONE} 
+%\textcolor{blue}{To obtain arrival sequences we consider two edges and swap their arrival times. This we do for 20\% of the total edges in the original network.
 
+Lastly, we present the effect of sample size ($n$) on the obtained community structure. We plot average $D$-statistics values across all the topological measures for all the algorithms on Youtube as a function of $n$ (figure \ref{param_est_1}(b)). As expected, with the increase of $n$ we obtain better results. Interestingly, for~\compas~and GA, the pattern remains consistent compared to others. Moreover as we increase $n$ the divergence between their performance decreases.
+
+%\vspace{-3mm}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/param_estimate_1.eps}
+%\vspace{-10mm}
+\caption{\label{param_est_1}Average $D$-statistics across all the topological measures for (a) different edge ordering and (b) sample size ($n$) of the Youtube graph.}
+\vspace{4mm}
+\end{figure}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\if{0}
 {\bf Comment on edge-density of the sample}: 
 Note that \compas~ is node-based, i.e., sample size is controlled by the number of nodes, and we at any point do not limit the number of edges in the sample ($e_{s}$). We compare the number of edges in the sample against that in the subgraph induced by the nodes in the obtained sample ($e_{p}$). 
 We observe that on average our sample consists of only $\sim71$\% of the edges in the induced subgraph across all the datasets. 
@@ -320,19 +349,36 @@ GA        &    0.218    &  0.063  &  0.46     &  0.24            &   0.35       
 %\vspace{-2mm} 
 
 {\bf Effect of edge ordering and sample size:}
-\iffalse As mentioned in Section \ref{sec:dataset}, we artificially imposed an edge ordering for two static graphs -- Youtube and LFR.\fi In this section, we show that most of our inferences are valid irrespective of any edge ordering. To do so, we randomly pick one pair of edges and swap their arrival time. We repeat it for 20\% of  edges present in each static graph. The entire experiment is repeated $20$ times and the average value is reported. Figure \ref{param_est_1}(a) shows that for the Youtube graph edge ordering does not affect   the final  sample much (the pattern is same for LFR graph, see \cite{si}).
+In this section, we show that most of our inferences are valid irrespective of any edge ordering. To do so, we randomly pick one pair of edges and swap their arrival time. 
+We repeat it for $x$\% of edges (where $x$ varies between 5 and 50) present in each aggregated graph. %\textcolor{red}{Put results starting from $x=5$ in steps of 5 up to 50.} 
+Each value of $x$ represents a new ordering with a higher 
+value representing higher disorder. For each such ordering we obtain a representative sample (say $S_x$) and compare with sample ($S$) obtained considering original arrival 
+order. The comparison is done by obtaining the distribution of each community scoring function for $S_x$ and $S$ and thereby calculating the $D$-statistics.  
+%For each value of $x$, we compare (through $D$-statistics) the distribution of each scoring function with the original order of edge arrivals. 
+In figure \ref{param_est_1}(a) we plot the $D$-statistics value averaged over all the scoring functions for Youtube dataset. 
+The plot clearly shows that edge-ordering does not 
+affect the final sample much. 
+%(the pattern is same for LFR graph, see \cite{si}).
 %\TODO{Mention how you obtained the ordering each time? Is it different random order or is there some strategic order also. You should make it explicit and say that~\compas~is tolerant to only these orders. DONE} 
 %\textcolor{blue}{To obtain arrival sequences we consider two edges and swap their arrival times. This we do for 20\% of the total edges in the original network.
 Lastly, we present the effect of sample size ($n$) on the obtained community structure. We plot average $D$-statistics values across all the topological measures for all the algorithms on Youtube  (see others in \cite{si}) as a function of $n$ (Figure \ref{param_est_1}(b)). As expected, with the increase of $n$ we obtain better results. Interestingly, for~\compas~and GA, the pattern remains consistent compared to others.\\
 
+
+\noindent{\bf Extensions:} In its current form, our algorithm is applicable to undirected and and unweighted networks. We believe that through minor modifications our algorithm could be extended to 
+directed as well as as weighted networks. \compas~ is aimed at optimizing modularity which has already been precisely defined for weighted~\cite{newman2004analysis} and 
+directed networks~\cite{leicht2008community}. Further, the same sub-routines in the original algorithm, with minor modifications could be used for directed and weighted networks. 
+The theoretical analysis would require additional research efforts which we plan to take up in future.
+
 %\vspace{-5mm}
 \begin{figure}[!h]
 \centering
-\includegraphics[width=\columnwidth]{./texfiles/Chapter_2/figures/param_estimate_1.eps}
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/param_estimate_1.eps}
 %\vspace{-10mm}
 \caption{\label{param_est_1}Average $D$-statistics across all the topological measures for (a) different edge ordering and (b) sample size ($n$) of the Youtube graph.}
-%\vspace{-4mm}
+\vspace{4mm}
 \end{figure}
+\fi
+
 
 
 %\if{0}

@@ -1,25 +1,21 @@
 
 
 \thispagestyle{empty}
-\noindent 
-
-
-
-
-\noindent To ensure efficient offload using WiFi network, we propose to use WiFi network as a local area CDN where popular files are distributed across the network in a local cache of WiFi APs. It ensures uninterrupted streaming service for users with high mobility. Another important contribution of this work is to propose a storage efficient spatial chunk distribution strategy considering human mobility model. Simulation results show that across a wide range of speed, system does a sizeable offload and in high traffic scenario performance degrades gracefully.\\
-
-
-
-\noindent Traffic distribution across network is uneven. With such traffic distribution, ad-hoc association may result in poor system performance. To manage heterogeneity in load, we create a global view of load distribution across network. Moreover, we reduce pressing association control protocol to classical max flow algorithm which ensures maximum device association with knowledge of load distribution. Simulation results show that our proposed protocol can accommodate more devices and provide better fairness in association compared to existing protocols.\\
-
-
-
-\noindent As people do share their subscription credential with others, service providers lose their revenue and extra traffic is also introduced into already congested network. In this work, we propose an authentication scheme utilizing our daily activities which reduces shareability substantially. We have chosen a set of daily activities, which users are uncomfortable to share with others, to form authentication challenge. Simulation results show that an authentic user can successfully authenticate in $95\%$ cases while even very close friends can not break-in in more than $5.5\%$ cases.\\ 
-
+Real-world systems are mostly dynamic in nature and hence can be accurately represented as time-varying networks. Understanding different characteristics 
+of these time-varying networks is of prime importance as it is essential in accurately discerning the true behavior of the underlying real-world systems. In this thesis we look into different aspects of time-varying networks: (i) predicting properties of temporal network at future time steps, (ii) designing sampling algorithms for streaming
+graphs such that the underlying community structure in the original graph is preserved, (iii) designing information diffusion model and provide theoretical framework
+that captures the uneven susceptibility of agents in a system and (iv) leveraging network based and other data mining techniques to improve the scientific peer-review system.
+While the first two objectives are related to the structural aspect of temporal networks, the third one pertains to its function and the last one demonstrates a real-world application.\\
+{\bf Structure}: We propose a generic framework, whereby, we map temporal network to time series and leverage time series forecasting tools to predict the properties at a future
+time step. In fact, we are able to further refine our predictions through spectrogram analysis.\\
+Many real-world networks can be represented as a stream of edges arriving sequentially over time and the sheer volumes of edges as well as the dynamic nature makes it impossible to retain all the edges. Hence, one resorts to sampling a set of edges with the aim of preserving the properties of the original graph in the sample. Here we formulate a sampling algorithm ~\compas~ which is able to retain the underlying community structure of the original graph in the sample.\\
+{\bf Function}: We next propose an information diffusion model inspired by the fact that every agent within a population is not equally susceptible to a disease
+or equally amenable to a rumor - the ones which have been exposed more number of times (in the recent past) are more amenable. In fact, we observe that such a diffusion process progresses in two distinct phases - (i) a slow initial phase followed by a (ii) residual phase where the rate of diffusion increases manifold. \\
+{\bf Application}: Finally, as an application of time-varying network analysis we consider the scientific peer-review system which presents an unique case of temporal system as the interactions between its entities could be modeled as time-varying networks. More specifically, we leverage temporal network analysis and other data mining techniques to improve the scientific peer-review system.
+ 
 
 
 \medskip
 
 
-\noindent \textbf{Keywords:} Community analysis, Permanence, Overlapping permanence, Community detection algorithms, Community evolution,
-Citation networks, Faceted recommendation system
+\noindent \textbf{Keywords:} time-varying network, time series, sampling, community, information diffusion, scientific peer-review system 

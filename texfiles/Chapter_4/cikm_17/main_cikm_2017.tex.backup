@@ -78,20 +78,60 @@
 % \maketitle
 
 %\vspace{-8mm}
-\input{introduction}
+% \input{./texfiles/Chapter_4/cikm_17/introduction}
 %\vspace{-4mm}
 %\input{related_works}
 %\vspace{-3mm}
 %\input{dataset}
 %\vspace{-3mm}
-\input{multiple_vs_single}
 
-\input{reviewer}
+% \begin{figure}
+%  \centering
+%  \includegraphics[scale = 0.4]{./texfiles/Chapter_4/cikm_17/figures/citation_jhep_1.eps}
+%  \caption{\label{citation:jhep} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JHEP dataset.} 
+% \end{figure}
+% 
+% \begin{figure}
+%  \centering
+%  \includegraphics[scale = 0.4]{./texfiles/Chapter_4/cikm_17/figures/citation_jstat_1.eps}
+%  \caption{\label{citation:jstat} Citation distribution of the multi-refereed and single-refereed papers for (Left) accepted and (Right) rejected papers for JSTAT dataset.}
+% \end{figure}
+% 
+% \begin{figure}
+%  \centering
+%  \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/best_paper.eps}
+%  \caption{\label{fig:best} Fraction of multi-refereed papers in the top $k$ most cited papers where $k = 1,50,100,500,1000,2000$.}
+% \end{figure}
 
-\input{group_referee}
-%\vspace{-4mm}
-\input{editor_importance}
 
-\input{conclusion}
+% \begin{figure*}
+% \centering
+% \begin{tabular}{cc}
+% \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/jhep_all.eps} & \includegraphics[scale = 0.28]{./texfiles/Chapter_4/cikm_17/figures/jstat_all.eps}
+% \end{tabular}
+% \caption{\label{disagree:jhep} Fraction of cases where the reviewers disagreed with respect to (1) length (2) sentiment and (3) content for (a) JHEP and (b) JSTAT 
+%   datasets.}
+% \end{figure*}  
+
+In this section we systematically analyze the cases where a single reviewer is involved and compare these with the cases where multiple reviewers are involved and further 
+propose a framework for identifying and recommending compatible reviewer groups for multi-reviewer cases. Since our framework is specifically designed for cases where 
+multiple referees are involved and fraction of such cases in JHEP dataset is low, we evaluate our framework on an additional dataset (JSTAT).
+
+\subsection{JSTAT dataset}
+
+Journal of Statistical Mechanics: Theory and Experiment (JSTAT) publishes papers in statistical physics and has 
+an impact factor of 2.091\footnote{http://iopscience.iop.org/journal/1742-5468}. 
+JSTAT is more interdisciplinary (compared to JHEP) and attracts papers from a wide range of researchers from physicists to computer scientists. 
+The dataset contains information of 6106 papers which were submitted between 2004 and 2016. The meta information available for each paper is same as that of the 
+JHEP dataset.
+
+\input{./texfiles/Chapter_4/cikm_17/multiple_vs_single}
+
+\input{./texfiles/Chapter_4/cikm_17/reviewer}
+
+\input{./texfiles/Chapter_4/cikm_17/group_referee}
+\vspace{-6mm}
+\input{./texfiles/Chapter_4/cikm_17/editor_importance}
+
 
 

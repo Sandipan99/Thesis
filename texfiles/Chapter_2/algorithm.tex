@@ -1,9 +1,9 @@
 \setlength{\textfloatsep}{-3pt}% Remove \textfloatsep
 
-\begin{algorithm}
+\begin{algorithm}[htpb]
 
 \caption{\compas: A {\bf Com}munity {\bf P}reserving Sampling {\bf A}lgorithm for {\bf S}treaming Graph}\label{alg:compas}
-\KwData{$S$: Graph stream, $n$: Sample size,  $\alpha$: Initial fraction of nodes inserted,  $\beta$: Edge density threshold, $n_d$: size of the buffer, $Algo$: a community detection algorithm}\label{algo_compas}
+\KwData{$S$: Graph stream, $n$: Sample size,  $\alpha$: Initial fraction of nodes inserted, $n_d$: size of the buffer, $Algo$: a community detection algorithm}\label{algo_compas}
 \KwResult{Sampled subgraph $G_s(V_s, E_s)$, $C_s$}
 Initialize $G_s$: $V_s=\phi$, $E_s=\phi$\\
 Create an empty buffer $\mathcal{H}$ of size $n_d$\\
@@ -12,7 +12,7 @@ $flag=1$, $t=0$\\
 \For{$e_t$ in the graph stream $S$}{
 $e_t=\{u,v\}$\\
 %\If{$|V_s|\neq n$}{
-\If{$\frac{|V_s|}{n}<\alpha \wedge e_t\notin E_t$}{\label{b:step1}
+\If{$\frac{|V_s|}{n}<\alpha \wedge e_t\notin E_s$}{\label{b:step1}
 $V_s=V_s\cup u \cup v$\\
 $E_s=E_s\cup e_t$\\
 \textbf{Continue;}\label{e:step1}
@@ -21,27 +21,31 @@ $E_s=E_s\cup e_t$\\
 Run $Algo$ on $G_s$ and detect community structure $C_s$\label{algo} \\
 $flag$=0\\
 }
-\ElseIf{$u, v\in V_s$}{
+\ElseIf{$u, v\in V_s$}{ 
 $V_s,E_s,C_s=BothinSample(u,v,e_t,V_s,E_s,C_s)$\\
 }
-\ElseIf{$u\in V_s \wedge v\notin V_s \wedge v\notin \mathcal{H}$}{
-$V_s,E_s,C_s,\mathcal{H}=OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$
+\ElseIf{$u,v\notin V_s \wedge u,v\in \mathcal{H}$}{
+$\mathcal{H} = NodeinBuffer(u,\mathcal{H})$\\
+$\mathcal{H} = NodeinBuffer(v,\mathcal{H})$
 }
 \ElseIf{$u \in V_s \wedge v\notin V_s \wedge v\in \mathcal{H}$}{
-$V_s,E_s,C_s,\mathcal{H}=OneinSampleOneinBuffer(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$
+$\mathcal{H} = NodeinBuffer(v,\mathcal{H})$\\
+%$V_s,E_s,C_s,\mathcal{H}=OneinSampleOneinBuffer(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$
+}
+\ElseIf{$u\in V_s \wedge v\notin V_s \wedge v\notin \mathcal{H}$}{
+$V_s,E_s,C_s,\mathcal{H}=NodeisNew(v,u,V_s,E_s,\mathcal{H},C_s)$
 }
 \ElseIf{$u\notin V_s \wedge u\in \mathcal{H} \wedge v\notin V_s \wedge v\notin \mathcal{H}$}{
-$V_s,E_s,C_s,\mathcal{H}=OneinBufferOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$
+$\mathcal{H}_c(u) = \mathcal{H}_c(u) +1$\\
+$V_s,E_s,C_s,\mathcal{H}=NodeisNew(v,u,V_s,E_s,\mathcal{H},C_s)$
 }
 %\ElseIf{$u,v\notin V_s \wedge u,v\in \mathcal{H}$}{
 %$\mathcal{H}_c[u]=\mathcal{H}_c[u]+1$\\
 %$\mathcal{H}_c[v]=\mathcal{H}_c[u]+1$
 %}
 \ElseIf{$u,v\notin V_s \wedge u,v\notin \mathcal{H}$}{
-$V_s,E_s,C_s,\mathcal{H}=BothNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$
-}
-\ElseIf{$u,v\notin V_s \wedge u,v\in \mathcal{H}$}{
-$\mathcal{H}=BothinBuffer(u,v,\mathcal{H})$
+$V_s,E_s,C_s,\mathcal{H}=NodeisNew(u,v,V_s,E_s,\mathcal{H},C_s)$\\
+$V_s,E_s,C_s,\mathcal{H}=NodeisNew(v,u,V_s,E_s,\mathcal{H},C_s)$
 }
 $t=t+1$
 }
@@ -54,71 +58,63 @@ $t=t+1$
 
 %\vspace{-2mm}
 
-\section{Proposed Algorithm: \compas}
+\section{Proposed algorithm: \compas}
 \label{algorithm}
 
-%\noteng{The algorithm is written in extreme cryptic language, the intuition behind the algorithm is not clear... First we need to clearly mention the intuition -- is that intuition copied from the static version, or how have you got the idea??}
-Here we propose \compas, a {\bf Com}munity {\bf P}reserving sampling {\bf A}lgorithm for {\bf S}treaming graphs. \compas~aims at sampling a streaming graph in such a way that its underlying community structure is preserved in the sample (Algorithm~\ref{algo_compas} and Figure~\ref{fig_algo} respectively presents a pseudo-code and a toy example). 
-%\textcolor{blue}{
-\compas~ leverages three basic principles in order to obtain a community preserving sample - (i) maximize  modularity~\cite{newman2004analysis}, (ii) estimate the importance of a node over time and (iii) allow for merging, splitting and creation of communities over time. \\
-%}
-{\bf Algorithmic Description:} We now present a detailed description of \compas.
-To start with, \compas~keeps on adding streaming edges (nodes) into the sample $G_s$ as long as a certain fraction of nodes $\alpha$ is inserted (lines \ref{b:step1}-\ref{e:step1}). This in turn provides an initial knowledge about the graph structure. 
-%\noteng{Then the inherent assumption is that the graph property would be preserved - what about only one portion of the graph } 
-Once the threshold is reached, a pre-selected community detection algorithm $Algo$ is run on $G_s$ to detect the initial community structure (line \ref{algo}). It then interweaves both graph sampling and community detection in such a way that each task gets benefits from the other. Once an edge $e_t$ is taken from the stream, \compas~ judiciously inserts $e_t$ into $G_s$ with the help of a buffer $\mathcal{H}$ which is composed of $\mathcal{H}_c$ and $\mathcal{H}_p$. $\mathcal{H}_c$ counts 
+We propose \compas, a {\bf Com}munity {\bf P}reserving sampling {\bf A}lgorithm for {\bf S}treaming graphs. \compas~aims at sampling a streaming graph in such a way that its underlying community structure is preserved in the sample (Algorithm~\ref{algo_compas} and Figure~\ref{fig_algo} respectively present a pseudo-code and a toy example). 
+The algorithm attempts to identify the high fidelity nodes (nodes with high degree and high clustering coefficient) and suitably determine the communities to which they belong. \\
+%as these are the most suitable community centers and allow the sample to grow around them so that the important communities in the original graph are captured.} \\
+{\bf Description of the algorithm:} To start with, \compas~keeps adding streaming edges (nodes) into the sample $G_s$ as long as a certain number  of nodes ($\alpha \cdot n$, $\alpha~<~1$) are inserted. 
+This constitutes the warm-up knowledge for the structure. 
+Once the threshold is reached, a pre-selected community detection algorithm $Algo$ is run on $G_s$ to obtain the {\bf initial community structure} (line \ref{algo}). 
+%It then interweaves both graph sampling and community detection in such a way that each task gets benefits from the other. 
+
+\noindent{\bf Subsequent dynamics:} Henceforth, once an edge $e_t$ is picked up from the stream, \compas~inserts $e_t$ into a buffer $\mathcal{H}$ (size $n_d$) which consists of the two variables -- $\mathcal{H}_c$ and $\mathcal{H}_p$. $\mathcal{H}_c$ counts 
 %the ``number of hits'' of a node (i.e.,
-the number of times a node is encountered till that time\footnote{In streaming graph, an edge might appear multiple times.}, and $\mathcal{H}_p$ keeps track of the current parent of a node (i.e., node with which it arrived last). %\textcolor{blue}{
-This roughly estimates the importance of the node, since a recurrently occurring node is probably more important compared to node occurring only intermittently. The idea is inspired by reservoir sampling technique introduced in \cite{ahmed2014network}.
-%} 
-A streaming edge $e_t=\{u,v\}$ is first inserted into  $\mathcal{H}$, and depending upon the current position of $u$ and $v$ (whether in the buffer or in the sample), their counts in $\mathcal{H}_c$, their current parents in $\mathcal{H}_p$, and the current community structure $C_s$ of $G_s$, a decision as to which node/edge is to be inserted into $G_s$, is taken. 
-One of the six different submodules is invoked to systematically handle this decision. Execution of these submodules may lead to node being removed from the buffer and subsequently added to its parent in $G_s$. $C_s$ is adjusted accordingly. 
-%\textcolor{blue}{
-The submodules further allow for splitting and merging of existing communities as well as creation of new communities.
-%}
-%This in turn may remove an existing node out of the buffer and connect it with its parent in $G_s$. $C_s$ is adjusted accordingly. 
-We next describe the different subroutines in detail.
+the number of times a node is encountered till that time\footnote{In streaming graph, an edge might appear multiple times in the stream.}, and $\mathcal{H}_p$ keeps track of the current parent of a node (i.e., the node with which it arrived last). %\textcolor{blue}{
+This presents a crude estimation of the importance of the node, since a recurrently occurring node is probably more important compared to a node occurring only intermittently. The idea is inspired by the reservoir sampling technique introduced in \cite{ahmed2014network}.
+Once the buffer $\mathcal{H}$ is full, the insertion activity triggers some chain reactions which are different at the two specific phases 
+(a). when the size of $G_s$ is between $\alpha \cdot n$ and $n$  -  any incoming new node triggers the entry of a node ($x$) and corresponding edge ($\mathcal {P}(x)$, $x$)  from buffer to $G_s$ and (b). when $G_s$ has already reached $n$ - at that point a node has to be removed from $G_s$ to insert the incoming node~($x$) from buffer. We eliminate the node with least degree and clustering coefficient thus  ensuring progressive
+inclusion of high-fidelity nodes. 
+
+\noindent{\bf Genesis of the six modules of \compas:} Considering differently, for an incoming  streaming edge $e_t~=~\{u,v\}$, each endpoint ($u,v$) could be (i) a new node, %(never encountered before or has got deleted), 
+(ii) is present in the buffer or (iii) is present in the partially constructed  sample graph $G_s$. Depending on the current position of $u$ and $v$, one of the six conditions is encountered which are consequently handled by the six submodules - 
+(1) both endpoints are present in the sample, (2) both are in buffer, (3) one is in sample while the other is in buffer, (4) one is in sample while the other is new, (5) one is in buffer while the other is new and (6) both are new. 
+%A new node is always inserted into $\mathcal{H}$. As a result, (if $\mathcal{H}$ is full), we pick one node $x$ from $\mathcal{H}$ %preferentially based on $\mathcal{H}_c[x]$ with an additional constraint that $\mathcal{P}(x)$, the parent of $x$  should be in $G_s$\footnote{\tbr{this additional constraint allows to avoid a disconnected component being created in the sample and at the same time expanding one of the big components.}} (e.g., in Figure~\ref{fig_algo} if the buffer is full although node $l$ has highest count we do not pick $l$ from the buffer because its parent node $i$ is not in $G_s$; instead we pick $m$ which satisfies both the constraints). $x$ is then added to $G_s$ through the edge $\{\mathcal{P}(x),x\}$ and is and insert it into $G_s$, whereby, one node from $G_s$ is removed. The rules behind these insertions/deletions ensure that the fraction of the high fidelity nodes as well as the quality of the assigned communities improve progressively.  
+%the community of $\mathcal{P}(x)$. If the node is already in the buffer, its frequency in incremented.  
+%If $G_s$ is already full (i.e., $V_s=n$), one existing node which has lowest degree is removed from $G_s$ and the community structure 
+%is adjusted accordingly using $CommunityAfterNodeRemoval()$ (both Functions 7 and 8 are discussed later).
+We elaborate on the submodules next. 
+%Note: we consider the situation where $|G_s|~=~n$ as well as $\mathcal{H}$ is full. 
 %In order to maintain non-redundancy inside a community, \compas~never allows an existing  community to cross a certain edge density threshold $\beta$. 
-Throughout the iterations, \compas~maximizes {\em modularity}, a well-studied objective function for community detection defined as 
-%\begin{equation}\label{modularity}
-{\small $Q(G(V,E),C)=\sum_{c\in C} (\frac{m_c}{M} - \frac{D_c^2}{4M^2})$}
-%\end{equation}
-where $C$ is the community structure of $G$, $m_c$ is the total number of edges inside $c$, $D_c$ is the sum of degree of all the nodes inside a community $c\in C$, and $M=|E|$ is the total number of edges $G$. In this section, we individually present each submodule of \compas~in details.\\
-%Once the initial threshold $\alpha$ is reached, a community finding algorithm $Algo$ is used to detect the initial community structure of $G_s$ (denoted as $C_s$) (line 12). Then in every occurrence of a new edge $e_t=\{u,v\}$, it is not allowed to enter into the sample immediately; instead depending upon the current position of $u$ and $v$ different subroutines are invoked to place the edge (i.e., two end nodes) into the buffer {\color{red} redundant}. 
-%This in turn may remove an existing node out of the buffer and connect it with its parent in $G_s$. $C_s$ is adjusted accordingly. 
-%In this section, we describe different subroutines in details.
-\noindent\textbf{(i) \underline{Both $u$ and $v$ are present in the sample:}} When both $u,v$ are in $V_s$, $BothinSample()$ (see Function 1) is called from line 15 of Algorithm \ref{algo_compas}.  We further divide this case into two subcases: $e_t$ is an intra-community edge (totally inside a single community) or an inter-community edge (connecting two communities $C(u)$ and $C(v)$). In the former case (edge $\{b,d\}$  in Figure~\ref{fig_algo}), addition of $e_t$ will strengthen the internal community structure according to Proposition~\ref{1}. We also know from Proposition~\ref{2} that adding an intra-community edge should not split the current community~\cite{PhysRevE.78.046115}. Therefore we leave $C_s$ in its current form without any modification.
-%\noteng{I guess the algorithm suffers from early formation disadvantage because if a community is already form these rules would just reiterate those. }{\color{green}T: No, because it may happen than an inter-community edge comes and a portion of that community is pulled by the neighboring communities, see the next para. }
+%Throughout the iterations, \compas~maximizes {\em modularity}, a well-studied objective function for community detection defined as %\begin{equation}\label{modularity} {\small $Q(G(V,E),C)=\sum_{c\in C} (\frac{m_c}{M} - \frac{D_c^2}{4M^2})$} %\end{equation} where $C$ is the community structure of $G$, $m_c$ is the total number of edges inside $c$, $D_c$ is the sum of degree of all the nodes inside a community $c\in C$, and $M=|E|$ is the total number of edges $G$. In this section, we individually present each submodule of \compas~in details.\\ %Once the initial threshold $\alpha$ is reached, a community finding algorithm $Algo$ is used to detect the initial community structure of $G_s$ (denoted as $C_s$) (line 12). Then in every occurrence of a new edge $e_t=\{u,v\}$, it is not allowed to enter into the sample immediately; instead depending upon the current position of $u$ and $v$ different subroutines are invoked to place the edge (i.e., two end nodes) into the buffer {\color{red} redundant}.  %This in turn may remove an existing node out of the buffer and connect it with its parent in $G_s$. $C_s$ is adjusted accordingly. 
+%/In this section, we describe different subroutines in details.
 
-In case of $e_t$ connecting two different communities (edge $\{b,f\}$ in Figure \ref{fig_algo}), several possibilities may arise. $u$ (or $v$) may leave its current community and join another community. Additionally, if the community membership of $u$ (or $v$) is changed, it can also pull out its neighbors to join with it, and some of the neighbors might eventually want to change their memberships as well \cite{pone.0091431}. According to Proposition~\ref{3}, we know that if $u$ (or $v$) ever changes its community membership, $C(v)$ (or $C(u)$) would be the best new community for it. But how do we quickly decide it? Here we provide a criteria to check the change in membership for $u$ and $v$ in Proposition~\ref{complex}. If both $\Delta Q(u,C(u),C(v))$ and $\Delta Q(v,C(v),C(u))$ (where $\Delta Q(u,C(u),C(v))$ indicates the change in modularity after assigning $u$ from $C(u)$ to $C(v)$) fail to satisfy the criteria (see Corollary 1), we can retain the current community structure. Otherwise, we move $u$ (or $v$) to $C(v)$ (or $C(u)$) and consequently we let its neighbors decide their best move in the similar way. %\textcolor{blue}{
-Note that all the above actions are aimed at maximizing modularity.
-%}
+\noindent\textbf{(i) \underline{Both $u$ and $v$ are present in the Graph $G_s$:}} When both $u,v$ are in $V_s$, $BothinSample()$ (see Function \ref{bothsample}) is called from 
+line 15 of Algorithm \ref{algo_compas}.  
+The aim of this module is to place the edge in such a way that the modularity 
+of the evolving sample graph ($G_s$) improves. Vis-a-vis the existing community structure, the edge $e_t$ 
+%can either be an intra community edge or an inter community edge. Accordingly,    } 
+%Note that all the above actions are aimed at selectively densifying the component and letting the community structure to evolve with maximizing modularity at the same time.}
+%we have two subcases: $e_t$ is 
+can be (a). an intra-community edge (totally inside a single community) or 
+(b). an inter-community edge (connecting two communities $C(u)$ and $C(v)$). 
 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=\columnwidth]{./texfiles/Chapter_2/figures/demo.eps}
-%\vspace{-5mm}
-\caption{Toy example depicting various conditions handled by \compas~ when a streaming edge arrives.}\label{fig_algo} 
-%\vspace{2mm}
-\end{figure}
-
+In case of an intra-community edge (edge $\{b,d\}$ in figure~\ref{fig_algo}), addition of $e_t$ 
+increases modularity of the community according to Proposition~\ref{1}. Moreover, we also know from Proposition~\ref{2} that 
+splitting of current community on addition of a new intra-community edge does not increase modularity~\cite{PhysRevE.78.046115}. 
+Therefore we leave $C_s$ in its current form without any modification.
 
 \begin{prop}\label{1}
 %For a community $c\in C$, if $D_c\leq M-1$ $($where $M=|E|)$ then addition of an edge within $c$ will increase its modularity.
-Addition of an edge to a community $c\in C$, increases its modularity if $D_c\leq M-1$ $($where $M=|E|)$.
+Addition of an edge to a community $c\in C$, increases its modularity if $D_c\leq M-1$ $($where $M=|E|$ and $D_c$ is total degree of all the nodes $c$ ).
 %\vspace{-2mm}
 \end{prop}
 
 
 \begin{proof}
-Recall the formulation of modularity as:
-\begin{equation}\label{modularity}\small
-Q(G(V,E),C)=\sum_{c\in C} (\frac{m_c}{M} - \frac{D_c^2}{4M^2})
-\end{equation}
-where $C$ is the community structure of $G$, $m_c$ is the total number of edges inside $c$, $D_c$ is the sum of degree of all the nodes inside a community $c\in C$, and $M=|E|$ is the total number of edges $G$.
-
-
-From Equation \ref{modularity}, we see the contribution of individual community $c\in C$ in modularity as: $Q_c=\frac{m_c}{M} - \frac{D_c^2}{4M^2}$. 
-where $m_c$ is the number of edges inside $c$, $M$ is the total number of edges in the graph, and $D_c$ is the sum of degrees of all the nodes in $c$. 
+From definition of modularity, we see the contribution of individual community $c\in C$ in modularity as: $Q_c=\frac{m_c}{M} - \frac{D_c^2}{4M^2}$. 
+%where $m_c$ is the number of edges inside $c$, $M$ is the total number of edges in the graph, and $D_c$ is the sum of degrees of all the nodes in $c$. 
 
 Addition of a new edge within $c$, the $c$'s contribution of modularity becomes:
 \[
@@ -126,10 +122,10 @@ Q'_c=\frac{m_c+1}{M+1} - \frac{(D_c+2)^2}{4(M+1)^2}
 \]
 
 So the increase in modularity is $\Delta Q_c=Q'_c-Q_c$,
-\[\small
+\[
 \begin{split}
 \Delta Q_c=&\frac{4M^2-4m_cM^2-4D_cM^2-4m_cM+2D_c^2M+D_c^2}{4(M+1)^2M^2}\\
-&\geq \frac{4M^2-6D_cM^2-2D_cM+2D_c^2M+D_c^2}{4(M+1)^2M^2}\\
+%&\geq \frac{4M^2-6D_cM^2-2D_cM+2D_c^2M+D_c^2}{4(M+1)^2M^2}\\
 &\geq\frac{(2M^2-2D_cM-D_c)(2M-D_c)}{4(M+1)^2M^2}\\
 &\geq 0
 \end{split}
@@ -137,8 +133,29 @@ So the increase in modularity is $\Delta Q_c=Q'_c-Q_c$,
 The equality holds if $D_c\leq M-1$. This thus implies $(2M^2-2D_cM-D_c)\geq 0$. This proves the proposition.
 \end{proof}
 
-
-
+\begin{function1}[!ht]
+%\caption{Both in Sample}
+\caption{\small$BothinSample(u,v,e_t,V_s,E_s,C_s)$} \iffalse\TODO{Notation mismatch. Are $\Delta_{u,C_s(u),C_s(v)}$ and $\Delta Q(u, C_s(u),C_s(v))$ the same?} \textcolor{blue}{corrected}\fi
+\label{bothsample} 
+\If{$C_s(u)==C_s(v)$}{
+$E_s=E_s\cup e_t$
+}
+\Else{
+\If{$\Delta Q (u,C_s(u),C_s(v))<0 \wedge \Delta Q (v,C_s(v),C_s(u))<0 \wedge Q(\{u,v\},\{C(u),C(v)\},C^{\ast})<0$}{
+\Return{$V_s,E_s,C_s$}}
+\Else{
+$w = arg max \{\Delta  Q(u,C_s(u),C_s(v)),\Delta Q(v,C_s(v),C_s(u))$, \\
+$Q(\{u,v\},\{C(u),C(v)\},C^{\ast})\}$\\
+Move $w$ to a new community and update $C_S$\\
+\For{$t\in N(w)$}{
+Let $t$ decide its own community 
+%\textcolor{red}{Modify to address the question of referee 1.} \\
+Update $C_s$
+}
+}
+}
+\Return $V_s,E_s,C_s$   
+\end{function1}
 
 \begin{prop}\label{2}
 %For a community $c\in C$, addition of any intra-community edge into $c$ should not split it into smaller communities.
@@ -148,32 +165,28 @@ Addition of any intra-community edge into a community $c\in C$ would not split i
 
 
 
+
 \begin{proof}
 We will prove this proposition by contradiction.
 Assume that once a new intra-community edge is added into $c$, it gets split into $k$ small modules, namely $X_1$, $X_2$, $\cdot$,$X_k$. Let $D_{X_i}$ and $e_{ij}$ be the total degree of nodes inside $X_i$ and number of edges connecting $X_i$ and $X_j$ respectively. 
 
 
-Recall that the contribution of $X_i$ in the modularity value is $Q_{X_i}=\frac{m_{X_i}}{M} - \frac{D_{X_i}^2}{4M^2}$.  Before adding the edge, we have $Q_c \geq \sum_{i=1}^k Q_{X_i}$ (where $Q_c$ is the total modularity of community $c$), because otherwise all $X_i$s can be split earlier, which is not in this case. This implies that:
-\[
-\frac{m_c}{M}- \frac{D_c^2}{4M^2} > \sum_{i=1}^k (\frac{m_{X_i}}{M} - \frac{D_{X_i}^2}{4M^2})
-\]
-Since $X_1,X_2,\cdot,X_k$ are all disjoint modules of $c$, $D_c=\sum_{i=1}^k D_{X_i}$ and $m_c=\sum_{i=1}^k m_{X_i} + \sum_{i<j} e_{ij}$. This further implies that:
-\[
-\frac{m_c}{M}-\sum_{i=1}^k \frac{m_{X_i}}{M} > \frac{D_c^2}{4M^2}- \sum_{i=1}^k \frac{D_{X_i}^2}{4M^2}
-\]
-or,
-\[
-\sum_{i<j} e_{ij} > \frac{\sum_{i<j} D_{X_i}D_{X_j}}{2M}
-\]
+%Recall that the contribution of $X_i$ in the modularity value is $Q_{X_i}=\frac{m_{X_i}}{M} - \frac{D_{X_i}^2}{4M^2}$.  
+Before adding the edge, we have $Q_c \geq \sum_{i=1}^k Q_{X_i}$ (where $Q_c$ is the total modularity of community $c$), because otherwise all $X_i$s can be split earlier, which is not in this case. This implies that: $\frac{m_c}{M}- \frac{D_c^2}{4M^2} > \sum_{i=1}^k (\frac{m_{X_i}}{M} - \frac{D_{X_i}^2}{4M^2})$. Since $X_1,X_2,\cdot,X_k$ are all disjoint modules of $c$, $D_c=\sum_{i=1}^k D_{X_i}$ and $m_c=\sum_{i=1}^k m_{X_i} + \sum_{i<j} e_{ij}$. This further implies that:
+%\[ \frac{m_c}{M}-\sum_{i=1}^k \frac{m_{X_i}}{M} > \frac{D_c^2}{4M^2}- \sum_{i=1}^k \frac{D_{X_i}^2}{4M^2}\]
+%or,
+$\sum_{i<j} e_{ij} > \frac{\sum_{i<j} D_{X_i}D_{X_j}}{2M}
+$.
  
  Without loss of generality, let us assume that the new edge is added inside $X_1$. 
-Since we assume that after adding the new edge into $c$, it gets split into $k$ small modules, the modularity value should increase because of the split. Therefore, the new modularity $Q'_c<\sum_{i=1}^k Q_{X_i}$. This implies that
-\[\small
+Since we assume that after adding the new edge into $c$, it gets split into $k$ small modules, the modularity value should increase because of the split. Therefore, %Therefore, the new modularity $Q'_c<\sum_{i=1}^k Q_{X_i}$. 
+%This implies that
+\[
 \begin{split}\small
 & Q'_c < \sum_{i=1}^k Q_{X_i}\\
 & \Leftrightarrow \frac{\sum_{i=1}^k m_{X_i} + \sum_{i<j} e_{ij} + 1}{M+1} - \frac{(\sum_{i=1}^k D_{X_i +2})^2}{4(M+1)^2}\\
-& <  \frac{m_{X_1}+1}{M+1} - \frac{(D_{X_1}+2)^2}{4(M+1)^2}  + \sum_{i=2}^k  (\frac{m_{X_i}}{M+1} - \frac{D_{X_i}^2}{4(M+1)^2} )\\
-&\Leftrightarrow \frac{\sum_{i=1}^k m_{X_i} + \sum_{i<j} e_{ij} + 1}{M+1} - \frac{(\sum_{i=1}^k D_{X_i +2})^2}{4(M+1)^2}\\
+%& <  \frac{m_{X_1}+1}{M+1} - \frac{(D_{X_1}+2)^2}{4(M+1)^2}  + \sum_{i=2}^k  (\frac{m_{X_i}}{M+1} - \frac{D_{X_i}^2}{4(M+1)^2} )\\
+%&\Leftrightarrow \frac{\sum_{i=1}^k m_{X_i} + \sum_{i<j} e_{ij} + 1}{M+1} - \frac{(\sum_{i=1}^k D_{X_i +2})^2}{4(M+1)^2}\\
 & < \frac{\sum_{i=1}^k m_{X_i}+1}{M+1} - \frac{(D_{X_1}+2)^2}{4(M+1)^2} - \sum_{i=2}^k \frac{D_{X_i}^2}{4(M+1)^2}\\
 &\Leftrightarrow \sum_{i<i} e_{ij} < \frac{\sum_{i=1}^k D_{X_i} - 2 D_{X_1} + \sum_{i<j} D_{X_i}D_{X_j}}{2(M+1)}
 \end{split}
@@ -186,29 +199,48 @@ Since $\sum_{i=1}^k D_{X_i} - 2D_{X_1} < 2M$, this implies that
 & <\frac{\sum_{i<j}D_{X_i}D_{X_j}}{2M}+1
 \end{split}
 \]
-Therefore, the proposition holds.
+Thus, the proposition holds.
 \end{proof}
 
 
 
+In case of $e_t$ connecting two different communities (edge $\{b,f\}$ in Figure \ref{fig_algo}), three possibilities may arise - \\
+(i) $u$ may leave its current community and join $v$'s community, (ii) $v$ may leave its current community and join $u$'s community and (iii) $u$ and $v$ may leave their current communities and together form a new community. In addition, if the community membership of $u$ (or $v$) is changed, this can also pull out its neighbors to join with it, and some of the neighbors might eventually want to change their memberships as well~\cite{pone.0091431}. To decide we first calculate $\Delta Q(u,C(u),C(v))$ (where $\Delta Q(x,C(x),C(y))$ indicates the change in modularity after assigning $x$ from $C(x)$ to $C(y)$) (case (i)), $\Delta Q(v,C(v),C(u))$ (case (ii)) and $\Delta Q(\{u,v\},\{C(u),C(v)\},C^{\ast})$ ($u$ and $v$ change their current communities to form a new community $C^{\ast}$, case (iii)) and select the case where the change in modularity is maximum. Consequently, we let the neighbors (of the node whose community membership is altered by the above action) decide their best move in the similar way. This continues recursively (neighbors of neighbors) until the modularity stabilizes or decreases.  
+%(i) $u$ (or $v$) may leave its current community and join another community. 
+%Additionally, if the community membership of $u$ (or $v$) is changed, it can also pull out its neighbors to join with it, and some of the neighbors might eventually want to change their memberships as well \cite{pone.0091431}. According to Proposition~\ref{3}, we know that if $u$ (or $v$) ever changes its community membership, $C(v)$ (or $C(u)$) would be the best new community for it. But how to decide it quickly? We calculate $\Delta Q(u,C(u),C(v))$  
+%But how do we quickly decide it? Here we provide a criteria to check the change in membership for $u$ and $v$ in Proposition~\ref{complex}. If both $\Delta Q(u,C(u),C(v))$ and $\Delta Q(v,C(v),C(u))$ (where $\Delta Q(u,C(u),C(v))$ indicates the change in modularity after assigning $u$ from $C(u)$ to $C(v)$) fail to satisfy the criteria (see Corollary 1), we can retain the current community structure. Otherwise, we move $u$ (or $v$) to $C(v)$ (or $C(u)$) and consequently we let its neighbors decide their best move in the similar way. This continues recursively (neighbors of neighbors) until the modularity does not change or decreases. 
+%\textcolor{red}{Tell that you are doing this recursively to address the question of referee 1.} %\textcolor{blue}{
+%}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/demo.pdf}
+%\vspace{-5mm}
+\caption{Toy example depicting various conditions handled by \compas~ when a streaming edge arrives.}\label{fig_algo} 
+\vspace{2mm}
+\end{figure}
+
+%\vspace{-3mm}
 
 
 
 
 
+
+\iffalse
 \begin{prop}\label{3}
 If a new inter-community edge $(u,v)$ connecting two communities $C(u)$ and $C(v)$ is introduced, $C(u)$ $($or $C(v))$ is the most likely candidate for $v$ (or $u$) if it changes its membership.
 %\vspace{-2mm}
 \end{prop}
 
-
 \begin{proof}
 The method is inspired by \cite{PhysRevE.78.046115} that a vertex $u$ is influenced by two factors: $F^c_{in}(u)$ the force that keeps $u$ stay in its own community $c$, and $F^c_{out}(u)$, the force that a community $S$ imposes to $u$ in order to bring $u$ to $S$ as follows:
-\[
+\[\small
 F^c_{in}(u)=e_c^u-\frac{d_u(D_c-d_u)}{2M}
 \]
 and 
-\[
+\[\small
 F^S_{out}(u)=max_{S\in NC(u)} \{e_S^u - \frac{d_u D_{outS}}{2M}\}
 \]
 where $NC(u)$ is the set of neighboring communities of $u$, and $D_{outS}$ is the total degree of vertices outside $S$.
@@ -218,12 +250,12 @@ Now we will show that the presence of new edge $(u,v)$ will strengthen $F^{C(v)}
 \begin{split}
 &F^{C(v)}_{out}(u)|_{new} - F^{C(v)}_{out}(u)|_{old}\\
 &=(e_u^{C(v)}+1-\frac{(d_u+1)(d_{outC(v)}+1)}{2(M+1)} - (e_u^{C(v)} - \frac{d_ud_{outC(v)}}{2M})\\
-&= \frac{2M+d_ud_{outC(v)}}{2(M+1)} - \frac{d_ud_{outC(v)}+d_{outD(v)}+d_u+1}{2(M+1)}\\
+%&= \frac{2M+d_ud_{outC(v)}}{2(M+1)} - \frac{d_ud_{outC(v)}+d_{outD(v)}+d_u+1}{2(M+1)}\\
 &\geq \frac{2M+d_ud_{outC(v)}}{2(M+1)} - \frac{d_u d_{outC(v)}+d_{outC(v)}+d_u+1}{2(M+1)}\\
 &>0
 \end{split}
 \]
-Therefore $F^{C(v)}_{out}(u)$ is strengthen when new edge $(u,v)$ is introduced. Furthermore, for any community $S\in C \wedge S\notin \{C(u),C(v)\}$
+Therefore $F^{C(v)}_{out}(u)$ is strengthened when a new edge $(u,v)$ is introduced. Further, for any community $S\in C \wedge S\notin \{C(u),C(v)\}$
 \[
 \begin{split}
 & F^{S}_{out}(u)|_{new} - F^{S}_{out}(u)|_{old}\\
@@ -234,19 +266,18 @@ Therefore $F^{C(v)}_{out}(u)$ is strengthen when new edge $(u,v)$ is introduced.
 
 This implies that $F^S_{out}(u)$ is weakened when $(u,v)$ is added. Therefore,  the proposition holds.
 \end{proof}
+\fi
 
 
-
-
-
+\iffalse
 \begin{prop}\label{complex}
 If a new edge $(u,v)$ is added into the graph, then joining $u$ to $v$'s  community $C(v)$ will increase the modularity value  if $\Delta Q(u,C(u),C(v)) \equiv 4(M+1)(e_{C(v)}^u+1-e_{C(u)}^u)+e_{C(v)}^u(2D_{C(v)}-2d_u-e_{C(u)}^u) - 2(d_u+1)(d_u+1+d_{C(v)}-d_{C(u)})>0$.
 %\vspace{-2mm}
 \end{prop}
-
-
+\fi
+\iffalse
 \begin{proof}
-Vertex $u$ will leave its current community $C(u)$ and join $v$'s community $C(v)$ if\\
+Vertex $u$ will leave its current community $C(u)$ and join $v$'s community $C(v)$ if
 \[\small
 \begin{split}
 & Q_{C(v)+u} + Q_{C(u)-u} > Q_{c(u)} + Q_{C(v)}\\
@@ -257,179 +288,171 @@ Vertex $u$ will leave its current community $C(u)$ and join $v$'s community $C(v
 & - 2(d_{C(u)}+1)(d_{C(u)}+1+d_{C(v)}-d_{C(u)})>0
 \end{split}\]
 \end{proof}
-
+\fi
+\iffalse
 \noindent{\bf Corollary 1.} {\em If the condition in Proposition \ref{complex} is not satisfied, then neither $u$ nor its neighbors should be assigned to $C(v)$.}
-
+\fi
 
 %\vspace{-3mm}
-\begin{function1}[!h]
-\caption{\small$BothinSample(u,v,e_t,V_s,E_s,C_s)$ \iffalse\TODO{Notation mismatch. Are $\Delta_{u,C_s(u),C_s(v)}$ and $\Delta Q(u, C_s(u),C_s(v))$ the same?} \textcolor{blue}{corrected}\fi} 
-\If{$C_s(u)==C_s(v)$}{
-$E_s=E_s\cup e_t$
-}
-\Else{
-\If{$\Delta Q (u,C_s(u),C_s(v))<0 \wedge \Delta Q (v,C_s(v),C_s(u))<0$}{
-\Return{$V_s,E_s,C_s$}}
-\Else{
-$w = arg max \{\Delta  Q(u,C_s(u),C_s(v)),\Delta Q(v,C_s(v),C_s(u))\}$\\
-Move $w$ to a new community and update $C_S$\\
-\For{$t\in N(w)$}{
-Let $t$ decide its own community\\
-Update $C_s$
-}
-}
-}
-\Return $V_s,E_s,C_s$   
-\end{function1}
-%\vspace{-2mm}
 
-\begin{function2}[!t]
+%\vspace{-2mm}
+\iffalse
+\begin{function2}[!t]\tiny
 \caption{\small$OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
+\label{onesampleonenew}
 \If{$\mathcal{H}$ is not full}{
 Insert $v$ to $\mathcal{H}$\\
 }
 \Else{
 Choose a node $x$ with $\mathcal{P}(x) \in V_s$ from $\mathcal{H}$ preferentially based on $\mathcal{H}_c$\\
-Remove $x$ from $\mathcal{H}$\\
-$\mathcal{H}_c[x]=0$\\
-$\mathcal{H}_p[x]=\phi$\\
-$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,1)$\\
-$V_s=V_s\cup x$\\
-$E_s=E_s\cup \{P(x),x\}$\\
-$C_s(x)=C_s(P(x))$\\
-Update $C_s$\\ %\TODO{Not clear what this line does. I do not see a separate update function.}\\
-Insert $v$ to $\mathcal{H}$\\
+$V_s,E_s,C_s,\mathcal{H} = OneinSampleOneinBuffer(\mathcal{P}(x),x,V_s,E_s,\mathcal{H},C_s)$\\
+%Remove $x$ from $\mathcal{H}$\\
+%$\mathcal{H}_c[x]=0$\\
+%$\mathcal{H}_p[x]=\phi$\\
+%$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,1)$\\
+%$V_s=V_s\cup x$\\
+%$E_s=E_s\cup \{P(x),x\}$\\
+%$C_s(x)=C_s(P(x))$\\
+%Update $C_s$\\ %\TODO{Not clear what this line does. I do not see a separate update function.}\\
+%Insert $v$ to $\mathcal{H}$\\
 }
 
 $\mathcal{H}_c[v]=1$\\ 
 $\mathcal{H}_p[v]=u$\\ 
 \Return $V_s,E_s,C_s,\mathcal{H}$   
 \end{function2}
+\fi
 
-
-%\vspace{-3mm}
-\noindent\textbf{(ii) \underline{$u$ is in sample and $v$ is new:}} When a new node $v$  connecting node $u\in G_s$ appears, $OneinSampleOneNew()$ (see Function 2) is executed (line 17 of Algorithm 1, edge $\{b,p\}$ in Figure \ref{fig_algo}). In this case, we do not add $\{u,v\}$ into the sample immediately. Instead, we first insert $v$ into $\mathcal{H}$ if $\mathcal{H}$ is not full. 
-%\textcolor{blue}{
-The idea is to delay the insertion of the node into the sample in order to estimate its importance (current hit count) prior to insertion.
-%}
-If $\mathcal{H}$ is full, we pick one node $x$ from $\mathcal{H}$ preferentially based on $\mathcal{H}_c[x]$ with an additional constraint that $\mathcal{P}(x)$, the parent of $x$  should be in $G_s$\footnote{The additional constraint allows to avoid a disconnected component being created in the sample.} (e.g., in Figure~\ref{fig_algo} if the buffer is full although node $l$ has highest count we do not pick $l$ from the buffer  because its parent node $i$ is not in $G_s$; instead we pick $m$ which satisfies both the constraints).  $x$ is then added to $G_s$ through the edge $\{\mathcal{P}(x),x\}$ (line 10 in Function 2) and is assigned the community of $\mathcal{P}(x)$ (line 11 in Function 2). We also check if including $x$ in $G_s$ violates the sample size constraint through the function 
-%If $G_s$ is already full (i.e., $V_s=n$) then 
-$CheckResizeSample()$ (Function 7). If $G_s$ is already full (i.e., $V_s=n$), one existing node which has lowest degree is removed from $G_s$ and the community structure is adjusted accordingly using $CommunityAfterNodeRemoval()$ (both Functions 7 and 8 are discussed later).
-
-%If $\mathcal{H}$ is full, we will remove one node $x$ from $\mathcal{H}$ preferentially based on the  number of times $x$ is encountered previously and add it into $G_s$. To do so, we first check if $P(x)$, the parent of $x$ is already in $G_s$; if exists then we assign $x$ into the community of $P(x)$ (line 11 of Function 2). We also check if assigning $x$ into $G_s$ will not violate the size of $G_s$. If $G_s$ is already full (i.e., $V_s$=n) then we call $CheckResizeSample()$ (Function 6) which will remove  from $G_s$ one existing node which has lowest degree and adjust the community accordingly using $CommunityAfterNodeRemoval()$ (discussed later in Function 7). On the other hand, if $P(x)$ is not in $G_s$ but in $\mathcal{H}$, we remove both $x$ and $P(x)$ from $\mathcal{H}$ and add them into $G_s$. Once again, if $G_s$ is full, two nodes are removed from $G_s$ based on the lowest degree as mentioned earlier and communities are adjusted (line 18 in Function 2). Then a new community is created, and $x$ and $P(x)$ are added into it (line 22 in Function 2).
-
+\begin{function2}[!ht]
+\caption{\small $NodeinBuffer(u,\mathcal{H})$}
+\label{nodebuffer}
+$\mathcal{H}_c[x]=\mathcal{H}_c[x] + 1$\\
+\Return $\mathcal{H}$
+\end{function2}
 
 
 
 %\vspace{-3mm}
 
 
-%\vspace{-3mm}
-\noindent\textbf{(iii) \underline{$u$ is in sample and $v$ is in buffer:}} In this case (edge $\{d,i\}$ in Figure \ref{fig_algo}), $OneinSampleOneinBuffer()$ (see Function 3) is called from line 19 of Algorithm 1. We first check the sample size constraint (line 4 in Function 3) and accordingly add $v$ (and edge $\{u,v\}$) into $G_s$. $v$ is further assigned to $C(u)$.
+\noindent\textbf{(ii) \underline{Both $u$ and $v$ are in buffer:}}
+The only action (lines 16 - 18 of Algorithm 1) taken is that in the buffer $\mathcal{H}$, $\mathcal{H}_c$ entries of $u$ and $v$ are incremented by 1 which is achieved through the function $NodeinBuffer()$ (executed twice with $u$ and $v$).
+Example: edge $\{k,n\}$ in figure \ref{fig_algo}.
+
+\iffalse
+%\vspace{-2mm}
+\begin{function3}[!t]\tiny
+\caption{\small$BothinBuffer(u,v,\mathcal{H})$}
+\label{bothbuffer}
+$\mathcal{H}_c[u]=\mathcal{H}_c[u] + 1$\\
+$\mathcal{H}_c[v]=\mathcal{H}_c[v] + 1$\\
+\Return $\mathcal{H}$
+\end{function3}
+\fi
+%\vspace{-2mm}
 
 %\vspace{-3mm}
-\begin{function3}[!h]
-\caption{\small$OneinSampleOneinBuffer(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
-Remove $v$ from $\mathcal{H}$\\
-$\mathcal{H}_c[v]=0$\\
-$\mathcal{H}_p[v]=\phi$\\
-$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,1)$ \\
-$V_s=V_s\cup v$\\
-$E_s=E_s \cup \{ v,\mathcal{P}(v)\}$\\
+\noindent\textbf{(iii) \underline{$u$ is in sample and $v$ is in buffer:}} 
+In this case (edge $\{d,i\}$ in Figure \ref{fig_algo}) also the only action (lines 19 - 20 of Algorithm 1) taken is that in the buffer $\mathcal{H}$, $\mathcal{H}_c$ entry of $v$ is incremented by 1 which is implemented through the function $NodeinBuffer()$.
+
+%\noteng{I dont think the next lines are needed}
+%In this case (edge $\{d,i\}$ in Figure \ref{fig_algo}), $OneinSampleOneinBuffer()$ (see Function \ref{onesampleonebuffer}) is called from line 19 of Algorithm 1. 
+%We first check the sample size constraint (line 4 in Function \ref{onesampleonebuffer}) and accordingly add $v$ (and edge $\{u,v\}$) into $G_s$. $v$ is further assigned to $C(u)$.
+\iffalse
+%\vspace{-3mm}
+\begin{function4}[!h]\tiny
+\caption{\small$OneinSampleOneinBuffer(u,v,V_s,E_s,\mathcal{H},C_s)$}
+\label{onesampleonebuffer}
+%Remove $v$ from $\mathcal{H}$\\
+$\mathcal{H}_c[v]=\mathcal{H}_c[v] + 1$\\
+$\mathcal{H}_p[v]=u$\\
+%$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,1)$ \\
+%$V_s=V_s\cup v$\\
+%$E_s=E_s \cup \{ v,\mathcal{P}(v)\}$\\
 %\If{$V_s == n$}{
 %Remove one nodes (and all adjacent edges) from $G_s$ having lowest degree \\
 %$C_s=CommunityAfterNodeRemove()$;
 %}
-$C_s(v)=C_s(u)$\\
-Update $C_s$ \\
+%$C_s(v)=C_s(u)$\\
+%Update $C_s$ \\
 %\TODO{Not clear what this line does. I do not see a separate update function.}\\
 \Return $V_s,E_s,C_s,\mathcal{H}$   
-\end{function3}
-
-%\vspace{-1mm}
-\noindent\textbf{(iv) \underline{$u$ is in buffer and $v$ is new:}} This case (edge $\{m,p\}$ in Figure \ref{fig_algo}, see Function 4) is similar to Function 2. We first increment the counter corresponding to $u$ in the buffer and add $v$ into the buffer in the same way as mentioned in Function 2.
-%\vspace{-4mm}
-\begin{function4}[!h]
-\caption{\small$OneinBufferOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
-$\mathcal{H}_c[u]=\mathcal{H}_c[u]+1$\\
-$V_s,E_s,C_s,\mathcal{H} = OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$\\
-\Return $V_s,E_s,C_s,\mathcal{H}$  %\TODO{Check. I think we do not need this line as it is included already in the previous function.{\color{blue}Done}}
 \end{function4}
-%\vspace{-4mm}
-
-\noindent\textbf{(v) \underline{Both $u$ and $v$ are new:}}
-When both $u$ and $v$ are new (edge $\{p,q\}$ in Figure \ref{fig_algo}), $BothNew()$ (see Function 5) is called from line 23 of Algorithm 1. We initially check whether buffer $\mathcal{H}$ is full or not. In case it is not full, we insert $u$ in $\mathcal{H}$ and then call Function 2. Otherwise, we preferentially remove $x$ and $y$ from $\mathcal{H}$ based on the counts in $\mathcal{H}_c$ with the additional constraint that both $\mathcal{P}(x)$ and $\mathcal{P}(y)$ are in $G_s$, and add nodes $x$, $y$ and edges $\{\mathcal{P}(x)$,$x$\}, $\{\mathcal{P}(y)$,$y\}$ into $G_s$. $x$ and $y$ are also assigned to the community of the their respective parents. Finally, $u$ and $v$ are inserted into $\mathcal{H}$. If during the insertion into $G_s$ the sample size is violated, the required number of nodes along with their adjacent edges are deleted from $G_s$ using $CheckResizeSample()$.
-
-
+\fi
 %\vspace{-3mm}
-\begin{function5}[!t]
-\caption{\small$BothNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
-\If{$\mathcal{H}$ is not full}{
-Insert $u$ to $\mathcal{H}$\\
-$\mathcal{H}_p[u] = v$\\
-$\mathcal{H}_c[u] = 1$\\
-$V_s,E_s,C_s,\mathcal{H}= OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$\\
-}
-\Else{
-Choose nodes $x$, $y$ with $\mathcal{P}(x), \mathcal{P}(y) \in V_s$ \iffalse\TODO{Not $\mathcal{P}(y) \in V_s$?}\textcolor{blue}{corrected}\fi from $\mathcal{H}$ preferentially based on $\mathcal{H}_c$\\
-Remove $x$, $y$ from $\mathcal{H}$\\
-$\mathcal{H}_c[x] = 0$, $\mathcal{H}_c[y] = 0$\\
-$\mathcal{H}_p[x] = \phi$, $\mathcal{H}_p[y] = \phi$\\
-$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,2)$\\
-$V_s = V_s \cup x \cup y$ \\
-$E_s = E_s \cup \{x,\mathcal{P}(x)\} \cup \{y,\mathcal{P}(y)\}$ \\
-$C_s(x) = C_s(\mathcal{P}(x))$\\
-$C_s(y) = C_s(\mathcal{P}(y))$\\
-Update $C_s$\\ % \TODO{Not clear how this function helps?}\\
-Insert $u,v$ to $\mathcal{H}$\\
-$\mathcal{H}_p[u] = v$, $\mathcal{H}_p[v] = u$ \\
-$\mathcal{H}_c[u] = 1$, $\mathcal{H}_c[v] = 1$\\
 
-}
-\Return $V_s,E_s,C_s,\mathcal{H}$   %\TODO{Check: the if part does not need this return as the function preceding already does it. Only the second part needs it? {\color{blue} Done}}
-\end{function5}
+\subsubsection{Entry of a new node:} In the three subsequent cases, at least one node is neither present in the buffer nor in the sample (new). This node triggers a rearrangement, whereby, another selected node is removed from the buffer to make space for the new node, and this selected node is inserted into the graph sample $G_s$  which further triggers a rearrangement of the sample in case it has already reached its size limit ($n$). The function $NodeisNew()$ is invoked to accomplish this task. The rearrangements that take place are described next.
 
-
-\noindent\textbf{(vi) \underline{Both $u$ and $v$ are in buffer:}}
-In this case (edge $\{k,n\}$ in Figure \ref{fig_algo}), $Bothin Buffer()$ (see Function 6) is called from line 24 of Algorithm 1 whereby, only the buffer $\mathcal{H}$ is modified by increasing $\mathcal{H}_c$ entries of $u$ and $v$ by 1.
-
-\begin{function6}[!t]
-\caption{\small$BothinBuffer(u,v,\mathcal{H})$}
-$\mathcal{H}_c[u]=\mathcal{H}_c[u] + 1$\\
-$\mathcal{H}_c[v]=\mathcal{H}_c[v] + 1$\\
-\Return $\mathcal{H}$
-\end{function6}
+%in order to provide space to the incoming node, a selected node in the buffer replaces a selected node in $G_s$. More specifically three 
 
 
 
-\begin{figure}[!t]
+
+%\vspace{-7mm}
+\begin{figure}[!h]
 \centering
 %\vspace{-3mm}
-\includegraphics[width=\columnwidth]{./texfiles/Chapter_2/figures/percolation}
+\includegraphics[width=0.8\columnwidth]{./texfiles/Chapter_2/figures/percolation}
 \caption{Illustrative example of 3-clique percolation. Once node $g$ is removed, a 3-clique is placed on node $a$. The clique  percolates and accumulates all the nodes except node $f$ which forms a singleton community along with $\{a,b,c,d,e\}$.}\label{fig_percolation} 
 %\vspace{-3mm}
 \end{figure}
 
-%\noteng{The algorithm has huge complexity}
 
-\noindent$\bullet$ \underline{Adjust communities after removing a node:} When $G_s$ is full, we remove $m$ nodes (and their adjacent edges) from the sample using $CheckResizeSample()$ (Function 7). Since each such node $u$ is already a part of its community $C(u)$, its deletion might keep the previous community structure unchanged, or break the community into smaller parts, or merge several communities together. The community structure $C_s$ is adjusted using  $CommunityAfterNodeRemoval()$ (Function 8) incrementally.  Let us consider two extreme cases -- a node with degree $1$ is removed, and a node with highest degree is removed. Removal of a single degree node will keep the community unchanged. However, removal of a highest degree node might render the community disconnected 
-%\noteng{not necessarily}\textcolor{blue}{it has been argued in this paper} 
-or broken into smaller parts which might further merge to the other existing communities~\cite{pone.0091431}. Here we utilize the clique percolation method \cite{PalEtAl05} to handle this situation. In particular, when a vertex $v$ is removed from a community $C$, we place a 3-clique to one of its neighbors and let the clique percolate until no vertices in $C$ are discovered. Nodes discovered in each such clique percolation will form a community. We repeat this clique percolation from each of $v$'s neighbors until each member in $C$ is assigned to a community. For example, in Figure \ref{fig_percolation} when node $g$ is removed, we place a 3-clique on its neighbor $a$. Once the 3-clique starts percolating, it accumulates all nodes except $f$. Therefore, two new communities $\{a,b,c,d,e\}$ and $\{f\}$  emerge due to the deletion of $g$. In this way, we let the remaining communities of $C$ choose their best communities to merge in. % \TODO{It is not clear how you make a community merge into the best possible candidate. In fact, this part is extremely hard to follow. More detailed and explanatory writing + a figure to illustrate the situation is needed {\color{blue} Done}}.
+\noindent\underline{Remove node from buffer:} This is triggered when $\mathcal{H}$ is full and in order to make room for the new node one of the existing nodes need to be removed from $\mathcal{H}$. To this aim 
+we preferentially remove $x$ from $\mathcal{H}$ based on the counts in $\mathcal{H}_c$ with the 
+additional constraint that $\mathcal{P}(x)$ is present in $G_s$. We add node $x$ and edges $\{\mathcal{P}(x)$,$x$\}, into $G_s$. This is achieved by executing the function $RemoveNodefromBuffer()$. 
+%Finally, $u$ and $v$ are inserted into $\mathcal{H}$. If during the insertion into $G_s$ the sample size is violated, the required number of nodes along with their adjacent edges are deleted from $G_s$ using $CheckResizeSample()$.
 
-\begin{function7}
+\begin{function3}[!ht]
+ \caption{\small $RemoveNodefromBuffer(\mathcal{H},V_s,E_s,C_s)$}
+ \label{removenodebuffer}
+ Choose $x$ preferentially from $\mathcal{H}$ $\mathcal{P}(x) \in V_s$ \\
+ Remove $x$ from $\mathcal{H}$ \\
+ $InsertNodeinSample(x,\mathcal{P}(x),V_s,E_s,C_s)$ \\
+ \Return  $\mathcal{H},V_s,E_s,C_s$ 
+\end{function3}
+
+\noindent\underline{Selection of node for removal from $G_s$:}
+Insertion of a node into $V_s$  (obtained in the previous step), 
+%we check whether its insertion with exceed the sample size limit. In case it does another rearrangement of $V_s$ is triggered as 
+necessitates the removal of an existing node from the sample ($V_s$) to make space for the new entry. 
+%Therefore, we first select 
+Nodes with the lowest degree in $G_s$ are candidates for deletion. Among these candidate nodes the one (say $x$) with  the lowest clustering coefficient is then removed from the $G_s$ to allow insertion of a new node (selected in the previous step). Subsequently, all the edges incident on $x$ are removed from $G_s$. The function $CheckResizeSample()$ implements this task. Finally, the selected node ($x$) is inserted into $V_s$ utilizing the function $InsertNodeinSample()$, whereby, an edge $(x,\mathcal{P}(x))$ is added to $V_s$ and $x$ is assigned the community of $\mathcal{P}(x)$. 
+
+\begin{function4}[!ht]
 \caption{\small$CheckResizeSample(V_s,C_s,n,m)$}
+\label{resizesample}
 \If{$V_s == n$}{
-Remove $m$ nodes say, $u_1, u_2,\cdots, u_m$  (and all their adjacent edges) from $G_s$ having lowest degree\\
+Remove $m$ nodes say, $u_1, u_2,\cdots, u_m$  (and all their adjacent edges) from $G_s$ having lowest degree and clustering coefficient\\
 \For{$u\in \{u_1,u_2,\cdots,u_m\}$}{
 $C_s \leftarrow CommunityAfterNodeRemoval(u,C_s)$
 }
 }
 \Return $V_s,E_s,C_s$
-\end{function7}
+\end{function4}
+
+\begin{function5}[!ht]
+ \caption{\small $InsertNodeinSample(x,\mathcal{P}(x),V_s,E_s,C_s)$}
+ \label{insertnodesample}
+ $V_s,E_s,C_s=CheckResizeSample(V_s,E_s,C_s,n,1)$ \\
+ $V_s = V_s \cup x$ \\
+ $E_s = E_s \cup \{x,\mathcal{P}(x)\}$ \\
+ $C_s(x) = C_s(\mathcal{P}(x))$ \\
+ Update $C_s$
+ \Return $V_s,E_s,C_s$
+\end{function5}
 
 
-\begin{function8}
+\noindent \underline{Adjust communities after removing a node:} 
+Deletion of a node might keep the previous community structure unchanged, or break the community into smaller parts, or merge several communities together. The community structure $C_s$ is adjusted using  $CommunityAfterNodeRemoval()$ (Function \ref{communityadjust}) incrementally.  In the extreme,
+%Let us consider two extreme cases -- a node with degree $1$ is removed, and a node with highest degree is removed. Removal of a single degree node will keep the community unchanged. However, 
+removal of a node might render the community disconnected 
+%\noteng{not necessarily}\textcolor{blue}{it has been argued in this paper} 
+or broken into smaller parts which might further merge to the other existing communities~\cite{pone.0091431}. Here we utilize the clique percolation method~\cite{PalEtAl05} to handle this situation. In particular, when a vertex $v$ is removed from a community $C$, we place a 3-clique on one of its neighbors and let the clique percolate until no vertices in $C$ are discovered. Nodes discovered in each such clique percolation will form a community. We repeat this clique percolation from each of $v$'s neighbors until each member in $C$ is assigned to a community. For example, in figure \ref{fig_percolation} when node $g$ is removed, we place a 3-clique on its neighbor $a$. Once the 3-clique starts percolating, it accumulates all nodes except $f$. Therefore, two new communities $\{a,b,c,d,e\}$ and $\{f\}$  emerge due to the deletion of $g$. In this way, we let the remaining nodes of $C$ choose their best communities to merge in. % \TODO{It is not clear how you make a community merge into the best possible candidate. In fact, this part is extremely hard to follow. More detailed and explanatory writing + a figure to illustrate the situation is needed {\color{blue} Done}}.
+%\vspace{-3mm}
+\begin{function6}[!ht]
 \caption{\small$CommunityAfterNodeRemoval(u,C_s)$}
+\label{communityadjust}
 Assume node $u$ and its adjacent edges are removed from $G_s$\\
 $i=1$\\
 \While{$N(u)\neq \phi$}{
@@ -445,7 +468,125 @@ $i=i+1$\\
 %Let each $b_i$ consider its best communities \TODO{Not clear how this is done?}\\
 Update $C_i$\\% \TODO{What does this line do?}\\
 \Return $C_s$   
+\end{function6}
+
+
+We now proceed to discuss the remaining cases. \\
+\noindent\textbf{(iv) \underline{$u$ is in sample and $v$ is new:}}
+In this case (handled by lines 21 - 22 in Algorithm 1) $v$ is inserted into the buffer $\mathcal{H}$ if $\mathcal{H}$ is not full. Otherwise its insertion triggers rearrangements of $\mathcal{H}$ and subsequently $V_s$. We use $NodeisNew()$ to accomplish this task. 
+
+% \noteng{I think in general put examples at the end}
+% When a new node $v$  connecting node $u\in G_s$ appears, $OneinSampleOneNew()$ (see Function \ref{onesampleonenew}) is executed 
+% (line 17 of Algorithm 1, edge $\{b,p\}$ in Figure \ref{fig_algo}). In this case, we do not add $\{u,v\}$ into the sample immediately. Instead, we first 
+% insert $v$ into $\mathcal{H}$ if $\mathcal{H}$ is not full. If $\mathcal{H}$ is full, we preferentially pick a node $x$ based on $\mathcal{H}_c[x]$ with $\mathcal{P}(x) \in G_s$ and then execute $OneinSampleOneinBuffer()$ (Function \ref{onesampleonebuffer}, discussed later) with $\mathcal{P}(x)$ and $x$.  
+%\textcolor{green}{
+%The idea is to delay the insertion of the node into the sample in order to estimate its importance (current hit count) prior to insertion. This further ensures the insertion of high degree nodes in the sample.
+%}
+% If $\mathcal{H}$ is full, we pick one node $x$ from $\mathcal{H}$ preferentially based on $\mathcal{H}_c[x]$ with an additional constraint that $\mathcal{P}(x)$, 
+% the parent of $x$  should be in $G_s$\footnote{\textcolor{green} {this additional constraint allows to avoid a disconnected component being created in the sample and at the same time expanding the giant component.}} (e.g., 
+% in Figure~\ref{fig_algo} if the buffer is full although node $l$ has highest count we do not pick $l$ from the buffer because its parent node $i$ is not in $G_s$; 
+% instead we pick $m$ which satisfies both the constraints). $x$ is then added to $G_s$ through the edge $\{\mathcal{P}(x),x\}$ (line 10 in Function 2) and is assigned 
+% the community of $\mathcal{P}(x)$ (line 11 in Function 2). 
+%We also check if including $x$ in $G_s$ violates the sample size constraint through the function 
+%If $G_s$ is already full (i.e., $V_s=n$) then 
+%$CheckResizeSample()$ (Function 7). 
+% If $G_s$ is already full (i.e., $V_s=n$), one existing node which has lowest degree is removed from $G_s$ and the community structure 
+% is adjusted accordingly using $CommunityAfterNodeRemoval()$ (both Functions 7 and 8 are discussed later).
+
+%If $\mathcal{H}$ is full, we will remove one node $x$ from $\mathcal{H}$ preferentially based on the  number of times $x$ is encountered previously and add it into $G_s$. To do so, we first check if $P(x)$, the parent of $x$ is already in $G_s$; if exists then we assign $x$ into the community of $P(x)$ (line 11 of Function 2). We also check if assigning $x$ into $G_s$ will not violate the size of $G_s$. If $G_s$ is already full (i.e., $V_s$=n) then we call $CheckResizeSample()$ (Function 6) which will remove  from $G_s$ one existing node which has lowest degree and adjust the community accordingly using $CommunityAfterNodeRemoval()$ (discussed later in Function 7). On the other hand, if $P(x)$ is not in $G_s$ but in $\mathcal{H}$, we remove both $x$ and $P(x)$ from $\mathcal{H}$ and add them into $G_s$. Once again, if $G_s$ is full, two nodes are removed from $G_s$ based on the lowest degree as mentioned earlier and communities are adjusted (line 18 in Function 2). Then a new community is created, and $x$ and $P(x)$ are added into it (line 22 in Function 2).
+
+
+
+
+
+%\vspace{-3mm}
+ 
+%\vspace{-1mm}
+\noindent\textbf{(v) \underline{$u$ is in buffer and $v$ is new:}} In this case (edge $\{m,p\}$ in Figure \ref{fig_algo}), we increment the counter corresponding to $u$ and attempt to insert $v$ into $\mathcal{H}$ using the function $NodeisNew()$. 
+
+\begin{function7}[!ht]
+ \caption{\small $NodeisNew(u,v,\mathcal{H},V_s,E_s,C_s)$}
+ \label{nodenew}
+ \If{$\mathcal{H}$ is full}{
+$RemoveNodefromBuffer(\mathcal{H},V_s,E_s,C_s)$ \\
+}
+Insert u in $\mathcal{H}$ \\
+$\mathcal{H}_c[u] = 1$\\
+$\mathcal{H}_p[u] = v$ \\
+
+\Return $\mathcal{H},V_s,E_s,C_s$
+\end{function7}
+
+%see Function \ref{onebufferonenew}) is similar to Function 2. We first increment the counter corresponding to $u$ in the buffer and add $v$ into the buffer in the same way as mentioned in Function 2.\noteng{What is function 2 does it cover the entire three-step process}
+%\vspace{-4mm}
+\iffalse
+\begin{function7}[!h]\tiny
+\caption{\small$OneinBufferOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
+\label{onebufferonenew}
+$\mathcal{H}_c[u]=\mathcal{H}_c[u]+1$\\
+$V_s,E_s,C_s,\mathcal{H} = OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$\\
+\Return $V_s,E_s,C_s,\mathcal{H}$  %\TODO{Check. I think we do not need this line as it is included already in the previous function.{\color{blue}Done}}
+\end{function7}
+%\vspace{-4mm}
+\fi
+
+\noindent\textbf{(vi) \underline{Both $u$ and $v$ are new:}}
+In this case we attempt to insert both $u$ and $v$ to the buffer by executing the function $NodeisNew()$. 
+
+Summarizing, the algorithm continuously increases the proportion of high fidelity nodes and 
+improves the community structure by the following actions -- 
+%We would like to point out that although our algorithm follows a greedy approach, it is able to achieve its objective of obtaining a sample that preserves the underlying community structure. In specific - \\
+(a) delaying the insertion of a node to the sample allows for determining the importance of a node.\\
+(b) removal of low clustering coefficient nodes from the sample ensures that only nodes with high clustering coefficient constitute the final $G_s$.  \\
+(c) since all the actions are aimed at improving  modularity at every iteration, the final $G_s$ potentially will have 
+ well-separated community structure.   
+
+%\noteng{This would also trigger Function2}
+%When both $u$ and $v$ are new (edge $\{p,q\}$ in Figure \ref{fig_algo}), $BothNew()$ (see Function \ref{bothnew}) is called from line 23 of Algorithm 1. %We initially check whether buffer $\mathcal{H}$ is full or not. In case it is not full, we insert $u$ in $\mathcal{H}$ and then call Function 2. Otherwise, 
+%{\em Selection of nodes from buffer:} We preferentially remove $x$ and $y$ from $\mathcal{H}$ based on the counts in $\mathcal{H}_c$ with the additional constraint that both $\mathcal{P}(x)$ and $\mathcal{P}(y)$ are in $G_s$, and add nodes $x$, $y$ and edges $\{\mathcal{P}(x)$,$x$\}, $\{\mathcal{P}(y)$,$y\}$ into $G_s$. $x$ and $y$ are also assigned to the community of the their respective parents. Finally, $u$ and $v$ are inserted into $\mathcal{H}$. If during the insertion into $G_s$ the sample size is violated, the required number of nodes along with their adjacent edges are deleted from $G_s$ using $CheckResizeSample()$.
+
+\iffalse
+%\vspace{-3mm}
+\begin{function8}[!t]\tiny
+\caption{\small$BothNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$}
+\label{bothnew}
+\If{$\mathcal{H}$ is not full}{
+Insert $u$ to $\mathcal{H}$\\
+$\mathcal{H}_p[u] = v$\\
+$\mathcal{H}_c[u] = 1$\\
+$V_s,E_s,C_s,\mathcal{H}= OneinSampleOneNew(u,v,e_t,V_s,E_s,\mathcal{H},C_s)$\\
+}
+\Else{
+Choose nodes $x$, $y$ with $\mathcal{P}(x), \mathcal{P}(y) \in V_s$\TODO{Not $\mathcal{P}(y) \in V_s$?}\textcolor{blue}{corrected} from $\mathcal{H}$ preferentially based on $\mathcal{H}_c$\\
+Remove $x$, $y$ from $\mathcal{H}$\\
+$\mathcal{H}_c[x] = 0$, $\mathcal{H}_c[y] = 0$\\
+$\mathcal{H}_p[x] = \phi$, $\mathcal{H}_p[y] = \phi$\\
+$V_s,E_s,C_s = CheckResizeSample(V_s,C_s,n,2)$\\
+$V_s = V_s \cup x \cup y$ \\
+$E_s = E_s \cup \{x,\mathcal{P}(x)\} \cup \{y,\mathcal{P}(y)\}$ \\
+$C_s(x) = C_s(\mathcal{P}(x))$\\
+$C_s(y) = C_s(\mathcal{P}(y))$\\
+Update $C_s$\\ % \TODO{Not clear how this function helps?}\\
+Insert $u,v$ to $\mathcal{H}$\\
+$\mathcal{H}_p[u] = v$, $\mathcal{H}_p[v] = u$ \\
+$\mathcal{H}_c[u] = 1$, $\mathcal{H}_c[v] = 1$\\
+
+}
+\Return $V_s,E_s,C_s,\mathcal{H}$   %\TODO{Check: the if part does not need this return as the function preceding already does it. Only the second part needs it? {\color{blue} Done}}
 \end{function8}
+\fi
+%\vspace{-3mm}
+
+\iffalse
+\begin{figure}[!t]
+\centering
+%\vspace{-3mm}
+\includegraphics[width=\columnwidth]{figures/percolation}
+\caption{Illustrative example of 3-clique percolation. Once node $g$ is removed, a 3-clique is placed on node $a$. The clique  percolates and accumulates all the nodes except node $f$ which forms a singleton community along with $\{a,b,c,d,e\}$.}\label{fig_percolation} 
+%\vspace{-3mm}
+\end{figure}
+\fi
+%\noteng{The algorithm has huge complexity}
 
 
 %{\color{red}

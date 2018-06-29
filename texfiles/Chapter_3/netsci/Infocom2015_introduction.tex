@@ -1,13 +1,13 @@
 \noindent
 {\bf Broadcast algorithm based on diffusion model:} The study of broadcast over unstructured and mobile networks always assumes that the 
-size of the message is  small enough to be transfered from one node to other 
-on the short durations of contacts between the nodes. 
-Contrary to this, we here explore
+size of the message is  small enough to be transferred from one node to other 
+on the short duration of contacts between the nodes. 
+In contrast, we here explore
  the idea of ``segmented messages'' where we assume that the duration of a contact 
 between the nodes is not always sufficient for the transfer and therefore the message might need to be 
 segmented/divided into sub-parts and sent individually. 
 At the ethernet level such techniques of segmented broadcast are often termed as pipelined broadcast 
-~\cite{patarasuk2008techniques, watts1995pipelined}. Note that this is equivalent to diffusion model we proposed earlier with number of contacts ($k$) replaced by number 
+~\cite{patarasuk2008techniques, watts1995pipelined}. Note that this is equivalent to the diffusion model we proposed earlier with number of contacts ($k$) replaced by number 
 of packets in a message. 
 We systematically study the effect of the size and partition structure of the message on the broadcast time.
  %considering different variants of the basic push-pull transfer protocol. 
@@ -46,7 +46,7 @@ However, we observe that push transfer protocol results in a large number of use
 %their neighborhood by maintaining a history of all previous contacts and stop attempting to perform any further 
 %push after a certain number of unique unsuccessful contacts (reduces to 10\%, message size = 2). 
 An unsuccessful/useless contact here refers to a case 
-where a sender node attempts to send a packet to another node who already has the packet. 
+where a sender node attempts to send a packet to another node that already has the packet. 
 In order to reduce both broadcast time and wastage we propose a combined strategy whereby the nodes in the system initially push and then switch over 
 to pull after a certain percentage (say $x$) of the nodes have received the full message. We observe that if $x$ is carefully chosen, both gain in  
 broadcast time and reduction in wastage is achieved. However, to determine that $x$\% of the nodes have indeed received the message, the system needs to maintain a global information 

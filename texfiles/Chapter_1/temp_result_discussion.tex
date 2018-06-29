@@ -1,7 +1,7 @@
 \noindent
 \section{Prediction results}
 \label{result}
-In this section, we provide detailed results of the our prediction framework on the datasets discussed earlier.
+In this section, we provide detailed results of our prediction framework on the datasets discussed earlier.
 To determine the accuracy of our prediction strategy we use the cross validation technique.  
 For each time step in this range we 
 use our framework to obtain a prediction at that time step. Since we already know the original value, we can obtain a percentage error for the prediction.
@@ -10,35 +10,21 @@ Let $predict_{t}$ represent the prediction value at time $t$ and $original_{t}$ 
  {\large$error_{t}=\frac{|original_{t}-predict_{t}|}{original_{t}}*100$}
 \end{center}
 
+
+
 First we try to find the suitable window for predicting the value of a time series at a time step. For this we refer to figure ~\ref{aging} where 
 we quantify structural correlation and show how the similarity value decreases with increasing lag.
 We observe that the value of the structural correlation decreases as we increase the lag. For INFOCOM 2006 dataset (figure ~\ref{aging}(A)) the correlation drops to less than 
 $0.2$ at lag around $70$.
 Therefore we select a window of size 64. 
-We could have selected any other value between 60 and 70, but we select 64 as it is in the power of 2 and it helps in the spectrogram 
-analysis. Similarly we find the suitable window size to be around 128, 64, 64, 32 (closest power of 2) 
+Although any other value between 60 and 70 could have been selected, we opt for 64 as it is in the power of 2 and thereby helps in the spectrogram 
+analysis. Similarly, we find the suitable window size to be around 128, 64, 64, 32 (closest power of 2) 
 for the SIGCOMM 2009, Highschool 2011, Highschool 2012 and Hospital datasets respectively (refer to figure ~\ref{aging}). 
 % If we look into the behavior in figure ~\ref{aging}(B)
 %  we observe that even at lag 1 the similarity value is 0.025 and it decreases as we increase lag. We found similar behavior for Facebook posts dataset
 %  as well. This essentially suggests that structural correlation does not exist in case networks representing human contact through social media. 
 %  Hence we do not find a suitable window for applying our prediction framework in these networks. 
 %\subsubsection{Human face-to-face interaction}
-
-%We apply our prediction framework on (i) INFOCOM 2006 and (ii) SIGCOMM 2009 datasets.
-For the INFOCOM 2006 dataset we consider the time steps 200-800. 
-%We select the range from 200-800 to remove inconsistencies in the series during the initial and also towards the final stages. 
-Note that selection of these is just representative and one is free to take 
-any time step given there is a window of appropriate length available. For SIGCOMM 2009, High School 2012, High School 2011 and Hospital datasets we 
-consider our test time steps to be 300-900, 200-1000, 200-1000 and 100-900 respectively (refer to table 1). 
-% for Twitter hashtag co-occurrence dataset we consider the time steps 100-600.
-%  We do not apply our prediction framework for the Facebook posts data.
-% For each time step in this range we 
-% use our framework to obtain a prediction at that time step. Since we already know the original value, we can obtain a percentage error for the prediction.
-% Let $predict_{t}$ represent the prediction value at time $t$ and $original_{t}$ represent the original value. We obtain percentage error ($error_{t}$) using the formula:
-% \begin{center}
-%  {\large$error_{t}=\frac{|original_{t}-predict_{t}|}{original_{t}}*100$}
-% \end{center}
-
 \begin{table*}
 %\begin{center}
 \centering
@@ -64,6 +50,22 @@ Average                                                           & 0.867, (\und
  the improvement is more than $5\%$ have been underlined.}
 
 \end{table*}
+%We apply our prediction framework on (i) INFOCOM 2006 and (ii) SIGCOMM 2009 datasets.
+For the INFOCOM 2006 dataset we consider the time steps 200-800. 
+%We select the range from 200-800 to remove inconsistencies in the series during the initial and also towards the final stages. 
+Note that selection of these is only representative and one is free to take 
+any time step, subject to the condition that a window of appropriate length is available. For SIGCOMM 2009, High School 2012, Highschool 2011 and Hospital datasets we 
+consider our test time steps to be 300-900, 200-1000, 200-1000 and 100-900 respectively (refer to table 1). 
+% for Twitter hashtag co-occurrence dataset we consider the time steps 100-600.
+%  We do not apply our prediction framework for the Facebook posts data.
+% For each time step in this range we 
+% use our framework to obtain a prediction at that time step. Since we already know the original value, we can obtain a percentage error for the prediction.
+% Let $predict_{t}$ represent the prediction value at time $t$ and $original_{t}$ represent the original value. We obtain percentage error ($error_{t}$) using the formula:
+% \begin{center}
+%  {\large$error_{t}=\frac{|original_{t}-predict_{t}|}{original_{t}}*100$}
+% \end{center}
+
+
 %-eps-converted-to.pdf
 \begin{figure}
  \begin{center}
@@ -72,6 +74,42 @@ Average                                                           & 0.867, (\und
   \end{center}
  \end{figure}
 
+
+  
+%\todo{Is Fig 8 a new figure}
+ 
+
+%\todo{This para is very poorly written}
+To check how efficient our predictions are we plot the cumulative probability distribution of percentage error for all the datasets in figure ~\ref{fig8}. 
+In table ~\ref{tab_res}, we compare the prediction results across different datasets and different metrics for cases where the prediction error $\leq20\%$. 
+ Note that this error level is representative and ideally a table can be recovered for each such error level from figure ~\ref{fig8}. We make the 
+ following observations from the results: 
+\begin{itemize}
+ \item  Our framework is able to predict the values for active nodes, average degree and modularity with high accuracy across all datasets. 
+%  In fact the prediction error is 
+%  less than or equal to $20\%$ with probability 0.84, 0.85 and 0.86 respectively for active nodes, average degree and modularity on an average across all datasets.
+ \item For active edges, edge emergence, clustering coefficient and closeness centrality, our framework is able to predict the values with moderate accuracy although the 
+ prediction accuracy for these properties is reasonably high for some datasets (INFOCOM 2006, SIGCOMM 2009).
+ \item The prediction accuracy is poor across all datasets for betweenness centrality and in some cases for clustering coefficient and closeness centrality.
+\end{itemize}
+
+
+An important observation is that the spectrogram analysis (introduced in section ~\ref{properties}) is able to distinguish between these properties based on their 
+ predictability. On ranking the properties based on the PSD value at bin 1 (refer to figures ~\ref{fig_all_dataset}(B), (D), (F) and ~\ref{fig_all_dataset_1}(B), (D)), we observe 
+ that the higher ranked properties are the ones for which the prediction error is low while the lower ranked ones have higher prediction error. 
+ Following this observation we further plot the mean percentage error for all the properties across all the datasets versus LPSD in figure ~\ref{k1}. 
+ The plot clearly shows that the higher the value of LPSD, lower is the 
+mean percentage of error and vice versa.
+%This shows that spectrogram of the time series can be used to determine whether a property can be predicted with low percentage error in prediction.
+
+On further investigating into the cases where the prediction error is high, we observe that these points are mostly located either in places where a sharp 
+ transition occurs or in silent phases where there is limited interaction among the nodes. Figure~\ref{fig9} identifies some of the transition and silent phases 
+ in the time series of the number of active edges in INFOCOM 2006 dataset.
+Similar phases are also present in the other datasets as well. 
+ %An immediate extension to check whether we can leverage spectrogram analysis to identify these points beforehand. 
+%  To our aim we extend the spectrogram analysis to the single point case whereby  
+%  while predicting a property at a give time step, we find that the spectrogram of the window ($w$) and use the LPSD value as an indicator for prediction accuracy. 
+% We 
 
  \begin{figure}[!ht]
   \begin{center}
@@ -92,46 +130,10 @@ Average                                                           & 0.867, (\und
  \begin{figure}[!ht]
   \begin{center}
   \includegraphics[width=0.95\columnwidth, angle=0]{./texfiles/Chapter_1/fig/Prediction.pdf}
-  \caption{\label{fig13}The prediction framework.}
+  \caption{\label{fig:e_pred}The prediction framework.}
   \end{center}
  \end{figure}
- 
-%\todo{Is Fig 8 a new figure}
- 
 
-%\todo{This para is very poorly written}
-To check how efficient our predictions are we plot the cumulative probability distribution of percentage error for all the datasets in figure ~\ref{fig8}. 
-In table ~\ref{tab_res}, we compare the prediction results across different datasets and different metrics for cases where the prediction error $\leq20\%$. 
- Note that this error level is representative and ideally a table can be recovered for each such error level from figure ~\ref{fig8}. We make the 
- following observations from the results: 
-\begin{itemize}
- \item  Our framework is able to predict the values for active nodes, average degree and modularity with high accuracy across all datasets. 
-%  In fact the prediction error is 
-%  less than or equal to $20\%$ with probability 0.84, 0.85 and 0.86 respectively for active nodes, average degree and modularity on an average across all datasets.
- \item For active edges, edge emergence, clustering coefficient and closeness centrality our framework is able to predict the values with moderate accuracy although the 
- prediction accuracy for these properties is reasonably high for some datasets (INFOCOM 2006, SIGCOMM 2009).
- \item The prediction accuracy is poor across all datasets for betweenness centrality and in some cases for clustering coefficient and closeness centrality.
-\end{itemize}
-
-
-An important observation is that the spectrogram analysis (introduced in section ~\ref{properties}) is able to distinguish between these properties based on their 
- predictability. On ranking the properties based on the PSD value at bin 1 (refer to figures ~\ref{fig_all_dataset}(B), (D), (F) and ~\ref{fig_all_dataset_1}(B), (D)), we observe 
- that the higher ranked properties are the ones for which the prediction error is low while the lower ranked ones have higher prediction error. 
- Following this observation we further plot the mean percentage error for all the properties across all the datasets versus LPSD in figure ~\ref{k1}. 
- The plot clearly shows that the higher the value of LPSD, lower is the 
-mean percentage of error and vice versa.
-%This shows that spectrogram of the time series can be used to determine whether a property can be predicted with low percentage error in prediction.
-
-On further investigating into the cases where the prediction error is high, we observed that these points are mostly located either in places where a sharp 
- transition occurred or in silent phases where there was limited interaction among the nodes. Figure~\ref{fig9} identifies some of the transition and silent phases 
- in the time series of number of active edges in INFOCOM 2006 dataset.
-Similar phases are also present in the other datasets as well. 
- %An immediate extension to check whether we can leverage spectrogram analysis to identify these points beforehand. 
-%  To our aim we extend the spectrogram analysis to the single point case whereby  
-%  while predicting a property at a give time step, we find that the spectrogram of the window ($w$) and use the LPSD value as an indicator for prediction accuracy. 
-% We 
-
- 
 
 %\subsection{Capturing the high error points}
 %We next concentrate on the time points where the prediction error is high. 
@@ -183,15 +185,15 @@ To that aim we extend the spectrogram analysis to the single point case whereby
  while predicting a property at a give time step, we find that the spectrogram of the window ($w$) and use the LPSD value as an indicator for potential prediction accuracy. 
  The cases identified by spectrogram analysis to be unsuitable for prediction can then be filtered out to improve the overall accuracy of the prediction framework. 
   A schematic diagram of this enhanced prediction framework is 
- provided in figure ~\ref{fig13}.
-We now consider all the datasets and the corresponding time steps for prediction (which we considered earlier in this section, refer to table 1) and  
+ provided in figure ~\ref{fig:e_pred}.
+We now consider all the datasets and the corresponding time steps for prediction (which we considered earlier in this section, refer to table 3.1) and  
 instead of directly using our prediction framework we 
  perform spectrogram analysis (single point method) on these points to separate out those which are unsuitable for prediction. We predict 
- only the points which the spectrogram analysis identified as suitable for prediction.
+ only the points which the spectrogram analysis identifies as suitable for prediction.
  In table ~\ref{tab_res} we compare the fraction of predictions with 
- error $\leq 20\%$ between both the cases where we do not use spectrogram  and where we use spectrogram. 
- We observe that the fraction of prediction with error $\leq 20\%$ is enhanced for all the properties albeit only marginally in some cases where the accuracy was already high. 
- More importantly for (ill-predicted) properties like betweenness centrality, closeness centrality, the prediction
+ error $\leq 20\%$ between both the cases where we do not use spectrogram  and where we make use of it. 
+ We observe that the fraction of prediction with error $\leq 20\%$ is enhanced for all the properties, albeit only marginally in some cases where the accuracy has already been high. 
+ More importantly, for (ill-predicted) properties like betweenness centrality, closeness centrality, the prediction
 accuracy increases substantially. 
  Note that prediction error $20\%$ is again representative and similar results 
  could be obtained for other values of prediction error as well.

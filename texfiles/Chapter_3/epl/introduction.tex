@@ -3,9 +3,9 @@
 Information diffusion is one of the most common phenomena that occurs on a
 network and the most elementary model of this process is SI
 (Susceptible-Infected)~\cite{anderson1992infectious} and its different variations~\cite{watts2002simple,dodds2004universal,pnas1,pnas2,tang2009epidemic,son2012percolation}.
-Epidemic/adoption models have recently found a renewed interest with the formulation of temporal networks and 
+Epidemic/adoption models have recently found a renewed interest with the formulation of temporal networks and the 
 realization that most of the real-world networks are temporal in nature (network structure changes with time). 
-\if{0}
+\iffalse
 For example,  Takaguchi et. al. in~\cite{takaguchi2013bursty} presents a model whereby adoption behavior 
 of a node is driven by the number of recent contacts with already adopted individual. 
 Through simulations on real-world temporal networks the authors further show that burstiness~\cite{karsai2011small} 
@@ -27,12 +27,12 @@ is to succinctly define the problem in  terms of a simple model and then theoret
 %Albeit a deep literature exists on the study of epidemics in temporal networks, they are mostly simulation based and to the best of our knowledge, a theoretical foundation on the topic is still wanting. 
 We consider a spreading model in the lines of~\cite{takaguchi2013bursty} where each susceptible node needs to communicate with the 
 infected nodes {\em multiple times} to contract infection. More importantly, unlike memoryless systems, we assume that each node comprises a memory which 
-keeps track of the number of contacts it makes with infected ones. Note that in our system memory is a property which allows each node to remember the number 
+keeps track of the number of contacts it makes with the infected ones. Note that in our system memory is a property which allows each node to remember the number 
 of contacts it has already made with the infected ones. While Karimi et. al. studied the effect of burstiness in the diffusion process, we 
 are more interested in estimating both empirically and analytically the diffusion time and rate.
-Note that this model is completely different from  threshold models~\cite{granovetter1978threshold,sur1} where a node
+Our model is also completely different from  threshold models~\cite{granovetter1978threshold,sur1} where a node
  gets infected when majority of its neighbors are infected or probabilistic SI-models where an infected node,  on coming in contact, 
-infects a susceptible node with a probability $p$,  as those are memoryless systems and the transition depends only on the activity of present time step. 
+infects a susceptible node with a probability $p$,  as those are memoryless systems and the transition depends only on the activity of the present time step. 
 Our diffusion model also differs from the Neighborhood Exchange (NE) model proposed in \cite{volz2007susceptible}. NE assumes at any given time, an individual
 will be in contact with an individual-specific number of neighbors with whom disease transmission is possible while our model considers that a node can be in contact with 
 only a single individual. Also NE does not consider the fact that multiple contacts are required to contract infection.
@@ -40,7 +40,7 @@ only a single individual. Also NE does not consider the fact that multiple conta
 The analytical results are obtained 
 considering simple yet important topologies like the complete graph and the infinite $d$-regular trees which accounts for two extreme variants of network topology in terms of edge 
 density. 
-We demonstrate that the total diffusion time required for complemete graph topology (with $n$ nodes) scales as $n^{\frac{k-1}{k}}$ where $k>1$ is the number 
+We demonstrate that the total diffusion time required for complete graph topology (with $n$ nodes) scales as $n^{\frac{k-1}{k}}$ where $k>1$ is the number 
 of contacts required to infect a susceptible individual. 
 This is in sharp contrast to the case with $k$ = $1$, where it has been shown that diffusion time 
 scales as $\log{(n)}$ ~\cite{rumarSreadingPushPull,rumourSpreading_evolvingGraph_PushPull}.

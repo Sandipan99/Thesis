@@ -1,12 +1,12 @@
 \noindent
-\section{On Complete graph}
+\section{On complete graph}
 \label{res_complete}
 \noindent For {\bf complete graph} we assume the
 number of nodes in the system to be $n$. 
 %The time elapsed before the first sender (apart from the initiator) is created is represented by $t_1$ and the total diffusion time is denoted by $T^*$. We denote the expected values of these quantities by $% \mathbb{E}(t_1)$ and $\mathbb{E}(T^*)$ respectively. 
 To determine how the number of
 senders in the system changes with time, we plot the number of senders
-against time for complete graph in Fig.~\ref{fig1}. 
+against time for complete graph in figure~\ref{chapter_5_fig1}. 
 %We further show in ~\ref{fig_k} how the diffusion progresses by plotting the number of nodes at each stage of infection at every time step for complete graph topology which roughly resembles epidemic process on a heterogenous population.  %Note
 %that we assume the $d$-regular tree to be truncated with all the nodes except the leaf
 %nodes have degree $d$.
@@ -27,7 +27,7 @@ balls in the experiment where we have initially $d$ empty urns (degree of the no
 single time step we add a single ball to one urn chosen randomly. 
  For any $k$%
 -parts message, by~\cite{kaplan1977generalization} we describe our problem
-as a unit-time Poisson process. Note that for a poisson process the inter-arrival time follows exponential distribution ($\lambda$) and expected number of arrivals in time $t$ is $\lambda t$.  
+as a unit-time Poisson process. Note that for a Poisson process the inter-arrival time follows exponential distribution ($\lambda$) and expected number of arrivals in time $t$ is $\lambda t$.  
  Let 
 $X_{j}(t)$ be a random value describing the number of balls in $j^\textrm{th}$ urn up
 to time $t$. More precisely $X_{j}(t)=\sum_{i=1}^{N}1$ where $N$ is a random variable 
@@ -61,7 +61,7 @@ t)dt=\int_{0}^{\infty}(1-(1-P(t_{1}
 \end{aligned}
 \end{equation}
 
-where $Q(k,u)$ is a regularized incomplete gamma function i.e. 
+where $Q(k,u)$ is a regularized incomplete gamma function~\cite{arfken1985incomplete} i.e. 
 \begin{equation}
 Q(k,u)=\frac{\Gamma(k,u)}{\Gamma(k)}=e^{-u}\sum_{l=0}^{k-1}\frac{u^{l}}{l!}
 \end{equation}
@@ -76,7 +76,7 @@ Note that $t_{1}$ for a Poisson process, is a continuous random variable.
 we compute scaled $t_1$ and $T^{*}$ (by $d^{\frac{k-1}{k}}$, 
 (this specific scaling function was initially calculated for $k=2$ and then generalized for higher values)) instead of their explicit values to further aid our analysis. 
 To summarize, we start by computing  
-expected values of scaled $t_1$ and $T^{*}$ considering a continuous (Poisson) model with $d\rightarrow \infty$ and show that the results hold for finite $d$. Finally we show that the results for the continuous model extend to the discrete model.
+expected values of scaled $t_1$ and $T^{*}$ considering a continuous (Poisson) model with $d\rightarrow \infty$ and show that the results hold for finite $d$. Finally, we show that the results for the continuous model extend to the discrete model.
 We begin by showing that $t_1$ (time to create the first sender apart from the initiator) is an indicator for the diffusion delay $T^*$ through the following two theorems. 
 %The detailed proof of both the theorems are available in the supplementary.
 
@@ -198,7 +198,7 @@ random variable $s^{\ast }$ with
 \begin{proof}
 $G_{i}^{\left( d\right) }\left( z\right)
 =1-F_{i}^{\left( d\right) }\left( z\right) =\Pr \left\{ t_{i}>zd^{\frac{k-1}{%
-k}}\right\} =\Pr \left\{ T_{i}>z\right\} $(complementary cdf of $T_i$). Since $\frac{zd^{\frac{k-1}{k}}}{%
+k}}\right\} =\Pr \left\{ T_{i}>z\right\} $ (complementary cdf of $T_i$). Since $\frac{zd^{\frac{k-1}{k}}}{%
 d}=zd^{-\frac{1}{k}}$ we have 
 \begin{equation}
 \begin{aligned} G_{i}^{\left( d\right) }\left( z\right)
@@ -269,7 +269,7 @@ The above results are based on the assumption that $i$ is fixed as
 %as I understand the number of sender would also increase exponentially - then does the limit hold}) is fixed and $%
 $d\rightarrow \infty .$  
 We now proceed to show that the computations hold for finite $d$ for $i$ varying with $d$.
-Note that the above formulas hold true for $i\leq f\left( d\right) $ as
+Note that the above formulae hold true for $i\leq f\left( d\right) $ as
 long as $f\left( d\right) =o\left( d^{\frac{1}{k}}\right) .$ 
 
 
@@ -303,7 +303,7 @@ k}\int_{0}^{\infty }y^{i-2+\frac{1}{k}}e^{-y}dy \\
 %For large $i$ we have by Stirlings formula $\Gamma \left( i-1+1/k\right)
 %\simeq \sqrt{2\pi }\frac{\left( i-2+1/k\right) ^{i-3/2+1/k}}{e^{i-2+1/k}}$
 %and
-Using Stirlings approximation we obtain - \\
+Using Stirling's approximation~\cite{feller2008introduction} we obtain - \\
 %$\left( i-1\right) !\simeq \sqrt{2\pi \left( i-1\right) }\left( \frac{i-1%
 %}{e}\right) ^{i-1}$ hence 
 \begin{equation}
@@ -325,9 +325,9 @@ Note once more that all the computations up to now are in scaled time units.
 Hence in real time we have $t_{L}\sim $ $L^{1/k}d^{1-\frac{1}{k}}.$ Setting $%
 L\sim d^{\frac{1}{k}-\epsilon }$ we get $t_{L}=d^{1-\frac{1}{k}+1/k^{2}-%
 \frac{\epsilon }{k}}.$ Taking $t_{L}$ as unit and taking into account that
-the total time $t^{\ast }$ (in the scaled process) is according to the
-results in Erd\"{o}s and Kaplan \cite{kaplan1977generalization} $t^{\ast
-}=\left( 1+o\left( 1\right) \right) d\log d$ we have $t^{\ast }=$ $O\left(
+the total time  $t^{\ast
+}=\left( 1+o\left( 1\right) \right) d\log d$ (in the scaled process), we have according to the
+results in \cite{kaplan1977generalization}, $t^{\ast }=$ $O\left(
 1\right) \cdot t_{L}\cdot d^{\frac{1}{k}-1/k^{2}+\frac{\epsilon }{k}}\log d.$
 But since the acceleration at this point is $d^{1/k-\epsilon }$ we have for
 the remaining time (that is the time after the $d^{\frac{1}{k}-\epsilon }$%
@@ -382,7 +382,7 @@ hence $\hat{E}\left( \hat{t}_{i}\right) =\hat{E}\left( t_{i}\right)
 \left( 1+o_{d}\left( 1\right) \right) $ and the analytical results for the poisson model hold for the discrete case as well.
 \end{proof}
 
-We further simulated our diffusion model on complete graphs to verify our analytical results. 
+We further simulate our diffusion model on complete graphs to verify our analytical results. 
 For this
 purpose, we plot in figure \ref{segSizeVsDelay_nrTrans_varyN_Mall_push_pull}
 the values of {average diffusion time ($Av(T^{\ast })$)} and {average time to create the first sender ($Av(t_{1})$)} respectively as we vary the size of the network. We further 
@@ -419,7 +419,7 @@ numerical simulations.
 dense graphs (i.e., having high edge probability) the analysis on the complete graph case holds.  
 In this regard we first plot $Av(T^{\ast})$ (obtained through simulations) and $\hat{E}(T^{\ast})$ ($n^{\frac{k-1}{k}}$ scaled by a constant, $n$ is the number of nodes) for 
 different values of $k$ (message size) (refer to figure \ref{fig_diff_g_n_p}(a)). 
-Clearly the theoretical estimate closely follows the simulated result. {As we increase the value of edge probabilities($p$) (i.e., make the network more dense)
+Clearly, the theoretical estimate closely follows the simulated result. {As we increase the value of edge probabilities ($p$) (i.e., make the network more dense)
  the closer it gets to the theoretical estimate.}
 We further plot $Av(T^{\ast})$ (scaled by $\hat{E}(t_{1})$) for varying $p$ in figure \ref{fig_diff_g_n_p}(b). 
 The value gets close to 2 with edge probability 1 but remains close to 2 even for lower values of $p$. 

@@ -9,7 +9,7 @@ the time series extracted from the temporal network
 %We can convert a time series from its time domain to its frequency domain using Discrete Fourier Transform (DFT). However, instead of taking the discrete fourier transform of the whole series we 
 by conducting
   a spectrogram analysis of the data. Spectrogram analysis is a short time fourier transform 
-where we divide the whole time series into several equal sized windows and apply discrete fourier transform on this widowed data.
+where we divide the whole time series into several equal sized windows and apply discrete fourier transform on this windowed data.
 The main advantages of using spectrogram analysis are
  (a). we do not lose the time information,
  (b). we are able to obtain a view of the local frequency spectrum.
@@ -19,6 +19,14 @@ A high concentration of low frequency components would indicate lower fluctuatio
 would indicate higher fluctuations and irregularities in the data.
 %These fluctuations have a direct relation to our prediction framework as lower the fluctuations in data higher is the prediction accuracy and vice versa.
 
+\begin{figure}
+ \begin{center}
+ \includegraphics[width=0.45\columnwidth, angle=0]{./texfiles/Chapter_1/fig/jaccard-eps-converted-to.pdf}
+ \caption{\label{fig2}(a) and (b) denote the status of node $i$ at time $t$ and $t+k$ respectively. $NBR(i)_{t}=\{a,b,c\}$ and $NBR(i)_{t+k}=\{a,d,c,e\}$ 
+ $Correlation(i)_{k}$={\large$\frac{NBR(i)_{t}\bigcap NBR(i)_{t+k}}{NBR(i)_{t}\bigcup NBR(i)_{t+k}}$}={\large$\frac{2}{5}$} where $NBR(i)_{t}\rightarrow$ the set of neighbors of $i$ at time $t$}
+  \end{center}
+ \end{figure}
+
 We construct the spectrogram and segregate the power spectral density (PSD measured in Watts/Hz) based on the frequency into three bins. In bin 1 we calculate the mean PSD 
 corresponding to the frequencies $<$ 5 Hz, in bin 2 we calculate the PSD corresponding to frequencies between 5 and 15 Hz and bin 3 consists of the 
 mean PSD value corresponding to frequencies $>$ 15 Hz. We call them LPSD, MPSD and HPSD respectively.
@@ -26,7 +34,7 @@ So a higher value of mean PSD corresponding to bin 1 (LPSD) would indicate lower
 In figures ~\ref{fig_all_dataset}(B), (D), (E) and ~\ref{fig_all_dataset_1}(B), (D) we plot the PSD corresponding to the three bins across all the properties for all the datasets. We 
 observe that the lower frequencies dominate to a higher extent in case of the properties like number of active nodes, number of active edges, modularity 
 but to a much lower extent in case of betweenness centrality, closeness centrality and clustering coefficient.  
-In fact the prediction accuracy of a property can be enhanced through spectrogram analysis.
+In fact, as we shall show later, the prediction accuracy of a property can be enhanced through spectrogram analysis.
 %this could be a good indicator of prediction accuracy of a property.
 % But for the human face-to-face networks the PSD values 
 % are much higher than in case networks of human contact through social media. This indicates that the time series corresponding to human face-to-face 

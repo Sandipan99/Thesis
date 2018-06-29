@@ -164,7 +164,7 @@
     \preliminarymargins
 	\namepage
     \titlepage 
-%	\approvalpage		%% uncomment this line to include the approval by DSC committee - SG
+	\approvalpage		%% uncomment this line to include the approval by DSC committee - SG
 	\certificatepage
     \declarationpage
     \acknowledgmentspage

@@ -1,5 +1,5 @@
 \noindent
-\section{Forming reviewer groups}
+\subsection{Forming reviewer groups}
 \label{group}
 
 The results in the previous section together lead us to believe that the editors in numerous cases fail to assign reviewers which may further lead to flawed papers 
@@ -20,15 +20,30 @@ of the work.
 
 %hence we leverage this framework to obtain the best possible multiple-referee assignments for a given paper.
 
-\subsection{Problem definition} Given a submission $S$, a set of reviewers $R = \{R_1, R_2,\ldots, R_n\}$ and the number 
+\begin{table}
+\centering
+\caption{Proportion of discordant cases (length, sentiment and content) in each reviewer class combination with respect to (accept ratio, time since 
+last assignment).\vspace{3mm} }
+\label{tab:dis}
+\begin{tabular}{c|c|c|c}
+\hline
+           & Length       & Sentiment    & Content      \\ \hline
+MM         & 0.176, 0.159  & 0.194, 0.143 & 0.164, 0.152 \\ 
+LM, HM     & 0.173, 0.162 & 0.243, 0.192 & 0.237, 0.216 \\ 
+LL, HH, LH & 0.312, 0.254 & 0.371, 0.286 & 0.293, 0.311 \\ \hline
+\end{tabular}
+\vspace{4mm}
+\end{table}
+
+\subsubsection{Problem definition} Given a submission $S$, a set of reviewers $R = \{R_1, R_2,\ldots, R_n\}$ and the number 
 of reviewers to be assigned for a paper $k$, the goal is to obtain a set of potential reviewer groups $G = \{ G_1, G_2, \ldots, G_u\}$ (each of size $k$) 
 who could be assigned to referee a submission.
 
-\subsection{Methodology}
+\subsubsection{Methodology}
 We now proceed to develop a solution to the above problem based on a genetic algorithm framework which is inspired by the method proposed in~\cite{ani2010method}. 
 Typically, chromosomes are represented as simple
 strings of data and instruction. In our case chromosomes represent solutions while reviewers are chosen as genes. The details of our algorithm is as follows -- 
-\subsubsection{Selecting a population} Genetic algorithm starts with an initial population represented by the chromosomes. 
+\subsubsection*{Selecting a population} Genetic algorithm starts with an initial population represented by the chromosomes. 
 Ideally the assigned reviewers should be knowledgeable and experienced in the topics related to the submitted paper. Although information about the associated topic of the papers are not present, each paper in the dataset is  associated with a set of keywords (at least 1 and at most 4, assigned by the publisher) which we use as a proxy for the topic. While the JHEP dataset consists of 201 unique keywords, JSTAT dataset has 562. This again indicates that the papers in JSTAT are more diverse. 
 Hence for  a given 
 submission we first extract the keywords. 
@@ -43,7 +58,7 @@ that has one (or more) keywords in common with that of the submission. This set 
 % \end{figure}
 
 
-\subsubsection{Initialization} Once the initial population $\bar R$ of reviewers is obtained, we classify them based on 
+\subsubsection*{Initialization} Once the initial population $\bar R$ of reviewers is obtained, we classify them based on 
 the accept ratio and time from the last assignment. For each reviewer $i$ we obtain the accept ratio $a_{i}$ and time from the last 
 assignment $d_i$ (scaled between 0 and 1). Finally, we calculate the fitness score for the reviewer $i$ as -
 \begin{equation}
@@ -54,13 +69,13 @@ less than $0.33$ are classified as class 1 ($RC_1$), between $0.33$ and $0.66$ a
 We then club the reviewers randomly into non-overlapping groups of size $k$. This forms the initial generation with each group represented as 
 a chromosome. Note that a generation forms a solution set for the above problem.
 
-\subsubsection{Fitness evaluation}
+\subsubsection*{Fitness evaluation}
 Once a generation is obtained, we proceed to calculate the fitness of each chromosome (group) and, thereby, calculate the fitness of the whole generation. 
 The generation level fitness ($FG_{gen}$) is calculated according to function 1 for a generation $gen$. For each class $RC_i$ we initially calculate the number of reviewers in $RC_i$ 
 per group (represented by $RPC_i$). Now for every group $g_j$ we find the number of reviewers of each class $RC_i$  which we represent by $RC_{i}^{g_j}$. We penalize the 
 chromosome if the constraint (refer to line 10 of function 1) is violated by not adding anything to the final score; otherwise, a value of 1000 is added to the fitness score.
 Note that $1000$ is a representative value and for practical purposes we can use any positive value ($C$). 
-More importantly this scoring scheme further allows for ranking the groups. 
+More importantly, this scoring scheme further allows for ranking the groups. 
 \begin{function1}
  \caption{generation\_level\_fitness()}
  $G$, $RC_i$ \\ 
@@ -81,6 +96,16 @@ More importantly this scoring scheme further allows for ranking the groups.
 %\vspace{-8mm}
 %\mycheck{An example to illustrate the computation of the above fitness would be nice.Sandipan: added}
 
+
+
+To illustrate on how the fitness function is calculated we consider here a toy example. Consider a population of 16 reviewers (with ids 0 - 15), group size of 4 and 3 reviewer classes (1, 2, 3) with number of reviewers in each class being 6, 5 and 5 respectively. Let the reviewers with ids 0 - 5 be assigned to class 1, 6 - 10 to class 2 and rest are assigned to class 3. 
+So, $|RPC_1| = 1.5$, $|RPC_2| = 1.25$ and $|RPC_3| = 1.25$.
+%\mycheck{The calculation is not correct. Check $|RPC_3| = 1.25$} 
+Each generation consists of 4 groups. Let us consider a group $g$ with reviewers 0, 1, 6 and 12. For this group  $|RC_1^{g}| = 2$, $|RC_2^{g}| = 1$ and $|RC_3^{g}| = 1$. Since $|RC_1^{g}| > RPC_1$, it contributes a score of 1000. Similarly, $|RC_2^{g}|$ and $|RC_3^{g}|$ does not contribute to any score. 
+%\mycheck{According to your example $|RC_3^{g}| < |RPC_3|$ and therefore should not add a score of 1000. CHECK.} 
+Hence the score contributed by this group to the generation is 1000. Sum of this score across all the groups in the generation equals the generation level fitness. 
+Note that our algorithm is inherently fair because the proportion of referees in each class is maintained in the recommended set of referees.
+
 \begin{figure}
 \centering
 \includegraphics[scale=0.32]{./texfiles/Chapter_4/cikm_17/figures/cross_over.pdf}
@@ -88,15 +113,7 @@ More importantly this scoring scheme further allows for ranking the groups.
 \vspace{4mm}
 \end{figure}
 
-To illustrate on how the fitness function is calculated we consider here a toy example. Consider a population of 16 reviewers (with ids 0 - 15), group size of 4 and 3 reviewer classes (1, 2, 3) with number of reviewers in each class being 6, 5 and 5 respectively. Let the reviewers with ids 0 - 5 are assigned to class 1, 6 - 10 to class 2 and rest are assigned to class 3. 
-So, $|RPC_1| = 1.5$, $|RPC_2| = 1.25$ and $|RPC_3| = 1.25$.
-%\mycheck{The calculation is not correct. Check $|RPC_3| = 1.25$} 
-Each generation consists of 4 groups. Let us consider a group $g$ with reviewers 0, 1, 6 and 12. For this group  $|RC_1^{g}| = 2$, $|RC_2^{g}| = 1$ and $|RC_3^{g}| = 1$. Since $|RC_1^{g}| > RPC_1$, it contributes a score of 1000. Similarly $|RC_2^{g}|$ and $|RC_3^{g}|$ does not contribute to any score. 
-%\mycheck{According to your example $|RC_3^{g}| < |RPC_3|$ and therefore should not add a score of 1000. CHECK.} 
-Hence the score contributed by this group to the generation is 1000. Sum of this score across all the groups in the generation equals the generation level fitness. 
-Note that our algorithm is inherently fair because the proportion of referees in each class is maintained in the recommended set of referees.
-
-\subsubsection{Crossover}
+\subsubsection*{Crossover}
 Crossover is the process in which two chromosomes combine the genetic material to create a new generation such that the new one possesses the genetic material of both. 
 Although several techniques for crossover exist~\cite{golberg1989genetic}, we here consider the one-point crossover technique. 
 One random position in the chromosome is chosen to determine the crossover point. In the offsprings produced, the data till the crossover point are copied verbatim from the parents while the data beyond the crossover point are swapped between the two parents. As a result, these new chromosomes or
@@ -114,7 +131,7 @@ with the best score is confirmed as the best possible reviewer grouping for the 
 \vspace{4mm}
 \end{figure}
 
-\subsection{Evaluation}
+\subsubsection{Evaluation}
 
 To evaluate the performance of our algorithm, we initially separate out the multi-refereed papers from both the datasets. Based on the long term citations received by each, 
 we classify them as high and low cited. Specifically we rank them based on their citations and top 25 percentile are classified as highly cited ones and bottom 25 percentile 
@@ -151,8 +168,10 @@ As mentioned earlier, our algorithm requires two parameters, (i) $\alpha$ and (i
 for different values of $\alpha$. We observe that TP (averaged over accepted and rejected cases) improves with increasing value of $\alpha$ after which it drops for 
 both JHEP and JSTAT datasets. Optimal result is obtained at $\alpha = 0.6$ for JHEP and $\alpha = 0.7$ for JSTAT. 
 We hence set the value of $\alpha$ at 0.6 and 0.7 respectively for JHEP and JSTAT datasets. \\
-We further look into the crossover rate as well. In figure~\ref{fig:param_estimte}(b), we plot TP for different crossover rates. TP is observed to be lower for 
-low crossover rate. This is because lower crossover rate allows for very low change of the chromosomes and since we set the number of generations to a constant  On the other hand, for very high crossover rate changes in the chromosome occurs at higher rates which increases the chances of obtaining the best solution. 
+We further look into the crossover rate as well. In figure~\ref{fig:param_estimte}(b), we plot TP for different crossover rates. 
+%TP is observed to be lower for 
+%low crossover rate. 
+%This is because lower crossover rate allows for very low change of the chromosomes. On the other hand, for very high crossover rate changes in the chromosome occurs at higher rates which increases the chances of obtaining the best solution. 
 Optimal TP is obtained at 70\% crossover rate and hence we set the crossover rate at $70\%$ for our experiments. The number of generations we examine is set at 500.\\ 
 
 {\bf Key results:}  
@@ -223,12 +242,7 @@ Average &  0.71,0.66                                                   &  0.87,0
 \vspace{5mm}
 \end{table}
 
-\begin{figure}
-\centering
-\includegraphics[scale = 0.35]{./texfiles/Chapter_4/cikm_17/figures/G_A_baseline.eps}
-\caption{\label{fig:GA_base} Mean true positive (averaged over accepted and rejected papers) value with recommendation by our method (G\_A\_based) and the baseline. Results are 
-noted for (a) JHEP and (b) JSTAT. $k = 15$.\vspace{4mm}}
-\end{figure}
+
 
 \if{0}
 \mycheck{Discard this part?}

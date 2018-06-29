@@ -113,12 +113,26 @@
 %   datasets.}
 % \end{figure*}  
 
+In this section, we systematically analyze the cases where a single reviewer is involved and compare these with the cases where multiple reviewers are involved and further 
+propose a framework for identifying and recommending compatible reviewer groups for multi-reviewer cases. Since our framework is specifically designed for cases where 
+multiple referees are involved and fraction of such cases in JHEP dataset is low, we also evaluate our framework on an additional dataset JSTAT.
+
+\subsection{JSTAT dataset}
+
+Journal of Statistical Mechanics: Theory and Experiment (JSTAT) publishes papers in statistical physics and has 
+an impact factor of 2.091\footnote{http://iopscience.iop.org/journal/1742-5468}. 
+JSTAT is more interdisciplinary (compared to JHEP) and attracts papers from a wide range of researchers from physicists to computer scientists. 
+The dataset contains information of 6106 papers which were submitted between 2004 and 2016. The meta information available for each paper is same as that of the 
+JHEP dataset.
+For JSTAT the citation information of the papers (both accepted and rejected) were not available. Hence, we collected the titles of all the papers and queried the ``scopus''\footnote{https://www.scopus.com/home.uri}
+database to obtain the citation information of the papers (both accepted and rejected).
+
 \input{./texfiles/Chapter_4/cikm_17/multiple_vs_single}
 
 \input{./texfiles/Chapter_4/cikm_17/reviewer}
 
 \input{./texfiles/Chapter_4/cikm_17/group_referee}
-\vspace{-6mm}
+
 \input{./texfiles/Chapter_4/cikm_17/editor_importance}
 
 

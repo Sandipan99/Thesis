@@ -5,30 +5,27 @@
 \newblock konect.uni-koblenz.de/networks/facebook-wosn-links, 2017.
 \newblock [Online; accessed 2017].
 
-\bibitem{si}
-{Resources (anonymized)}.
-\newblock https://goo.gl/dQaZ7B, 2017.
-\newblock [Online; accessed 18-Feb-2017].
-
-\bibitem{Agarwal72}
-G.~Agarwal and D.~Kempe.
-\newblock Modularity-maximizing graph communities via mathematical programming.
-\newblock {\em The European Physical Journal B}, 66(3):409--418.
-
 \bibitem{aggarwal2011outlier}
 C.~C. Aggarwal, Y.~Zhao, and S.~Y. Philip.
 \newblock Outlier detection in graph streams.
 \newblock In {\em ICDE}, pages 399--409. IEEE, 2011.
 
+\bibitem{agrawal2014grouping}
+R.~Agrawal, B.~Golshan, and E.~Terzi.
+\newblock Grouping students in educational settings.
+\newblock In {\em Proceedings of the 20th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 1017--1026. ACM, 2014.
+
+\bibitem{ahmed2010reconsidering}
+N.~K. Ahmed, J.~Neville, and R.~Kompella.
+\newblock Reconsidering the foundations of network sampling.
+\newblock In {\em Proceedings of the 2nd Workshop on Information in Networks},
+  2010.
+
 \bibitem{ahmed2014network}
 N.~K. Ahmed, J.~Neville, and R.~Kompella.
 \newblock Network sampling: From static to streaming graphs.
 \newblock {\em ACM TKDD}, 8(2):7, 2014.
-
-\bibitem{nature2010}
-Y.-Y. Ahn, J.~P. Bagrow, and S.~Lehmann.
-\newblock Link communities reveal multiscale complexity in networks.
-\newblock {\em Nature}, 466:761--764, 2010.
 
 \bibitem{albert1999internet}
 R.~Albert, H.~Jeong, and A.~Barab{\'a}si.
@@ -40,6 +37,18 @@ L.~A. Amaral, A.~Scala, M.~Barthelemy, and H.~E. Stanley.
 \newblock Classes of small-world networks.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 97(21):11149--11152, October 2000.
+
+\bibitem{anagnostopoulos2010power}
+A.~Anagnostopoulos, L.~Becchetti, C.~Castillo, A.~Gionis, and S.~Leonardi.
+\newblock Power in unity: forming teams in large-scale community systems.
+\newblock In {\em Proceedings of the 19th ACM international conference on
+  Information and knowledge management}, pages 599--608. ACM, 2010.
+
+\bibitem{anagnostopoulos2012online}
+A.~Anagnostopoulos, L.~Becchetti, C.~Castillo, A.~Gionis, and S.~Leonardi.
+\newblock Online team formation in social networks.
+\newblock In {\em Proceedings of the 21st international conference on World
+  Wide Web}, pages 839--848. ACM, 2012.
 
 \bibitem{anderson1992infectious}
 R.~M. Anderson, R.~M. May, and B.~Anderson.
@@ -59,57 +68,34 @@ S.~Aral, L.~Muchnik, and A.~Sundararajan.
 \newblock {\em Proceedings of the National Academy of Sciences},
   106(51):21544--21549, 2009.
 
-\bibitem{Arenas2007Motif}
-A.~Arenas, A.~Fernandez, S.~Fortunato, and S.~Gomez.
-\newblock Motif-based communities in complex networks.
-\newblock {\em Journal of Physics A}, 41(22):224001, Sept. 2008.
-
-\bibitem{Arenas}
-A.~Arenas, A.~Fern{\'a}ndez, and S.~G{\'o}mez.
-\newblock Analysis of the structure of complex networks at different resolution
-  levels.
-\newblock {\em New Journal of Physics}, 10(5):053039, 2008.
-
-\bibitem{Asur:2009}
-S.~Asur, S.~Parthasarathy, and D.~Ucar.
-\newblock An event-based framework for characterizing the evolutionary behavior
-  of interaction graphs.
-\newblock {\em ACM Trans. Knowl. Discov. Data}, 3(4):16:1--16:36, Dec. 2009.
+\bibitem{arfken1985incomplete}
+G.~Arfken.
+\newblock The incomplete gamma function and related functions.
+\newblock {\em Mathematical Methods in Physics, Academic Press, Orlando FL},
+  pages 565--572, 1985.
 
 \bibitem{bacchetti2002peer}
 P.~Bacchetti.
 \newblock Peer review of statistics in medical research: the other problem.
-\newblock {\em British Medical Journal}, 324(7348):1271, 2002.
+\newblock {\em BMJ: British Medical Journal}, 324(7348):1271, 2002.
 
-\bibitem{Backstrom:2006}
-L.~Backstrom, D.~Huttenlocher, J.~Kleinberg, and X.~Lan.
-\newblock Group formation in large social networks: Membership, growth, and
-  evolution.
-\newblock In {\em Proceedings of the 12th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '06, pages 44--54, New York, NY,
-  USA, 2006. ACM.
+\bibitem{backlund2014effects}
+V.-P. Backlund, J.~Saram{\"a}ki, and R.~K. Pan.
+\newblock Effects of temporal correlations on cascades: Threshold models on
+  temporal networks.
+\newblock {\em Physical Review E}, 89(6):062815, 2014.
 
-\bibitem{barabasi1999emergence}
-A.-L. Barab{\'a}si and R.~Albert.
-\newblock Emergence of scaling in random networks.
-\newblock {\em science}, 286(5439):509--512, 1999.
+\bibitem{barabasi2005origin}
+A.-L. Barabasi.
+\newblock The origin of bursts and heavy tails in human dynamics.
+\newblock {\em Nature}, 435(7039):207--211, 2005.
 
-\bibitem{barber2007mac}
-M.~J. Barber.
-\newblock Modularity and community detection in bipartite networks.
-\newblock {\em Physical Review E}, 76(6), 2007.
-
-\bibitem{opac-b1007877}
-E.~R. Barnes.
-\newblock An algorithm for partitioning the nodes of a graph.
-\newblock Technical Report RC 08690, IBM US Research Centers (Yorktown,San
-  Jose,Almaden, US), 1981.
-
-\bibitem{BaumesGKMP05}
-J.~Baumes, M.~K. Goldberg, M.~S. Krishnamoorthy, M.~Magdon-Ismail, and
-  N.~Preston.
-\newblock Finding communities by clustering a graph into overlapping subgraphs.
-\newblock In {\em IADIS AC}, pages 97--104. IADIS, 2005.
+\bibitem{bassett2011dynamic}
+D.~S. Bassett, N.~F. Wymbs, M.~A. Porter, P.~J. Mucha, J.~M. Carlson, and S.~T.
+  Grafton.
+\newblock Dynamic reconfiguration of human brain networks during learning.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(18):7641--7646, 2011.
 
 \bibitem{bawa2005lsh}
 M.~Bawa, T.~Condie, and P.~Ganesan.
@@ -117,39 +103,11 @@ M.~Bawa, T.~Condie, and P.~Ganesan.
 \newblock In {\em Proceedings of the 14th international conference on World
   Wide Web}, pages 651--660. ACM, 2005.
 
-\bibitem{6425767}
-V.~Belak, S.~Lam, and C.~Hayes.
-\newblock Towards maximising cross-community information diffusion.
-\newblock In {\em 2012 IEEE/ACM International Conference on Advances in Social
-  Networks Analysis and Mining (ASONAM)}, pages 171--178, Aug 2012.
-
-\bibitem{Berger-Wolf:2006}
-T.~Y. Berger-Wolf and J.~Saia.
-\newblock A framework for analysis of dynamic social networks.
-\newblock In {\em Proceedings of the 12th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '06, pages 523--528, New York,
-  NY, USA, 2006. ACM.
-
-\bibitem{Berry}
-J.~W. Berry, B.~Hendrickson, R.~A. LaViolette, V.~J. Leung, and C.~A. Phillips.
-\newblock {\em eprint arXiv:0710.3800}, 2007.
-
-\bibitem{Berry_PRE2011}
-J.~W. Berry, B.~Hendrickson, R.~A. LaViolette, and C.~A. Phillips.
-\newblock {Tolerating the community detection resolution limit with edge
-  weighting}.
-\newblock {\em Physical Review E}, 83(5):056119, May 2011.
-
-\bibitem{Bezdek:1981}
-J.~C. Bezdek.
-\newblock {\em Pattern Recognition with Fuzzy Objective Function Algorithms}.
-\newblock Kluwer Academic Publishers, Norwell, MA, USA, 1981.
-
-\bibitem{Bianconi1407}
-G.~Bianconi, P.~Pin, and M.~Marsili.
-\newblock Assessing the relevance of node features for network structure.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  106(28):11433--11438, 2009.
+\bibitem{baykasoglu2007project}
+A.~Baykasoglu, T.~Dereli, and S.~Das.
+\newblock Project team selection using fuzzy optimization approach.
+\newblock {\em Cybernetics and Systems: An International Journal},
+  38(2):155--185, 2007.
 
 \bibitem{blondel2008fast}
 V.~D. Blondel, J.-L. Guillaume, R.~Lambiotte, and E.~Lefebvre.
@@ -157,21 +115,16 @@ V.~D. Blondel, J.-L. Guillaume, R.~Lambiotte, and E.~Lefebvre.
 \newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
   2008(10):P10008, 2008.
 
-\bibitem{Boettcher}
-S.~Boettcher and A.~G. Percus.
-\newblock Optimization with extremal dynamics.
-\newblock {\em Complex.}, 8(2):57--62, Nov. 2002.
+\bibitem{prl1}
+M.~Bogu{\~n}{\'a}, C.~Castellano, and R.~Pastor-Satorras.
+\newblock Nature of the epidemic threshold for the
+  susceptible-infected-susceptible dynamics in networks.
+\newblock {\em Physical review letters}, 111(6):068701, 2013.
 
 \bibitem{bohannon2013s}
 J.~Bohannon.
 \newblock Who's afraid of peer review.
 \newblock {\em Science}, 342(6154), 2013.
-
-\bibitem{Bollobas1998}
-B.~Bollobás.
-\newblock {\em Modern Graph Theory}.
-\newblock Graduate texts in mathematics. Springer, Heidelberg, corrected
-  edition, 1998.
 
 \bibitem{box2011time}
 G.~E. Box, G.~M. Jenkins, and G.~C. Reinsel.
@@ -182,38 +135,25 @@ G.~E. Box, G.~M. Jenkins, and G.~C. Reinsel.
 R.~D. Braatz.
 \newblock Papers receive more citations after rejection [publication
   activities].
-\newblock {\em Control systems, IEEE}, 34(4):22--23, 2014.
+\newblock {\em Control Systems, IEEE}, 34(4):22--23, 2014.
 
-\bibitem{Brandes}
-U.~Brandes, M.~Gaertler, and D.~Wagner.
-\newblock Experiments on graph clustering algorithms.
-\newblock In G.~D. Battista and U.~Zwick, editors, {\em ESA}, volume 2832 of
-  {\em Lecture Notes in Computer Science}, pages 568--579. Springer, 2003.
+\bibitem{bullmore2009complex}
+E.~Bullmore and O.~Sporns.
+\newblock Complex brain networks: graph theoretical analysis of structural and
+  functional systems.
+\newblock {\em Nature reviews. Neuroscience}, 10(3):186, 2009.
 
-\bibitem{Breve:2009}
-F.~Breve, L.~Zhao, and M.~Quiles.
-\newblock Uncovering overlap community structure in complex networks using
-  particle competition.
-\newblock In {\em Proceedings of the International Conference on Artificial
-  Intelligence and Computational Intelligence}, AICI '09, pages 619--628,
-  Berlin, Heidelberg, 2009. Springer-Verlag.
+\bibitem{candia2008uncovering}
+J.~Candia, M.~C. Gonz{\'a}lez, P.~Wang, T.~Schoenharl, G.~Madey, and A.-L.
+  Barab{\'a}si.
+\newblock Uncovering individual and collective human dynamics from mobile phone
+  records.
+\newblock {\em Journal of physics A: mathematical and theoretical},
+  41(22):224015, 2008.
 
 \bibitem{caswellimproving}
 H.~Caswell.
 \newblock Improving peer review.
-
-\bibitem{5591234}
-R.~Cazabet, F.~Amblard, and C.~Hanachi.
-\newblock Detection of overlapping communities in dynamical social networks.
-\newblock In {\em 2010 IEEE Second International Conference on Social Computing
-  (SocialCom)}, pages 309--314, Aug 2010.
-
-\bibitem{Chakrabarti04a}
-D.~Chakrabarti.
-\newblock Autopart: Parameter-free graph partitioning and outlier detection.
-\newblock In J.-F. Boulicaut, F.~Esposito, F.~Giannotti, and D.~Pedreschi,
-  editors, {\em PKDD}, volume 3202 of {\em Lecture Notes in Computer Science},
-  pages 112--124. Springer, 2004.
 
 \bibitem{chakraborty2014towards}
 T.~Chakraborty, S.~Kumar, P.~Goyal, N.~Ganguly, and A.~Mukherjee.
@@ -232,52 +172,21 @@ C.~Chatfield.
 \newblock {\em The analysis of time series: an introduction}.
 \newblock CRC press, 2013.
 
-\bibitem{Chen20104177}
-D.~Chen, M.~Shang, Z.~Lv, and Y.~Fu.
-\newblock Detecting overlapping communities of weighted networks via a local
-  algorithm.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  389(19):4177--4187, 2010.
-
-\bibitem{Chen20121848}
-J.~Chen, H.~Zhang, Z.-H. Guan, and T.~Li.
-\newblock Epidemic spreading on networks with overlapping community structure.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  391(4):1848--1854, 2012.
-
-\bibitem{Chen_2013}
-M.~Chen, T.~Nguyen, and B.~Szymanski.
-\newblock A new metric for quality of network community structure.
-\newblock {\em ASE Human Journal}, 1(4):226--240, 2013.
-
-\bibitem{Chen:2010}
-W.~Chen, Z.~Liu, X.~Sun, and Y.~Wang.
-\newblock A game-theoretic framework to identify overlapping communities in
-  social networks.
-\newblock {\em Data Min. Knowl. Discov.}, 21(2):224--240, Sept. 2010.
-
-\bibitem{Chen08}
-W.~Y.~C. Chen, A.~W.~M. Dress, and W.~Q. Yu.
-\newblock Community structures of networks.
-\newblock {\em Mathematics in Computer Science}, 1(3):441--457, 2008.
+\bibitem{cheng2003time}
+E.~Cheng, J.~W. Grossman, and M.~J. Lipman.
+\newblock Time-stamped graphs and their associated influence digraphs.
+\newblock {\em Discrete Applied Mathematics}, 128(2):317--335, 2003.
 
 \bibitem{rumarSreadingPushPull}
 F.~Chierichetti, S.~Lattanzi, and A.~Panconesi.
 \newblock Rumour spreading and graph conductance.
 \newblock In {\em SODA}, pages 1657--1663, 2010.
 
-\bibitem{Xiangwei}
-X.~Chu, J.~Guan, Z.~Zhang, and S.~Zhou.
-\newblock Epidemic spreading in weighted scale-free networks with community
-  structure.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2009(07):P07043, 2009.
-
-\bibitem{Clauset.Moore}
-A.~Clauset, C.~Moore, and M.~E.~J. Newman.
-\newblock Hierarchical structure and the prediction of missing links in
-  networks.
-\newblock {\em Nature}, 453:98--101, 2008.
+\bibitem{cigno2008some}
+R.~L. Cigno, A.~Russo, and D.~Carra.
+\newblock On some fundamental properties of p2p push/pull protocols.
+\newblock In {\em Communications and Electronics, 2008. ICCE 2008. Second
+  International Conference on}, pages 67--73. IEEE, 2008.
 
 \bibitem{clauset2004finding}
 A.~Clauset, M.~E. Newman, and C.~Moore.
@@ -289,21 +198,31 @@ S.~Cole, G.~A. Simon, et~al.
 \newblock Chance and consensus in peer review.
 \newblock {\em Science}, 214(4523):881--886, 1981.
 
-\bibitem{collins1988}
-L.~M. Collins and C.~W. Dent.
-\newblock {Omega: A general formulation of the rand index of cluster recovery
-  suitable for non-disjoint solutions}.
-\newblock {\em Multivariate Behavioral Research}, 23(2):231--242, 1988.
+\bibitem{costa2003introducing}
+P.~Costa, M.~Migliavacca, G.~P. Picco, and G.~Cugola.
+\newblock Introducing reliability in content-based publish-subscribe through
+  epidemic algorithms.
+\newblock In {\em Proceedings of the 2nd international workshop on Distributed
+  event-based systems}, pages 1--8. ACM, 2003.
 
-\bibitem{Μcopi05}
-J.~Copic, M.~O. Jackson, and A.~Kirman.
-\newblock Identifying community structures from network data, 2005.
+\bibitem{costa2004epidemic}
+P.~Costa, M.~Migliavacca, G.~P. Picco, and G.~Cugola.
+\newblock Epidemic algorithms for reliable content-based publish-subscribe: An
+  evaluation.
+\newblock In {\em Distributed Computing Systems, 2004. Proceedings. 24th
+  International Conference on}, pages 552--561. IEEE, 2004.
 
-\bibitem{Danon2006}
-L.~Danon, A.~{D\'{i}az-Guilera}, and A.~Arenas.
-\newblock The effect of size heterogeneity on community identification in
-  complex networks.
-\newblock {\em Journal of Statistical Mechanics}, 2006(11):P11010, 2006.
+\bibitem{coupe2013peer}
+T.~Coup{\'e}.
+\newblock Peer review versus citations--an analysis of best paper prizes.
+\newblock {\em Research Policy}, 42(1):295--301, 2013.
+
+\bibitem{dagum1992dynamic}
+P.~Dagum, A.~Galper, and E.~Horvitz.
+\newblock Dynamic network models for forecasting.
+\newblock In {\em Proceedings of the eighth international conference on
+  uncertainty in artificial intelligence}, pages 41--48. Morgan Kaufmann
+  Publishers Inc., 1992.
 
 \bibitem{danon2005comparing}
 L.~Danon, A.~Diaz-Guilera, J.~Duch, and A.~Arenas.
@@ -331,34 +250,34 @@ D.~A. Dickey and W.~A. Fuller.
 \newblock {\em Journal of the American statistical association},
   74(366a):427--431, 1979.
 
-\bibitem{5473438}
-F.~Ding, Z.~Luo, J.~Shi, and X.~Fang.
-\newblock Overlapping community detection by kernel-based fuzzy affinity
-  propagation.
-\newblock In {\em Intelligent Systems and Applications (ISA), 2010 2nd
-  International Workshop on}, pages 1--4, May 2010.
+\bibitem{dietz2007unsupervised}
+L.~Dietz, S.~Bickel, and T.~Scheffer.
+\newblock Unsupervised prediction of citation influences.
+\newblock In {\em Proceedings of the 24th international conference on Machine
+  learning}, pages 233--240. ACM, 2007.
+
+\bibitem{dimitriadis2010tracking}
+S.~I. Dimitriadis, N.~A. Laskaris, V.~Tsirka, M.~Vourkas, S.~Micheloyannis, and
+  S.~Fotopoulos.
+\newblock Tracking brain dynamics via time-dependent network analysis.
+\newblock {\em Journal of neuroscience methods}, 193(1):145--155, 2010.
 
 \bibitem{dodds2004universal}
 P.~S. Dodds and D.~J. Watts.
 \newblock Universal behavior in a generalized model of contagion.
 \newblock {\em Physical review letters}, 92(21):218701, 2004.
 
-\bibitem{Donath:1973}
-W.~E. Donath and A.~J. Hoffman.
-\newblock Lower bounds for the partitioning of graphs.
-\newblock {\em IBM J. Res. Dev.}, 17(5):420--425, Sept. 1973.
+\bibitem{dong2015will}
+Y.~Dong, R.~A. Johnson, and N.~V. Chawla.
+\newblock Will this paper increase your h-index?: Scientific impact prediction.
+\newblock In {\em Proceedings of the eighth ACM international conference on web
+  search and data mining}, pages 149--158. ACM, 2015.
 
-\bibitem{PhysRevE.72.}
-J.~Duch and A.~Arenas.
-\newblock Community detection in complex networks using extremal optimization.
-\newblock {\em Phys. Rev. E}, 72:027104, Aug 2005.
-
-\bibitem{Eckmann300}
-J.-P. Eckmann and E.~Moses.
-\newblock Curvature of co-links uncovers hidden thematic layers in the world
-  wide web.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  99(9):5825--5829, 2002.
+\bibitem{eckmann2004entropy}
+J.-P. Eckmann, E.~Moses, and D.~Sergi.
+\newblock Entropy of dialogues creates coherent structures in e-mail traffic.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 101(40):14333--14337, 2004.
 
 \bibitem{erdos1959random}
 P.~Erd{\"o}s and A.~R{\'e}nyi.
@@ -370,73 +289,56 @@ P.~T. Eugster, P.~A. Felber, R.~Guerraoui, and A.-M. Kermarrec.
 \newblock The many faces of publish/subscribe.
 \newblock {\em ACM Computing Surveys (CSUR)}, 35(2):114--131, 2003.
 
-\bibitem{Evans0638}
-T.~S. Evans.
-\newblock Clique graphs and overlapping communities.
-\newblock {\em CoRR}, abs/1009.0638, 2010.
-
 \bibitem{Faloutsos:1999}
 M.~Faloutsos, P.~Faloutsos, and C.~Faloutsos.
 \newblock On power-law relationships of the internet topology.
 \newblock {\em SIGCOMM Comput. Commun. Rev.}, 29(4):251--262, Aug. 1999.
 
-\bibitem{Farkas180}
-I.~Farkas, D.~{\'A}bel, G.~Palla, and T.~Vicsek.
-\newblock Weighted network modules.
-\newblock {\em New Journal of Physics}, 9(6):180, 2007.
-
-\bibitem{Fatemi}
-M.~Fatemi and L.~Tokarchuk.
-\newblock A community based social recommender system for individuals amp;
-  groups.
-\newblock In {\em 2013 International Conference on Social Computing
-  (SocialCom)}, pages 351--356, Sept 2013.
-
-\bibitem{Fortunato201075}
-S.~Fortunato.
-\newblock Community detection in graphs.
-\newblock {\em Physics Reports}, 486(3-5):75 -- 174, 2010.
-
-\bibitem{Fortunato:2007}
-S.~Fortunato and M.~Barthelemy.
-\newblock Resolution limit in community detection.
-\newblock {\em Proceedings of the National Academy of Sciences}, Jan. 2007.
-
-\bibitem{Barthelemy}
-S.~Fortunato and M.~Barthelemy.
-\newblock Resolution limit in community detection.
-\newblock {\em PNAS}, Jan. 2007.
-
-\bibitem{Fortunato:2009}
-S.~Fortunato and A.~Lancichinetti.
-\newblock Community detection algorithms: A comparative analysis.
-\newblock In {\em Proceedings of the Fourth International ICST Conference on
-  Performance Evaluation Methodologies and Tools}, VALUETOOLS '09, pages
-  27:1--27:2, ICST, Brussels, Belgium, Belgium, 2009. ICST (Institute for
-  Computer Sciences, Social-Informatics and Telecommunications Engineering).
+\bibitem{feller2008introduction}
+W.~Feller.
+\newblock {\em An introduction to probability theory and its applications},
+  volume~2.
+\newblock John Wiley \& Sons, 2008.
 
 \bibitem{fournet2014contact}
 J.~Fournet and A.~Barrat.
 \newblock Contact patterns among high school students.
 \newblock 2014.
 
-\bibitem{Frey07}
-B.~J. Frey and D.~Dueck.
-\newblock Clustering by passing messages between data points.
-\newblock {\em Science}, 315:972--976, 2007.
+\bibitem{broadcastCoverage_push_pull}
+G.~P.~R. Francesco~Giudici, Elena~Pagani.
+\newblock Self-adaptive and stateless broadcast in delay and disruption
+  tolerant networks.
+\newblock Technical report, Universit ́a degli Studi di Milano, 2008.
 
-\bibitem{4781180}
-Q.~Fu and A.~Banerjee.
-\newblock Multiplicative mixture models for overlapping clustering.
-\newblock In {\em Eighth IEEE International Conference on Data Mining (ICDM)},
-  pages 791--796, Dec 2008.
+\bibitem{frank1977survey}
+O.~Frank.
+\newblock Survey sampling in graphs.
+\newblock {\em Journal of Statistical Planning and Inference}, 1(3):235--264,
+  1977.
 
-\bibitem{Gaertler:2007}
-M.~Gaertler, R.~G\"{o}rke, and D.~Wagner.
-\newblock Significance-driven graph clustering.
-\newblock In {\em Proceedings of the 3rd International Conference on
-  Algorithmic Aspects in Information and Management}, AAIM '07, pages 11--26,
-  Berlin, Heidelberg, 2007. Springer-Verlag.
+\bibitem{frank1980sampling}
+O.~Frank.
+\newblock Sampling and inference in a population graph.
+\newblock {\em International Statistical Review}, pages 33--41, 1980.
+
+\bibitem{garnett1996sexually}
+G.~P. Garnett and R.~M. Anderson.
+\newblock Sexually transmitted diseases and sexual behavior: insights from
+  mathematical models.
+\newblock {\em Journal of Infectious Diseases}, 174(Supplement\_2):S150--S161,
+  1996.
+
+\bibitem{ghose2011estimating}
+A.~Ghose and P.~G. Ipeirotis.
+\newblock Estimating the helpfulness and economic impact of product reviews:
+  Mining text and reviewer characteristics.
+\newblock {\em TKDD}, 23(10):1498--1512, 2011.
+
+\bibitem{gile2010respondent}
+K.~J. Gile and M.~S. Handcock.
+\newblock Respondent-driven sampling: An assessment of current methodology.
+\newblock {\em Sociological methodology}, 40(1):285--327, 2010.
 
 \bibitem{girvan2002community}
 M.~Girvan and M.~E. Newman.
@@ -453,54 +355,44 @@ D.~E. Golberg.
 \newblock Genetic algorithms in search, optimization, and machine learning.
 \newblock {\em Addion wesley}, 1989:102, 1989.
 
-\bibitem{graffy2006improving}
-J.~Graffy, R.~Bryar, S.~Kendall, and D.~Crook.
-\newblock Improving peer review.
-\newblock {\em Primary Health Care Research and Development}, 7(01):1--2, 2006.
+\bibitem{goodman1961snowball}
+L.~A. Goodman.
+\newblock Snowball sampling.
+\newblock {\em The annals of mathematical statistics}, pages 148--170, 1961.
+
+\bibitem{granovetter1976network}
+M.~Granovetter.
+\newblock Network sampling: Some first steps.
+\newblock {\em American Journal of Sociology}, pages 1287--1303, 1976.
 
 \bibitem{granovetter1978threshold}
 M.~Granovetter.
 \newblock Threshold models of collective behavior.
 \newblock {\em American journal of sociology}, pages 1420--1443, 1978.
 
-\bibitem{5562773}
-D.~Greene, D.~Doyle, and P.~Cunningham.
-\newblock Tracking the evolution of communities in dynamic social networks.
-\newblock In {\em 2010 International Conference on Advances in Social Networks
-  Analysis and Mining (ASONAM)}, pages 176--183, Aug 2010.
+\bibitem{gunturi2010minimum}
+V.~Gunturi, S.~Shekhar, and A.~Bhattacharya.
+\newblock Minimum spanning tree on spatio-temporal networks.
+\newblock In {\em Database and Expert Systems Applications}, pages 149--158.
+  Springer, 2010.
 
-\bibitem{Gregory:2007}
-S.~Gregory.
-\newblock An algorithm to find overlapping community structure in networks.
-\newblock In {\em Proceedings of the 11th European Conference on Principles and
-  Practice of Knowledge Discovery in Databases}, PKDD 2007, pages 91--102,
-  Berlin, Heidelberg, 2007. Springer-Verlag.
+\bibitem{hamilton1989new}
+J.~D. Hamilton.
+\newblock A new approach to the economic analysis of nonstationary time series
+  and the business cycle.
+\newblock {\em Econometrica: Journal of the Econometric Society}, pages
+  357--384, 1989.
 
-\bibitem{Gregory2009}
-S.~Gregory.
-\newblock Finding overlapping communities using disjoint community detection
-  algorithms.
-\newblock In S.~Fortunato, G.~Mangioni, R.~Menezes, and V.~Nicosia, editors,
-  {\em Complex Networks}, volume 207 of {\em Studies in Computational
-  Intelligence}, pages 47--61. Springer, Berlin / Heidelberg, 2009.
+\bibitem{han2004evidence}
+J.-D.~J. Han, N.~Bertin, H.~Tong, D.~S. Goldberg, et~al.
+\newblock Evidence for dynamically organized modularity in the yeast
+  protein-protein interaction network.
+\newblock {\em Nature}, 430(6995):88, 2004.
 
-\bibitem{guimera2004}
-R.~Guimera, M.~Sales-Pardo, and L.~Amaral.
-\newblock Modularity from fluctuations in random graphs and complex networks.
-\newblock {\em Physical Review E}, 70(2):025101, 2004.
-
-\bibitem{Guimera:2007}
-R.~Guimer\`{a}, M.~Sales-Pardo, and L.~Amaral.
-\newblock A network-based method for target selection in metabolic networks.
-\newblock {\em Bioinformatics}, 23(13):1616--1622, July 2007.
-
-\bibitem{WICS1319}
-S.~Harenberg, G.~Bello, L.~Gjeltema, S.~Ranshous, J.~Harlalka, R.~Seay,
-  K.~Padmanabhan, and N.~Samatova.
-\newblock Community detection in large-scale networks: a survey and empirical
-  evaluation.
-\newblock {\em Wiley Interdisciplinary Reviews: Computational Statistics},
-  6(6):426--439, 2014.
+\bibitem{hanneke2010discrete}
+S.~Hanneke, W.~Fu, and E.~P. Xing.
+\newblock Discrete temporal models of social networks.
+\newblock {\em Electronic Journal of Statistics}, 4:585--605, 2010.
 
 \bibitem{hartigan1979algorithm}
 J.~A. Hartigan and M.~A. Wong.
@@ -508,28 +400,23 @@ J.~A. Hartigan and M.~A. Wong.
 \newblock {\em Journal of the Royal Statistical Society. Series C (Applied
   Statistics)}, 28(1):100--108, 1979.
 
-\bibitem{hastie01}
-T.~Hastie, R.~Tibshirani, and J.~Friedman.
-\newblock {\em The Elements of Statistical Learning}.
-\newblock Springer Series in Statistics. Springer New York Inc., New York, NY,
-  USA, 2001.
+\bibitem{heckathorn1997respondent}
+D.~D. Heckathorn.
+\newblock Respondent-driven sampling: a new approach to the study of hidden
+  populations.
+\newblock {\em Social problems}, 44(2):174--199, 1997.
 
-\bibitem{Hastings035102}
-M.~B. Hastings.
-\newblock Community detection as an inference problem.
-\newblock {\em Phys. Rev. E}, 74:035102, Sep 2006.
+\bibitem{heckathorn2002respondent}
+D.~D. Heckathorn.
+\newblock Respondent-driven sampling ii: deriving valid population estimates
+  from chain-referral samples of hidden populations.
+\newblock {\em Social problems}, 49(1):11--34, 2002.
 
-\bibitem{Havemann2010}
-F.~Havemann, M.~H. 0003, A.~Struck, and J.~Gläser.
-\newblock Identification of overlapping communities and their hierarchy by
-  locally calculating community-changing resolution levels.
-\newblock {\em CoRR}, abs/1012.1269, 2010.
-
-\bibitem{Dongxiao}
-D.~He, D.~Liu, W.~Zhang, D.~Jin, and B.~Yang.
-\newblock Discovering link communities in complex networks by exploiting link
-  dynamics.
-\newblock {\em CoRR}, abs/1303.4699, 2013.
+\bibitem{hempel2011inner}
+S.~Hempel, A.~Koseska, J.~Kurths, and Z.~Nikoloski.
+\newblock Inner composition alignment for inferring directed networks from
+  short time series.
+\newblock {\em Physical review letters}, 107(5):054101, 2011.
 
 \bibitem{henzinger1998computing}
 M.~R. Henzinger, P.~Raghavan, and S.~Rajagopalan.
@@ -537,20 +424,36 @@ M.~R. Henzinger, P.~Raghavan, and S.~Rajagopalan.
 \newblock Technical report, Technical Note 1998-011, Digital Systems Research
   Center, Palo Alto, CA, 1998.
 
-\bibitem{HlaouiW06}
-A.~Hlaoui and S.~Wang.
-\newblock Median graph computation for graph clustering.
-\newblock {\em Soft Comput.}, 10(1):47--53, 2006.
+\bibitem{hethcote2014gonorrhea}
+H.~W. Hethcote and J.~Yorke.
+\newblock {\em Gonorrhea transmission dynamics and control}, volume~56.
+\newblock Springer, 2014.
 
-\bibitem{Hofman2007}
-J.~M. Hofman and C.~H. Wiggins.
-\newblock A bayesian approach to network modularity, Sept. 2007.
+\bibitem{holme2003network}
+P.~Holme.
+\newblock Network dynamics of ongoing social relationships.
+\newblock {\em EPL (Europhysics Letters)}, 64(3):427, 2003.
 
-\bibitem{Holland:1992}
-J.~H. Holland.
-\newblock {\em Adaptation in Natural and Artificial Systems: An Introductory
-  Analysis with Applications to Biology, Control and Artificial Intelligence}.
-\newblock MIT Press, Cambridge, MA, USA, 1992.
+\bibitem{holme2004structure}
+P.~Holme, C.~R. Edling, and F.~Liljeros.
+\newblock Structure and time evolution of an internet dating community.
+\newblock {\em Social Networks}, 26(2):155--174, 2004.
+
+\bibitem{Holme2012}
+P.~Holme and J.~Saram\"{a}ki.
+\newblock Temporal networks.
+\newblock {\em Physics Reports}, 519(3):97--125, 2012.
+
+\bibitem{holme2013temporal}
+P.~Holme and J.~Saram{\"a}ki.
+\newblock Temporal networks as a modeling framework.
+\newblock In {\em Temporal networks}, pages 1--14. Springer, 2013.
+
+\bibitem{hoory2006expander}
+S.~Hoory, N.~Linial, and A.~Wigderson.
+\newblock Expander graphs and their applications.
+\newblock {\em Bulletin of the American Mathematical Society}, 43(4):439--561,
+  2006.
 
 \bibitem{horrobin1990philosophical}
 D.~F. Horrobin.
@@ -558,31 +461,44 @@ D.~F. Horrobin.
   innovation.
 \newblock {\em JAMA}, 263(10):1438--1441, 1990.
 
-\bibitem{Hu026121}
-Y.~Hu, H.~Chen, P.~Zhang, M.~Li, Z.~Di, and Y.~Fan.
-\newblock Comparative definition of community and corresponding identifying
-  algorithm.
-\newblock {\em Phys. Rev. E}, 78:026121, Aug 2008.
+\bibitem{hu2013survey}
+P.~Hu and W.~C. Lau.
+\newblock A survey and taxonomy of graph sampling.
+\newblock {\em arXiv preprint arXiv:1308.5865}, 2013.
 
-\bibitem{hubert1985}
-L.~Hubert and P.~Arabie.
-\newblock {Comparing partitions}.
-\newblock {\em Journal of classification}, 2(1):193--218, 1985.
+\bibitem{huang2007minimum}
+S.~C.-H. Huang, P.-J. Wan, X.~Jia, H.~Du, and W.~Shang.
+\newblock Minimum-latency broadcast scheduling in wireless ad hoc networks.
+\newblock In {\em INFOCOM 2007. 26th IEEE International Conference on Computer
+  Communications. IEEE}, pages 733--739. IEEE, 2007.
 
 \bibitem{hubert1985comparing}
 L.~Hubert and P.~Arabie.
 \newblock Comparing partitions.
 \newblock {\em Journal of classification}, 2(1):193--218, 1985.
 
-\bibitem{hughes1995}
-B.~Hughes.
-\newblock {\em Random Walks and Random Environments: Random walks}.
-\newblock Number v. 1 in Oxford science publications. Clarendon Press, 1995.
-
 \bibitem{ingelfinger1974peer}
 F.~J. Ingelfinger.
 \newblock Peer review in biomedical publication.
-\newblock {\em The American J. of Med.}, 56(5):686--692, 1974.
+\newblock {\em The American journal of medicine}, 56(5):686--692, 1974.
+
+\bibitem{iribarren2009impact}
+J.~L. Iribarren and E.~Moro.
+\newblock Impact of human activity patterns on the dynamics of information
+  diffusion.
+\newblock {\em Physical review letters}, 103(3):038702, 2009.
+
+\bibitem{iribarren2011branching}
+J.~L. Iribarren and E.~Moro.
+\newblock Branching dynamics of viral information spreading.
+\newblock {\em Physical Review E}, 84(4):046116, 2011.
+
+\bibitem{isella2011close}
+L.~Isella, M.~Romano, A.~Barrat, C.~Cattuto, V.~Colizza, W.~Van~den Broeck,
+  F.~Gesualdo, E.~Pandolfi, L.~Rav{\`a}, C.~Rizzo, et~al.
+\newblock Close encounters in a pediatric ward: measuring face-to-face
+  proximity and mixing patterns with wearable sensors.
+\newblock {\em PloS one}, 6(2):e17144, 2011.
 
 \bibitem{jefferson2006editorial}
 T.~Jefferson, M.~Rudin, S.~Brodney~Folse, and F.~Davidoff.
@@ -593,7 +509,7 @@ T.~Jefferson, M.~Rudin, S.~Brodney~Folse, and F.~Davidoff.
 \bibitem{jefferson2002measuring}
 T.~Jefferson, E.~Wager, and F.~Davidoff.
 \newblock Measuring the quality of editorial peer review.
-\newblock {\em JAMA}, 287(21):2786--2790, 2002.
+\newblock {\em Jama}, 287(21):2786--2790, 2002.
 
 \bibitem{Jeong}
 H.~Jeong, B.~Tombor, R.~Albert, Z.~N. Oltvai, and A.~L. Barabási.
@@ -608,60 +524,63 @@ Z.~Jin, J.~Wang, S.~Zhang, and Y.~Shu.
   Conference on Autonomic \& Trusted Computing (UIC/ATC), 2010 7th
   International Conference on}, pages 191--194. IEEE, 2010.
 
-\bibitem{Kamahara:2005}
-J.~Kamahara, T.~Asakawa, S.~Shimojo, and H.~Miyahara.
-\newblock A community-based recommendation system to reveal unexpected
-  interests.
-\newblock In {\em Multimedia Modelling Conference, 2005. MMM 2005. Proceedings
-  of the 11th International}, pages 433--438, Jan. 2005.
-
 \bibitem{kaplan1977generalization}
 N.~Kaplan.
 \newblock A generalization of a result of erd{\"o}s and r{\'e}nyi.
 \newblock {\em Journal of Applied Probability}, pages 212--216, 1977.
+
+\bibitem{karsai2011small}
+M.~Karsai, M.~Kivel{\"a}, R.~K. Pan, K.~Kaski, J.~Kert{\'e}sz, A.-L.
+  Barab{\'a}si, and J.~Saram{\"a}ki.
+\newblock Small but slow world: How network topology and burstiness slow down
+  spreading.
+\newblock {\em Physical Review E}, 83(2):025102, 2011.
+
+\bibitem{karsai2013emergence}
+M.~Karsai, A.~Vespignani, and N.~Perra.
+\newblock The emergence and role of strong ties in time-varying communication
+  networks.
+\newblock {\em Scientific Reports}, 4(arXiv: 1303.5966):4001, 2013.
 
 \bibitem{kassirer1994peer}
 J.~P. Kassirer and E.~W. Campion.
 \newblock Peer review: crude and understudied, but indispensable.
 \newblock {\em JAMA}, 272(2):96--97, 1994.
 
-\bibitem{Kernighan70}
-B.~W. Kernighan and S.~Lin.
-\newblock An efficient heuristic procedure for partitioning graphs.
-\newblock {\em Bell Sys. Tech. J.}, 49(2):291--308, 1970.
+\bibitem{keeling2005networks}
+M.~J. Keeling and K.~T. Eames.
+\newblock Networks and epidemic models.
+\newblock {\em Journal of the Royal Society Interface}, 2(4):295--307, 2005.
 
-\bibitem{Kim0257}
-Y.~Kim and H.~Jeong.
-\newblock The map equation for link community.
-\newblock {\em CoRR}, abs/1105.0257, 2011.
+\bibitem{kempe2000connectivity}
+D.~Kempe, J.~Kleinberg, and A.~Kumar.
+\newblock Connectivity and inference problems for temporal networks.
+\newblock In {\em Proceedings of the thirty-second annual ACM symposium on
+  Theory of computing}, pages 504--513. ACM, 2000.
 
-\bibitem{KSJ}
-Y.~Kim, S.~W. Son, and H.~Jeong.
-\newblock {Link Rank: Finding communities in directed networks}.
-\newblock Technical Report arXiv:0902.3728.
+\bibitem{kim2006automatically}
+S.-M. Kim, P.~Pantel, T.~Chklovski, and M.~Pennacchiotti.
+\newblock Automatically assessing review helpfulness.
+\newblock In {\em EMNLP}, pages 423--430. Association for Computational
+  Linguistics, 2006.
 
-\bibitem{KimuraYSM08}
-M.~Kimura, K.~Yamakawa, K.~Saito, and H.~Motoda.
-\newblock Community analysis of influential nodes for information diffusion on
-  a social network.
-\newblock In {\em IJCNN}, pages 1358--1363. IEEE, 2008.
+\bibitem{kivela2012multiscale}
+M.~Kivel{\"a}, R.~K. Pan, K.~Kaski, J.~Kert{\'e}sz, J.~Saram{\"a}ki, and
+  M.~Karsai.
+\newblock Multiscale analysis of spreading in a large communication network.
+\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
+  2012(03):P03005, 2012.
 
-\bibitem{Kirkpatrick1983}
-S.~Kirkpatrick, C.~D. Gelatt, and M.~P. Vecchi.
-\newblock Optimization by simulated annealing.
-\newblock {\em Science}, 220(4598):671--680, 1983.
+\bibitem{kolascyk2013statistical}
+E.~Kolascyk.
+\newblock Statistical analysis of network data.
+\newblock {\em SAMSI program on Complex networks. Boston university}, 2013.
 
-\bibitem{Kolaczyk:2009}
-E.~D. Kolaczyk.
-\newblock {\em Statistical Analysis of Network Data: Methods and Models}.
-\newblock Springer, 1st edition, 2009.
-
-\bibitem{Kovacs10}
-I.~A. Kovács, R.~Palotai, M.~S. Szalay, and P.~Csermely.
-\newblock Community landscapes: an integrative approach to determine
-  overlapping network module hierarchy, identify key nodes and predict network
-  dynamics.
-\newblock {\em PLoS One}, page 12528, 2010.
+\bibitem{komurov2007revealing}
+K.~Komurov and M.~White.
+\newblock Revealing static and dynamic modular architecture of the eukaryotic
+  protein interaction network.
+\newblock {\em Molecular systems biology}, 3(1):110, 2007.
 
 \bibitem{pnas1}
 A.~D. Kramer, J.~E. Guillory, and J.~T. Hancock.
@@ -670,10 +589,16 @@ A.~D. Kramer, J.~E. Guillory, and J.~T. Hancock.
 \newblock {\em Proceedings of the National Academy of Sciences},
   111(24):8788--8790, 2014.
 
-\bibitem{Kumpula08}
-J.~M. Kumpula, M.~Kivel\"a, K.~Kaski, and J.~Saram\"aki.
-\newblock Sequential algorithm for fast clique percolation.
-\newblock {\em Phys. Rev. E}, 78:026109, Aug 2008.
+\bibitem{kretzschmar1996measures}
+M.~Kretzschmar and M.~Morris.
+\newblock Measures of concurrency in networks and the spread of infectious
+  disease.
+\newblock {\em Mathematical biosciences}, 133(2):165--195, 1996.
+
+\bibitem{kumar2005parallel}
+V.~Kumar.
+\newblock Parallel and distributed computing for cybersecurity.
+\newblock {\em IEEE Distributed Systems Online}, (10):1, 2005.
 
 \bibitem{kwiatkowski1992testing}
 D.~Kwiatkowski, P.~C. Phillips, P.~Schmidt, and Y.~Shin.
@@ -681,64 +606,28 @@ D.~Kwiatkowski, P.~C. Phillips, P.~Schmidt, and Y.~Shin.
   of a unit root: How sure are we that economic time series have a unit root?
 \newblock {\em Journal of econometrics}, 54(1):159--178, 1992.
 
-\bibitem{Labatut}
-V.~Labatut.
-\newblock Generalized measures for the evaluation of community detection
-  methods.
-\newblock {\em CoRR}, abs/1303.5441, 2013.
-
-\bibitem{Renaud}
-R.~Lambiotte.
-\newblock Multi-scale modularity in complex networks.
-\newblock In {\em WiOpt}, pages 546--553. IEEE, 2010.
-
-\bibitem{Lancichinetti}
-A.~Lancichinetti and S.~Fortunato.
-\newblock Community detection algorithms: A comparative analysis.
-\newblock {\em Phys. Rev. E}, 80:056117, Nov 2009.
-
-\bibitem{santo_11}
-A.~Lancichinetti and S.~Fortunato.
-\newblock Limits of modularity maximization in community detection.
-\newblock {\em Phys. Rev. E}, 84:066122, 2011.
-
-\bibitem{Lancichinetti033015}
-A.~Lancichinetti, S.~Fortunato, and J.~Kert{\'e}sz.
-\newblock Detecting the overlapping and hierarchical community structure in
-  complex networks.
-\newblock {\em New Journal of Physics}, 11(3):033015, 2009.
+\bibitem{lahiri2007structure}
+M.~Lahiri and T.~Y. Berger-Wolf.
+\newblock Structure prediction in temporal networks using frequent subgraphs.
+\newblock In {\em Computational Intelligence and Data Mining, 2007. CIDM 2007.
+  IEEE Symposium on}, pages 35--42. IEEE, 2007.
 
 \bibitem{lancichinetti2008benchmark}
 A.~Lancichinetti, S.~Fortunato, and F.~Radicchi.
 \newblock Benchmark graphs for testing community detection algorithms.
 \newblock {\em Physical review E}, 78(4):046110, 2008.
 
-\bibitem{pone.0018961}
-A.~Lancichinetti, F.~Radicchi, J.~J. Ramasco, and S.~Fortunato.
-\newblock Finding statistically significant communities in networks.
-\newblock {\em PLoS ONE}, 6(4):e18961, 04 2011.
+\bibitem{lappas2009finding}
+T.~Lappas, K.~Liu, and E.~Terzi.
+\newblock Finding a team of experts in social networks.
+\newblock In {\em Proceedings of the 15th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 467--476. ACM, 2009.
 
-\bibitem{Vicsek}
-A.~L{\'a}z{\'a}r, D.~{\'A}bel, and T.~Vicsek.
-\newblock Modularity measure of networks with overlapping communities.
-\newblock {\em Europhys. Lett.}, 90(1):18001, 2010.
-
-\bibitem{Lee10}
-C.~Lee, F.~Reid, A.~Mcdaid, and N.~Hurley.
-\newblock Detecting highly overlapping community structure by greedy clique
-  expansion.
-\newblock In {\em In Proceedings of the 4th Workshop on Social Network Mining
-  and Analysis, (SNA/KDD10)}, pages 33--42, Aug 2010.
-
-\bibitem{Lehmann}
-S.~Lehmann and L.~K. Hansen.
-\newblock Deterministic modularity optimization.
-\newblock {\em The European Physical Journal B}, 60(1):83--88.
-
-\bibitem{Phys118703}
-E.~A. Leicht and M.~E.~J. Newman.
-\newblock Community structure in directed networks.
-\newblock {\em Phys. Rev. Lett.}, 100:118703, Mar 2008.
+\bibitem{lebre2010statistical}
+S.~Lebre, J.~Becq, F.~Devaux, M.~P. Stumpf, and G.~Lelandais.
+\newblock Statistical inference of the time-varying structure of
+  gene-regulation networks.
+\newblock {\em BMC systems biology}, 4(1):130, 2010.
 
 \bibitem{rumourSpreading_evolvingGraph_PushPull}
 S.~Leonardi, A.~Panconesi, P.~Ferragina, and A.~Gionis, editors.
@@ -747,7 +636,14 @@ S.~Leonardi, A.~Panconesi, P.~Ferragina, and A.~Gionis, editors.
 \bibitem{leskovec2006sampling}
 J.~Leskovec and C.~Faloutsos.
 \newblock Sampling from large graphs.
-\newblock In {\em SIGKDD}, pages 631--636. ACM, 2006.
+\newblock In {\em Proceedings of the 12th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 631--636. ACM, 2006.
+
+\bibitem{leskovec2008planetary}
+J.~Leskovec and E.~Horvitz.
+\newblock Planetary-scale views on a large instant-messaging network.
+\newblock In {\em Proceedings of the 17th international conference on World
+  Wide Web}, pages 915--924. ACM, 2008.
 
 \bibitem{leskovec2007graph}
 J.~Leskovec, J.~Kleinberg, and C.~Faloutsos.
@@ -755,11 +651,11 @@ J.~Leskovec, J.~Kleinberg, and C.~Faloutsos.
 \newblock {\em ACM Transactions on Knowledge Discovery from Data (TKDD)},
   1(1):2, 2007.
 
-\bibitem{Li2014432}
-F.~Li, J.~He, G.~Huang, Y.~Zhang, and Y.~Shi.
-\newblock A clustering-based link prediction method in social networks.
-\newblock {\em Procedia Computer Science}, 29(0):432--442, 2014.
-\newblock 2014 International Conference on Computational Science.
+\bibitem{li2010team}
+C.-T. Li and M.-K. Shan.
+\newblock Team formation for generalized tasks in expertise social networks.
+\newblock In {\em Social Computing (SocialCom), 2010 IEEE Second International
+  Conference on}, pages 9--16. IEEE, 2010.
 
 \bibitem{lim2015mascot}
 Y.~Lim and U.~Kang.
@@ -768,31 +664,17 @@ Y.~Lim and U.~Kang.
 \newblock In {\em Proceedings of the 21th ACM SIGKDD International Conference
   on Knowledge Discovery and Data Mining}, pages 685--694. ACM, 2015.
 
-\bibitem{Lin:2008}
-Y.-R. Lin, Y.~Chi, S.~Zhu, H.~Sundaram, and B.~L. Tseng.
-\newblock Facetnet: A framework for analyzing communities and their evolutions
-  in dynamic networks.
-\newblock In {\em Proceedings of the 17th International Conference on World
-  Wide Web}, WWW '08, pages 685--694, New York, NY, USA, 2008. ACM.
-
-\bibitem{Isboa}
-P.~Lisboa, H.~AL-Mamory, and B.~W.
-\newblock Timproving recommendation systems by modeling the stability of
-  implicit behaviour.
-\newblock In {\em The Post Graduate Network Symposium (PGNet2013)}, pages
-  354--361, Dec 2013.
+\bibitem{push_pull_contentDistribution}
+C.~Liu, J.~Wu, X.~Guan, and L.~Chen.
+\newblock Cooperative file sharing in hybrid delay tolerant networks.
+\newblock ICDCSW '11, pages 339--344, Washington, DC, USA, 2011. IEEE Computer
+  Society.
 
 \bibitem{lo2008some}
 R.~Lo~Cigno, A.~Russo, and D.~Carra.
 \newblock On some fundamental properties of p2p push/pull protocols.
 \newblock In {\em Communications and Electronics, 2008. ICCE 2008. Second
   International Conference on}, pages 67--73. IEEE, 2008.
-
-\bibitem{Long:2007}
-B.~Long, Z.~M. Zhang, X.~Wu, and P.~S. Yu.
-\newblock Relational clustering by symmetric convex coding.
-\newblock In {\em Proceedings of the 24th International Conference on Machine
-  Learning}, ICML '07, pages 569--576, New York, NY, USA, 2007. ACM.
 
 \bibitem{lu2009similarity}
 L.~L{\"u}, C.-H. Jin, and T.~Zhou.
@@ -806,39 +688,47 @@ L.~L{\"u} and T.~Zhou.
 \newblock {\em Physica A: Statistical Mechanics and its Applications},
   390(6):1150--1170, 2011.
 
-\bibitem{Povh}
-B.~Lu\"{e}ar, Z.~Levnajić, J.~Povh, and M.~Perc.
-\newblock Community structure and the evolution of interdisciplinarity in
-  slovenia's scientific collaboration network.
-\newblock {\em PLoS ONE}, 9(4):e94429, Dec. 2014.
-
-\bibitem{kmeans}
-J.~B. MacQueen.
-\newblock Some methods for classification and analysis of multivariate
-  observations.
-\newblock In L.~M.~L. Cam and J.~Neyman, editors, {\em Proc. of the fifth
-  Berkeley Symposium on Mathematical Statistics and Probability}, volume~1,
-  pages 281--297. University of California Press, 1967.
-
-\bibitem{Magdon-IsmailP11}
-M.~Magdon-Ismail and J.~T. Purnell.
-\newblock Ssde-cluster: Fast overlapping clustering of networks using sampled
-  spectral distance embedding and gmms.
-\newblock In {\em SocialCom/PASSAT}, pages 756--759. IEEE, 2011.
-
 \bibitem{maiya2010sampling}
 A.~S. Maiya and T.~Y. Berger-Wolf.
 \newblock Sampling community structure.
-\newblock In {\em WWW}, pages 701--710. ACM, 2010.
+\newblock In {\em Proceedings of the 19th international conference on World
+  wide web}, pages 701--710. ACM, 2010.
+
+\bibitem{maiya2011benefits}
+A.~S. Maiya and T.~Y. Berger-Wolf.
+\newblock Benefits of bias: Towards better characterization of network
+  sampling.
+\newblock In {\em Proceedings of the 17th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 105--113. ACM, 2011.
+
+\bibitem{majumder2012capacitated}
+A.~Majumder, S.~Datta, and K.~Naidu.
+\newblock Capacitated team formation problem on social networks.
+\newblock In {\em Proceedings of the 18th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 1005--1013. ACM, 2012.
 
 \bibitem{manning2008introduction}
 C.~D. Manning, P.~Raghavan, and H.~Sch{\"u}tze.
 \newblock Introduction to information retrieval, 2008.
 
-\bibitem{Massen_2005}
-C.~P. Massen and J.~P.~K. Doye.
-\newblock {Identifying communities within energy landscapes}.
-\newblock {\em Physical Review E}, 71(046101), 2005.
+\bibitem{manning1995introduction}
+D.~Manning.
+\newblock Introduction.
+\newblock In {\em Introduction to Industrial Minerals}, pages 1--16. Springer,
+  1995.
+
+\bibitem{masuda2013predicting}
+N.~Masuda and P.~Holme.
+\newblock Predicting and controlling infectious disease epidemics using
+  temporal networks.
+\newblock {\em F1000 prime reports}, 5:6, 2013.
+
+\bibitem{mcdonald2003recommending}
+D.~W. McDonald.
+\newblock Recommending collaboration with social networks: a comparative
+  evaluation.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pages 593--600. ACM, 2003.
 
 \bibitem{mcnutt1990effects}
 R.~A. McNutt, A.~T. Evans, R.~H. Fletcher, and S.~W. Fletcher.
@@ -846,16 +736,32 @@ R.~A. McNutt, A.~T. Evans, R.~H. Fletcher, and S.~W. Fletcher.
   trial.
 \newblock {\em JAMA}, 263(10):1371--1376, 1990.
 
+\bibitem{medo2011temporal}
+M.~Medo, G.~Cimini, and S.~Gualdi.
+\newblock Temporal effects in the growth of networks.
+\newblock {\em Physical review letters}, 107(23):238701, 2011.
+
+\bibitem{mimno2007expertise}
+D.~Mimno and A.~McCallum.
+\newblock Expertise modeling for matching papers with reviewers.
+\newblock In {\em Proceedings of the 13th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 500--509. ACM, 2007.
+
+\bibitem{min2011spreading}
+B.~Min, K.-I. Goh, and A.~Vazquez.
+\newblock Spreading dynamics following bursty human activity patterns.
+\newblock {\em Physical Review E}, 83(3):036102, 2011.
+
+\bibitem{miritello2011dynamical}
+G.~Miritello, E.~Moro, and R.~Lara.
+\newblock Dynamical strength of social ties in information spreading.
+\newblock {\em Physical Review E}, 83(4):045102, 2011.
+
 \bibitem{sur1}
 D.~Mollison.
 \newblock {\em Epidemic models: their structure and relation to data},
   volume~5.
 \newblock Cambridge University Press, 1995.
-
-\bibitem{Molloy:1995}
-M.~Molloy and B.~Reed.
-\newblock A critical point for random graphs with a given degree sequence.
-\newblock {\em Random Struct. Algorithms}, 6(2/3):161--179, Mar. 1995.
 
 \bibitem{montejo2012random}
 A.~Montejo-R{\'a}ez, E.~Mart{\'\i}nez-C{\'a}mara, M.~T. Martin-Valdivia, and
@@ -870,30 +776,11 @@ J.~Moreno, D.~A. Ovalle, and R.~M. Vicari.
   learning considering multiple student characteristics.
 \newblock {\em Computers \& Education}, 58(1):560--569, 2012.
 
-\bibitem{Musto_atag}
-C.~Musto, P.~Lops, F.~Narducci, G.~Semeraro, and M.~D. Gemmis.
-\newblock A tag recommender system exploiting user and community behavior.
-
-\bibitem{nadler}
-B.~Nadler and M.~Galun.
-\newblock Fundamental limitations of spectral clustering methods.
-\newblock In B.~Sch\"{o}lkopf, J.~Platt, and T.~Hoffman, editors, {\em Advances
-  in Neural Information Processing Systems 19}. MIT Press, Cambridge, MA, 2007.
-
-\bibitem{Nematzadeh}
-A.~Nematzadeh, E.~Ferrara, A.~Flammini, and Y.-Y. Ahn.
-\newblock Optimal network modularity for information diffusion.
-\newblock {\em Phys. Rev. Lett.}, 113:088701, Aug 2014.
-
-\bibitem{nepusz07b}
-T.~Nepusz, A.~Petróczi, L.~Négyessy, and F.~Bazsó.
-\newblock Fuzzy communities and the concept of bridgeness in complex networks.
-\newblock E-print, 2007.
-
-\bibitem{newman2004analysis}
-M.~E. Newman.
-\newblock Analysis of weighted networks.
-\newblock {\em Physical review E}, 70(5):056131, 2004.
+\bibitem{DTN_framework_pushPull}
+M.~Musolesi and C.~Mascolo.
+\newblock A framework for multi-region delay tolerant networking.
+\newblock In {\em ACM workshop on Wireless networks and systems for developing
+  regions}, WiNS-DR '08, pages 37--42, New York, NY, USA, 2008. ACM.
 
 \bibitem{newman2006modularity}
 M.~E. Newman.
@@ -907,38 +794,16 @@ M.~E.~J. Newman.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 98(2):404--409, January 2001.
 
-\bibitem{PhysRevE.70}
-M.~E.~J. Newman.
-\newblock Analysis of weighted networks.
-\newblock {\em Phys. Rev. E}, 70(5):056131, Nov. 2004.
-
-\bibitem{citeulike:646478}
-M.~E.~J. Newman.
-\newblock {Detecting community structure in networks}.
-\newblock {\em The European Physical Journal B - Condensed Matter and Complex
-  Systems}, 38(2):321--330, Mar. 2004.
-
-\bibitem{PhysRevE.69.066133}
-M.~E.~J. Newman.
-\newblock Fast algorithm for detecting community structure in networks.
-\newblock {\em Phys. Rev. E}, 69:066133, Jun 2004.
-
-\bibitem{Newman05062007}
-M.~E.~J. Newman and E.~A. Leicht.
-\newblock Mixture models and exploratory analysis in networks.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  104(23):9564--9569, 2007.
-
-\bibitem{Ng01on}
-A.~Y. Ng, M.~I. Jordan, and Y.~Weiss.
-\newblock On spectral clustering: Analysis and an algorithm.
-\newblock In {\em Advances in Neural Information Processing Systems 14}, pages
-  849--856. MIT Press, 2001.
-
 \bibitem{pone.0091431}
 N.~P. Nguyen, T.~N. Dinh, Y.~Shen, and M.~T. Thai.
 \newblock Dynamic social community detection and its applications.
 \newblock {\em PLOS ONE}, 9(4):1--18, 04 2014.
+
+\bibitem{nicosia2012components}
+V.~Nicosia, J.~Tang, M.~Musolesi, G.~Russo, C.~Mascolo, and V.~Latora.
+\newblock Components in time-varying graphs.
+\newblock {\em Chaos: An interdisciplinary journal of nonlinear science},
+  22(2):023101, 2012.
 
 \bibitem{niwattanakul2013using}
 S.~Niwattanakul, J.~Singthongchai, E.~Naenudorn, and S.~Wanapu.
@@ -946,10 +811,23 @@ S.~Niwattanakul, J.~Singthongchai, E.~Naenudorn, and S.~Wanapu.
 \newblock In {\em Proceedings of the International MultiConference of Engineers
   and Computer Scientists}, volume~1, page~6, 2013.
 
-\bibitem{citeulike:1206611}
-G.~Palla, A.-L. Barabasi, and T.~Vicsek.
-\newblock Quantifying social group evolution.
-\newblock {\em Nature}, 446(7136):664--667, April 2007.
+\bibitem{o2010tweets}
+B.~O'Connor, R.~Balasubramanyan, B.~R. Routledge, and N.~A. Smith.
+\newblock From tweets to polls: Linking text sentiment to public opinion time
+  series.
+\newblock {\em ICWSM}, 11:122--129, 2010.
+
+\bibitem{onnela2007structure}
+J.-P. Onnela, J.~Saram{\"a}ki, J.~Hyv{\"o}nen, G.~Szab{\'o}, D.~Lazer,
+  K.~Kaski, J.~Kert{\'e}sz, and A.-L. Barab{\'a}si.
+\newblock Structure and tie strengths in mobile communication networks.
+\newblock {\em Proceedings of the national academy of sciences},
+  104(18):7332--7336, 2007.
+
+\bibitem{page1999pagerank}
+L.~Page, S.~Brin, R.~Motwani, and T.~Winograd.
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock Technical report, Stanford InfoLab, 1999.
 
 \bibitem{PalEtAl05}
 G.~Palla, I.~Derenyi, I.~Farkas, and T.~Vicsek.
@@ -957,11 +835,10 @@ G.~Palla, I.~Derenyi, I.~Farkas, and T.~Vicsek.
   nature and society.
 \newblock {\em Nature}, 435(7043):814--818, 2005.
 
-\bibitem{Palla05}
-G.~Palla, I.~Derényi, I.~Farkas, and T.~Vicsek.
-\newblock Uncovering the overlapping community structure of complex networks in
-  nature and society.
-\newblock {\em Nature}, 435(7043):814--818, June 2005.
+\bibitem{pan2011path}
+R.~K. Pan and J.~Saram{\"a}ki.
+\newblock Path lengths, correlations, and centrality in temporal networks.
+\newblock {\em Physical Review E}, 84(1):016105, 2011.
 
 \bibitem{pan2010detecting}
 Y.~Pan, D.-H. Li, J.-G. Liu, and J.-Z. Liang.
@@ -970,9 +847,11 @@ Y.~Pan, D.-H. Li, J.-G. Liu, and J.-Z. Liang.
 \newblock {\em Physica A: Statistical Mechanics and its Applications},
   389(14):2849--2857, 2010.
 
-\bibitem{Skusa}
-S.~Papadopoulos, A.~Skusa, A.~Vakali, Y.~Kompatsiaris, and N.~Wagner.
-\newblock {\em eprint arXiv:0902.08}, 2009.
+\bibitem{patarasuk2006pipelined}
+P.~Patarasuk, A.~Faraj, and X.~Yuan.
+\newblock Pipelined broadcast on ethernet switched clusters.
+\newblock In {\em Parallel and Distributed Processing Symposium, 2006. IPDPS
+  2006. 20th International}, pages 10--pp. IEEE, 2006.
 
 \bibitem{patarasuk2008techniques}
 P.~Patarasuk, X.~Yuan, and A.~Faraj.
@@ -980,19 +859,14 @@ P.~Patarasuk, X.~Yuan, and A.~Faraj.
 \newblock {\em Journal of Parallel and Distributed Computing}, 68(6):809--824,
   2008.
 
-\bibitem{Pearson_drif}
-M.~Pearson.
-\newblock Drifting smoke rings: Social network analysis and markov processes in
-  a longitudinal study of friendship groups and risk-taking, connections, 2003.
-
 \bibitem{pennebaker2007development}
 J.~W. Pennebaker, C.~K. Chung, M.~Ireland, A.~Gonzales, and R.~J. Booth.
 \newblock The development and psychometric properties of liwc2007, 2007.
 
-\bibitem{Peterson:1987}
-C.~Peterson and J.~R. Anderson.
-\newblock {A mean field theory learning algorithm for neural networks}.
-\newblock {\em Complex Systems}, 1:995--1019, 1987.
+\bibitem{perra2012activity}
+N.~Perra, B.~Gon{\c{c}}alves, R.~Pastor-Satorras, and A.~Vespignani.
+\newblock Activity driven modeling of time varying networks.
+\newblock {\em Scientific reports}, 2, 2012.
 
 \bibitem{thlab-sigcomm2009-mobiclique-proximity-2012-07-15}
 A.-K. Pietilainen and C.~Diot.
@@ -1000,39 +874,17 @@ A.-K. Pietilainen and C.~Diot.
   2012-07-15).
 \newblock July 2012.
 
-\bibitem{PinWes06}
-J.~W. Pinney and D.~R. Westhead.
-\newblock Betweenness-based decomposition methods for social and biological
-  networks.
-\newblock In S.~Barber, P.~Baxter, K.~Mardia, and R.~Walls, editors, {\em
-  Interdisciplinary Statistics and Bioinformatics}, pages 87--90. Leeds
-  University Press, 2007.
+\bibitem{mikko}
+M.~Pitk{\"a}nen, A.~Ker{\"a}nen, and J.~Ott.
+\newblock Message fragmentation in opportunistic dtns.
+\newblock In {\em International Symposium on a World of Wireless, Mobile and
+  Multimedia Networks}, pages 1--7, Washington, DC, USA, 2008. IEEE Computer
+  Society.
 
-\bibitem{Yolum}
-P.~Pons and M.~Latapy.
-\newblock Computing communities in large networks using random walks.
-\newblock In p.~Yolum, T.~G{\"u}ng{\"o}r, F.~G{\"u}rgen, and C.~{\"O}zturan,
-  editors, {\em Computer and Information Sciences - ISCIS 2005}, volume 3733 of
-  {\em Lecture Notes in Computer Science}, pages 284--293. Springer Berlin
-  Heidelberg.
-
-\bibitem{Pothen:1997}
-A.~Pothen.
-\newblock Graph partitioning algorithms with applications to scientific
-  computing.
-\newblock Technical report, Norfolk, VA, USA, 1997.
-
-\bibitem{Raghavan}
-U.~N. Raghavan, R.~Albert, and S.~Kumara.
-\newblock Near linear time algorithm to detect community structures in
-  large-scale networks.
-\newblock {\em Phys. Rev. E}, 76:036106, Sep 2007.
-
-\bibitem{rand1971}
-W.~Rand.
-\newblock Objective criteria for the evaluation of clustering methods.
-\newblock {\em Journal of the American Statistical Association},
-  66(336):846--850, 1971.
+\bibitem{pragarauskas2012multi}
+H.~Pragarauskas and O.~Gross.
+\newblock Multi-skill collaborative teams based on densest subgraphs.
+\newblock 2012.
 
 \bibitem{rasti2009respondent}
 A.~H. Rasti, M.~Torkjazi, R.~Rejaie, N.~Duffield, W.~Willinger, and
@@ -1040,27 +892,10 @@ A.~H. Rasti, M.~Torkjazi, R.~Rejaie, N.~Duffield, W.~Willinger, and
 \newblock Respondent-driven sampling for characterizing unstructured overlays.
 \newblock In {\em INFOCOM}, pages 2701--2705. IEEE, 2009.
 
-\bibitem{Rattigan:2007}
-M.~J. Rattigan, M.~Maier, and D.~Jensen.
-\newblock Graph clustering with network structure indices.
-\newblock In {\em Proceedings of the 24th International Conference on Machine
-  Learning}, ICML '07, pages 783--790, New York, NY, USA, 2007. ACM.
-
-\bibitem{reichardt2004}
-J.~Reichardt and S.~Bornholdt.
-\newblock Detecting fuzzy community structures in complex networks with a potts
-  model.
-\newblock {\em Phys. Rev. Lett.}, 93(21):218701, Nov. 2004.
-
 \bibitem{relman1989good}
 A.~S. Relman and M.~Angell.
 \newblock How good is peer review?
-\newblock {\em The New Eng. J. of Med.}, 321(12):827--829, 1989.
-
-\bibitem{Ren036111}
-W.~Ren, G.~Yan, X.~Liao, and L.~Xiao.
-\newblock Simple probabilistic algorithm for detecting community structure.
-\newblock {\em Phys. Rev. E}, 79:036111, Mar 2009.
+\newblock {\em The New England journal of medicine}, 321(12):827--829, 1989.
 
 \bibitem{rennie1990editorial}
 D.~Rennie.
@@ -1068,11 +903,23 @@ D.~Rennie.
   international congress.
 \newblock {\em JAMA}, 263(10):1317--1317, 1990.
 
+\bibitem{rezvanian2015sampling}
+A.~Rezvanian and M.~R. Meybodi.
+\newblock Sampling social networks using shortest paths.
+\newblock {\em Physica A: Statistical Mechanics and its Applications},
+  424:254--268, 2015.
+
 \bibitem{ribeiro2010estimating}
 B.~Ribeiro and D.~Towsley.
 \newblock Estimating and sampling graphs with multidimensional random walks.
 \newblock In {\em Proceedings of the 10th ACM SIGCOMM conference on Internet
   measurement}, pages 390--403. ACM, 2010.
+
+\bibitem{riggs2001algorithm}
+T.~Riggs and R.~Wilensky.
+\newblock An algorithm for automated rating of reviewers.
+\newblock In {\em Proceedings of the 1st ACM/IEEE-CS joint conference on
+  Digital libraries}, pages 381--387. ACM, 2001.
 
 \bibitem{ripeanu2002mapping}
 M.~Ripeanu, I.~Foster, and A.~Iamnitchi.
@@ -1080,30 +927,32 @@ M.~Ripeanu, I.~Foster, and A.~Iamnitchi.
   systems and implications for system design.
 \newblock {\em arXiv preprint cs/0209028}, 2002.
 
-\bibitem{Rosvall01052007}
-M.~Rosvall and C.~T. Bergstrom.
-\newblock An information-theoretic framework for resolving community structure
-  in complex networks.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  104(18):7327--7331, 2007.
+\bibitem{rocha2013bursts}
+L.~E. Rocha and V.~D. Blondel.
+\newblock Bursts of vertex activation and epidemics in evolving networks.
+\newblock {\em PLoS Comput Biol}, 9(3):e1002974, 2013.
 
-\bibitem{Rosvall290}
-M.~Rosvall and C.~T. Bergstrom.
-\newblock Maps of random walks on complex networks reveal community structure.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  105(4):1118--1123, 2008.
+\bibitem{rodriguez2008algorithm}
+M.~A. Rodriguez and J.~Bollen.
+\newblock An algorithm to determine peer-reviewers.
+\newblock In {\em Proceedings of the 17th ACM conference on Information and
+  knowledge management}, pages 319--328. ACM, 2008.
+
+\bibitem{rodriguez2007mapping}
+M.~A. Rodriguez, J.~Bollen, and H.~Van~de Sompel.
+\newblock Mapping the bid behavior of conference referees.
+\newblock {\em Journal of Informetrics}, 1(1):68--82, 2007.
+
+\bibitem{rohani2000impact}
+P.~Rohani, D.~J. Earn, and B.~T. Grenfell.
+\newblock Impact of immunisation on pertussis transmission in england and
+  wales.
+\newblock {\em The Lancet}, 355(9200):285--286, 2000.
 
 \bibitem{rosvall2008maps}
 M.~Rosvall and C.~T. Bergstrom.
 \newblock Maps of random walks on complex networks reveal community structure.
 \newblock {\em PNAS}, 105(4):1118--1123, 2008.
-
-\bibitem{5460690}
-M.~Sachan and R.~Ichise.
-\newblock Using abstract information and community alignment information for
-  link prediction.
-\newblock In {\em 2010 Second International Conference on Machine Learning and
-  Computing (ICMLC)}, pages 61--65, Feb 2010.
 
 \bibitem{sanghavi2007gossiping}
 S.~Sanghavi, B.~Hajek, and L.~Massouli{\'e}.
@@ -1111,35 +960,15 @@ S.~Sanghavi, B.~Hajek, and L.~Massouli{\'e}.
 \newblock {\em IEEE Transactions on Information Theory}, 53(12):4640--4654,
   2007.
 
-\bibitem{SC08}
-P.~Schuetz and A.~Caflisch.
-\newblock {Efficient modularity optimization by multistep greedy algorithm and
-  vertex mover refinement}.
-\newblock {\em Physical Review E}, 77(4):046112, 2008.
+\bibitem{scherrer2008description}
+A.~Scherrer, P.~Borgnat, E.~Fleury, J.-L. Guillaume, and C.~Robardet.
+\newblock Description and simulation of dynamic mobility networks.
+\newblock {\em Computer Networks}, 52(15):2842--2858, 2008.
 
 \bibitem{cambridge-haggle-imote-infocom2006-2009-05-29}
 J.~Scott, R.~Gass, J.~Crowcroft, P.~Hui, C.~Diot, and A.~Chaintreau.
 \newblock {CRAWDAD} trace cambridge/haggle/imote/infocom2006 (v. 2009-05-29).
 \newblock May 2009.
-
-\bibitem{Shang6903136}
-J.~Shang, L.~Liu, F.~Xie, and C.~Wu.
-\newblock How overlapping community structure affects epidemic spreading in
-  complex networks.
-\newblock In {\em 2014 IEEE 38th International Computer Software and
-  Applications Conference Workshops (COMPSACW)}, pages 240--245, July 2014.
-
-\bibitem{Shen20091706}
-H.~Shen, X.~Cheng, K.~Cai, and M.-B. Hu.
-\newblock Detect overlapping and hierarchical community structure in networks.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  388(8):1706--1712, 2009.
-
-\bibitem{Shi:2000}
-J.~Shi and J.~Malik.
-\newblock Normalized cuts and image segmentation.
-\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 22(8):888--905, Aug.
-  2000.
 
 \bibitem{sikdar2016anomalies}
 S.~Sikdar, M.~Marsili, N.~Ganguly, and A.~Mukherjee.
@@ -1151,7 +980,7 @@ S.~Sikdar, M.~Marsili, N.~Ganguly, and A.~Mukherjee.
 \bibitem{smith2006peer}
 R.~Smith.
 \newblock Peer review: a flawed process at the heart of science and journals.
-\newblock {\em Journal of the R. Soc. of Med.}, 99(4):178--182, 2006.
+\newblock {\em Journal of the royal society of medicine}, 99(4):178--182, 2006.
 
 \bibitem{son2012percolation}
 S.-W. Son, G.~Bizhani, C.~Christensen, P.~Grassberger, and M.~Paczuski.
@@ -1159,31 +988,36 @@ S.-W. Son, G.~Bizhani, C.~Christensen, P.~Grassberger, and M.~Paczuski.
   spreading.
 \newblock {\em EPL (Europhysics Letters)}, 97(1):16006, 2012.
 
-\bibitem{SonSW}
-S.-W. Son, H.~Jeong, and J.~D. Noh.
-\newblock Random field ising model and community structure in complex networks.
-\newblock {\em The European Physical Journal B - Condensed Matter and Complex
-  Systems}, 50(3):431--437.
+\bibitem{spence2001detection}
+C.~Spence, L.~Parra, and P.~Sajda.
+\newblock Detection, synthesis and compression in mammographic image analysis
+  with a hierarchical image probability model.
+\newblock In {\em MMBIA 2001.}, pages 3--10. IEEE, 2001.
 
-\bibitem{Spiliopoulou:2006}
-M.~Spiliopoulou, I.~Ntoutsi, Y.~Theodoridis, and R.~Schult.
-\newblock Monic: Modeling and monitoring cluster transitions.
-\newblock In {\em Proceedings of the 12th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '06, pages 706--711, New York,
-  NY, USA, 2006. ACM.
+\bibitem{sporns2004organization}
+O.~Sporns, D.~R. Chialvo, M.~Kaiser, and C.~C. Hilgetag.
+\newblock Organization, development and function of complex brain networks.
+\newblock {\em Trends in cognitive sciences}, 8(9):418--425, 2004.
 
-\bibitem{Sun:2007}
-J.~Sun, C.~Faloutsos, S.~Papadimitriou, and P.~S. Yu.
-\newblock Graphscope: Parameter-free mining of large time-evolving graphs.
-\newblock In {\em Proceedings of the 13th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '07, pages 687--696, New York,
-  NY, USA, 2007. ACM.
+\bibitem{stehle2011simulation}
+J.~Stehl{\'e}, N.~Voirin, A.~Barrat, C.~Cattuto, V.~Colizza, L.~Isella,
+  C.~R{\'e}gis, J.-F. Pinton, N.~Khanafer, W.~Van~den Broeck, et~al.
+\newblock Simulation of an seir infectious disease model on the dynamic contact
+  network of conference attendees.
+\newblock {\em BMC medicine}, 9(1):87, 2011.
 
-\bibitem{citeulike:938243}
-S.~R. Sundaresan, I.~R. Fischhoff, J.~Dushoff, and D.~I. Rubenstein.
-\newblock {Network metrics reveal differences in social organization between
-  two fission--fusion species, Grevy's zebra and onager}.
-\newblock {\em Oecologia}, 151(1):140--149, Feb. 2007.
+\bibitem{stehle2011high}
+J.~Stehl{\'e}, N.~Voirin, A.~Barrat, C.~Cattuto, L.~Isella, J.-F. Pinton,
+  M.~Quaggiotto, W.~Van~den Broeck, C.~R{\'e}gis, B.~Lina, et~al.
+\newblock High-resolution measurements of face-to-face contact patterns in a
+  primary school.
+\newblock {\em PloS one}, 6(8):e23176, 2011.
+
+\bibitem{stutzbach2009unbiased}
+D.~Stutzbach, R.~Rejaie, N.~Duffield, S.~Sen, and W.~Willinger.
+\newblock On unbiased sampling for unstructured peer-to-peer networks.
+\newblock {\em IEEE/ACM Transactions on Networking (TON)}, 17(2):377--390,
+  2009.
 
 \bibitem{sur2014attack}
 S.~Sur, N.~Ganguly, and A.~Mukherjee.
@@ -1197,38 +1031,35 @@ T.~Takaguchi, N.~Masuda, and P.~Holme.
   threshold-based epidemic dynamics.
 \newblock {\em PloS one}, 8(7):e68629, 2013.
 
+\bibitem{tang2009temporal}
+J.~Tang, M.~Musolesi, C.~Mascolo, and V.~Latora.
+\newblock Temporal distance metrics for social network analysis.
+\newblock In {\em Proceedings of the 2nd ACM workshop on Online social
+  networks}, pages 31--36. ACM, 2009.
+
+\bibitem{tang2010analysing}
+J.~Tang, M.~Musolesi, C.~Mascolo, V.~Latora, and V.~Nicosia.
+\newblock Analysing information flows and key mediators through temporal
+  centrality metrics.
+\newblock In {\em Proceedings of the 3rd Workshop on Social Network Systems},
+  page~3. ACM, 2010.
+
 \bibitem{TSMML10:smallworld}
 J.~Tang, S.~Scellato, M.~Musolesi, C.~Mascolo, and V.~Latora.
 \newblock Small-world behavior in time-varying graphs.
-\newblock {\em Physical Review E}, 81(5), May 2010.
-\newblock 055101(R).
+\newblock {\em Physical Review E}, 81(5):055101, 2010.
 
 \bibitem{tang2009epidemic}
 M.~Tang, Z.~Liu, and B.~Li.
 \newblock Epidemic spreading by objective traveling.
 \newblock {\em EPL (Europhysics Letters)}, 87(1):18005, 2009.
 
-\bibitem{Tantipathananandh:2009}
-C.~Tantipathananandh and T.~Berger-Wolf.
-\newblock Constant-factor approximation algorithms for identifying dynamic
-  communities.
-\newblock In {\em Proceedings of the 15th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '09, pages 827--836, New York,
-  NY, USA, 2009. ACM.
-
-\bibitem{Tantipathananandh:2007}
-C.~Tantipathananandh, T.~Berger-Wolf, and D.~Kempe.
-\newblock A framework for community identification in dynamic social networks.
-\newblock In {\em Proceedings of the 13th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '07, pages 717--726, New York,
-  NY, USA, 2007. ACM.
-
-\bibitem{Tiby20084982}
-G.~Tib{\'e}ly and J.~Kert{\'e}sz.
-\newblock On the equivalence of the label propagation method of community
-  detection and a potts model approach.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  387(19--20):4982--4984, 2008.
+\bibitem{taylor2009dynamic}
+I.~W. Taylor, R.~Linding, D.~Warde-Farley, Y.~Liu, C.~Pesquita, D.~Faria,
+  S.~Bull, T.~Pawson, Q.~Morris, and J.~L. Wrana.
+\newblock Dynamic modularity in protein interaction networks predicts breast
+  cancer outcome.
+\newblock {\em Nature biotechnology}, 27(2):199--204, 2009.
 
 \bibitem{tong2016novel}
 C.~Tong, Y.~Lian, J.~Niu, Z.~Xie, and Y.~Zhang.
@@ -1240,28 +1071,10 @@ S.~Trajanovski, S.~Scellato, and I.~Leontiadis.
 \newblock Error and attack vulnerability of temporal networks.
 \newblock {\em Physical Review E}, 85(6):066105, 2012.
 
-\bibitem{gcalda:TWH03}
-J.~R. Tyler, D.~M. Wilkinson, and B.~A. Huberman.
-\newblock E-mail as a spectroscopy: Automated discovery of community structure
-  within organizations.
-\newblock In M.~Huysman, E.~Wenger, and V.~Wulfs, editors, {\em Proceedings of
-  the First Iternational Conference on Communities and Technologies}, 2003.
-
-\bibitem{6412391}
-J.~Valverde-Rebaza and A.~de~Andrade~Lopes.
-\newblock Structural link prediction using community information on twitter.
-\newblock In {\em 2012 Fourth International Conference on Computational Aspects
-  of Social Networks (CASoN)}, pages 132--137, Nov 2012.
-
-\bibitem{Valverde-RebazaICSA2014}
-J.~C. Valverde-Rebaza and A.~A. Lopes.
-\newblock Link prediction in online social networks using group information.
-\newblock volume 8584, pages 31 -- 45, Portugal, 2014. Springer.
-
-\bibitem{vandongen00}
-S.~van Dongen.
-\newblock {\em Graph Clustering by Flow Simulation}.
-\newblock PhD thesis, University of Utrecht, 2000.
+\bibitem{van2012epidemic}
+P.~Van~Mieghem.
+\newblock Epidemic phase transition of the sis type in networks.
+\newblock {\em EPL (Europhysics Letters)}, 97(4):48004, 2012.
 
 \bibitem{vanhems2013estimating}
 P.~Vanhems, A.~Barrat, C.~Cattuto, J.-F. Pinton, N.~Khanafer, C.~R{\'e}gis,
@@ -1270,12 +1083,21 @@ P.~Vanhems, A.~Barrat, C.~Cattuto, J.-F. Pinton, N.~Khanafer, C.~R{\'e}gis,
   using wearable proximity sensors.
 \newblock {\em PloS one}, 8(9):e73970, 2013.
 
-\bibitem{Vinh:2009}
-N.~X. Vinh, J.~Epps, and J.~Bailey.
-\newblock Information theoretic measures for clusterings comparison: Is a
-  correction for chance necessary?
-\newblock In {\em Proceedings of the 26th Annual International Conference on
-  Machine Learning}, ICML '09, pages 1073--1080, New York, NY, USA, 2009. ACM.
+\bibitem{vazquez2006modeling}
+A.~V{\'a}zquez, J.~G. Oliveira, Z.~Dezs{\"o}, K.-I. Goh, I.~Kondor, and A.-L.
+  Barab{\'a}si.
+\newblock Modeling bursts and heavy tails in human dynamics.
+\newblock {\em Physical Review E}, 73(3):036127, 2006.
+
+\bibitem{vazquez2007impact}
+A.~Vazquez, B.~Racz, A.~Lukacs, and A.-L. Barabasi.
+\newblock Impact of non-poissonian activity patterns on spreading processes.
+\newblock {\em Physical review letters}, 98(15):158702, 2007.
+
+\bibitem{vitter1985random}
+J.~S. Vitter.
+\newblock Random sampling with a reservoir.
+\newblock {\em ACM TOMS}, 11(1):37--57, 1985.
 
 \bibitem{volz2007susceptible}
 E.~Volz and L.~A. Meyers.
@@ -1284,22 +1106,10 @@ E.~Volz and L.~A. Meyers.
 \newblock {\em Proceedings of the Royal Society of London B: Biological
   Sciences}, 274(1628):2925--2934, 2007.
 
-\bibitem{Wakita:2007}
-K.~Wakita and T.~Tsurumi.
-\newblock Finding community structure in mega-scale social networks: [extended
-  abstract].
-\newblock In {\em Proceedings of the 16th International Conference on World
-  Wide Web}, WWW '07, pages 1275--1276, New York, NY, USA, 2007. ACM.
-
 \bibitem{wald}
 A.~Wald.
 \newblock On cumulative sums of random variables.
 \newblock {\em The Annals of Mathematical Statistics}, 15(3):283--296, 1944.
-
-\bibitem{Watts-1998}
-D.~Watts and S.~Strogatz.
-\newblock Collective dynamics of `small-world' networks.
-\newblock {\em Nature}, (393):440--442, 1998.
 
 \bibitem{watts2002simple}
 D.~J. Watts.
@@ -1312,60 +1122,41 @@ J.~Watts and R.~Van De~Geijn.
 \newblock A pipelined broadcast for multidimensional meshes.
 \newblock {\em Parallel Processing Letters}, 5(02):281--292, 1995.
 
-\bibitem{citeulike:10267542}
-Y.-C. Wei and C.-K. Cheng.
-\newblock {Towards efficient hierarchical designs by ratio cut partitioning}.
-\newblock In {\em Computer-Aided Design, 1989. ICCAD-89. Digest of Technical
-  Papers., 1989 IEEE International Conference on}, pages 298--301. IEEE, Nov.
-  1989.
-
-\bibitem{Weng13}
-L.~Weng, F.~Menczer, and Y.-Y. Ahn.
-\newblock Virality prediction and community structure in social networks.
-\newblock {\em Sci. Rep.}, 3(2522), 2013.
-
 \bibitem{west2014exploiting}
 R.~West, H.~S. Paskov, J.~Leskovec, and C.~Potts.
 \newblock Exploiting social network structure for person-to-person sentiment
   analysis.
 \newblock {\em arXiv preprint arXiv:1409.2450}, 2014.
 
-\bibitem{winkler1972}
-R.~Winkler.
-\newblock {\em An Introduction to Bayesian Inference and Decision}.
-\newblock International series in decision processes. Holt, Rinehart and
-  Winston, 1972.
+\bibitem{WILLIAMS-MARTINEZ.2000}
+R.~J. Williams and N.~D. Martinez.
+\newblock {Simple rules yield complex food webs}.
+\newblock {\em Nature}, 404(6774):180--183, Mar. 2000.
 
-\bibitem{Wu235}
-F.~Y. Wu.
-\newblock The potts model.
-\newblock {\em Rev. Mod. Phys.}, 54(1):235--268, Jan. 1982.
+\bibitem{wolf2009mining}
+T.~Wolf, A.~Schr{\"o}ter, D.~Damian, L.~D. Panjer, and T.~H. Nguyen.
+\newblock Mining task-based social networks to explore collaboration in
+  software teams.
+\newblock {\em IEEE Software}, 26(1):58--66, 2009.
 
-\bibitem{5680851}
-Z.~Wu, Y.~Lin, H.~Wan, and S.~Tian.
-\newblock A fast and reasonable method for community detection with adjustable
-  extent of overlapping.
-\newblock In {\em 2010 International Conference on Intelligent Systems and
-  Knowledge Engineering (ISKE)}, pages 376--379, Nov 2010.
-
-\bibitem{Xie_2013s}
-J.~Xie, S.~Kelley, and B.~K. Szymanski.
-\newblock Overlapping community detection in networks: The state-of-the-art and
-  comparative study.
-\newblock {\em ACM Comput. Surv.}, 45(4):43:1--43:35, Aug. 2013.
-
-\bibitem{6137400}
-J.~Xie, B.~Szymanski, and X.~Liu.
-\newblock Slpa: Uncovering overlapping communities in social networks via a
-  speaker-listener interaction dynamic process.
-\newblock In {\em 2011 IEEE 11th International Conference on Data Mining
-  Workshops (ICDMW)}, pages 344--349, Dec 2011.
+\bibitem{wu2010evidence}
+Y.~Wu, C.~Zhou, J.~Xiao, J.~Kurths, and H.~J. Schellnhuber.
+\newblock Evidence for a bimodal distribution in human communication.
+\newblock {\em Proceedings of the national academy of sciences},
+  107(44):18803--18808, 2010.
 
 \bibitem{yan2012better}
 R.~Yan, C.~Huang, J.~Tang, Y.~Zhang, and X.~Li.
 \newblock To better stand on the shoulder of giants.
 \newblock In {\em Proceedings of the 12th ACM/IEEE-CS joint conference on
   Digital Libraries}, pages 51--60. ACM, 2012.
+
+\bibitem{yan2011citation}
+R.~Yan, J.~Tang, X.~Liu, D.~Shan, and X.~Li.
+\newblock Citation count prediction: learning to estimate future citations for
+  literature.
+\newblock In {\em Proceedings of the 20th ACM international conference on
+  Information and knowledge management}, pages 1247--1252. ACM, 2011.
 
 \bibitem{yang2015defining}
 J.~Yang and J.~Leskovec.
@@ -1378,51 +1169,28 @@ Z.~Ye, S.~Hu, and J.~Yu.
   networks.
 \newblock {\em PRE}, 78:046115, Oct 2008.
 
-\bibitem{ZareiP11013}
-M.~Zarei, D.~Izadi, and K.~A. Samani.
-\newblock Detecting overlapping community structure of networks based on
-  vertex--vertex correlations.
-\newblock {\em Journal of Statistical Mechanics: Theory and Experiment},
-  2009(11):P11013, 2009.
+\bibitem{zhang2005peer}
+M.~Zhang, J.-G. Luo, L.~Zhao, and S.-Q. Yang.
+\newblock A peer-to-peer network for live media streaming using a push-pull
+  approach.
+\newblock In {\em Proceedings of the 13th annual ACM international conference
+  on Multimedia}, pages 287--290. ACM, 2005.
 
-\bibitem{Zarei200}
-M.~Zarei and K.~A. Samani.
-\newblock Eigenvectors of network complement reveal community structure more
-  accurately.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  388(8):1721--1730, 2009.
+\bibitem{zhang2014susceptible}
+Y.-Q. Zhang and X.~Li.
+\newblock When susceptible-infectious-susceptible contagion meets time-varying
+  networks with identical infectivity.
+\newblock {\em EPL (Europhysics Letters)}, 108(2):28006, 2014.
 
-\bibitem{Zhang2007483}
-S.~Zhang, R.-S. Wang, and X.-S. Zhang.
-\newblock Identification of overlapping community structure in complex networks
-  using fuzzy -means clustering.
-\newblock {\em Physica A: Statistical Mechanics and its Applications},
-  374(1):483--490, 2007.
+\bibitem{zhi2011empirical}
+Z.~Zhi-Dan, X.~Hu, S.~Ming-Sheng, and Z.~Tao.
+\newblock Empirical analysis on the human dynamics of a large-scale short
+  message communication system.
+\newblock {\em Chinese Physics Letters}, 28(6):068901, 2011.
 
-\bibitem{Zhang046103}
-S.~Zhang, R.-S. Wang, and X.-S. Zhang.
-\newblock Uncovering fuzzy community structure in complex networks.
-\newblock {\em Phys. Rev. E}, 76:046103, Oct 2007.
-
-\bibitem{Zhang:2009}
-Y.~Zhang, J.~Wang, Y.~Wang, and L.~Zhou.
-\newblock Parallel community detection on large networks with propinquity
-  dynamics.
-\newblock In {\em Proceedings of the 15th ACM SIGKDD International Conference
-  on Knowledge Discovery and Data Mining}, KDD '09, pages 997--1006, New York,
-  NY, USA, 2009. ACM.
-
-\bibitem{Zhou:2003a}
-H.~Zhou.
-\newblock Distance, dissimilarity index, and network community structure.
-\newblock {\em Physical Review E}, 67(6):061901, 2003.
-
-\bibitem{Zhuhadar}
-L.~Zhuhadar, R.~Yang, and O.~Nasraoui.
-\newblock Toward the design of a recommender system: Visual clustering and
-  detecting community structure in a web usage network.
-\newblock In {\em 2012 IEEE/WIC/ACM International Conferences on Web
-  Intelligence and Intelligent Agent Technology (WI-IAT)}, volume~1, pages
-  354--361, Dec 2012.
+\bibitem{zzkarian1999forming}
+A.~Zzkarian and A.~Kusiak.
+\newblock Forming teams: an analytical approach.
+\newblock {\em IIE transactions}, 31(1):85--97, 1999.
 
 \end{thebibliography}

@@ -1,10 +1,10 @@
 \noindent
 %\section{Broadcast algorithm based on the diffusion model}
 We now proceed to propose a broadcast algorithm based on the information diffusion model proposed earlier. 
-Note that contrary to the general assumption that size of a message is small enough to be transferred from one node to other 
-on the short durations of contacts between the nodes, we consider a more stringent case that is, the duration of a contact 
+Note that in contrast to the general assumption that size of a message is small enough to be transferred from one node to the other 
+on the short duration of contacts between the nodes, we consider a more stringent case that is, the duration of a contact 
 between the nodes is not always sufficient for the transfer and therefore the message might need to be 
-segmented/divided into sub-parts and sent individually. Further note that our proposed diffusion model is a natural fit (which we elaborate on next) as the 
+segmented/divided into sub-parts and sent individually. Further note that our proposed diffusion model is a natural fit (which we elaborate next) as the 
 number of contacts to contract infection can be replaced by the number of sub-parts in the message. 
 
 %\vspace{-3.5mm}
@@ -45,12 +45,12 @@ The two basic modes of message transfer that we consider are the push and the (r
  \noindent \emph{Pull technique:} 
 % \vspace{-3mm}
  \begin{itemize}
-  \item \emph{Step 1:} At any time step between $v_j$ and $u_i$, $v_j$ establishes a communication link with $u_i$ 
+  \item \emph{Step 1:} At any time step, between $v_j$ and $u_i$, $v_j$ establishes a communication link with $u_i$ 
   and requests for a packet that it has not received yet. 
   \item \emph{Step 2:} Given that $u_i$ has already become a sender it first finds such a packet from its own buffer and then transfers a copy of it to $v_j$.
  \end{itemize}
   Note that in the traditional pull technique, $u_i$, being a sender, may transfer more than one packet if it gets multiple simultaneous requests from more than one agent at any particular time step. However, unlike the traditional case, here $u_i$ can serve only one request in case there are multiple pull requests. Such a restriction actually allows for conservation of both battery power and network bandwidth in resource constrained scenarios like DTN. 
- Also note that we consider the duration of each communication link is long enough for the transfer of at least a single packet.  
+  We further consider that the duration of each communication link is long enough for the transfer of at least a single packet.  
 
 
 %\vspace{-5mm}
@@ -62,14 +62,14 @@ The second metric centers around a complementary issue of power and bandwidth co
 %\vspace{-4mm}
  \item \textbf{Broadcast delay $T^*$} - this is the time from the point when the message source starts sending the first packet to the point when all the agents in the network have received the entire message. 
  $E(T^*)$ denotes the expected broadcast time. 
- In addition, we are also interested in the time $T_i$ which is the minimum time at which there are $i$ senders (except the source) in the network, and especially in $T_1$ since, as we shall see, that this is the prime determinant of the entire broadcast time. 
+ In addition, we are also interested in the time $t_i$ which is the minimum time at which there are $i$ senders (except the source) in the network, and especially in $t_1$ since, as we shall see, that this is the prime determinant of the entire broadcast time. 
  %\todo{why are these lines needed - Finally, note that $T^*$ may not correspond to $T_{n-1}$, i.e., the time when there are $n-1$ senders (except the source) in the network because all $n-1$ agents need not become senders to spread the message.}  
  \item \textbf{Broadcast wastage $C_m^*$} - let $C_l$ and $C_p$ be the total number of communication links that get established in the network and the total number of successful packet transfers respectively. We define the broadcast wastage as $C_m^* = (C_l - C_p)/C_l$. This metric essentially measures the number of useless contacts in the network during which no packet could be transferred and is therefore a direct cause of energy wastage.
 \end{itemize}
 
 \subsection{Broadcast algorithms}
 We consider following four algorithms for broadcasting messages. While the first one (Blind Push) is exactly similar to the diffusion model proposed earlier, the others 
-builds on it.
+build on it.
 \subsubsection{Blind push (B-P)}
 {
 An initiator node is the one which has the full message in the beginning. At each time step all the nodes 
@@ -108,13 +108,13 @@ message.
 \begin{figure}
 \centering
 \includegraphics[scale=0.25]{./texfiles/Chapter_3/netsci/figs1/ps_pl_at_su.eps}
-\caption{Pull attempts, successful pulls, push attempts, successful pushes versus time for gnutella1 network}
+\caption{Pull attempts, successful pulls, push attempts, successful pushes versus time for gnutella1 network\vspace{4mm}}
 \label{ps_pl_at_su}
 \end{figure}
 
-\subsubsection{Strategy-x\%, automatic switch from push to pull}
+\subsubsection{Strategy-$x$\%, automatic switch from push to pull}
 
-In this Strategy (X-P-P), the nodes in the system follow $Blind-push$ initially and then switch to $Blind-Pull$ once x\% of the nodes in the system have 
+In this Strategy (X-P-P), the nodes in the system follow $Blind-push$ initially and then switch to $Blind-Pull$ once $x$\% of the nodes in the system have 
 the full message. The algorithm terminates when all the nodes in the system have the full message.
 
 We consider the $Blind-push$ and $Blind-pull$ algorithm on a network and check how efficiently they perform over a broadcast time window. 
@@ -124,7 +124,7 @@ In figure ~\ref{ps_pl_at_su} we plot the number of attempts and the number of su
   performs poorly in the beginning but picks up after a certain percentage of nodes have become senders. We observe just the opposite behavior 
   for push mechanism. Our X-P-P strategy is based on this idea to obtain the best out of both the strategies.
 
-The X-P-P strategy cannot be implemented in a practical setting  because the nodes in the system need to maintain a global information of the percentage of nodes in the 
+The X-P-P strategy cannot be implemented in a practical setting  because every node in the system needs to maintain a global information of the percentage of nodes in the 
 system having the full message which is difficult in a distributed setting like this.
 
 
@@ -135,8 +135,8 @@ system having the full message which is difficult in a distributed setting like 
 % In this strategy,  each node $i$ maintains a counter ($pl\_count_i$, initialized to $0$) and an additional list $l_{i}$ which is initially empty.
 % The counter counts
 Here, we introduce a new strategy $Push-pull-with-giveup$ (P-P-G) which approximately mimics 
-the X-P-P strategy in a distributed setting  and it functions in the following way-
-Initially there  is a single node in the system which has the full message. At each time step the sender nodes in the system communicate with one of the nodes 
+the X-P-P strategy in a distributed setting  and it functions in the following way - 
+initially there  is a single node in the system which has the full message. At each time step the sender nodes in the system communicate with one of the nodes 
 in their proximity and try to $push$. Among all the other non-sender nodes in the system those which have at least a single packet (i.e., nodes which have participated 
 in a message transfer at least once and hence are aware of the broadcast) try to pull. Each node also keeps a local history regarding the number of unsuccessful 
 communications it has participated in and once this exceeds a threshold, it `gives-up' and no longer 
@@ -153,7 +153,7 @@ participates in the broadcast. Once all the nodes have `given-up', the broadcast
 
 \subsection{Dynamic topology}
 %\vspace{-2mm}
-We performed our experiments on gnutella snapshots and on synthetic topologies like complete graph, regular tree, regular graph and random graph. 
+We perform our experiments on gnutella snapshots and on synthetic topologies like complete graph, regular tree, regular graph and random graph. 
 A topology specifies the potential neighborhood of a node 
 - a node at each time step connects randomly to one of these nodes. A complete graph 
 topology would indicate that the 

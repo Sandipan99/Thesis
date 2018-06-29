@@ -1,16 +1,10 @@
 \noindent
 
  \section{Prediction framework}
- \label{prediction}
+ \label{prediction_1}
  
 
-\begin{figure}
- \begin{center}
- \includegraphics[width=0.45\columnwidth, angle=0]{./texfiles/Chapter_1/fig/jaccard-eps-converted-to.pdf}
- \caption{\label{fig2}(a) and (b) denote the status of node $i$ at time $t$ and $t+k$ respectively. $NBR(i)_{t}=\{a,b,c\}$ and $NBR(i)_{t+k}=\{a,d,c,e\}$ 
- $Correlation(i)_{k}$={\large$\frac{NBR(i)_{t}\bigcap NBR(i)_{t+k}}{NBR(i)_{t}\bigcup NBR(i)_{t+k}}$}={\large$\frac{2}{5}$} where $NBR(i)_{t}\rightarrow$ the set of neighbors of $i$ at time $t$}
-  \end{center}
- \end{figure}
+
   
  \begin{figure*}
  \centering
@@ -44,13 +38,13 @@
   
 In this section, we employ the time series to forecast the different structural properties of the temporal networks.
 %Note that this process is equivalent to having a growth model for the temporal networks.
-Elementary models of time series forecasting could be categorized into Auto-regressive(AR) and Moving average(MA) models ~\cite{chatfield2013analysis}. In case of 
+Elementary models of time series forecasting could be categorized into Auto-regressive (AR) and Moving average (MA) models ~\cite{chatfield2013analysis}. In case of 
 an auto-regressive model of order $p$, AR($p$), the value of the time series at time step $t$ is given as - 
 \begin{center}
  $y_{t}=\alpha_{1}y_{t-1}+\cdots+\alpha_{p}y_{t-p}+e_t+c$
 \end{center}
 where $\alpha_{i}$s are parameters, $e_t$ is the white noise error term and $c$ is a constant.
-Similarly, in case of Moving average model of order $q$, MA($q$), the value of the time series at time step $t$ is given as - 
+Similarly, in case of moving average model of order $q$, MA($q$), the value of the time series at time step $t$ is given as - 
 \begin{center}
  $y_{t}=\beta_{1}e_{t-1}+\cdots+\beta_{q}e_{t-q}+\mu+e_t+c$
 \end{center}
@@ -60,7 +54,7 @@ These two models could be combined into Auto-regressive-moving-average (ARMA($p$
  $y_{t}=\alpha_{1}y_{t-1}+\cdots+\alpha_{p}y_{t-p}+\beta_{1}e_{t-1}+\cdots+\beta_{q}e_{t-q}+e_t+c$
 \end{center}
 
-However, in our case the time series show evidences of non-stationarity and short term dependencies and these models are insufficient and hence we use ARIMA model ~\cite{box2011time} for forecasting. The initial differncing step in ARIMA model 
+However, in our case the time series show evidences of non-stationarity and short term dependencies and these models are insufficient and hence we use ARIMA model ~\cite{box2011time} for forecasting. The initial differencing step in ARIMA model 
 is used to reduce the non-stationarity.
 %Any ARIMA model has three parameters $p$, $d$ and $q$. $p$ is the auto-regressive element representing the lingering effects of preceding scores.
 %$d$ represents the integrated element and $q$ represents the moving average element.
@@ -71,7 +65,14 @@ equation of the form-
  $y_{t}=\alpha_{1}y_{t-1}+\cdots+\alpha_{p}y_{t-p}+\beta_{1}e_{t-1}+\cdots+\beta_{q}e_{t-q}+c$
 \end{center}
 
-
+ \begin{figure}
+ \begin{center}
+  \includegraphics[width=0.75\columnwidth, angle=0]{./texfiles/Chapter_1/fig/error_similarity_val-eps-converted-to.pdf}
+  \caption{\label{fig_err} Mean prediction error (\%) across different properties for INFOCOM 2006 dataset for different similarity values. The lags corresponding to the similarity 
+  value are also provided.}
+  \end{center}
+ \end{figure}
+ 
 Hence we can take a time series corresponding to a network property and fit an ARIMA model to it. Thus, we obtain an auto-regressive equation for that series which 
 can be used 
 in forecasting. 
@@ -114,14 +115,7 @@ Figure~\ref{fig2} shows how we formulate this measure using the Jaccard similari
   training set. One can imagine this process as a sliding window of size $w$ which is used for learning the auto-regressive equation and the point that falls immediately 
   outside the window is the unknown that is to be predicted.
   
-  \begin{figure}
- \begin{center}
-  \includegraphics[width=0.75\columnwidth, angle=0]{./texfiles/Chapter_1/fig/error_similarity_val-eps-converted-to.pdf}
-  \caption{\label{fig_err} Mean prediction error (\%) across different properties for INFOCOM 2006 dataset for different similarity values. The lags corresponding to the similarity 
-  value are also provided.}
-  \end{center}
- \end{figure}
-  
+ 
   
   %   Figure ~\ref{aging} gives the value of the measure at different lags for INFOCOM 2006 dataset. To calculate the correlation value at a certain lag, we take each network snapshot 
 %   and measure the average neighborhood-overlap with the snapshot at that lag and take the mean of the values.

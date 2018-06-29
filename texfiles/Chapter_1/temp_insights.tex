@@ -15,11 +15,11 @@ In case of average node degree attack the temporal degree\footnote{Given a time 
 subsequent steps (i.e., ``the node is attacked''). 
 We observe that for every 
 node its degree over a given time interval forms a time series. Using our prediction framework we calculate the degree of the node at a future time step based on the previous 
-$w$ time steps (window size for the corresponding dataset, refer to section \ref{prediction})
+$w$ time steps (window size for the corresponding dataset, refer to section \ref{prediction_1})
 and remove a node with the 
 highest degree as predicted by our proposed framework. We compare our strategy (Pred-deg) with average node degree based attack (Avg-deg) and the random case (nodes are selected at random 
 and removed). 
-The effectiveness of an attack strategy is measured using temporal robustness ~\cite{trajanovski2012error} which is estimated by the relative change in efficiency ~\cite{trajanovski2012error} 
+We measure the effectiveness of an attack strategy by using temporal robustness~\cite{trajanovski2012error} which we estimate by the relative change in efficiency~\cite{trajanovski2012error} 
 after a structural damage $D$. 
 Temporal efficiency of a network $G$ in a given time interval [$t_1,t_n$], $E_G(t_1,t_2)$ is defined as the averaged sum of the inverse temporal distances over all pairs of 
 nodes in that time interval. 

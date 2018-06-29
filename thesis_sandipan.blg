@@ -1,11 +1,50 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis_sandipan.aux
 The style file: abbrv.bst
-Reallocated field_info (elt_size=4) to 10980 items from 5000.
 Database file #1: bib/intro.bib
 Database file #2: bib/chapter_1_ref.bib
+Repeated entry---line 1 of file bib/chapter_1_ref.bib
+ : @article{TSMML10:smallworld
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 197 of file bib/chapter_1_ref.bib
+ : @inproceedings{tang2009temporal
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 395 of file bib/chapter_1_ref.bib
+ : @article{pan2011path
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 657 of file bib/chapter_1_ref.bib
+ : @article{trajanovski2012error
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 679 of file bib/chapter_1_ref.bib
+ : @book{box2011time
+ :                  ,
+I'm skipping whatever remains of this entry
 Database file #3: bib/chapter_2_ref.bib
+Repeated entry---line 68 of file bib/chapter_2_ref.bib
+ : @inproceedings{leskovec2006sampling
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 84 of file bib/chapter_2_ref.bib
+ : @inproceedings{maiya2010sampling
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 132 of file bib/chapter_2_ref.bib
+ : @article{tong2016novel
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 191 of file bib/chapter_2_ref.bib
+ : @article{danon2005comparing
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 224 of file bib/chapter_2_ref.bib
+ : @article{hubert1985comparing
+ :                             ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 235 of file bib/chapter_2_ref.bib
  : @article{blondel2008fast
  :                         ,
@@ -15,11 +54,403 @@ Repeated entry---line 480 of file bib/chapter_2_ref.bib
  :                         ,
 I'm skipping whatever remains of this entry
 Database file #4: bib/related_work.bib
+Repeated entry---line 55 of file bib/related_work.bib
+ : @article{hanneke2010discrete
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 85 of file bib/related_work.bib
+ : @inproceedings{gunturi2010minimum
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 94 of file bib/related_work.bib
+ : @article{pan2011path
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 321 of file bib/related_work.bib
+ : @article{vazquez2007impact
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 354 of file bib/related_work.bib
+ : @article{iribarren2009impact
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 365 of file bib/related_work.bib
+ : @inproceedings{kempe2000connectivity
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 396 of file bib/related_work.bib
+ : @article{frank1980sampling
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 405 of file bib/related_work.bib
+ : @article{frank1977survey
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 416 of file bib/related_work.bib
+ : @article{goodman1961snowball
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 425 of file bib/related_work.bib
+ : @article{granovetter1976network
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 434 of file bib/related_work.bib
+ : @article{heckathorn1997respondent
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 445 of file bib/related_work.bib
+ : @article{gile2010respondent
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 456 of file bib/related_work.bib
+ : @article{kolascyk2013statistical
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 463 of file bib/related_work.bib
+ : @inproceedings{leskovec2006sampling
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 472 of file bib/related_work.bib
+ : @inproceedings{ahmed2010reconsidering
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 479 of file bib/related_work.bib
+ : @inproceedings{maiya2010sampling
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 489 of file bib/related_work.bib
+ : @techreport{henzinger1998computing
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 496 of file bib/related_work.bib
+ : @inproceedings{aggarwal2011outlier
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 505 of file bib/related_work.bib
+ : @article{ahmed2014network
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 516 of file bib/related_work.bib
+ : @article{vitter1985random
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 527 of file bib/related_work.bib
+ : @article{tong2016novel
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 546 of file bib/related_work.bib
+ : @article{yang2015defining
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 557 of file bib/related_work.bib
+ : @article{lancichinetti2008benchmark
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 569 of file bib/related_work.bib
+ : @misc{manning2008introduction
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 576 of file bib/related_work.bib
+ : @article{danon2005comparing
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 596 of file bib/related_work.bib
+ : @article{PalEtAl05
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 609 of file bib/related_work.bib
+ : @article{hubert1985comparing
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 620 of file bib/related_work.bib
+ : @article{blondel2008fast
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 631 of file bib/related_work.bib
+ : @inproceedings{ribeiro2010estimating
+ :                                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 640 of file bib/related_work.bib
+ : @inproceedings{rasti2009respondent
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 671 of file bib/related_work.bib
+ : @inproceedings{gjoka2010walking
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 680 of file bib/related_work.bib
+ : @article{girvan2002community
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 719 of file bib/related_work.bib
+ : @article{clauset2004finding
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 768 of file bib/related_work.bib
+ : @misc{d1
+ :         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 796 of file bib/related_work.bib
+ : @article{PhysRevE.78.046115
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 812 of file bib/related_work.bib
+ : @article{west2014exploiting
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 819 of file bib/related_work.bib
+ : @inproceedings{maiya2011benefits
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 828 of file bib/related_work.bib
+ : @inproceedings{lim2015mascot
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 837 of file bib/related_work.bib
+ : @article{de2016tri
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 844 of file bib/related_work.bib
+ : @article{pone.0091431
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 854 of file bib/related_work.bib
+ : @article{rosvall2008maps
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 933 of file bib/related_work.bib
+ : @article{vitter1985random
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1106 of file bib/related_work.bib
+ : @article{karsai2011small
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1308 of file bib/related_work.bib
+ : @article{barabasi2005origin
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1575 of file bib/related_work.bib
+ : @article{bacchetti2002peer
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1619 of file bib/related_work.bib
+ : @article{cole1981chance
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1637 of file bib/related_work.bib
+ : @article{ingelfinger1974peer
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1648 of file bib/related_work.bib
+ : @article{relman1989good
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1658 of file bib/related_work.bib
+ : @article{smith2006peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1670 of file bib/related_work.bib
+ : @article{braatz2014papers
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1703 of file bib/related_work.bib
+ : @article{mcnutt1990effects
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1714 of file bib/related_work.bib
+ : @article{caswellimproving
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1842 of file bib/related_work.bib
+ : @article{rennie1990editorial
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1852 of file bib/related_work.bib
+ : @article{kassirer1994peer
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1862 of file bib/related_work.bib
+ : @article{jefferson2006editorial
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1869 of file bib/related_work.bib
+ : @article{mcnutt1990effects
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1880 of file bib/related_work.bib
+ : @article{jefferson2002measuring
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1891 of file bib/related_work.bib
+ : @article{cole1981chance
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1902 of file bib/related_work.bib
+ : @article{horrobin1990philosophical
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1913 of file bib/related_work.bib
+ : @article{braatz2014papers
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1935 of file bib/related_work.bib
+ : @article{relman1989good
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1945 of file bib/related_work.bib
+ : @article{ingelfinger1974peer
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1977 of file bib/related_work.bib
+ : @article{smith2006peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2010 of file bib/related_work.bib
+ : @article{coupe2013peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2041 of file bib/related_work.bib
+ : @misc{pennebaker2007development
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2046 of file bib/related_work.bib
+ : @inproceedings{montejo2012random
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2135 of file bib/related_work.bib
+ : @inproceedings{sikdar2016anomalies
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2209 of file bib/related_work.bib
+ : @inproceedings{yan2012better
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2255 of file bib/related_work.bib
+ : @article{hamilton1989new
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2264 of file bib/related_work.bib
+ : @article{o2010tweets
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2273 of file bib/related_work.bib
+ : @article{hempel2011inner
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2284 of file bib/related_work.bib
+ : @article{scherrer2008description
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2304 of file bib/related_work.bib
+ : @article{perra2012activity
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2313 of file bib/related_work.bib
+ : @inproceedings{chakraborty2014towards
+ :                                      ,
+I'm skipping whatever remains of this entry
 Database file #5: bib/chapter_3_ref.bib
+Repeated entry---line 1 of file bib/chapter_3_ref.bib
+ : @article{watts2002simple
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 12 of file bib/chapter_3_ref.bib
+ : @article{backlund2014effects
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 39 of file bib/chapter_3_ref.bib
+ : @book{anderson1992infectious
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 47 of file bib/chapter_3_ref.bib
+ : @article{pnas1
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 58 of file bib/chapter_3_ref.bib
+ : @article{pnas2
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 80 of file bib/chapter_3_ref.bib
+ : @article{takaguchi2013bursty
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 91 of file bib/chapter_3_ref.bib
+ : @article{dodds2004universal
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 102 of file bib/chapter_3_ref.bib
+ : @article{wald
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 124 of file bib/chapter_3_ref.bib
+ : @article{erdos1959random
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 133 of file bib/chapter_3_ref.bib
+ : @article{granovetter1978threshold
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 142 of file bib/chapter_3_ref.bib
+ : @book{sur1
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 170 of file bib/chapter_3_ref.bib
+ : @article{kaplan1977generalization
+ :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 179 of file bib/chapter_3_ref.bib
+ : @article{karsai2011small
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 201 of file bib/chapter_3_ref.bib
+ : @article{masuda2013predicting
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 210 of file bib/chapter_3_ref.bib
+ : @article{prl1
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 221 of file bib/chapter_3_ref.bib
+ : @article{tang2009epidemic
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 232 of file bib/chapter_3_ref.bib
+ : @article{son2012percolation
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 243 of file bib/chapter_3_ref.bib
+ : @article{van2012epidemic
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 254 of file bib/chapter_3_ref.bib
+ : @article{zhang2014susceptible
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 265 of file bib/chapter_3_ref.bib
+ : @article{volz2007susceptible
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 276 of file bib/chapter_3_ref.bib
+ : @article{rocha2013bursts
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 298 of file bib/chapter_3_ref.bib
+ : @article{sanghavi2007gossiping
+ :                               ,
+I'm skipping whatever remains of this entry
 Database file #6: bib/chapter_3_1_ref.bib
 Repeated entry---line 1257 of file bib/chapter_3_1_ref.bib
  : @article{vanhems2013estimating
  :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1289 of file bib/chapter_3_1_ref.bib
+ : @article{leskovec2007graph
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1485 of file bib/chapter_3_1_ref.bib
+ : @inproceedings{zhang2005peer
+ :                             ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 1521 of file bib/chapter_3_1_ref.bib
  : @article{sanghavi2007gossiping
@@ -30,6 +461,86 @@ Repeated entry---line 1627 of file bib/chapter_3_1_ref.bib
  :                          ,
 I'm skipping whatever remains of this entry
 Database file #7: bib/chapter_4_ref.bib
+Repeated entry---line 10 of file bib/chapter_4_ref.bib
+ : @article{rennie1990editorial
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 20 of file bib/chapter_4_ref.bib
+ : @article{kassirer1994peer
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 30 of file bib/chapter_4_ref.bib
+ : @article{jefferson2006editorial
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 37 of file bib/chapter_4_ref.bib
+ : @article{mcnutt1990effects
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 48 of file bib/chapter_4_ref.bib
+ : @article{jefferson2002measuring
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 59 of file bib/chapter_4_ref.bib
+ : @article{cole1981chance
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 70 of file bib/chapter_4_ref.bib
+ : @article{horrobin1990philosophical
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 81 of file bib/chapter_4_ref.bib
+ : @article{braatz2014papers
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 103 of file bib/chapter_4_ref.bib
+ : @article{relman1989good
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 113 of file bib/chapter_4_ref.bib
+ : @article{ingelfinger1974peer
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 145 of file bib/chapter_4_ref.bib
+ : @article{smith2006peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 178 of file bib/chapter_4_ref.bib
+ : @article{coupe2013peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 189 of file bib/chapter_4_ref.bib
+ : @inproceedings{kim2006automatically
+ :                                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 198 of file bib/chapter_4_ref.bib
+ : @article{ghose2011estimating
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 209 of file bib/chapter_4_ref.bib
+ : @misc{pennebaker2007development
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 214 of file bib/chapter_4_ref.bib
+ : @inproceedings{montejo2012random
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 303 of file bib/chapter_4_ref.bib
+ : @inproceedings{sikdar2016anomalies
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 312 of file bib/chapter_4_ref.bib
+ : @inproceedings{yan2012better
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 321 of file bib/chapter_4_ref.bib
+ : @inproceedings{chakraborty2014towards
+ :                                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 330 of file bib/chapter_4_ref.bib
+ : @article{bohannon2013s
+ :                       ,
+I'm skipping whatever remains of this entry
 Database file #8: bib/chapter_4_c_ref.bib
 Repeated entry---line 22 of file bib/chapter_4_c_ref.bib
  : @article{rennie1990editorial
@@ -75,6 +586,30 @@ Repeated entry---line 157 of file bib/chapter_4_c_ref.bib
  : @article{smith2006peer
  :                       ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 190 of file bib/chapter_4_c_ref.bib
+ : @article{coupe2013peer
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 200 of file bib/chapter_4_c_ref.bib
+ : @article{caswellimproving
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 217 of file bib/chapter_4_c_ref.bib
+ : @article{chandola2009anomaly
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 228 of file bib/chapter_4_c_ref.bib
+ : @article{kumar2005parallel
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 238 of file bib/chapter_4_c_ref.bib
+ : @inproceedings{spence2001detection
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 247 of file bib/chapter_4_c_ref.bib
+ : @article{bacchetti2002peer
+ :                           ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 258 of file bib/chapter_4_c_ref.bib
  : @misc{pennebaker2007development
  :                                ,
@@ -83,7 +618,15 @@ Repeated entry---line 264 of file bib/chapter_4_c_ref.bib
  : @inproceedings{montejo2012random
  :                                 ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 271 of file bib/chapter_4_c_ref.bib
+ : @article{hartigan1979algorithm
+ :                               ,
+I'm skipping whatever remains of this entry
 Database file #9: bib/chapter_4_c_1_ref.bib
+Repeated entry---line 1 of file bib/chapter_4_c_1_ref.bib
+ : @article{golberg1989genetic
+ :                            ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 10 of file bib/chapter_4_c_1_ref.bib
  : @article{cole1981chance
  :                        ,
@@ -108,8 +651,8 @@ Repeated entry---line 61 of file bib/chapter_4_c_1_ref.bib
  : @article{braatz2014papers
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 72 of file bib/chapter_4_c_1_ref.bib
- : @article{graffy2006improving
+Repeated entry---line 83 of file bib/chapter_4_c_1_ref.bib
+ : @article{zzkarian1999forming
  :                             ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 94 of file bib/chapter_4_c_1_ref.bib
@@ -120,77 +663,102 @@ Repeated entry---line 105 of file bib/chapter_4_c_1_ref.bib
  : @article{caswellimproving
  :                          ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Barabasi99"
-Warning--I didn't find a database entry for "Girvan02"
-Warning--I didn't find a database entry for "ng2002"
-Warning--I didn't find a database entry for "gmc2010"
-Warning--I didn't find a database entry for "Shi"
-Warning--I didn't find a database entry for "Newman:2006"
-Warning--I didn't find a database entry for "cnm2004"
-Warning--I didn't find a database entry for "bgll2008"
-Warning--I didn't find a database entry for "Yang:2012"
-Warning--I didn't find a database entry for "PhysRevE.74.036104"
-Warning--I didn't find a database entry for "lesco"
-Warning--I didn't find a database entry for "Gregory1"
-Warning--I didn't find a database entry for "nmi"
-Warning--I didn't find a database entry for "McDaid"
-Warning--to sort, need author or key in si
+Repeated entry---line 112 of file bib/chapter_4_c_1_ref.bib
+ : @article{ani2010method
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 122 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{anagnostopoulos2010power
+ :                                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 130 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{anagnostopoulos2012online
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 139 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{lappas2009finding
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 148 of file bib/chapter_4_c_1_ref.bib
+ : @article{baykasoglu2007project
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 159 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{agrawal2014grouping
+ :                                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 168 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{majumder2012capacitated
+ :                                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 177 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{mcdonald2003recommending
+ :                                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 186 of file bib/chapter_4_c_1_ref.bib
+ : @article{wolf2009mining
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 197 of file bib/chapter_4_c_1_ref.bib
+ : @article{pragarauskas2012multi
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 204 of file bib/chapter_4_c_1_ref.bib
+ : @inproceedings{li2010team
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 213 of file bib/chapter_4_c_1_ref.bib
+ : @article{moreno2012genetic
+ :                           ,
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in d1
-Warning--empty year in Agarwal72
-Warning--empty title in Berry
 Warning--empty journal in caswellimproving
 Warning--empty year in caswellimproving
 Warning--empty journal in fournet2014contact
-Warning--empty institution in KSJ
-Warning--empty year in KSJ
-Warning--empty year in Lehmann
-Warning--empty title in Skusa
+Warning--there's a number but no volume in kumar2005parallel
+Warning--empty booktitle in push_pull_contentDistribution
 Warning--empty journal in thlab-sigcomm2009-mobiclique-proximity-2012-07-15
-Warning--empty year in Yolum
-Warning--empty institution in Pothen:1997
+Warning--empty journal in pragarauskas2012multi
 Warning--empty journal in cambridge-haggle-imote-infocom2006-2009-05-29
-Warning--empty year in SonSW
-Warning--empty booktitle in Valverde-RebazaICSA2014
-Warning--there's a number but no volume in Watts-1998
-You've used 246 entries,
+You've used 207 entries,
             2118 wiz_defined-function locations,
-            1984 strings with 45826 characters,
-and the built_in function-call counts, 90161 in all, are:
-= -- 8956
-> -- 4200
-< -- 77
-+ -- 1673
-- -- 1392
-* -- 6614
-:= -- 14621
-add.period$ -- 779
-call.type$ -- 246
-change.case$ -- 1409
+            1633 strings with 40561 characters,
+and the built_in function-call counts, 78403 in all, are:
+= -- 7849
+> -- 3794
+< -- 63
++ -- 1515
+- -- 1284
+* -- 5797
+:= -- 12749
+add.period$ -- 666
+call.type$ -- 207
+change.case$ -- 1254
 chr.to.int$ -- 0
-cite$ -- 264
-duplicate$ -- 3387
-empty$ -- 7008
-format.name$ -- 1392
-if$ -- 19108
+cite$ -- 216
+duplicate$ -- 2872
+empty$ -- 5953
+format.name$ -- 1284
+if$ -- 16506
 int.to.chr$ -- 0
-int.to.str$ -- 246
-missing$ -- 242
-newline$ -- 1225
-num.names$ -- 505
-pop$ -- 1354
+int.to.str$ -- 207
+missing$ -- 206
+newline$ -- 1034
+num.names$ -- 413
+pop$ -- 1211
 preamble$ -- 1
-purify$ -- 1174
+purify$ -- 1051
 quote$ -- 0
-skip$ -- 2501
+skip$ -- 2062
 stack$ -- 0
-substring$ -- 6035
-swap$ -- 847
-text.length$ -- 77
+substring$ -- 5322
+swap$ -- 719
+text.length$ -- 63
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 961
-warning$ -- 18
-while$ -- 856
-width$ -- 249
-write$ -- 2744
-(There were 27 error messages)
+type$ -- 815
+warning$ -- 9
+while$ -- 770
+width$ -- 210
+write$ -- 2301
+(There were 175 error messages)

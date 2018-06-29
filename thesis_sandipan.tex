@@ -182,13 +182,13 @@
 \newcommand{\bigsize}{\fontsize{14pt}{20pt}\selectfont}
 
 \Year{2017}
-\Month{July}
+\Month{February}
 \Author{Sandipan Sikdar}
 \degree{Doctor of Philosophy}
 % If you have a long title, split it between two lines. The \TitleBottom field defines the second line
 % A two line title should be an "inverted pyramid" with the top line longer than the bottom.
 \TitleTop{{\bigsize \bf Temporal Networks: }}
-\TitleBottom{{\bigsize \bf Structure, Function and Applications}}
+\TitleBottom{{\bigsize \bf Structure, Function and Application}}
 
 % Your research advisor
 \AdvisorA{Prof. Animesh Mukherjee\\and\\Prof. Niloy Ganguly}
@@ -201,10 +201,10 @@
 
 \Approval{
 \singlespace
-\hspace{9cm}
+\hspace{9.5cm}Date: \\ \\
 %Date:\hspace{.8cm}$\backslash \ \ \ \ \  \ \backslash$ 20  \\  \\
-Date:\hspace{.8cm}$/ \ \ \ \ \  \ /$ 20  \\  \\
-Certified that the thesis entitled {\bf ``Temporal networks: Structure, function and applications''} 
+%Date:\hspace{1cm}  \\  \\
+Certified that the thesis entitled {\bf ``Temporal Networks: Structure, Function and Application''} 
 submitted by Sandipan Sikdar to the Indian Institute
 of Technology, Kharagpur, for the award of the degree of Doctor of Philosophy
 has been accepted by the external examiners and that the student has successfully
@@ -220,6 +220,8 @@ defended the thesis in the viva-voce examination held today.
 
 \vspace{1in}
 \noindent
+
+Prof. Debdeep Mukhopadhyay \hfill Prof. Anumpam Basu \hfill Prof. Anirban Mukherjee\\
 (Member of DSC)~~~~~\hfill(Member of DSC)~~~~~\hfill(Member of DSC)
 
 \vspace{0.3in}
@@ -230,7 +232,8 @@ defended the thesis in the viva-voce examination held today.
 %Name:
 \noindent
 %\hspace{2cm}
-(Member of DSC)~~~~~\hfill(Supervisor)\hfill ~~~~~~~ %(Co-Supervisor)\hfill ~~~~~~~
+Prof. Sudeshna Sarkar\hfill Prof. Animesh Mukherjee\hfill Prof. Niloy Ganguly\\
+(HoD CSE)~~~~~~~~~~~~~~\hspace{2cm}(Supervisor)\hspace{2.5cm} (Co-Supervisor)\hfill ~~~~~~~
 
 \vspace{0.3in}
 %\hspace{2cm}
@@ -242,7 +245,8 @@ defended the thesis in the viva-voce examination held today.
 \vspace{0.5in}
 %\hspace{2cm}
 \noindent
-(External Examiner)~~~~~~~~~\hfill(Chairman)\hfill ~~~~~~~
+Prof. Amitabha Bagchi \hspace{3cm} Prof. Jayanta Mukhopadhyay\\ 
+(External Examiner)~~~~~~~~~~\hfill(Chairman)\hfill ~~~~~~~
 }
 
 
@@ -253,7 +257,7 @@ defended the thesis in the viva-voce examination held today.
 
 \Certificate{
 \noindent%
-{\em This is to certify that the thesis entitled {\bf ``Temporal networks: Structure, function and applications''}, submitted by {\bf
+{\em This is to certify that the thesis entitled {\bf ``Temporal Networks: Structure, Function and Application''}, submitted by {\bf
 Sandipan Sikdar} to the Indian Institute of Technology, %%@
 Kharagpur, for the award of the degree of Doctor of Philosophy, is a record of bona fide %%@
 research work carried out by him under my supervision and guidance.
@@ -379,7 +383,7 @@ Kharagpur, India\\
 \setcounter{tocdepth}{3}
 %\input{./texfiles/Chapter_3/epl/tcilatex}
 
-\input{texfiles/Introduction/intro.tex}
+\input{texfiles/Introduction/intro_all.tex}
 % \clearpage
 \input{texfiles/Related_work/main_text.tex}
 % \clearpage
@@ -403,14 +407,21 @@ Kharagpur, India\\
 
 \chapter{Application of temporal network analysis in peer-review network}
 
-leverage temporal network analysis techniques to improve peer-review system.
+This chapter is dedicated to our final objective - leveraging temporal network analysis techniques to improve the scientific peer-review system. More specifically, 
+we consider three tasks for improving the peer review system - 
+\begin{itemize}
+ \item Predict long-term impact of a paper which we believe would immensely help editors in deciding the fate (accept/reject) of a paper.
+ \item Quantify the performance of editors and reviewers and, thereby, identify under-performing editors and reviewers (we refer to them as anomalous).
+ \item Propose a system for identifying and recommending compatible reviewer groups when multiple reviewers are involved in the review process.
+\end{itemize}
+Note that all the above objectives are aimed at improving the scientific peer review system.
 
-\section{Introduction}
+%\section{Introduction}
 
-
-\input{texfiles/Chapter_4/jcdl/introduction}
-\input{texfiles/Chapter_4/cikm/introduction}
-\input{texfiles/Chapter_4/cikm_17/introduction}
+\input{texfiles/Chapter_4/introduction_all}
+%\input{texfiles/Chapter_4/jcdl/introduction}
+%\input{texfiles/Chapter_4/cikm/introduction}
+%\input{texfiles/Chapter_4/cikm_17/introduction}
 
 %\input{dataset}
 
@@ -418,15 +429,20 @@ leverage temporal network analysis techniques to improve peer-review system.
 
 \input{texfiles/Chapter_4/jcdl/dataset}
 
+\section{Predicting long term impact}
 \input{texfiles/Chapter_4/jcdl/JCDL_2017_main.tex}
+
+\section{Identifying anomalous editors and reviewers}
 \input{texfiles/Chapter_4/cikm/main.tex}
+
+\section{Identifying and recommending compatible reviewer groups}
 \input{texfiles/Chapter_4/cikm_17/main_cikm_2017.tex}
 
-\section{Summary of Chapter}
-
-\input{texfiles/Chapter_4/jcdl/conclusion}
-\input{texfiles/Chapter_4/cikm/conclusion}
-\input{texfiles/Chapter_4/cikm_17/conclusion}
+%\section{Summary of Chapter}
+%\input{texfiles/Chapter_4/jcdl/implications}
+\input{texfiles/Chapter_4/summary}
+%\input{texfiles/Chapter_4/cikm/conclusion}
+%\input{texfiles/Chapter_4/cikm_17/conclusion}
 %\clearemptydoublepage
 \clearpage
 \clearpage

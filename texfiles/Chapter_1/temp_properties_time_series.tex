@@ -56,7 +56,7 @@ We now present the plots of the time series and analyze their properties based o
  % \hspace{6mm}(a)\hspace{52mm}(b)\hspace{52mm}(c)
   
   %\caption{\label{fb_post}{\bf NEED TO CHANGE}}
-   \caption{\label{fig_all_dataset} (A), (C) and (E) represent the time series plots for INFOCOM 2006, SIGCOMM 2009 and High-school 2011 respectively. (B), (D) and (F) represent the power spectral density (PSD) corresponding to the frequency bins for INFOCOM 2006, SIGCOMM 2009 and High-school 2011 dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
+   \caption{\label{fig_all_dataset} (A), (C) and (E) represent the time series plots for INFOCOM 2006, SIGCOMM 2009 and High-school 2011 respectively. (B), (D) and (F) represent the power spectral density (PSD) corresponding to the frequency bins for INFOCOM 2006, SIGCOMM 2009 and Highschool 2011 dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
 %   
  \end{figure*}
   %From the time series plots we can make the following observations about the key properties:
@@ -70,7 +70,7 @@ We now present the plots of the time series and analyze their properties based o
   \centering
   \includegraphics*[width=0.95\textwidth,angle=0]{./texfiles/Chapter_1/fig/hospital_psd-eps-converted-to.pdf}
   
-  \caption{\label{fig_all_dataset_1} (A) and (C) represent the time series plots for High-school 2012, Hospital respectively. (B) and (D) represent the power spectral density (PSD) corresponding to the frequency bins for High-school 2012 and Hospital dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
+  \caption{\label{fig_all_dataset_1} (A) and (C) represent the time series plots for Highschool 2012, Hospital respectively. (B) and (D) represent the power spectral density (PSD) corresponding to the frequency bins for High-school 2012 and Hospital dataset respectively. Bins 1, 2 and 3 corresponds to frequencies $<$5, 5-15 and $>$15(Hz) respectively.}
   
   \end{figure*}
  % \begin{figure*}[!ht]
@@ -119,7 +119,7 @@ We now present the plots of the time series and analyze their properties based o
 
 \subsection{Time domain characteristics}
 
-For the time domain analysis of the properties we look into the time series plots for the datasets represented in figures ~\ref{fig_all_dataset}(A), (C), (E) and 
+For the time domain analysis of the properties we observe the time series plots for the datasets illustrated in figures ~\ref{fig_all_dataset}(A), (C), (E) and 
 ~\ref{fig_all_dataset_1}(A), (C).
 From the time series plots we observe the presence of periodicity in almost all the datasets. A stretch of high values is followed by a stretch of low values 
 and so on. However, they are of varying lengths.  
@@ -127,13 +127,12 @@ and so on. However, they are of varying lengths.
 % plots in figures ~\ref{fig_all_dataset}(E) and (G) (human communication through social media), we observe that while for the 
 % former case a periodic pattern is
 % present, no such pattern is present for the latter case. 
-This indicates the presence of correlation in case of human face-to-face communication network.
-We quantify this structural correlation later in this chapter. 
+This indicates the presence of correlation in case of human face-to-face communication network. We quantify this structural correlation later in this chapter. 
 %We also do not observe any measurable trend in any of the four datasets since none 
 %of them seem to be globally increasing, decreasing or keeping constant with time. 
 We also check whether these time series are stationary. 
 On performing KPSS (Kwiatkowski-Phillips-Schmidt-Shin) ~\cite{kwiatkowski1992testing} and 
- ADF (Augmented Dickey Fuller) test ~\cite{dickey1979distribution} on the data we conclude that the data is non-stationary. 
+ ADF (Augmented Dickey Fuller) tests ~\cite{dickey1979distribution} on the data we conclude that the data is non-stationary. 
  Overall, the presence of correlation in case of human face-to-face network indicates that it is a stochastic process with memory i.e., the contacts a node 
  makes in the current time step is influenced by its contact history. 
 %  The network of human contact through social media is memory-less i.e., the 

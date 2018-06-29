@@ -1,6 +1,6 @@
 \noindent
 
-\section{Innoculation strategy}
+\section{Inoculation strategy}
 %\label{discussion}
 
 % \begin{figure}[htpb]
@@ -19,8 +19,8 @@ We have defined the epidemic setting aptly fitting the temporal network system w
 interactions from the previous time-steps and only adopt an idea after encountering it multiple times. 
 %hence observe that for a system consisting of agents who require persuasion (through multiple contacts) before they adopt an idea, 
 We find that such information diffusion process undergoes two phases with a slow initial phase followed by a very fast residual phase. This behavior is observed 
-irrespective of the underlying topology (refer to figure~\ref{fig1}, simulations done for scale-free graphs~\cite{barabasi1999emergence} and ER-random graphs).
- The reason behind such behavior is that during the process when the first few nodes get fully infected a large fraction of nodes also simulataneously get partly infected as 
+irrespective of the underlying topology (refer to figure~\ref{chapter_5_fig1}, simulations done for scale-free graphs and ER-random graphs).
+ The reason behind such behavior is that during the process when the first few nodes get fully infected a large fraction of nodes also simultaneously get partly infected as 
 represented in figure \ref{tree_ratio}(b). Once the first set of infected nodes are created these partially infected nodes also get quickly infected and this 
 results in a sudden ramp-up in the diffusion rate.
 
@@ -30,16 +30,16 @@ Accordingly, we perform an empirical study, whereby, we reduce the level of infe
 such action is not initiated. 
 Reduction of infection means removing one packet from the chosen (say with probability $\bar p$)  agent, for example, if an agent has acquired $j$ packets at time $t$, we reduce it to $j$ - 1.  
 %(reduce the number of packets by 1) with some predefined probability at a given time during the diffusion process and then estimate $t_1$. 
-In specific we considered a complete graph with $1000$ nodes and at $t$ =  $0.5 \ast t_1$  
+In specific we consider a complete graph with $1000$ nodes and at $t$ =  $0.5 \ast t_1$  
 we reduce the level of infection in each node with a probability ($\bar p$) and measure the corresponding time (say  $t_{1}^{\bar p}$). 
 In figure \ref{tree_ratio}(a) we plot $\frac{t_{1}^{\bar p} - t_1}{t_1}$ for different values of $\bar p$. 
 We observe that creation of the first sender (other than initiator) i.e.,
 beginning of the residual phase (where the rate of spread is increased manifold) could be delayed by almost $20\%$ with a probability of $0.3$. 
-We show the experiment by inoculating at one particular time step, however a continuous low-grade innoculation strategy can be
-initiated and we believe a threshold can be derived whereby the first sender creation can be pushed to infinity. However that 
+We show the experiment by inoculating at one particular time step, however a continuous low-grade inoculation strategy can be
+initiated and we believe a threshold can be derived whereby the first sender creation can be pushed to infinity. However, that 
 can be an interesting research direction to be pursued in the future.
 
-\if{0}
+\iffalse
 \revision{To further verify our hypothesis we 
 performed an empirical study, whereby, we randomly removed a certain fraction of infected nodes and at certain time points and then checked what fraction of the whole population 
 got infected after a given period of time. Note that here removal of infected node is same as immunizing them. 

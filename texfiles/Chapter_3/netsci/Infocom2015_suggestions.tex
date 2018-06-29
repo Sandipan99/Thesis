@@ -1,5 +1,5 @@
 \noindent
-In this section we systematically study the effect of topology of the underlying contact network on the broadcast time and wastage and come up with some suggestions which we 
+In this section, we systematically study the effect of topology of the underlying contact network on the broadcast time and wastage and come up with some suggestions which we 
 feel will be helpful while designing networks.  
 %First we analyze the B-P algorithm on complete graph topology and observe that the broadcast time scales 
 %as $n^{\frac{k-1}{k}}$. 
@@ -11,7 +11,7 @@ check whether the average degree ($d$) of the underlying contact network influen
  reinspect into their sparser variants to identify the effect of lowering the value of $d$ 
  through removal of edges without hampering network connectivity.
 \subsection{Blind push on different topologies} 
-\if{0}
+\iffalse
 %\vspace{-5mm}
 \subsection{Blind push on complete graph}
 % \vspace{-2mm}
@@ -105,8 +105,8 @@ The results of B-P on complete graph are similar to the ones provided in section
 In specific, we empirically analyze the B-P algorithm on regular-tree, regular-graph and random-graph. For each topology we consider $n=200$, $m = 4$ and $k=2$.
 Note that here we consider that the message has $2$ segments and each segment has $k=2$ packets. 
 We then vary the average degree $d$ for each of these networks and check how broadcast delay and wastage depend on it. Remarkably, for each of these topologies 
-- regular tree (figure ~\ref{DiffTopologyTree_N200_varyD_push_pull}), regular graph (figure ~\ref{DiffTopologyGraph_N200_varyD_push_pull}) and random graph 
-(figure ~\ref{DiffTopologyGnp_N200_varyD_push_pull}), one can observe that there is a critical value of $d$ for which we obtain minimum broadcast delay and 
+- regular tree (figure~\ref{DiffTopologyTree_N200_varyD_push_pull}), regular graph (figure~\ref{DiffTopologyGraph_N200_varyD_push_pull}) and random graph 
+(figure~\ref{DiffTopologyGnp_N200_varyD_push_pull}), one can observe that there is a critical value of $d$ for which we obtain minimum broadcast delay and 
 wastage.
 % Here, we assume a finite regular tree topology for $G$ where $n = 200$, $m = 4$ and $k=2$. We vary the degree $d$ of the tree from values ranging from 2 to 10 (see figure~\ref{DiffTopologyTree_N200_varyD_push_pull}). An important observation is that both the broadcast time and the broadcast wastage become significantly low at a critical value of $d$. In fact, for this value of $d$, the metrics of interest reach their minima for B-P technique. 
 % \vspace{-3mm}
@@ -160,7 +160,7 @@ wastage.
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{./texfiles/Chapter_3/netsci/figs1/DiffTopologyRegularTree_delay_cost_N200_m4_k2_varyD_ps_plRes1.eps}
-\caption{(A) Broadcast time and (B) broadcast wastage versus different values of $d$ for B-P. The parameters values are $n=200, m=4, k=2$.}
+\caption{(A) Broadcast time and (B) broadcast wastage versus different values of $d$ for B-P. The parameters values are $n=200, m=4, k=2$.\vspace{4mm}}
 \label{DiffTopologyTree_N200_varyD_push_pull}
 \end{figure}
 %\subsection{Random graph}

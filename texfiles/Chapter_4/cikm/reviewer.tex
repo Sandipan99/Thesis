@@ -1,10 +1,10 @@
 \noindent
-\subsection{Reviewer}
+\subsubsection{Reviewer}
 \label{reviewer}
 
 In this section, we investigate anomalous behavior of the referees. Recall that we define the behavior of a reviewer to be anomalous if the papers accepted by her are low cited or the papers rejected by her are highly cited. As in case of the editors, here also we investigate different factors that could be indicative of such anomalous behavior.  
 
-\subsubsection{Mean Reviewer Assignment Time (MRAT)}
+\subsubsection*{(1) Mean Reviewer Assignment Time (MRAT)}
 
 %For each individual reviewer we find the time difference (in days) between two consecutive assignments. Note that we do not consider the cases where the reviewer was assigned but she declined to review it.
 This is essentially same as MEAT. For a reviewer $i$, we define $MRAT_{i}$ as
@@ -13,7 +13,7 @@ $MRAT_{i}=\frac{1}{n-1}\sum (\delta_{j+1} - \delta_{j})$
 \end{center}
 \noindent where $n$ is the total number of assignments of reviewer $i$ and $\delta_{j}$ is the date of the $j^\textrm{th}$ assignment. In figure~\ref{fig5}(a) we plot $MRAT$ (binned) and median average citation of the papers reviewed for each reviewer. We observe that papers reviewed by reviewers with low $MRAT$ (high frequency of assignment) tend to be cited less and increases as $MRAT$ increases. This is followed by again a steep decrease in citation. This indicates that the reviewers assigned very frequently are often less reliable while those assigned only occasionally are also not likely to correctly judge the quality of the paper.  
 
-\subsubsection{Mean Report Sending Delay (MRSD)}
+\subsubsection*{(2) Mean Report Sending Delay (MRSD)}
 
 We argue that the time taken by a reviewer to send back the review report could be an indicator of his performance. If a reviewer on average sends back the review very quickly it is highly likely that the review was done in a hurry. Similarly, if the report was sent after being reminded by the editor numerous times, it is also highly likely the review report could be anomalous. For a reviewer we calculate the time delay between the date of her assignment and the date she sent back the report for each of her assignments. To measure $MRSD$ we calculate the mean value of all the delays. Note that we do not consider the assignments which the reviewer declined. Formally, for a reviewer $i$, we define $MRSD_{i}$ as 
 
@@ -23,7 +23,7 @@ $MRSD_{i}=\frac{1}{n}\sum(\delta_{i}-\Delta_{i})$
 
 where $n$ is the total number of assignments, $\Delta_{i}$ is the date of assignment and $\delta_{i}$ is the date when the report was received by the editor. On plotting against median average citation we observe a similar trend as was observed in case of $MRAT$ (refer to figure~\ref{fig5}(b)). Papers reviewed by reviewers with low $MRSD$ value are often less cited, indicating that reviewers sending back their report very quickly often do it in a hurry and fail to correctly judge the quality of the paper while those taking very long to send report are prone to failure as well. 
 
-\subsubsection{Topic Diversity Index (TDI)}
+\subsubsection*{(3) Topic Diversity Index (TDI)}
 
 JHEP associates with each submission a set of keywords which roughly indicates the domain of the work. We use these associated keywords as a proxy for topic. For each reviewer, we segregate all the keywords of the papers reviewed by her which we call the keyword corpus for the reviewer. Formally for a reviewer $i$, we define $TDI_{i}$ as 
 
@@ -36,7 +36,7 @@ for reviewers with low $TDI$ are low mainly because the number of papers reviewe
  
  
  
-\subsubsection{Editor Diversity Index (EDI)}
+\subsubsection*{(4) Editor Diversity Index (EDI)}
 
 Reviewers could be selected for review by a large set of editors or could only be selected by a single or a small set of editors. We check whether a reviewer selected by many editors is more reliable compared to one who is selected by a single or a very small set of editors. To this aim we assign each reviewer a score called Editor Diversity Index, $EDI_{i}$ which is defined as 
 
@@ -73,7 +73,7 @@ where $p_{j}$ represents the proportion of times reviewer $i$ was assigned by ed
 \end{table} 
 
 
-\subsubsection{Mean Time to Decline (MTD)}
+\subsubsection*{(5) Mean Time to Decline (MTD)}
 
 We further investigated the cases where the reviewer declined the assignment. In specific, we calculated the time delay (in days) 
 between the date she was assigned and the date she conveyed her decision of declining to review. For each reviewer we define {\bf Mean Time to Delay}, $MTD_{i}$ as 
@@ -82,28 +82,29 @@ between the date she was assigned and the date she conveyed her decision of decl
 $MTD_{i}= \frac{1}{d}\sum \limits_{j}(\mu_{j} - \Delta_{j})$
 \end{center}
 
-where $d$ is the number of assignments that reviewer $i$ declined and $\mu_{j}$ and $\Delta_{j}$ are respectively the date of assignments and date of reply for paper $j$ by reviewer $i$. We segregate the reviewers based on their $MTD$ values and calculate the median average citation. We observe that the reviewers who delay often in reporting their decision to the editor of being unable to review usually tend to fail in judging a paper quality when they do review (refer to figure~\ref{fig5}(f)).
+where $d$ is the number of assignments that reviewer $i$ declined and $\mu_{j}$ and $\Delta_{j}$ are respectively the date of assignments and date of reply for paper $j$ by reviewer $i$. We segregate the reviewers based on their $MTD$ values and calculate the median average citation. We observe that the reviewers who delay often in reporting their decision to the editor of being unable to review usually tend to fail in judging a paper quality when they do review (refer to figure~\ref{fig5}(e)).
 
-\subsubsection{Acceptance Ratio (AR)}
+\subsubsection*{(6) Acceptance Ratio (AR)}
 Acceptance Ratio ($AR$) of a reviewer is defined as the proportion of papers accepted by the reviewer. For a reviewer $i$, $AR_{i}$ is formally defined as 
 
 \begin{center}
 $AR_{i}=\frac{a_{i}}{a_{i}+r_{i}}$
 \end{center}
 
-\noindent where $a_{i}$ and $r_{i}$ respectively denote the number of papers accepted and rejected by reviewer $i$. We observe that reviewers with high $AR$ often accept  less impactful papers while reviewers with very low $AR$ often fail to identify quality research (refer to figure~\ref{fig5}(e)). Note that the reviewers are segregated based on their respective $AR$ values while the median average citation is calculated. They are segregated into bins based on the $AR$ values where typically the bins are ($\geq$ 0 and $< 0.1$), ($\geq$ 0.1 and $<$ 0.2) and so on.
+\noindent where $a_{i}$ and $r_{i}$ respectively denote the number of papers accepted and rejected by reviewer $i$. We observe that reviewers with high $AR$ often accept  less impactful papers while reviewers with very low $AR$ often fail to identify quality research (refer to figure~\ref{fig5}(f)). Note that the reviewers are segregated based on their respective $AR$ values while the median average citation is calculated. They are segregated into bins based on the $AR$ values where typically the bins are ($\geq$ 0 and $< 0.1$), ($\geq$ 0.1 and $<$ 0.2) and so on.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{./texfiles/Chapter_4/cikm/figures/DFI_dec_month.eps}
 \caption{\label{fig_dfi}(a) Median Average citation versus $DFI$. $DFI$ values are bucketed by values corresponding to ($\geq$ 0 and $<$ 0.1), ($\geq$ 0.1 and $<$ 0.2) and so on. (b) Number of declines versus the month of the year.}
+\vspace{3mm}
 \end{figure}
 %begin{figure}
 %ncludegraphics[scale=0.22]{figures/decline_month.eps}
 %aption{\label{fig6} Number of declines versus the month of the year.}
 %end{figure}
 
-\subsubsection{Decline Fraction Index (DFI)}
+\subsubsection*{(7) Decline Fraction Index (DFI)}
 
 {\bf Decline Fraction Index (DFI)} for a reviewer is the fraction of times she declined to review. For a reviewer $i$, we define $DFI_{i}$ as
 \begin{center}
@@ -113,7 +114,7 @@ $DFI_{i}=\frac{\vartheta_{i}}{\theta_{i}}$
 \noindent where $\theta_{i}$ is the total number of assignments while $\vartheta_{i}$ is the number of times $i$ declined to review. 
 In figure \ref{fig_dfi}(a) we plot median average citation versus $DFI$. We observe that for accepted papers the citation is higher for lower $DFI$ values and it drops as $DFI$ increases indicating that reviewers declining too frequently often fail to judge the quality of the paper assigned to them.
 
-A summary statistics of all the above factors that may be used to identify anomalous referees are noted in Table~\ref{summary_stat}.
+A summary statistics of all the above factors that may be used to identify anomalous referees are noted in table~\ref{summary_stat}.
 
 %\subsubsection*{Pathological Cases}
 We further looked into the data and made some interesting observations which are summarized below - 

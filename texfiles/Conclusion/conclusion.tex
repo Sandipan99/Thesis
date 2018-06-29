@@ -1,59 +1,177 @@
-\chapter[Conclusion and Future Work]{Conclusion and Future Work} In this chapter we elaborate important contributions from this thesis and finally wrap up this thesis pointing to some future research directions that have been opened from this thesis.
+\chapter[Conclusion and Future Work]{Conclusion and Future Work} 
+In this chapter we summarize important contributions of this thesis and finally wrap it up pointing to certain future research directions which this thesis has opened up.
 
-\section{Summary of Contribution} The demand for data through mobile devices would continue to increase thus leading to an exponential growth in Internet traffic. Merely increasing network capacity by means of infrastructure can not solve Internet traffic issue completely. In addition to it several protocol level modifications are needed. In this regard this thesis contributes in a meaningful way. We discuss contributions of this thesis corresponding to the objectives laid out in the beginning of the thesis.
+\section{Summary of contributions} 
 
-\subsection{Efficient Offload using WiFi Network} Cellular networks are becoming heavily congested due to huge data demand. One very promising approach to reduce the load of congested cellular network is to offload its traffic to some other networks like the Wi-Fi network. With availability of cheap storage, Wi-Fi APs (or base stations) can act as edge server with caching support. Caching of popular files may restrict significant traffic within local network. Applying this notion, this work provides a framework for local area CDN which enables uninterrupted video watching for users with high mobility. Contributions from this work are summarized as follows. 
+In this thesis, our primary objective has been to understand and analyze three different aspects of temporal networks - its structure, function and application. To this aim we designed a framework which maps a temporal network to a time series. This has allowed for predicting the properties of a network at a future time step. We have then designed a sampling algorithm for streaming network (a more constrained temporal network) which is able to preserve the community structure of the original network in the sample. We further proposed a threshold based diffusion model motivated by the fact that an agent might require multiple reinforcements before it adopts an idea. Leveraging the above model we also designed various message broadcast strategies in dynamic networks. Finally we utilized network analysis techniques along with a set of other data mining techniques to improve the scientific peer-review system. We now summarize our contributions for each problem separately. 
 
-\begin{itemize}
-\item Use Wi-Fi APs as edge server to bring popular contents closer to users which results in significant reduction in data access delay.\\
-\item Develop a methodology for systematic chunk distribution across network based on prior knowledge of human mobility pattern and hence ensure just in time streaming.\\
-\item Performance of this system is independent of the city map pattern and hence can be applied to any city with any road map.\\
-\item Short association duration with AP for users with high mobility was the main obstacle for smooth streaming; proposed system with caching support enables video streaming for the users with high mobility.\\
-\item Simulation results confirm that the proposed system can do a sizeable offload over a wide variation of speed (more than $80\%$ offload in the speed range between $20$km/hour - $60$km/hour). \\
-\item Performance degrades gracefully with increasing traffic, however waiting due to traffic signal increases performance for high traffic scenario.\\
-\item Even with very low density of Wi-Fi AP, system offloads the load significantly (when APs are placed at every 300m, system can offload more than $85\%$).\\
-\end{itemize}
-\subsection{Managing Heterogeneous Traffic} Many recent studies pointed out that load distribution across network is not homogeneous which in effect creates issue with overall system performance and user satisfaction. In most of the cases few base stations remain over loaded while others remain under utilized. In recent years Wi-Fi networks are going through an architectural shift. Wi-Fi APs are being connected via high speed wires. This change brings new opportunity to out of band communication among APs. The present work exploits this new architecture to collect a global view of load distribution across network and applies max-flow based strategy for resource allocation and association control. Contributions from this work are summarized as follows. 
+\subsection{Analyzing structural properties of temporal networks} 
 
+Most of the real world systems are dynamic in nature and unless the dimension of time is incorporated, networks are inadequate in representing them. Temporal networks hence have received increasing attention. Since the arrival of nodes and edges in these networks might not follow a specific pattern understanding and modeling them is an arduous task and so is determining how their properties evolve over time. We in this work provide a different insight to the problem. The contributions of this work can be summarized as below.   
 
 \begin{itemize}
-\item Exploiting the architectural shift, proposed system with minimum cost (out of band communication) can create a global load distribution view necessary for optimal association strategy.\\
-\item Pressing association control protocol is mapped to the classical max-flow algorithm where APs are considered as source of bandwidth and mobile devices are considered as sink of bandwidth and maximum flow of bandwidth from source nodes to sink nodes ensures maximum device satisfaction.\\
-\item Along with maximum device satisfaction, proposed association control protocol ensures fair chance of association for devices spatially distributed across network.\\
-\item With distributed design, proposed association control protocol is highly scalable.\\
-\item Proposed association control protocol can admit up to $10\%$ more devices than standard RSSI and LLF based association in the viable load range.\\
-\item Simulation results confirm that the proposed system can easily cope up with user mobility.\\
-\end{itemize}
-\subsection{Restricting Unauthorized Traffic} Among the three objectives of this thesis, this objective is least studied in literature. However, recent studies are pointing out the importance of restricting such traffic both from the point of view of service provider's revenue and unwanted extra traffic in network. In this work we have proposed another dimension of metric to be checked for authentication algorithm namely {\em shareability} along with existing dimension of security and simplicity to restrict unwanted traffic. An authentication system is proposed based on user's daily activity to restrict password sharing. This work empirically provides a proof to our hypothesis that {\em users can remember their own activity mostly while it is very difficult to be guessed by even close friends}. Contributions from this work are summarized as follows. 
+ \item We map temporal network of human contacts consisting of a series of graphlets equispaced in time into time series and provide a detailed
+time domain and frequency domain analysis.
 
-\begin{itemize}
-\item This work proposes a new dimension of metric to authentication -- {\em shareability}.\\
-\item This work identifies and empirically proves that our daily activity can be used in a meaningful way for authentication purpose.\\
-\item An integrated system is developed for evaluating the potential of proposed system which is capable of automatic activity collection, selection of potential activities for challenge generation and an interface for challenge response.\\
-\item Proposed system inherently provides security to any number of accounts with dynamic challenges and easy maintainability as users need to remember activities of recent past.\\ 
-\item User survey suggests that they are interested to use such system for password recovery instead of static (hint) question answer based password recovery.\\
-\item Our experiment shows that legitimate users can successfully pass through our authentication system in $95\%$ cases whereas impostors can go through only for $5.5\%$ cases.\\
-\item We have made some important observations from this study, for example a) outlier activities do have more potential to be a good candidate of challenge generation, b) text based question with little hint is more effective, c) user can remember well last 2-3 days activities etc.
+\item We demonstrate the presence of structural correlation in temporal network (specifically network of human contacts).
+
+\item We quantify this correlation using a metric called neighborhood-overlap.
+
+\item We use ARIMA model to predict the network properties at a future time step with high accuracy. 
+
+\item We further show that the frequency domain properties
+of the time series obtained from spectrogram analysis could be used to refine the prediction framework by identifying beforehand the cases where the error in prediction is likely to be high. In fact the results are consistent across five real-world datasets.
+
+\item As an application we show that our prediction scheme can be used to launch targeted attacks on temporal networks and that it beats the state-of-the art methods.
+
 \end{itemize}
 
-\section{Future Direction} In this section we discuss some new research issues that have been opened up by this thesis.
-\subsection{Efficient Offload using WiFi Network} Some important future directions from this study are summarized as follows.
+\subsection{Sampling temporal graphs} 
+Temporal networks can be represented as a stream of edges arriving sequentially over time with an additional constraint that an edge having entered once is never deleted. In many online applications it is not always possible to retain all the incoming edges due to memory constraint and hence is forced to sample only a subset of arriving edges with the aim of preserving the properties of the original network (formed by aggregating all the arriving edges). Researchers are however reaching a consensus that it is impossible to obtain a universal representative sample which preserves all the properties of the original network; rather sampling should be application specific. Existing sampling algorithms are incapable of obtaining a sample which can preserve the underlying community structure of the original network and hence our motivation in designing one. To summarize the primary contributions of our work - 
+
 \begin{itemize}
-\item This work does not consider the file selection strategy for caching and how the cache should be modified with time. So an important direction for an integrated system will be to focus on the file selection strategy which can be modulated based upon feedback from user.\\
-\item Feasibility of live streaming support with proposed framework can be studied.\\
-\item With this proposed framework, we want to study the feasibility in supporting live streaming and the solution thereof.\\
-\item In a high traffic scenario, due to bandwidth division, clients suffer from low streaming rate. However, in this scenario, a P2P kind of strategy might boost up efficiency significantly. A future direction could be to study the performance of such system in high traffic scenario.\\
-\end{itemize}
-\subsection{Managing Heterogeneous Traffic} Some important future directions from this study are summarized as follows.
-\begin{itemize}
-\item In this work, we have assumed very low mobility of users and a simplistic mobility protocol. More practical mobility model applicable for university campus and city may be studied.\\
-\item An anticipatory association based on mobility prediction will help in faster association. One can, in future, study the feasibility of this scheme and, subsequently explore the effect of such a strategy.\\
-\item Another important direction could be to study the effect of a sophisticated channel allocation strategy on reduction of interference during association.\\
+\item We propose~\compas~which is aimed at obtaining a sample that preserves the underlying community structure of the original graph. 
+\item Based on a set of topological measures we demonstrate that community structure obtained as output from~\compas~trumps those obtained from other sampling algorithms on streaming graphs. 
+\item As a second level of evaluation, we use community validation metrics to show that~\compas~indeed performs better than other sampling algorithms.
+\item We further demonstrate that the edge ordering has minimal effect on the obtained sample. 
+%\item We observe that the average edge density of the obtained sample is $\sim$ 71\% of the induced subgraph.
+\item Finally we exhibit the utility of~\compas~in sampling training set for online learning schemes.
 \end{itemize}
 
-\subsection{Restricting Unauthorized Traffic} Some important future directions from this study are summarized as follows.
+\subsection{Diffusion in temporal networks} 
+A person's tendency to adopt an idea is often decided based on his/her peers and often modeled as an information diffusion process in networks. 
+The fundamental difference between static and temporal epidemic (SI) models is that in temporal models every agent within a population is not equally susceptible to a
+disease or equally amenable to a rumor - the one which has been exposed more number of times (in recent past) are more susceptible. This difference however is not well
+formulated and hence the motivation of this work. We next summarize the contributions below -  
+
 \begin{itemize}
-\item As a proof of concept we explored very few information sources; as a future step, one might explore more information sources like information from wearable devices, smartphone sensors etc.\\
-\item Another concept could be to develop architectures for utilizing proposed methodology in different scenarios of authentication like architecture for utilizing proposed system in user's own smartphone will be different from the architecture when it is going to be used by some third party.\\
-\item There is always a potential of privacy leaks as this system works with user's private data. So in future it would be important to investigate the methods of securing privacy in greater detail.\\
+\item We propose a threshold based diffusion model whereby, an agent contracts infection or adopts an idea only after multiple contacts with an infected node.
+\item We observe that irrespective of the underlying topology the diffusion progresses in two distinct phases - (i) slow initial phase and (ii) fast residual phase.
+\item We demonstrate that for a complete graph topology the diffusion time scales as $n^{\frac{k-1}{k}}$ where $n$ is the number of nodes and $k$ is the number of contacts required to contract the infection.
+\item We further provide detailed empirical results to support our hypothesis.
+\item As the diffusion process follows two distinct phases, we hypothesize that an infection could be controlled or contained if acted upon within the initial phase and design a simple inoculation strategy to show that this indeed is the case.
+\end{itemize}
+
+As an application of the above observations we propose a set of message broadcast strategies in dynamic network. We specifically consider situations where connections between the agents are not continuous and only intermittent. To summarize our contributions -  
+
+\begin{itemize}
+ \item Unlike existing strategies we consider that contact durations are not long enough for a whole message to be transferred and hence might be required to be transmitted in segments.
+ \item We present a systematic and rigorous study of two crucial issues in dynamic networks - (i) effect of message size and partition structure and (ii) technique adopted for message transfer on broadcast time and wastage (proportion of redundant contacts).
+ \item We further propose different variants of the basic push and pull message transfer protocol in order to improve broadcast time and at the same time reduce the number of redundant contacts.
+ \item We introduce the concept of {\em giveup} which allows a node to terminate broadcast on sensing that its neighborhood has received the message.
+ \item Interestingly we observe that irrespective of the underlying topology, there exists an optimal degree for which the broadcast time and wastage is minimum.
+ 
+\end{itemize}
+
+
+\subsection{Application of temporal network analysis in peer-review network}
+As a final objective of this thesis, we leverage network analysis as well as other data mining techniques to improve the scientific peer-review system. In this regard our contributions are threefold - (i) predict long term impact of a paper, (ii) quantify the performance of editors and reviewers and identify the under-performing ones and (iii) extract and recommend compatible reviewer groups in a multi-reviewer setup. We elaborate on each of these next.
+
+\noindent{\bf (i) Predicting long term impact of a paper} 
+\begin{itemize}
+ \item We introduce a novel reviewer-reviewer interaction network (an edge exists between two reviewers if they were assigned by
+the same editor) and show that surprisingly the simple structural properties of this network such as degree, clustering coefficient,
+centrality (closeness, betweenness etc.) serve as strong predictors of the long-term citations (i.e., the overall scientific impact) of a
+submitted paper. 
+  \item We obtain a $R^2$ of 0.79 and $RMSE$ of 0.496 when these network features are fed into a regression model.
+  
+  \item We design a set of supporting features built from the basic characteristics of
+the submitted papers, the authors and the referees (e.g., the popularity of the submitting author, the acceptance rate history of a
+referee, the linguistic properties laden in the text of the review reports etc.), which when augmented with the network based features marginally improves 
+$R^2$ to 0.81 and $RMSE$ to 0.46.
+
+  \item The papers which went through lesser number of review rounds tend to be cited more on average while the papers that were
+accepted after going through higher number of rounds are cited less on average (although exceptions exist for both cases).
+
+ \item Although the reviewers tend to avoid highly polar words (negative or positive) in their review reports, the overall sentiment in the reports
+of accepted papers is more positive whereas the same is more negative for the rejected papers.
+
+ \item The authors with higher acceptance ratio tend to be cited more on average compared to those with lower acceptance ratio.
+
+ \item Reviewers excessively accepting or rejecting most of the assigned papers often fail to correctly judge the
+quality of the paper.
+\end{itemize}
+
+\noindent{\bf (ii) Identify under-performing editors and reviewers}
+
+\begin{itemize}
+ \item We observe that for editors, (i) high frequency of assignments, (ii) selecting from a very small set of referees for reviewing, (iii) assigning same reviewer to papers of
+same author and (iv) assigning herself as reviewer instead of assigning someone else are indicative of anomalous
+behavior.
+
+  \item Similarly for reviewers, (i) high frequency of assignments, (ii) delay in sending report, (iii) assignment
+from only a single editor or a very small set of editors (iv) very high or very low acceptance ratio and (vi) delay in
+notifying the editor about her decision to decline are also indicative of anomalous behavior and often leads to anomalous behavior.
+
+ \item Further the anomalous ones can be segregated using unsupervised clustering on the set of editors and reviewers with each being represented by the vector of above features.
+ 
+ \item We find 26.8\% of the editors and 14.5\% of the reviewers to be anomalous.
+ 
+%  %\item The anomalous reviewers can further be segregated into three groups based on performance - (i) deteriorates constantly over time, (ii) initially good but deteriorates in the long run and (iii) performance fluctuates but has a deteriorating trend in the long run.
+\end{itemize}
+
+\noindent{\bf (iii) Identify and recommend compatible reviewer groups}
+
+\begin{itemize}
+ \item We perform a detailed comparative analysis of cases where a single reviewer was involved in the peer-review
+process and where multiple reviewers were involved, considering the review history of papers. Interestingly, we observe
+that accepted papers which were reviewed by a single referee on
+average tend to garner a larger number of citations in long term
+compared to those which were reviewed by multiple referees. An exact opposite behavior is observed in case of rejected papers.
+
+ \item We also observe several contradictory trends - although on average single reviewers
+perform better, however, most impactful papers are largely multi-refereed; the multi-refereed papers generally perform poorly due to
+discordance between the reviewers.
+
+ \item We find that frequent assignments of reviews to a reviewer leads to his performance deterioration. 
+ Also those reviewers who have a tendency to be too critical or too liberal fail to identify the real good papers.
+ 
+ \item We observe that these anomalous reviewers when paired with high-graded ones perform better than the normal average. 
+ 
+ \item We finally propose a framework based on genetic algorithm to recommend reviewer groups to the editors
+to make 
+reviewer assignments. In fact our system was correctly
+able to recommend reviewer groups in $~$78\% on average across two datasets.
+
+\item We also demonstrate that expert intervention of the editor in choosing the reviewer groups is
+extremely important toward proper functioning of the peer-review
+system.
+\end{itemize}
+
+
+
+\section{Future direction} In this section we discuss some new research issues that have been opened up by this thesis.
+\subsection{Analyzing structural properties of temporal networks} 
+Some important future directions from this study are summarized as follows.
+\begin{itemize}
+\item In its current state our framework is able to predict the network features at a future time step but is unable to predict the exact network structure. So future research endeavors could be aimed at solving this problem.
+\item A direction of research could be toward determining the applicability of our framework in link prediction task.
+\item Another immediate extension would be to look into the frequency domain analysis in more details which we believe still remains largely unexplored. 
+ 
+\end{itemize}
+
+\subsection{Sampling temporal graphs} 
+Although there are tons of work related to sampling from static graph, there are still lot of interesting grounds to explore in streaming graph scenario. Some important research directions that directly follow from our work are summarized below.  
+\begin{itemize}
+\item In this work, we considered only undirected and unweighted networks and an immediate future direction would be to extend it to weighted and directed networks.
+\item We only consider non-overlapping communities and since most of the real world communities are overlapping, future research endeavors could be targeted toward that direction as well.
+\item Future studies could also be directed toward providing theoretical guarantees on the performance of the algorithm.  
+\end{itemize}
+
+\subsection{Diffusion in temporal networks} 
+Some important studies that can be taken up in future as a consequence of this work are summarized below - 
+\begin{itemize}
+\item In our diffusion model although the agents are equipped with a memory to remember past contacts, we assume them to not decay with time which is perhaps a more realistic assumption. This could be an interesting modification to explore in future.
+\item Research efforts could also be directed towards developing theoretical framework for other topologies (we in this work only consider complete graph and infinite $d$-regular trees).
+\item We further consider the population to be homogeneous although in reality they are heterogeneous. This would make an interesting study as well.
+\item Future research endeavors could also be directed towards developing better inoculation strategies.
+\end{itemize}
+
+\subsection{Application of temporal network analysis in peer-review network}
+In this work we pointed out several limitations of peer-review system and at the same time proposed ways of improving it. We still believe there are scopes for further improvement some of which we summarize below - 
+\begin{itemize}
+ \item Our work is mainly based on two datasets and that too related to Physics. An immediate extension would be to generalize the results by exploring other journals as well as conferences.
+ \item An important future direction would be to develop a full-fledged reviewer recommendation system that would assist editors in assigning reviewers to a submission.
+ \item Another extension could be to model the reviewer performance over time and thereby identify under-performing ones beforehand.
+ \item Further research efforts could be directed toward identifying biases against authors. Our work gives indications of this being present in the data.
 \end{itemize}

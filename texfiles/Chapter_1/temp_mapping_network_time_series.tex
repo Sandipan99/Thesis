@@ -1,19 +1,19 @@
 \noindent
-\section{Mapping Temporal network to time series}
+\section{Mapping temporal network to time series}
 \label{mapping}
 %In this section we describe how we transform a temporal network to a set of time series representing it. 
 
 \begin{figure}
  \begin{center}
  \includegraphics*[width=0.7\columnwidth, angle=0]{./texfiles/Chapter_1/fig/Presentation_d-eps-converted-to.pdf}
- \caption{\label{fig1}Converting Temporal network to Time series}
+ \caption{\label{chap_1_fig1}Converting temporal network to time series}
  \end{center}
  \end{figure}
 
  We consider a temporal network as a set of static snapshots collected at consecutive time intervals. 
 %In this way a temporal graph can be represented as series of static graphs. 
 Each snapshot is then represented in terms of eight (mainly structural) properties of the underlying graph. 
- Consequently we obtain a set of points ordered in time or equivalently a discrete time series (see figure ~\ref{fig1}). 
+ Consequently, we obtain a set of points ordered in time or equivalently a discrete time series (see figure ~\ref{chap_1_fig1}). 
 The eight properties we use to represent the temporal network as a time series are:
  
  \begin{itemize} 
@@ -39,7 +39,7 @@ The eight properties we use to represent the temporal network as a time series a
  \begin{center}
  
  \includegraphics[width=0.7\columnwidth, angle=0]{./texfiles/Chapter_1/fig/ede_em-eps-converted-to.pdf}
- \caption{\label{fig3}(a) and (b) denote the status of the network at time $t$ and $t+1$ respectively. For the edge $(i,e)$ in $t$ the corresponding edges
+ \caption{\label{chap_1_fig3}(a) and (b) denote the status of the network at time $t$ and $t+1$ respectively. For the edge $(i,e)$ in $t$ the corresponding edges
  emanating from $i$ and $e$ are $(i,a)$ and $(e,b)$. For the edge $(x,y)$ they are $(x,c)$ and $(y,d)$. So the $Edge\_emer_{t}=\frac{2+2}{2}=\frac{4}{2}$}
  
 %  \includegraphics[width=0.8\columnwidth, angle=0]{fig/jaccard.eps}
@@ -59,7 +59,7 @@ The eight properties we use to represent the temporal network as a time series a
   edge emergence at time $t$ we consider each edge of the network at time $t$ and for each of its two endpoints we calculate the number of edges 
   emerging in the next time step $t+1$. We represent edge-emergence at time $t$ by $Edge\_emg_{t}$. If $E_t$ denotes the set of edges present in the network at time $t$ 
   and $A_{t+1}$ denotes the set of edges at time $t+1$ which are adjacent to $E_t$ then $Edge\_emg_{t}=\frac{|A_{t+1}|}{|E_{t}|}$. 
-Figure~\ref{fig3} shows how we calculate this measure for a temporal network at any time instance.
+Figure~\ref{chap_1_fig3} shows how we calculate this measure for a temporal network at any time instance.
   
   
   \item (5). {\bf  Modularity}: We decompose each snapshot into communities using the technique specified in ~\cite{blondel2008fast}
@@ -70,8 +70,7 @@ Figure~\ref{fig3} shows how we calculate this measure for a temporal network at 
 %   {$Bet\_cen_{t}$}, {$Clos\_cen_{t}$} and {$Cluster\_coeff_{t}$} respectively.
   
  \end{itemize}
- We also consider (6). {\bf  betweenness centrality}, (7). {\bf closeness centrality} and (8). {\bf  clustering coefficient} of the graph (values computed for each node and then summed over all nodes) 
-and their values at time step $t$ are represented by 
+ We also consider (6). {\bf  betweenness centrality}, (7). {\bf closeness centrality} and (8). {\bf  clustering coefficient} of the graph (values computed for each node and then summed over all nodes); their values at time step $t$ are represented by 
   {$Bet\_cen_{t}$}, {$Clos\_cen_{t}$} and {$Clus\_coeff_{t}$} respectively.
 
 \medskip

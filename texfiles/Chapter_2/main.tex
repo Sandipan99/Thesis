@@ -13,8 +13,24 @@
 % % \usepackage{hyperref}
 %  \usepackage[table,xcdraw]{xcolor}
 % \usepackage{colortbl}
+% \usepackage{times}
+% \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% \usepackage{color}
+% \usepackage[table,xcdraw]{xcolor}
+% \usepackage{colortbl}
+% \usepackage{amsmath,amsthm}
 \newtheorem{prop}{Proposition}
-\newtheorem{mydef}{Definition}
+\newtheorem{mydef}{Sampling problem}
+% \usepackage{adjustbox}
+% \newcommand{\compas}{{\tt ComPAS}}
+% \newcommand\TODO[1]{\textcolor{red}{#1}}
+% \newcommand\tbr[1]{\textcolor{brown}{#1}}
+% \usepackage{multirow}
+% \usepackage[draft]{hyperref}
+% \usepackage[table,xcdraw]{xcolor}
+% \usepackage{colortbl}
+%\usepackage{amsmath,amsthm}
+
 
 \newenvironment{function1}[1][htb]
   {\renewcommand{\thealgocf}{1}
@@ -92,7 +108,7 @@
 In the last chapter we developed a framework that could predict structural properties of a temporal network albeit we could not make any prediction regarding the 
 structure of the network. It is in fact difficult to predict the structure of the network at a future time instant. We in this chapter look into a related problem - 
 given a streaming graph, we obtain a sample of the graph which is most representative of its underlying structure. 
-In specific we obtain a sample that is able to preserve the underlying community structure. 
+In specific, we obtain a sample that is able to preserve the underlying community structure. 
 
 
 \input{./texfiles/Chapter_2/introduction}
@@ -105,6 +121,7 @@ In specific we obtain a sample that is able to preserve the underlying community
 
 \input{./texfiles/Chapter_2/evaluation}
 
+\input{./texfiles/Chapter_2/complexity}
 %\input{./texfiles/Chapter_2/ranking_algorithm}
 
 \input{./texfiles/Chapter_2/learning}
